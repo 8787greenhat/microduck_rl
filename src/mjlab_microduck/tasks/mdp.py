@@ -6056,6 +6056,110 @@ def ball_vel_in_base(
     return torch.bmm(rot.transpose(1, 2), vel.unsqueeze(-1)).squeeze(-1)
 
 
+# =============================================================================
+# Soccer task — pure geometry helpers shared by the baseline and RL environment
+# =============================================================================
+
+
+def soccer_goal_direction(
+    ball_xy: torch.Tensor,
+    goal_xy: torch.Tensor,
+    eps: float = 1.0e-6,
+) -> torch.Tensor:
+    """Unit XY direction from the ball to the goal.
+
+    The helper is intentionally independent of an environment so the geometric
+    baseline and the learned high-level controller use the exact same frame
+    convention. Degenerate ball-at-goal inputs return ``[0, 0]`` rather than
+    producing NaNs.
+    """
+    delta = goal_xy - ball_xy
+    distance = torch.linalg.vector_norm(delta, dim=-1, keepdim=True)
+    return delta / distance.clamp_min(eps)
+
+
+def soccer_preparation_pose(
+    ball_xy: torch.Tensor,
+    goal_xy: torch.Tensor,
+    kick_offset_xy: tuple[float, float] = (0.09, -0.042),
+) -> torch.Tensor:
+    """Return the desired robot ``[x, y, yaw]`` for a goal-directed kick.
+
+    ``kick_offset_xy`` is the desired ball position in the robot yaw frame.
+    The default matches BallKick's right-foot placement. The returned pose is
+    therefore the robot root pose that places the ball at that offset while
+    pointing the robot from the ball toward the goal.
+    """
+    direction = soccer_goal_direction(ball_xy, goal_xy)
+    yaw = torch.atan2(direction[..., 1], direction[..., 0])
+
+    offset = torch.as_tensor(
+        kick_offset_xy,
+        dtype=ball_xy.dtype,
+        device=ball_xy.device,
+    )
+    cos_yaw = torch.cos(yaw)
+    sin_yaw = torch.sin(yaw)
+    offset_w = torch.stack(
+        (
+            cos_yaw * offset[0] - sin_yaw * offset[1],
+            sin_yaw * offset[0] + cos_yaw * offset[1],
+        ),
+        dim=-1,
+    )
+    robot_xy = ball_xy - offset_w
+    return torch.cat((robot_xy, yaw.unsqueeze(-1)), dim=-1)
+
+
+def soccer_goal_crossing(
+    previous_ball_pos_w: torch.Tensor,
+    ball_pos_w: torch.Tensor,
+    goal_base_pos_w: torch.Tensor,
+    goal_forward_xy: torch.Tensor,
+    goal_width: float,
+    crossbar_height: float,
+    ball_radius: float = 0.0,
+    eps: float = 1.0e-6,
+) -> torch.Tensor:
+    """Whether the ball crossed the goal plane from the field into the opening.
+
+    ``goal_forward_xy`` is the plane normal pointing from the field into the
+    goal. The opening test is evaluated at the interpolated plane intersection,
+    which prevents a fast ball from skipping the detector between simulation
+    steps. ``goal_base_pos_w`` is the centre of the goal mouth at ground level.
+    """
+    normal = goal_forward_xy / torch.linalg.vector_norm(
+        goal_forward_xy, dim=-1, keepdim=True
+    ).clamp_min(eps)
+    previous_rel_xy = previous_ball_pos_w[..., :2] - goal_base_pos_w[..., :2]
+    current_rel_xy = ball_pos_w[..., :2] - goal_base_pos_w[..., :2]
+    previous_side = torch.sum(previous_rel_xy * normal, dim=-1)
+    current_side = torch.sum(current_rel_xy * normal, dim=-1)
+    crossed_forward = (previous_side < 0.0) & (current_side >= 0.0)
+
+    denominator = current_side - previous_side
+    alpha = torch.where(
+        denominator.abs() > eps,
+        -previous_side / denominator,
+        torch.zeros_like(denominator),
+    ).clamp(0.0, 1.0)
+    intersection = previous_ball_pos_w + alpha.unsqueeze(-1) * (
+        ball_pos_w - previous_ball_pos_w
+    )
+
+    lateral_axis = torch.stack((-normal[..., 1], normal[..., 0]), dim=-1)
+    intersection_rel_xy = intersection[..., :2] - goal_base_pos_w[..., :2]
+    lateral_distance = torch.abs(torch.sum(intersection_rel_xy * lateral_axis, dim=-1))
+    lateral_clearance = max(0.0, goal_width * 0.5 - ball_radius)
+    inside_posts = lateral_distance <= lateral_clearance
+
+    base_z = goal_base_pos_w[..., 2]
+    inside_height = (intersection[..., 2] >= base_z + ball_radius) & (
+        intersection[..., 2] <= base_z + crossbar_height - ball_radius
+    )
+    return crossed_forward & inside_posts & inside_height
+
+
 # --------------------------------------------------------------------------- #
 # Tâche SPIN — rotation rapide sur place sur rollers                            #
 # --------------------------------------------------------------------------- #
