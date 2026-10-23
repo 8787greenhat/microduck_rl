@@ -6300,6 +6300,188 @@ def soccer_preparation_pose(
     return torch.cat((robot_xy, yaw.unsqueeze(-1)), dim=-1)
 
 
+def sample_soccer_reset_layout(
+    num_samples: int,
+    device: str | torch.device = "cpu",
+    *,
+    seed: int | None = None,
+    field_length: float = 2.0,
+    field_width: float = 1.2,
+    goal_distance_range: tuple[float, float] = (0.45, 1.10),
+    ball_lateral_range: tuple[float, float] = (-0.30, 0.30),
+    approach_distance_range: tuple[float, float] = (0.10, 0.45),
+    approach_lateral_range: tuple[float, float] = (-0.12, 0.12),
+    heading_error_range: tuple[float, float] = (-math.pi / 2, math.pi / 2),
+) -> dict[str, torch.Tensor]:
+    """Sample a vectorized soccer layout in field-local coordinates.
+
+    The goal mouth is centred on the positive-X boundary and points into the
+    goal along +X.  The robot starts behind a right-foot preparation pose with
+    independent approach-distance, lateral, and heading offsets.  Passing a
+    seed produces a deterministic CPU sequence suitable for a saved held-out
+    evaluation set; training resets omit it and use the active torch RNG.
+    """
+    if num_samples < 0:
+        raise ValueError("num_samples must be non-negative")
+    if field_length <= 0.0 or field_width <= 0.0:
+        raise ValueError("field dimensions must be positive")
+
+    sample_device = torch.device("cpu") if seed is not None else torch.device(device)
+    generator = None
+    if seed is not None:
+        generator = torch.Generator(device="cpu")
+        generator.manual_seed(seed)
+
+    def uniform(bounds: tuple[float, float]) -> torch.Tensor:
+        low, high = bounds
+        if high < low:
+            raise ValueError(f"invalid range: {bounds}")
+        return low + (high - low) * torch.rand(
+            num_samples,
+            device=sample_device,
+            generator=generator,
+        )
+
+    goal_xy = torch.zeros(num_samples, 2, device=sample_device)
+    goal_xy[:, 0] = field_length * 0.5
+
+    ball_xy = torch.empty(num_samples, 2, device=sample_device)
+    ball_xy[:, 0] = goal_xy[:, 0] - uniform(goal_distance_range)
+    ball_xy[:, 1] = uniform(ball_lateral_range)
+
+    prep = soccer_preparation_pose(ball_xy, goal_xy)
+    goal_direction = soccer_goal_direction(ball_xy, goal_xy)
+    lateral_axis = torch.stack((-goal_direction[:, 1], goal_direction[:, 0]), dim=-1)
+    robot_xy = (
+        prep[:, :2]
+        - uniform(approach_distance_range).unsqueeze(-1) * goal_direction
+        + uniform(approach_lateral_range).unsqueeze(-1) * lateral_axis
+    )
+    robot_yaw = wrap_to_pi(prep[:, 2] + uniform(heading_error_range))
+
+    result = {
+        "robot_xy_yaw": torch.cat((robot_xy, robot_yaw.unsqueeze(-1)), dim=-1),
+        "ball_xy": ball_xy,
+        "goal_xy_yaw": torch.cat(
+            (goal_xy, torch.zeros(num_samples, 1, device=sample_device)), dim=-1
+        ),
+    }
+    if sample_device != torch.device(device):
+        result = {name: value.to(device) for name, value in result.items()}
+    return result
+
+
+def reset_soccer_scene(
+    env: ManagerBasedRlEnv,
+    env_ids: torch.Tensor | None,
+    *,
+    field_length: float = 2.0,
+    field_width: float = 1.2,
+    goal_distance_range: tuple[float, float] = (0.45, 1.10),
+    ball_lateral_range: tuple[float, float] = (-0.30, 0.30),
+    approach_distance_range: tuple[float, float] = (0.10, 0.45),
+    approach_lateral_range: tuple[float, float] = (-0.12, 0.12),
+    heading_error_range: tuple[float, float] = (-math.pi / 2, math.pi / 2),
+    ball_radius: float = 0.035,
+    robot_name: str = "robot",
+    ball_name: str = "ball",
+    goal_name: str = "goal",
+) -> None:
+    """Reset robot, ball, and goal from one coherent soccer layout sample."""
+    if env_ids is None:
+        env_ids = torch.arange(env.num_envs, device=env.device, dtype=torch.int)
+    if len(env_ids) == 0:
+        return
+    env_ids = env_ids.to(env.device, dtype=torch.int)
+
+    layout = sample_soccer_reset_layout(
+        len(env_ids),
+        env.device,
+        field_length=field_length,
+        field_width=field_width,
+        goal_distance_range=goal_distance_range,
+        ball_lateral_range=ball_lateral_range,
+        approach_distance_range=approach_distance_range,
+        approach_lateral_range=approach_lateral_range,
+        heading_error_range=heading_error_range,
+    )
+    origins = env.scene.env_origins[env_ids]
+
+    robot: Entity = env.scene[robot_name]
+    current_root = env.sim.data.qpos[env_ids][:, robot.indexing.free_joint_q_adr]
+    robot_pose = torch.zeros(len(env_ids), 7, device=env.device)
+    robot_pose[:, :2] = layout["robot_xy_yaw"][:, :2] + origins[:, :2]
+    robot_pose[:, 2] = current_root[:, 2]
+    half_yaw = layout["robot_xy_yaw"][:, 2] * 0.5
+    robot_pose[:, 3] = torch.cos(half_yaw)
+    robot_pose[:, 6] = torch.sin(half_yaw)
+    robot.write_root_link_pose_to_sim(robot_pose, env_ids)
+    robot.write_root_link_velocity_to_sim(
+        torch.zeros(len(env_ids), 6, device=env.device), env_ids
+    )
+
+    ball: Entity = env.scene[ball_name]
+    ball_pose = torch.zeros(len(env_ids), 7, device=env.device)
+    ball_pose[:, :2] = layout["ball_xy"] + origins[:, :2]
+    ball_pose[:, 2] = origins[:, 2] + ball_radius
+    ball_pose[:, 3] = 1.0
+    ball.write_root_link_pose_to_sim(ball_pose, env_ids)
+    ball.write_root_link_velocity_to_sim(
+        torch.zeros(len(env_ids), 6, device=env.device), env_ids
+    )
+
+    goal: Entity = env.scene[goal_name]
+    goal_pose = torch.zeros(len(env_ids), 7, device=env.device)
+    goal_pose[:, :2] = layout["goal_xy_yaw"][:, :2] + origins[:, :2]
+    goal_pose[:, 2] = origins[:, 2]
+    goal_pose[:, 3] = 1.0
+    goal.write_mocap_pose_to_sim(goal_pose, env_ids)
+
+    # Cache the geometry contract for the later latches/termination stage.
+    if not hasattr(env, "_soccer_goal_base_pos_w"):
+        env._soccer_goal_base_pos_w = torch.zeros(env.num_envs, 3, device=env.device)
+        env._soccer_goal_forward_xy = torch.zeros(env.num_envs, 2, device=env.device)
+        env._soccer_previous_ball_pos_w = torch.zeros(env.num_envs, 3, device=env.device)
+    env._soccer_goal_base_pos_w[env_ids] = goal_pose[:, :3]
+    env._soccer_goal_forward_xy[env_ids, 0] = 1.0
+    env._soccer_goal_forward_xy[env_ids, 1] = 0.0
+    env._soccer_previous_ball_pos_w[env_ids] = ball_pose[:, :3]
+
+
+def soccer_position_out_of_bounds(
+    position_w: torch.Tensor,
+    env_origins: torch.Tensor,
+    field_length: float = 2.0,
+    field_width: float = 1.2,
+    margin: float = 0.0,
+) -> torch.Tensor:
+    """Return whether XY positions lie beyond a rectangular soccer field."""
+    relative_xy = position_w[..., :2] - env_origins[..., :2]
+    half_length = field_length * 0.5 + margin
+    half_width = field_width * 0.5 + margin
+    return (relative_xy[..., 0].abs() > half_length) | (
+        relative_xy[..., 1].abs() > half_width
+    )
+
+
+def soccer_asset_out_of_bounds(
+    env: ManagerBasedRlEnv,
+    asset_name: str,
+    field_length: float = 2.0,
+    field_width: float = 1.2,
+    margin: float = 0.0,
+) -> torch.Tensor:
+    """Termination helper for a robot or ball leaving the soccer field."""
+    asset: Entity = env.scene[asset_name]
+    return soccer_position_out_of_bounds(
+        asset.data.root_link_pos_w,
+        env.scene.env_origins,
+        field_length=field_length,
+        field_width=field_width,
+        margin=margin,
+    )
+
+
 def soccer_goal_crossing(
     previous_ball_pos_w: torch.Tensor,
     ball_pos_w: torch.Tensor,

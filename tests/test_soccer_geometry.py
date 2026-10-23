@@ -3,8 +3,10 @@ import math
 import torch
 
 from mjlab_microduck.tasks.mdp import (
+    sample_soccer_reset_layout,
     soccer_goal_crossing,
     soccer_goal_direction,
+    soccer_position_out_of_bounds,
     soccer_preparation_pose,
 )
 
@@ -78,3 +80,37 @@ def test_soccer_goal_crossing_uses_interpolated_plane_position():
         radius=0.0,
     )
     assert result.item() is True
+
+
+def test_soccer_reset_layout_is_seeded_and_inside_field():
+    first = sample_soccer_reset_layout(32, seed=123)
+    second = sample_soccer_reset_layout(32, seed=123)
+
+    for key in first:
+        assert torch.equal(first[key], second[key])
+
+    assert torch.allclose(first["goal_xy_yaw"][:, 0], torch.ones(32))
+    assert (first["ball_xy"][:, 0].abs() <= 1.0).all()
+    assert (first["ball_xy"][:, 1].abs() <= 0.6).all()
+    assert (first["robot_xy_yaw"][:, 0].abs() <= 1.0).all()
+    assert (first["robot_xy_yaw"][:, 1].abs() <= 0.6).all()
+
+
+def test_soccer_reset_robot_starts_behind_preparation_pose():
+    layout = sample_soccer_reset_layout(64, seed=456)
+    prep = soccer_preparation_pose(layout["ball_xy"], layout["goal_xy_yaw"][:, :2])
+    direction = soccer_goal_direction(layout["ball_xy"], layout["goal_xy_yaw"][:, :2])
+    robot_to_prep = prep[:, :2] - layout["robot_xy_yaw"][:, :2]
+
+    along_goal = (robot_to_prep * direction).sum(dim=-1)
+    assert (along_goal >= 0.10 - 1.0e-6).all()
+    assert (along_goal <= 0.45 + 1.0e-6).all()
+
+
+def test_soccer_position_out_of_bounds_uses_per_env_origins():
+    origins = torch.tensor([[0.0, 0.0, 0.0], [3.0, -2.0, 0.0]])
+    positions = torch.tensor([[1.0, 0.6, 0.0], [4.01, -2.0, 0.0]])
+
+    result = soccer_position_out_of_bounds(positions, origins)
+
+    assert torch.equal(result, torch.tensor([False, True]))

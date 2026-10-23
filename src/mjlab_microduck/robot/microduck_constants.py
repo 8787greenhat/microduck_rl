@@ -101,6 +101,58 @@ def get_ball_spec() -> mujoco.MjSpec:
     return mujoco.MjSpec.from_file(str(MICRODUCK_BALL_XML))
 
 
+def get_soccer_goal_spec(
+    goal_width: float = 0.40,
+    crossbar_height: float = 0.20,
+    post_thickness: float = 0.02,
+    goal_depth: float = 0.12,
+) -> mujoco.MjSpec:
+    """Build a fixed-base, collidable goal with a 40 x 20 cm clear opening.
+
+    The local goal plane is ``x=0`` and its forward direction is ``+x`` (from
+    the field into the goal).  Post centres sit outside the opening so the
+    geometry dimensions agree exactly with ``soccer_goal_crossing``.
+    """
+    spec = mujoco.MjSpec()
+    body = spec.worldbody.add_body(name="soccer_goal")
+    half_post = post_thickness * 0.5
+    post_y = goal_width * 0.5 + half_post
+    frame_rgba = (0.92, 0.92, 0.92, 1.0)
+
+    for side, y in (("left", post_y), ("right", -post_y)):
+        body.add_geom(
+            name=f"goal_{side}_post",
+            type=mujoco.mjtGeom.mjGEOM_BOX,
+            pos=(0.0, y, crossbar_height * 0.5),
+            size=(half_post, half_post, crossbar_height * 0.5),
+            rgba=frame_rgba,
+            friction=(0.8, 0.005, 0.0001),
+        )
+
+    body.add_geom(
+        name="goal_crossbar",
+        type=mujoco.mjtGeom.mjGEOM_BOX,
+        pos=(0.0, 0.0, crossbar_height + half_post),
+        size=(half_post, goal_width * 0.5 + post_thickness, half_post),
+        rgba=frame_rgba,
+        friction=(0.8, 0.005, 0.0001),
+    )
+
+    # Short side rails make the goal direction visually unambiguous while
+    # leaving the mouth and back open.  They are physical, not success sensors.
+    rail_x = goal_depth * 0.5
+    for side, y in (("left", post_y), ("right", -post_y)):
+        body.add_geom(
+            name=f"goal_{side}_rail",
+            type=mujoco.mjtGeom.mjGEOM_BOX,
+            pos=(rail_x, y, half_post),
+            size=(goal_depth * 0.5, half_post, half_post),
+            rgba=frame_rgba,
+            friction=(0.8, 0.005, 0.0001),
+        )
+    return spec
+
+
 def get_backlash_spec() -> mujoco.MjSpec:
     return mujoco.MjSpec.from_file(str(MICRODUCK_GROUNDCONTACT_BACKLASH_XML))
 
@@ -300,6 +352,13 @@ MICRODUCK_ROLLERS_BACKLASH_ROBOT_CFG = EntityCfg(
 MICRODUCK_BALL_CFG = EntityCfg(
     spec_fn=get_ball_spec,
     init_state=EntityCfg.InitialStateCfg(pos=(0.3, 0.0, 0.035)),
+)
+
+# Fixed goal. mjlab automatically wraps fixed-base entities in a mocap body so
+# the reset event can place one goal independently in every vectorized world.
+MICRODUCK_SOCCER_GOAL_CFG = EntityCfg(
+    spec_fn=get_soccer_goal_spec,
+    init_state=EntityCfg.InitialStateCfg(pos=(1.25, 0.0, 0.0)),
 )
 
 # Roller skate robot: the 4 passive wheel joints (passive_*wheel) have no XML

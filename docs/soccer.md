@@ -167,8 +167,8 @@ Status as of 2026-10-23:
 - [x] Right-foot preparation-pose helper implemented using BallKick's nominal offset.
 - [x] Directional goal-plane crossing with post, crossbar, radius, and high-speed interpolation checks implemented.
 - [x] Eight CPU unit tests covering nominal and failure cases pass.
-- [ ] Goal entity and soccer field added to an mjlab scene.
-- [ ] Randomized episode reset and held-out evaluation-set generator implemented.
+- [x] Goal entity and soccer field added to an mjlab scene.
+- [x] Randomized episode reset and held-out evaluation-set generator implemented.
 - [ ] Contact/separation latches and valid-shot termination implemented.
 - [ ] Geometric state-machine baseline implemented.
 - [ ] Frozen walking/kick action adapter implemented.
@@ -181,7 +181,19 @@ Status as of 2026-10-23:
 Current foundation tests:
 
 ```bash
-uv run --with pytest pytest tests/test_soccer_geometry.py
+uv run --with pytest pytest \
+  tests/test_soccer_geometry.py \
+  tests/test_soccer_cfg.py
+```
+
+Generate the fixed 100-episode held-out set once, before reward tuning, and
+keep the resulting JSON unchanged across all experiment conditions:
+
+```bash
+uv run scripts/generate_soccer_eval_set.py \
+  data/soccer_eval_set.json \
+  --episodes 100 \
+  --seed 20261023
 ```
 
 Before any long training run:
