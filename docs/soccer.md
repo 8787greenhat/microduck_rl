@@ -214,6 +214,77 @@ Status as of 2026-10-23:
   contact rests the ball centre 0.4 mm below its radius, under the old
   `z >= ball_radius` check. Fixed with a 5 mm ground tolerance and a test.
 
+## Handoff: train method C on another machine
+
+Status 2026-10-24: method A is evaluated (≈40 %, see findings), method B is
+training on the laptop RTX 4050 (`--agent.seed 1`), and method C is ready to
+train. Run C with the exact same settings as B so the comparison only measures
+the curriculum.
+
+1. **Get the branch and dependencies.**
+
+   ```bash
+   git fetch origin && git checkout feat/shaolin-duck-soccer && git pull
+   uv sync
+   ```
+
+2. **Download the frozen skills** (not tracked in git). Pin the Hub revision so
+   every machine runs byte-identical skills:
+
+   ```bash
+   uv run hf download pollen-robotics/microduck-policies \
+     alpha_walking.onnx ball_kick_right.onnx \
+     --revision 1b56c396825c052a4e26e95cf2b8d8298af9e9b4 --local-dir policies
+   md5sum policies/alpha_walking.onnx policies/ball_kick_right.onnx
+   # 2b68446b8d9a2d70a709cbd06d8b3a09  policies/alpha_walking.onnx
+   # 9695407b57e2a7f4f32edd3baaaf2958  policies/ball_kick_right.onnx
+   ```
+
+   If the checksums differ, stop: B and C would be using different skills.
+
+3. **Check the install** (CPU, ~10 s). If pytest fails with `No module named
+   'lark'` or similar, a sourced ROS workspace is on `PYTHONPATH`; prefix the
+   command with `env -u PYTHONPATH PYTEST_DISABLE_PLUGIN_AUTOLOAD=1`.
+
+   ```bash
+   uv run --with pytest pytest tests/test_soccer_*.py -q    # expect 27 passed
+   ```
+
+4. **Smoke test, then train** (~5 h at 2048 envs on a 6 GB laptop GPU, faster
+   on a 4090; keep 2048 envs anyway, see the table below):
+
+   ```bash
+   uv run train Mjlab-Soccer-Curriculum-Flat-MicroDuck --env.scene.num-envs 64 --agent.max_iterations 5
+   uv run train Mjlab-Soccer-Curriculum-Flat-MicroDuck --env.scene.num-envs 2048 \
+     --agent.max_iterations 2000 --agent.seed 1 --agent.run-name seed1
+   ```
+
+   While it runs, `Curriculum/reset_layout/stage` should step 0 → 1 → 2 by
+   iteration 600 at the latest, and every penalty `Episode_Reward/*` (fell,
+   out_of_bounds, kick_attempt, time) must stay ≤ 0.
+
+5. **Evaluate and report back** the printed rates and `summary.json`:
+
+   ```bash
+   uv run scripts/eval_soccer.py \
+     --checkpoint logs/rsl_rl/soccer_highlevel_curriculum/<run>/model_1999.pt \
+     --repeats 3 --out logs/eval_soccer/C_seed1
+   uv run scripts/view_soccer_policy.py \
+     --checkpoint logs/rsl_rl/soccer_highlevel_curriculum/<run>/model_1999.pt --num-envs 4
+   ```
+
+   Watch the video too: a high goal rate with a strange motion (shoving,
+   repeated kicks, falls right after scoring) is a reward exploit to report.
+   Then repeat with `--agent.seed 2` and `3`.
+
+| must match between B and C | value |
+| --- | --- |
+| frozen skills | the two checksums above |
+| envs | `--env.scene.num-envs 2048` |
+| budget | `--agent.max_iterations 2000` |
+| seeds | 1, 2, 3 |
+| evaluation | `scripts/eval_soccer.py --repeats 3` on the same 100 held-out layouts |
+
 ## Running the soccer stack
 
 ```bash
