@@ -87,6 +87,9 @@ class SoccerSkillAdapter(RslRlVecEnvWrapper):
         e._soccer_kick_progress[start] = 0.0
         e._soccer_kick_triggered |= start
         e._soccer_kick_count += start.long()
+        # Each kick is a fresh shot attempt: only its own contact can validate a goal.
+        e._soccer_foot_contact[start] = False
+        e._soccer_separated[start] = False
 
     def skill_actions(self, lowlevel_obs: torch.Tensor) -> torch.Tensor:
         """Joint targets from the frozen skill each env is currently running."""
@@ -145,22 +148,34 @@ class SoccerSkillAdapter(RslRlVecEnvWrapper):
 # Method A: geometric state machine on the same adapter                        #
 # --------------------------------------------------------------------------- #
 
-# Kick only inside BallKick's measured placement tolerance (scripts/eval_kick_
-# tolerance.py: goal rate collapses beyond about ±2 cm laterally).
-BASELINE_POS_TOL = 0.02      # m
-BASELINE_YAW_TOL = 0.10      # rad
-BASELINE_SPEED_TOL = 0.05    # m/s, settle before kicking
+# BallKick's measured placement tolerance is about ±2 cm (scripts/eval_kick_
+# tolerance.py), but the walking skill ignores commands below ~0.15 m/s, so the
+# proportional approach stalls a few cm short. The baseline therefore kicks once
+# it has held position inside BASELINE_POS_TOL for BASELINE_SETTLE_S: stalling
+# inside the tolerance is accepted, stalling outside it times out.
+BASELINE_POS_TOL = 0.05      # m; swept by scripts/eval_soccer.py --kick-tol
+BASELINE_YAW_TOL = 0.15      # rad
+BASELINE_SPEED_TOL = 0.05    # m/s
+BASELINE_SETTLE_S = 0.5      # s inside all three tolerances before kicking
 BASELINE_GAIN_XY = 2.0       # (m/s) per m of prep-pose error
 BASELINE_GAIN_YAW = 2.0      # (rad/s) per rad of heading error
 
 
-def geometric_baseline_actions(env: ManagerBasedRlEnv) -> torch.Tensor:
+def geometric_baseline_actions(
+    env: ManagerBasedRlEnv,
+    pos_tol: float = BASELINE_POS_TOL,
+    yaw_tol: float = BASELINE_YAW_TOL,
+    settle_s: float = BASELINE_SETTLE_S,
+) -> torch.Tensor:
     """Approach -> align -> slow down -> kick, from the shared geometry helpers.
 
     Proportional walking commands toward ``soccer_preparation_pose`` in the
     robot yaw frame, saturated at the walking policy's command range; the kick
-    fires once position, heading and speed are all inside tolerance.
+    fires after position, heading and speed have stayed inside tolerance for
+    ``settle_s``. Call once per high-level step (the settle timer counts 10 Hz
+    steps; it lives on the env and resets with the episode).
     """
+    microduck_mdp.soccer_state(env)
     geo = microduck_mdp.soccer_geometry(env)
     c, s = torch.cos(geo["robot_yaw"]), torch.sin(geo["robot_yaw"])
     dx = c * geo["prep_delta"][:, 0] + s * geo["prep_delta"][:, 1]
@@ -170,10 +185,13 @@ def geometric_baseline_actions(env: ManagerBasedRlEnv) -> torch.Tensor:
     )
     cmd = torch.clamp(cmd, torch.tensor(COMMAND_LOW, device=env.device), torch.tensor(COMMAND_HIGH, device=env.device))
     speed = torch.linalg.vector_norm(env.scene["robot"].data.root_link_lin_vel_b[:, :2], dim=-1)
-    ready = (
-        (geo["prep_dist"] < BASELINE_POS_TOL)
-        & (geo["yaw_err"].abs() < BASELINE_YAW_TOL)
+    inside = (
+        (geo["prep_dist"] < pos_tol)
+        & (geo["yaw_err"].abs() < yaw_tol)
         & (speed < BASELINE_SPEED_TOL)
     )
-    trigger = torch.where(ready, 1.0, -1.0).unsqueeze(-1)
+    walking = env._soccer_skill_mode == microduck_mdp.SOCCER_SKILL_WALK
+    settled = env._soccer_baseline_settled_s
+    settled[:] = torch.where(inside & walking, settled + env.step_dt * SUBSTEPS, torch.zeros_like(settled))
+    trigger = torch.where(settled >= settle_s, 1.0, -1.0).unsqueeze(-1)
     return torch.cat((cmd, trigger), dim=-1)

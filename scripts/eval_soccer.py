@@ -61,6 +61,7 @@ def main():
     who = p.add_mutually_exclusive_group(required=True)
     who.add_argument("--baseline", action="store_true", help="geometric state machine (method A)")
     who.add_argument("--checkpoint", help="high-level PPO checkpoint (.pt)")
+    p.add_argument("--kick-tol", type=float, default=None, help="baseline: prep-pose distance (m) to kick from")
     p.add_argument("--out", required=True)
     p.add_argument("--episodes", type=int, default=100)
     p.add_argument("--repeats", type=int, default=1)
@@ -79,9 +80,11 @@ def main():
     e = env.unwrapped
 
     if args.baseline:
+        baseline_kwargs = {} if args.kick_tol is None else {"pos_tol": args.kick_tol}
+
         def act(obs):
-            return geometric_baseline_actions(e)
-        label = "geometric baseline"
+            return geometric_baseline_actions(e, **baseline_kwargs)
+        label = "geometric baseline" + (f" (kick tol {args.kick_tol * 100:.0f} cm)" if args.kick_tol else "")
     else:
         from mjlab_microduck.tasks import SoccerOnPolicyRunner
         agent_cfg = load_rl_cfg(TASK_ID)

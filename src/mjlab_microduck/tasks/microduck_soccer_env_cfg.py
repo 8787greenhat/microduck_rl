@@ -102,7 +102,16 @@ def make_microduck_soccer_env_cfg(play: bool = False) -> ManagerBasedRlEnvCfg:
         reduce="netforce",
         num_slots=1,
     )
-    cfg.scene.sensors = (*cfg.scene.sensors, kick_contact_cfg)
+    # Any robot part on the ball: a touch while walking voids the previous kick.
+    body_contact_cfg = ContactSensorCfg(
+        name="robot_ball_contact",
+        primary=ContactMatch(mode="subtree", pattern="trunk_base", entity="robot"),
+        secondary=ContactMatch(mode="body", pattern="ball", entity="ball"),
+        fields=("found",),
+        reduce="netforce",
+        num_slots=1,
+    )
+    cfg.scene.sensors = (*cfg.scene.sensors, kick_contact_cfg, body_contact_cfg)
 
     # Replace BallKick's toe-relative ball placement with one event that owns
     # the robot/ball/goal geometry, preventing independently sampled states.
@@ -153,6 +162,7 @@ def make_microduck_soccer_env_cfg(play: bool = False) -> ManagerBasedRlEnvCfg:
         time_out=False,
         params={
             "sensor_name": kick_contact_cfg.name,
+            "body_sensor_name": body_contact_cfg.name,
             "goal_width": GOAL_WIDTH,
             "crossbar_height": CROSSBAR_HEIGHT,
             "ball_radius": BALL_RADIUS,

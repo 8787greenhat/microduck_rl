@@ -58,6 +58,13 @@ def test_soccer_goal_crossing_accepts_forward_crossing_inside_opening():
     assert result.item() is True
 
 
+def test_soccer_goal_crossing_accepts_ball_rolling_on_the_ground():
+    # MuJoCo's soft contact lets the 35 mm ball rest 0.4 mm into the floor
+    # (centre at z = 0.03463 in the soccer env); a rolling shot must count.
+    result = _goal_crossing(previous=(-0.10, 0.0, 0.03463), current=(0.10, 0.0, 0.03463))
+    assert result.item() is True
+
+
 def test_soccer_goal_crossing_rejects_reverse_crossing():
     result = _goal_crossing(previous=(0.10, 0.0, 0.08), current=(-0.10, 0.0, 0.08))
     assert result.item() is False

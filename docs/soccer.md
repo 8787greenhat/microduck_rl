@@ -192,11 +192,27 @@ Status as of 2026-10-23:
 - **The walking skill cannot creep.** `alpha_walking.onnx` tracks a 0.1 m/s
   forward command at 0.00 m/s, 0.2 → ~0.05, 0.3 → ~0.15 m/s, identically in
   its own velocity env and in the soccer env (so the soccer env is not the cause).
-- Together: the baseline walks to 2–4 cm of the preparation pose within ~3 s,
-  then its proportional command falls into the walking dead zone and it never
-  meets the 2 cm kick tolerance (8 held-out layouts: 6 timeouts, 2 missed kicks,
-  0 goals). Next: a stall-kick rule plus a kick-tolerance sweep for method A,
-  and §2.1's fallback of retraining the low-level skills.
+- Together: the baseline walks to ~2.5 cm of the preparation pose within ~3 s,
+  then its proportional command falls into the walking dead zone. It now kicks
+  after settling 0.5 s inside a tolerance. Kick-tolerance sweep on the 100
+  held-out layouts × 3 runs (300 episodes per point):
+
+  | kick tolerance | goal | kick triggered | foot touched ball | timeout |
+  | --- | --- | --- | --- | --- |
+  | 2 cm | 11.3 % | 13.0 % | 12.3 % | 86.7 % |
+  | 3 cm | 30.0 % | 46.7 % | 36.7 % | 60.3 % |
+  | 4 cm | 38.7 % | 75.7 % | 55.3 % | 39.0 % |
+  | 5 cm (default) | 40.3 % | 94.3 % | 64.0 % | 24.7 % |
+  | 6 cm | 41.3 % | 98.3 % | 67.7 % | 23.3 % |
+  | 10 cm | 37.0 % | 97.0 % | 64.0 % | 26.3 % |
+
+  Method A plateaus near 40 %, below the 70 % target, bounded by the skills
+  (median placement error at the kick 3.0 cm; the foot touches the ball in
+  ~2/3 of kicks). Next: §2.1's fallback of retraining the kick with ball/goal
+  observations and a direction-aware reward.
+- `soccer_goal_crossing` rejected every ball rolling on the floor: MuJoCo's soft
+  contact rests the ball centre 0.4 mm below its radius, under the old
+  `z >= ball_radius` check. Fixed with a 5 mm ground tolerance and a test.
 
 ## Running the soccer stack
 

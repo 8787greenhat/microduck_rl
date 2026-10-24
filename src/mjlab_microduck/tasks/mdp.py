@@ -6496,6 +6496,7 @@ def soccer_goal_crossing(
     crossbar_height: float,
     ball_radius: float = 0.0,
     eps: float = 1.0e-6,
+    ground_penetration_tol: float = 0.005,
 ) -> torch.Tensor:
     """Whether the ball crossed the goal plane from the field into the opening.
 
@@ -6503,6 +6504,8 @@ def soccer_goal_crossing(
     goal. The opening test is evaluated at the interpolated plane intersection,
     which prevents a fast ball from skipping the detector between simulation
     steps. ``goal_base_pos_w`` is the centre of the goal mouth at ground level.
+    ``ground_penetration_tol`` admits a ball rolling on the floor: MuJoCo's soft
+    contact rests its centre slightly below ``ball_radius`` (0.4 mm here).
     """
     normal = goal_forward_xy / torch.linalg.vector_norm(
         goal_forward_xy, dim=-1, keepdim=True
@@ -6530,7 +6533,7 @@ def soccer_goal_crossing(
     inside_posts = lateral_distance <= lateral_clearance
 
     base_z = goal_base_pos_w[..., 2]
-    inside_height = (intersection[..., 2] >= base_z + ball_radius) & (
+    inside_height = (intersection[..., 2] >= base_z + ball_radius - ground_penetration_tol) & (
         intersection[..., 2] <= base_z + crossbar_height - ball_radius
     )
     return crossed_forward & inside_posts & inside_height
@@ -6561,6 +6564,7 @@ _SOCCER_STATE_FIELDS = {
     "_soccer_any_crossing": (torch.bool, ()),
     "_soccer_prev_prep_dist": (torch.float, ()),
     "_soccer_prev_yaw_err": (torch.float, ()),
+    "_soccer_baseline_settled_s": (torch.float, ()),
 }
 
 
@@ -6632,9 +6636,15 @@ def _to_yaw_frame(vec_xy: torch.Tensor, yaw: torch.Tensor) -> torch.Tensor:
 
 # ---- Termination (also the per-step latch update) ---------------------------
 
+def _sensor_found(env: ManagerBasedRlEnv, sensor_name: str) -> torch.Tensor:
+    found = env.scene.sensors[sensor_name].data.found
+    return (found.sum(dim=-1) if found.dim() > 1 else found) > 0
+
+
 def soccer_valid_goal(
     env: ManagerBasedRlEnv,
     sensor_name: str,
+    body_sensor_name: str,
     goal_width: float,
     crossbar_height: float,
     ball_radius: float,
@@ -6642,22 +6652,27 @@ def soccer_valid_goal(
 ) -> torch.Tensor:
     """Success termination: a kicked ball crossed the goal plane through the mouth.
 
-    A crossing only counts after, in order: the kick skill was triggered, the
-    kicking foot touched the ball while the kick skill owned the joints, and
-    the ball left the foot (no contact, moving). This is what separates a shot
-    from walking the ball in. Also advances the latches every 50 Hz step, so it
-    must stay registered even in evaluation-only configurations.
+    A crossing only counts if the robot's LAST touch of the ball was a kick:
+    the kicking foot (``sensor_name``) touched it while the kick skill owned
+    the joints, then the ball left the robot entirely (``body_sensor_name``)
+    while moving. Any touch while walking voids the shot, and each new kick
+    starts a fresh attempt (the adapter clears the latches), so "kick once,
+    then walk the ball in" never scores. Also advances the latches every 50 Hz
+    step, so it must stay registered even in evaluation-only configurations.
     """
     soccer_state(env)
     ball: Entity = env.scene["ball"]
     ball_pos = ball.data.root_link_pos_w
 
-    found = env.scene.sensors[sensor_name].data.found
-    contact = (found.sum(dim=-1) if found.dim() > 1 else found) > 0
+    foot = _sensor_found(env, sensor_name)
+    body = _sensor_found(env, body_sensor_name) | foot
     kicking = env._soccer_skill_mode == SOCCER_SKILL_KICK
-    env._soccer_foot_contact |= contact & kicking & env._soccer_kick_triggered
+    touched_while_walking = body & ~kicking
+    env._soccer_foot_contact &= ~touched_while_walking
+    env._soccer_separated &= ~touched_while_walking
+    env._soccer_foot_contact |= foot & kicking & env._soccer_kick_triggered
     moving = torch.linalg.vector_norm(ball.data.root_link_lin_vel_w[:, :2], dim=-1) > min_separation_speed
-    env._soccer_separated |= env._soccer_foot_contact & ~contact & moving
+    env._soccer_separated |= env._soccer_foot_contact & ~body & moving
 
     crossing = soccer_goal_crossing(
         env._soccer_previous_ball_pos_w, ball_pos,
