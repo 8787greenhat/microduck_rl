@@ -169,12 +169,48 @@ Status as of 2026-10-23:
 - [x] Eight CPU unit tests covering nominal and failure cases pass.
 - [x] Goal entity and soccer field added to an mjlab scene.
 - [x] Randomized episode reset and held-out evaluation-set generator implemented.
-- [ ] Contact/separation latches and valid-shot termination implemented.
-- [ ] Geometric state-machine baseline implemented.
-- [ ] Frozen walking/kick action adapter implemented.
-- [ ] `Mjlab-Soccer-Flat-MicroDuck` registered and smoke-tested.
+- [x] Contact/separation latches and valid-shot termination implemented
+      (`soccer_valid_goal`: kick triggered → right foot touches ball while the
+      kick skill runs → ball leaves the foot → crossing).
+- [x] Geometric state-machine baseline implemented (`geometric_baseline_actions`).
+      It does not score yet; see findings below.
+- [x] Frozen walking/kick action adapter implemented (`soccer_adapter.SoccerSkillAdapter`,
+      ONNX skills batched on the GPU through `onnx_mlp.OnnxMlp`).
+- [x] `Mjlab-Soccer-Flat-MicroDuck` registered and smoke-tested (16 envs, 2 iterations, CPU).
+- [x] Held-out evaluation (`scripts/eval_soccer.py`) and viewer (`scripts/view_soccer_policy.py`).
+- [ ] Baseline evaluated on the 100 held-out episodes (needs the GPU).
 - [ ] PPO and curriculum experiments completed.
 - [ ] Evaluation plots, videos, and report completed.
+
+## Findings so far (2026-10-24)
+
+- **The blind kick only scores from a ~±2 cm placement.** `scripts/eval_kick_tolerance.py`
+  (2016 envs, ball offset grid, 1 m goal): `ball_kick_right.onnx` scores 53 %
+  with the ball exactly at its trained spot, ~0 % beyond ±3 cm laterally or
+  +4.5 cm forward, and kicks 8° right on average. BallKick's reward pays only
+  the forward ball-speed component capped at 1 m/s, so direction is free.
+- **The walking skill cannot creep.** `alpha_walking.onnx` tracks a 0.1 m/s
+  forward command at 0.00 m/s, 0.2 → ~0.05, 0.3 → ~0.15 m/s, identically in
+  its own velocity env and in the soccer env (so the soccer env is not the cause).
+- Together: the baseline walks to 2–4 cm of the preparation pose within ~3 s,
+  then its proportional command falls into the walking dead zone and it never
+  meets the 2 cm kick tolerance (8 held-out layouts: 6 timeouts, 2 missed kicks,
+  0 goals). Next: a stall-kick rule plus a kick-tolerance sweep for method A,
+  and §2.1's fallback of retraining the low-level skills.
+
+## Running the soccer stack
+
+```bash
+uv run scripts/view_soccer_policy.py --baseline --num-envs 2     # watch method A
+uv run scripts/eval_soccer.py --baseline --out logs/eval_soccer/baseline
+uv run train Mjlab-Soccer-Flat-MicroDuck --env.scene.num-envs 64 --agent.max_iterations 5
+```
+
+The frozen skills default to `policies/alpha_walking.onnx` and
+`policies/ball_kick_right.onnx` (official `pollen-robotics/microduck-policies`
+files, not tracked in git); override with `MICRODUCK_SOCCER_WALK_ONNX` /
+`MICRODUCK_SOCCER_KICK_ONNX`. `uv run play` cannot drive this task: its viewer
+steps the 14D joint action, not the 4D high-level one.
 
 ## Verification
 
