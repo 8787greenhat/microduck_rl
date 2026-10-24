@@ -222,6 +222,33 @@ uv run scripts/eval_soccer.py --baseline --out logs/eval_soccer/baseline
 uv run train Mjlab-Soccer-Flat-MicroDuck --env.scene.num-envs 64 --agent.max_iterations 5
 ```
 
+### Methods B and C (high-level PPO)
+
+| method | task id | logs |
+| --- | --- | --- |
+| B: PPO, full reset distribution | `Mjlab-Soccer-Flat-MicroDuck` | `logs/rsl_rl/soccer_highlevel/` |
+| C: PPO + reset curriculum | `Mjlab-Soccer-Curriculum-Flat-MicroDuck` | `logs/rsl_rl/soccer_highlevel_curriculum/` |
+
+Keep these identical across B and C and across machines, or the comparison is
+confounded: `--env.scene.num-envs 2048 --agent.max_iterations 2000`, seeds
+`--agent.seed 1`, `2`, `3`. 2048 envs fit a 6 GB laptop GPU (~4 GB, ~9 s per
+iteration, ~5 h per run); a bigger GPU only makes it faster.
+
+```bash
+uv run train Mjlab-Soccer-Curriculum-Flat-MicroDuck --env.scene.num-envs 2048 \
+  --agent.max_iterations 2000 --agent.seed 1 --agent.run-name seed1
+uv run scripts/eval_soccer.py --checkpoint logs/rsl_rl/soccer_highlevel_curriculum/<run>/model_1999.pt \
+  --repeats 3 --out logs/eval_soccer/C_seed1
+```
+
+Method C's stages (`CURRICULUM_STAGES` in `microduck_soccer_env_cfg.py`): near-ready
+(0–5 cm, ±10°), nearby (5–25 cm, ±45°), then exactly method B's ranges. A stage
+is left at a 50 % goal rate or after 300 iterations, whichever comes first, so C
+trains on the full distribution from iteration 600 at the latest; 20 % of resets
+keep drawing from earlier stages. The 70 % gate proposed above was lowered
+because method A, with the same frozen skills, tops out near 40 %. Watch
+`Curriculum/reset_layout/stage` and `.../goal_rate` in tensorboard.
+
 The frozen skills default to `policies/alpha_walking.onnx` and
 `policies/ball_kick_right.onnx` (official `pollen-robotics/microduck-policies`
 files, not tracked in git); override with `MICRODUCK_SOCCER_WALK_ONNX` /

@@ -25,9 +25,11 @@ bounded, so standing near the ball cannot be farmed.
 
 import math
 from copy import deepcopy
+from dataclasses import replace
 
 from mjlab.envs import ManagerBasedRlEnvCfg
 from mjlab.managers import (
+    CurriculumTermCfg,
     EventTermCfg,
     ObservationGroupCfg,
     ObservationTermCfg,
@@ -77,6 +79,42 @@ W_FELL = -3.0             # one-time
 W_OUT_OF_BOUNDS = -2.0    # one-time; > max time cost saved by ending early
 
 FELL_LIMIT_ANGLE = 1.2217304763960306  # BallKick's fell_over limit (70°)
+
+# ── Method C: reset-distribution curriculum (rewards identical to method B) ──
+# Easiest first; the last stage IS method B's distribution, so both methods are
+# evaluated on, and finish training on, the same layouts.
+CURRICULUM_STAGES = [
+    {   # near-ready: just settle, align and kick
+        "goal_distance_range": (0.45, 0.70),
+        "ball_lateral_range": (-0.10, 0.10),
+        "approach_distance_range": (0.00, 0.05),
+        "approach_lateral_range": (-0.02, 0.02),
+        "heading_error_range": (-math.radians(10), math.radians(10)),
+    },
+    {   # nearby starts with heading offsets
+        "goal_distance_range": (0.45, 0.90),
+        "ball_lateral_range": (-0.20, 0.20),
+        "approach_distance_range": (0.05, 0.25),
+        "approach_lateral_range": (-0.06, 0.06),
+        "heading_error_range": (-math.radians(45), math.radians(45)),
+    },
+    {   # full task = method B
+        "goal_distance_range": GOAL_DISTANCE_RANGE,
+        "ball_lateral_range": BALL_LATERAL_RANGE,
+        "approach_distance_range": APPROACH_DISTANCE_RANGE,
+        "approach_lateral_range": APPROACH_LATERAL_RANGE,
+        "heading_error_range": HEADING_ERROR_RANGE,
+    },
+]
+# Promote at this goal rate or after the iteration cap, whichever comes first.
+# docs/soccer.md proposed 70 %, but method A tops out near 40 % with the same
+# frozen skills, so a 70 % gate would likely never open. With the cap, method C
+# reaches the full distribution by iteration 600 of 2000.
+CURRICULUM_PROMOTE_GOAL_RATE = 0.5
+CURRICULUM_MAX_ITERATIONS_PER_STAGE = 300
+CURRICULUM_EASY_FRACTION = 0.2
+_SUBSTEPS_PER_ACTION = 5   # mjlab_microduck.soccer_adapter.SUBSTEPS
+_STEPS_PER_ENV = 24        # MicroduckSoccerRlCfg.num_steps_per_env
 
 
 def make_microduck_soccer_env_cfg(play: bool = False) -> ManagerBasedRlEnvCfg:
@@ -177,6 +215,24 @@ def make_microduck_soccer_env_cfg(play: bool = False) -> ManagerBasedRlEnvCfg:
     return cfg
 
 
+def make_microduck_soccer_curriculum_env_cfg(play: bool = False) -> ManagerBasedRlEnvCfg:
+    """Method C: method B's env plus the staged reset-distribution curriculum."""
+    cfg = make_microduck_soccer_env_cfg(play=play)
+    cfg.curriculum["reset_layout"] = CurriculumTermCfg(
+        func=microduck_mdp.soccer_reset_curriculum,
+        params={
+            "stages": CURRICULUM_STAGES,
+            "field_length": FIELD_LENGTH,
+            "field_width": FIELD_WIDTH,
+            "promote_goal_rate": CURRICULUM_PROMOTE_GOAL_RATE,
+            "max_iterations_per_stage": CURRICULUM_MAX_ITERATIONS_PER_STAGE,
+            "steps_per_iteration": _STEPS_PER_ENV * _SUBSTEPS_PER_ACTION,
+            "easy_fraction": CURRICULUM_EASY_FRACTION,
+        },
+    )
+    return cfg
+
+
 def _configure_observations(cfg: ManagerBasedRlEnvCfg) -> None:
     lowlevel = cfg.observations.pop("actor")
     cfg.observations.pop("critic")
@@ -272,4 +328,11 @@ MicroduckSoccerRlCfg = RslRlOnPolicyRunnerCfg(
     save_interval=100,
     num_steps_per_env=24,
     max_iterations=2000,
+)
+
+# Same network, PPO settings and budget as method B; only the logs differ.
+MicroduckSoccerCurriculumRlCfg = replace(
+    MicroduckSoccerRlCfg,
+    experiment_name="soccer_highlevel_curriculum",
+    run_name="soccer_highlevel_curriculum",
 )

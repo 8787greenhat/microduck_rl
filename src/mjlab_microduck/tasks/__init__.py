@@ -77,7 +77,9 @@ from .microduck_roulade_env_cfg import (
 )
 from .microduck_soccer_env_cfg import (
     make_microduck_soccer_env_cfg,
+    make_microduck_soccer_curriculum_env_cfg,
     MicroduckSoccerRlCfg,
+    MicroduckSoccerCurriculumRlCfg,
 )
 from .backlash import make_backlash_variant
 
@@ -256,6 +258,15 @@ register_mjlab_task(
     env_cfg=make_microduck_soccer_env_cfg(),
     play_env_cfg=make_microduck_soccer_env_cfg(play=True),
     rl_cfg=MicroduckSoccerRlCfg,
+    runner_cls=SoccerOnPolicyRunner,
+)
+
+# Method C: identical to the above plus the staged reset curriculum.
+register_mjlab_task(
+    task_id="Mjlab-Soccer-Curriculum-Flat-MicroDuck",
+    env_cfg=make_microduck_soccer_curriculum_env_cfg(),
+    play_env_cfg=make_microduck_soccer_curriculum_env_cfg(play=True),
+    rl_cfg=MicroduckSoccerCurriculumRlCfg,
     runner_cls=SoccerOnPolicyRunner,
 )
 

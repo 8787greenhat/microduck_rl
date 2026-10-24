@@ -6765,6 +6765,88 @@ def soccer_fell(env: ManagerBasedRlEnv, limit_angle: float) -> torch.Tensor:
     return (tilt > limit_angle).float() / env.step_dt
 
 
+# ---- Reset-distribution curriculum (method C) --------------------------------
+
+_LAYOUT_KEYS = {"robot_xy_yaw": 3, "ball_xy": 2, "goal_xy_yaw": 3}
+
+
+def soccer_reset_curriculum(
+    env: ManagerBasedRlEnv,
+    env_ids: torch.Tensor | slice,
+    stages: list[dict],
+    field_length: float,
+    field_width: float,
+    promote_goal_rate: float = 0.5,
+    min_episodes: int = 2000,
+    max_iterations_per_stage: int = 300,
+    steps_per_iteration: int = 120,
+    easy_fraction: float = 0.2,
+) -> dict[str, float]:
+    """Widen the soccer reset ranges stage by stage (docs/soccer.md, method C).
+
+    ``stages`` are ``sample_soccer_reset_layout`` range kwargs, easiest first;
+    the last stage must equal the method-B ranges so both methods end on the
+    same distribution. A stage is left when, over at least ``min_episodes``
+    episodes that started in it, the valid-goal rate reaches
+    ``promote_goal_rate``, OR after ``max_iterations_per_stage`` PPO
+    iterations. The cap matters: the frozen skills bound the goal rate near
+    40 % (method A), so a pure success gate could keep method C on the easy
+    layouts forever. After promotion ``easy_fraction`` of resets still draw
+    from an earlier stage.
+
+    Runs at reset BEFORE the events (mjlab order), so it scores the episodes
+    that just ended and writes the next layouts into the per-env override that
+    ``reset_soccer_scene`` consumes. ``steps_per_iteration`` counts 50 Hz env
+    steps: 24 high-level steps x 5 skill substeps.
+    """
+    soccer_state(env)
+    n = env.num_envs
+    if not hasattr(env, "_soccer_curriculum_stage"):
+        env._soccer_curriculum_stage = 0
+        env._soccer_curriculum_stage_start = env.common_step_counter
+        env._soccer_curriculum_goals = 0
+        env._soccer_curriculum_episodes = 0
+        env._soccer_episode_stage = torch.full((n,), -1, dtype=torch.long, device=env.device)
+    if getattr(env, "_soccer_layout_override", None) is None:
+        env._soccer_layout_override = {
+            key: torch.zeros(n, dim, device=env.device) for key, dim in _LAYOUT_KEYS.items()
+        }
+    if isinstance(env_ids, slice):
+        env_ids = torch.arange(n, device=env.device)
+    env_ids = env_ids.to(env.device, dtype=torch.long)
+
+    stage = env._soccer_curriculum_stage
+    started_here = env._soccer_episode_stage[env_ids] == stage
+    env._soccer_curriculum_goals += int((env._soccer_valid_goal[env_ids] & started_here).sum())
+    env._soccer_curriculum_episodes += int(started_here.sum())
+    episodes = env._soccer_curriculum_episodes
+    goal_rate = env._soccer_curriculum_goals / episodes if episodes else 0.0
+    iterations = (env.common_step_counter - env._soccer_curriculum_stage_start) / steps_per_iteration
+    if stage < len(stages) - 1 and (
+        (episodes >= min_episodes and goal_rate >= promote_goal_rate)
+        or iterations >= max_iterations_per_stage
+    ):
+        stage += 1
+        env._soccer_curriculum_stage = stage
+        env._soccer_curriculum_stage_start = env.common_step_counter
+        env._soccer_curriculum_goals = 0
+        env._soccer_curriculum_episodes = 0
+
+    chosen = torch.full((len(env_ids),), stage, dtype=torch.long, device=env.device)
+    if stage > 0:
+        easy = torch.rand(len(env_ids), device=env.device) < easy_fraction
+        chosen[easy] = torch.randint(0, stage, (int(easy.sum()),), device=env.device)
+    for s in chosen.unique().tolist():
+        rows = env_ids[chosen == s]
+        layout = sample_soccer_reset_layout(
+            len(rows), env.device, field_length=field_length, field_width=field_width, **stages[s],
+        )
+        for key in _LAYOUT_KEYS:
+            env._soccer_layout_override[key][rows] = layout[key]
+    env._soccer_episode_stage[env_ids] = chosen
+    return {"stage": float(stage), "goal_rate": float(goal_rate)}
+
+
 # ---- High-level observations -------------------------------------------------
 
 def soccer_ball_obs(env: ManagerBasedRlEnv) -> torch.Tensor:
