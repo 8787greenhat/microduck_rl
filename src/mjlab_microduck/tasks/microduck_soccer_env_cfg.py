@@ -5,28 +5,24 @@ path is still BallKick's 50 Hz joint-position interface; stage 4 will replace
 it with the 10 Hz frozen-skill adapter before ``Mjlab-Soccer-*`` is exposed.
 """
 
-import math
-
 from mjlab.envs import ManagerBasedRlEnvCfg
 from mjlab.managers import EventTermCfg, TerminationTermCfg
 
 from mjlab_microduck.robot.microduck_constants import MICRODUCK_SOCCER_GOAL_CFG
+from mjlab_microduck.soccer_constants import (
+    APPROACH_DISTANCE_RANGE,
+    APPROACH_LATERAL_RANGE,
+    BALL_LATERAL_RANGE,
+    BALL_RADIUS,
+    FIELD_LENGTH,
+    FIELD_WIDTH,
+    GOAL_DISTANCE_RANGE,
+    HEADING_ERROR_RANGE,
+)
 from mjlab_microduck.tasks import mdp as microduck_mdp
 from mjlab_microduck.tasks.microduck_ball_kick_env_cfg import (
-    BALL_RADIUS,
     make_microduck_ball_kick_env_cfg,
 )
-
-FIELD_LENGTH = 2.0
-FIELD_WIDTH = 1.2
-GOAL_WIDTH = 0.40
-CROSSBAR_HEIGHT = 0.20
-
-GOAL_DISTANCE_RANGE = (0.45, 1.10)
-BALL_LATERAL_RANGE = (-0.30, 0.30)
-APPROACH_DISTANCE_RANGE = (0.10, 0.45)
-APPROACH_LATERAL_RANGE = (-0.12, 0.12)
-HEADING_ERROR_RANGE = (-math.pi / 2, math.pi / 2)
 
 
 def make_microduck_soccer_env_cfg(play: bool = False) -> ManagerBasedRlEnvCfg:
