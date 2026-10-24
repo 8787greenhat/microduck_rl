@@ -75,7 +75,22 @@ from .microduck_roulade_env_cfg import (
     make_microduck_roulade_env_cfg,
     MicroduckRouladeRlCfg,
 )
+from .microduck_soccer_env_cfg import (
+    make_microduck_soccer_env_cfg,
+    MicroduckSoccerRlCfg,
+)
 from .backlash import make_backlash_variant
+
+
+class SoccerOnPolicyRunner(MicroduckOnPolicyRunner):
+    """High-level PPO: re-wraps the env so each action is 5 frozen-skill steps."""
+
+    def __init__(self, env, train_cfg: dict, log_dir=None, device="cpu", **kwargs):
+        from mjlab_microduck.soccer_adapter import SoccerSkillAdapter
+
+        if not isinstance(env, SoccerSkillAdapter):
+            env = SoccerSkillAdapter(env.unwrapped)
+        super().__init__(env, train_cfg, log_dir, device, **kwargs)
 
 # Standard velocity task
 register_mjlab_task(
@@ -231,6 +246,17 @@ register_mjlab_task(
     play_env_cfg=make_microduck_roulade_env_cfg(play=True),
     rl_cfg=MicroduckRouladeRlCfg,
     runner_cls=MicroduckOnPolicyRunner,
+)
+
+# Shaolin Duck Soccer — 10 Hz high-level PPO over the frozen walking and
+# right-kick skills (docs/soccer.md). `uv run play` cannot drive it (its viewer
+# steps the 14D joint action); use scripts/eval_soccer.py instead.
+register_mjlab_task(
+    task_id="Mjlab-Soccer-Flat-MicroDuck",
+    env_cfg=make_microduck_soccer_env_cfg(),
+    play_env_cfg=make_microduck_soccer_env_cfg(play=True),
+    rl_cfg=MicroduckSoccerRlCfg,
+    runner_cls=SoccerOnPolicyRunner,
 )
 
 # Backlash variants — ±1° serial gear play per servo + encoder-through-backlash

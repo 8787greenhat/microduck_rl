@@ -6405,6 +6405,11 @@ def reset_soccer_scene(
         approach_lateral_range=approach_lateral_range,
         heading_error_range=heading_error_range,
     )
+    # Held-out evaluation: per-env layouts from the saved eval set replace the
+    # random sample (set env._soccer_layout_override to {key: [num_envs, ...]}).
+    override = getattr(env, "_soccer_layout_override", None)
+    if override is not None:
+        layout = {name: value[env_ids.long()] for name, value in override.items()}
     origins = env.scene.env_origins[env_ids]
 
     robot: Entity = env.scene[robot_name]
@@ -6529,6 +6534,258 @@ def soccer_goal_crossing(
         intersection[..., 2] <= base_z + crossbar_height - ball_radius
     )
     return crossed_forward & inside_posts & inside_height
+
+
+# =============================================================================
+# Soccer task — skill/shot state shared by the 10 Hz adapter and the 50 Hz env
+# =============================================================================
+# The frozen-skill adapter (mjlab_microduck.soccer_adapter) owns which skill
+# drives the joints; the env owns physics, latches, rewards and terminations.
+# They meet through these per-env tensors on the env object, so the geometric
+# baseline and high-level PPO read exactly the same state.
+
+SOCCER_SKILL_WALK = 0
+SOCCER_SKILL_KICK = 1
+
+_SOCCER_STATE_FIELDS = {
+    # name: (dtype, trailing shape)
+    "_soccer_skill_mode": (torch.long, ()),
+    "_soccer_kick_steps_left": (torch.long, ()),
+    "_soccer_kick_progress": (torch.float, ()),
+    "_soccer_command": (torch.float, (3,)),
+    "_soccer_kick_triggered": (torch.bool, ()),
+    "_soccer_kick_count": (torch.long, ()),
+    "_soccer_foot_contact": (torch.bool, ()),
+    "_soccer_separated": (torch.bool, ()),
+    "_soccer_valid_goal": (torch.bool, ()),
+    "_soccer_any_crossing": (torch.bool, ()),
+    "_soccer_prev_prep_dist": (torch.float, ()),
+    "_soccer_prev_yaw_err": (torch.float, ()),
+}
+
+
+def soccer_state(env: ManagerBasedRlEnv) -> None:
+    """Allocate the soccer skill/shot tensors on first use (idempotent).
+
+    Also pre-allocates the goal geometry that ``reset_soccer_scene`` caches,
+    because the observation manager evaluates every term once at construction,
+    before the first reset has placed a goal.
+    """
+    for name, (dtype, shape) in _SOCCER_STATE_FIELDS.items():
+        if not hasattr(env, name):
+            setattr(env, name, torch.zeros((env.num_envs, *shape), dtype=dtype, device=env.device))
+    if not hasattr(env, "_soccer_goal_base_pos_w"):
+        env._soccer_goal_base_pos_w = torch.zeros(env.num_envs, 3, device=env.device)
+        env._soccer_goal_forward_xy = torch.zeros(env.num_envs, 2, device=env.device)
+        env._soccer_goal_forward_xy[:, 0] = 1.0
+        env._soccer_previous_ball_pos_w = torch.zeros(env.num_envs, 3, device=env.device)
+
+
+def reset_soccer_shot_state(env: ManagerBasedRlEnv, env_ids: torch.Tensor | None) -> None:
+    """Clear skill, latches and shaping memory for new episodes.
+
+    Must run after ``reset_soccer_scene``. Progress memories are set to NaN so
+    the first step of an episode pays zero progress instead of a jump from 0.
+    """
+    soccer_state(env)
+    if env_ids is None:
+        env_ids = torch.arange(env.num_envs, device=env.device)
+    env_ids = env_ids.to(env.device, dtype=torch.long)
+    for name, (dtype, _) in _SOCCER_STATE_FIELDS.items():
+        getattr(env, name)[env_ids] = float("nan") if dtype == torch.float and "prev" in name else 0
+
+
+def _yaw_from_quat(quat_wxyz: torch.Tensor) -> torch.Tensor:
+    w, x, y, z = quat_wxyz.unbind(-1)
+    return torch.atan2(2.0 * (w * z + x * y), 1.0 - 2.0 * (y * y + z * z))
+
+
+def soccer_geometry(
+    env: ManagerBasedRlEnv,
+    kick_offset_xy: tuple[float, float] = (0.09, -0.042),
+) -> dict[str, torch.Tensor]:
+    """Current robot/ball/goal geometry in world XY plus the preparation-pose error."""
+    robot: Entity = env.scene["robot"]
+    ball: Entity = env.scene["ball"]
+    robot_xy = robot.data.root_link_pos_w[:, :2]
+    robot_yaw = _yaw_from_quat(robot.data.root_link_quat_w)
+    ball_xy = ball.data.root_link_pos_w[:, :2]
+    goal_xy = env._soccer_goal_base_pos_w[:, :2]
+    prep = soccer_preparation_pose(ball_xy, goal_xy, kick_offset_xy)
+    prep_delta = prep[:, :2] - robot_xy
+    return {
+        "robot_xy": robot_xy,
+        "robot_yaw": robot_yaw,
+        "ball_xy": ball_xy,
+        "goal_xy": goal_xy,
+        "prep": prep,
+        "prep_delta": prep_delta,
+        "prep_dist": torch.linalg.vector_norm(prep_delta, dim=-1),
+        "yaw_err": wrap_to_pi(prep[:, 2] - robot_yaw),
+    }
+
+
+def _to_yaw_frame(vec_xy: torch.Tensor, yaw: torch.Tensor) -> torch.Tensor:
+    c, s = torch.cos(yaw), torch.sin(yaw)
+    return torch.stack((c * vec_xy[:, 0] + s * vec_xy[:, 1], -s * vec_xy[:, 0] + c * vec_xy[:, 1]), dim=-1)
+
+
+# ---- Termination (also the per-step latch update) ---------------------------
+
+def soccer_valid_goal(
+    env: ManagerBasedRlEnv,
+    sensor_name: str,
+    goal_width: float,
+    crossbar_height: float,
+    ball_radius: float,
+    min_separation_speed: float = 0.1,
+) -> torch.Tensor:
+    """Success termination: a kicked ball crossed the goal plane through the mouth.
+
+    A crossing only counts after, in order: the kick skill was triggered, the
+    kicking foot touched the ball while the kick skill owned the joints, and
+    the ball left the foot (no contact, moving). This is what separates a shot
+    from walking the ball in. Also advances the latches every 50 Hz step, so it
+    must stay registered even in evaluation-only configurations.
+    """
+    soccer_state(env)
+    ball: Entity = env.scene["ball"]
+    ball_pos = ball.data.root_link_pos_w
+
+    found = env.scene.sensors[sensor_name].data.found
+    contact = (found.sum(dim=-1) if found.dim() > 1 else found) > 0
+    kicking = env._soccer_skill_mode == SOCCER_SKILL_KICK
+    env._soccer_foot_contact |= contact & kicking & env._soccer_kick_triggered
+    moving = torch.linalg.vector_norm(ball.data.root_link_lin_vel_w[:, :2], dim=-1) > min_separation_speed
+    env._soccer_separated |= env._soccer_foot_contact & ~contact & moving
+
+    crossing = soccer_goal_crossing(
+        env._soccer_previous_ball_pos_w, ball_pos,
+        env._soccer_goal_base_pos_w, env._soccer_goal_forward_xy,
+        goal_width, crossbar_height, ball_radius,
+    )
+    valid = crossing & env._soccer_kick_triggered & env._soccer_foot_contact & env._soccer_separated
+    env._soccer_any_crossing = crossing
+    env._soccer_valid_goal = valid
+    env._soccer_previous_ball_pos_w = ball_pos.clone()
+    return valid
+
+
+# ---- Rewards (mjlab multiplies every term by weight * step_dt) ---------------
+
+def soccer_goal_bonus(env: ManagerBasedRlEnv) -> torch.Tensor:
+    """1/dt on the valid-goal step, so ``weight`` is the one-time bonus."""
+    soccer_state(env)
+    return env._soccer_valid_goal.float() / env.step_dt
+
+
+def soccer_prep_progress(env: ManagerBasedRlEnv, max_rate: float = 1.0) -> torch.Tensor:
+    """Potential-based: rate of approach to the preparation pose (m/s).
+
+    Pays only before the first kick. Holding still pays 0, walking away costs
+    exactly what walking back pays, so it cannot be farmed. ``max_rate`` caps
+    the per-step value so a reset-induced jump can never become a jackpot.
+    """
+    soccer_state(env)
+    geo = soccer_geometry(env)
+    prev = env._soccer_prev_prep_dist
+    rate = torch.nan_to_num((prev - geo["prep_dist"]) / env.step_dt, nan=0.0)
+    env._soccer_prev_prep_dist = geo["prep_dist"]
+    return rate.clamp(-max_rate, max_rate) * (~env._soccer_kick_triggered).float()
+
+
+def soccer_align_progress(env: ManagerBasedRlEnv, max_rate: float = 3.0) -> torch.Tensor:
+    """Potential-based: rate of heading-error reduction toward the shot line (rad/s)."""
+    soccer_state(env)
+    err = soccer_geometry(env)["yaw_err"].abs()
+    prev = env._soccer_prev_yaw_err
+    rate = torch.nan_to_num((prev - err) / env.step_dt, nan=0.0)
+    env._soccer_prev_yaw_err = err
+    return rate.clamp(-max_rate, max_rate) * (~env._soccer_kick_triggered).float()
+
+
+def soccer_ball_to_goal_speed(env: ManagerBasedRlEnv, max_speed: float = 1.5) -> torch.Tensor:
+    """Ball speed toward the goal centre, paid only after a foot-contact kick.
+
+    Bounded and gated on the contact latch: pushing the ball with the body
+    while walking earns nothing here.
+    """
+    soccer_state(env)
+    ball: Entity = env.scene["ball"]
+    to_goal = soccer_goal_direction(ball.data.root_link_pos_w[:, :2], env._soccer_goal_base_pos_w[:, :2])
+    speed = (ball.data.root_link_lin_vel_w[:, :2] * to_goal).sum(dim=-1)
+    return speed.clamp(0.0, max_speed) * env._soccer_foot_contact.float()
+
+
+def soccer_kick_attempt(env: ManagerBasedRlEnv) -> torch.Tensor:
+    """1/dt on the step a kick starts (weight < 0 makes each attempt cost)."""
+    soccer_state(env)
+    started = (env._soccer_skill_mode == SOCCER_SKILL_KICK) & (env._soccer_kick_progress == 0.0)
+    return started.float() / env.step_dt
+
+
+def soccer_time_cost(env: ManagerBasedRlEnv) -> torch.Tensor:
+    """Constant 1 per second (weight < 0): finishing sooner is better."""
+    return torch.ones(env.num_envs, device=env.device)
+
+
+def soccer_out_of_bounds_failure(
+    env: ManagerBasedRlEnv, field_length: float, field_width: float, ball_radius: float,
+) -> torch.Tensor:
+    """1/dt when the robot or a non-scoring ball leaves the field (weight < 0).
+
+    Without it, kicking the ball out would END the episode early and dodge the
+    remaining time cost, i.e. a miss would beat waiting for a good shot.
+    """
+    soccer_state(env)
+    robot_out = soccer_asset_out_of_bounds(env, "robot", field_length, field_width)
+    ball_out = soccer_asset_out_of_bounds(env, "ball", field_length, field_width, margin=ball_radius)
+    return ((robot_out | ball_out) & ~env._soccer_valid_goal).float() / env.step_dt
+
+
+def soccer_fell(env: ManagerBasedRlEnv, limit_angle: float) -> torch.Tensor:
+    """1/dt when the trunk tilts past the fell_over limit (weight < 0: one-time cost)."""
+    robot: Entity = env.scene["robot"]
+    tilt = torch.acos((-robot.data.projected_gravity_b[:, 2]).clamp(-1.0, 1.0))
+    return (tilt > limit_angle).float() / env.step_dt
+
+
+# ---- High-level observations -------------------------------------------------
+
+def soccer_ball_obs(env: ManagerBasedRlEnv) -> torch.Tensor:
+    """Ball position and velocity in the robot yaw frame: ``[px, py, vx, vy]``."""
+    soccer_state(env)
+    robot: Entity = env.scene["robot"]
+    ball: Entity = env.scene["ball"]
+    yaw = _yaw_from_quat(robot.data.root_link_quat_w)
+    rel = ball.data.root_link_pos_w[:, :2] - robot.data.root_link_pos_w[:, :2]
+    return torch.cat((_to_yaw_frame(rel, yaw), _to_yaw_frame(ball.data.root_link_lin_vel_w[:, :2], yaw)), dim=-1)
+
+
+def soccer_goal_obs(env: ManagerBasedRlEnv) -> torch.Tensor:
+    """Goal-mouth centre and goal normal in the robot yaw frame: ``[px, py, nx, ny]``."""
+    soccer_state(env)
+    robot: Entity = env.scene["robot"]
+    yaw = _yaw_from_quat(robot.data.root_link_quat_w)
+    rel = env._soccer_goal_base_pos_w[:, :2] - robot.data.root_link_pos_w[:, :2]
+    return torch.cat((_to_yaw_frame(rel, yaw), _to_yaw_frame(env._soccer_goal_forward_xy, yaw)), dim=-1)
+
+
+def soccer_skill_obs(env: ManagerBasedRlEnv) -> torch.Tensor:
+    """``[walking, kicking, kick_progress, vx_cmd, vy_cmd, wz_cmd]``."""
+    soccer_state(env)
+    kicking = (env._soccer_skill_mode == SOCCER_SKILL_KICK).float()
+    return torch.cat(
+        ((1.0 - kicking).unsqueeze(-1), kicking.unsqueeze(-1),
+         env._soccer_kick_progress.unsqueeze(-1), env._soccer_command), dim=-1)
+
+
+def soccer_prep_error_obs(env: ManagerBasedRlEnv) -> torch.Tensor:
+    """CRITIC-ONLY: preparation-pose error in the robot yaw frame ``[dx, dy, sin, cos]``."""
+    soccer_state(env)
+    geo = soccer_geometry(env)
+    d = _to_yaw_frame(geo["prep_delta"], geo["robot_yaw"])
+    return torch.cat((d, torch.sin(geo["yaw_err"]).unsqueeze(-1), torch.cos(geo["yaw_err"]).unsqueeze(-1)), dim=-1)
 
 
 # --------------------------------------------------------------------------- #
