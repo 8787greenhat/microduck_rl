@@ -1,0 +1,56 @@
+1946a1947,2001
+>   reset_layout:
+>     func: !!python/name:mjlab_microduck.tasks.mdp.soccer_reset_curriculum ''
+>     params:
+>       stages:
+>       - goal_distance_range: !!python/tuple
+>         - 0.45
+>         - 0.7
+>         ball_lateral_range: !!python/tuple
+>         - -0.1
+>         - 0.1
+>         approach_distance_range: !!python/tuple
+>         - 0.0
+>         - 0.05
+>         approach_lateral_range: !!python/tuple
+>         - -0.02
+>         - 0.02
+>         heading_error_range: !!python/tuple
+>         - -0.17453292519943295
+>         - 0.17453292519943295
+>       - goal_distance_range: !!python/tuple
+>         - 0.45
+>         - 0.9
+>         ball_lateral_range: !!python/tuple
+>         - -0.2
+>         - 0.2
+>         approach_distance_range: !!python/tuple
+>         - 0.05
+>         - 0.25
+>         approach_lateral_range: !!python/tuple
+>         - -0.06
+>         - 0.06
+>         heading_error_range: !!python/tuple
+>         - -0.7853981633974483
+>         - 0.7853981633974483
+>       - goal_distance_range: !!python/tuple
+>         - 0.45
+>         - 1.1
+>         ball_lateral_range: !!python/tuple
+>         - -0.3
+>         - 0.3
+>         approach_distance_range: !!python/tuple
+>         - 0.1
+>         - 0.45
+>         approach_lateral_range: !!python/tuple
+>         - -0.12
+>         - 0.12
+>         heading_error_range: !!python/tuple
+>         - -1.5707963267948966
+>         - 1.5707963267948966
+>       field_length: 2.0
+>       field_width: 1.2
+>       promote_goal_rate: 0.5
+>       max_iterations_per_stage: 300
+>       steps_per_iteration: 120
+>       easy_fraction: 0.2

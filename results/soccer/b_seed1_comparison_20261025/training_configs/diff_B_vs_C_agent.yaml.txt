@@ -1,0 +1,8 @@
+10,12c10,12
+< experiment_name: soccer_highlevel
+< run_name: seed1
+< logger: wandb
+---
+> experiment_name: soccer_highlevel_curriculum
+> run_name: seed1_4060_20261024_164942
+> logger: tensorboard

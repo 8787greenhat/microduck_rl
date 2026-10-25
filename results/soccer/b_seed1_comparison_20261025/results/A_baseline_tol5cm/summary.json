@@ -1,0 +1,17 @@
+{
+  "controller": "geometric baseline (kick tol 5 cm)",
+  "envs": 300,
+  "rates": {
+    "goal": 0.4033333361148834,
+    "fell": 0.0033333334140479565,
+    "robot_oob": 0.009999999776482582,
+    "ball_oob": 0.3166666626930237,
+    "timeout": 0.2666666805744171,
+    "kicked": 0.9500000476837158,
+    "contact": 0.6566666960716248
+  },
+  "mean_goal_time_s": 4.872727394104004,
+  "median_min_prep_dist_m": 0.022345267236232758,
+  "median_prep_dist_at_kick_m": 0.030003247782588005,
+  "median_yaw_err_at_kick_rad": 0.04590129852294922
+}
