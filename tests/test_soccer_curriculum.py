@@ -84,3 +84,51 @@ def test_easy_fraction_keeps_some_resets_on_earlier_stages():
     _reset(env, easy_fraction=0.2)
     earlier = (env._soccer_episode_stage == 0).float().mean().item()
     assert 0.15 < earlier < 0.25
+
+
+def test_curriculum_state_round_trips_through_a_checkpoint_dict():
+    env = _env()
+    _reset(env)
+    env.common_step_counter = 10 * 120
+    _reset(env)  # cap promotes to stage 1 at step 1200
+    state = mdp.soccer_curriculum_state(env)
+    assert state["stage"] == 1 and state["stage_start_step"] == 1200
+
+    resumed = _env()
+    resumed.common_step_counter = 1300  # mjlab restores the step counter on load
+    _reset(resumed)  # construction-time reset, before the checkpoint is loaded
+    mdp.restore_soccer_curriculum_state(resumed, state)
+    assert _reset(resumed)["stage"] == 1.0
+    resumed.common_step_counter = 1200 + 10 * 120  # the cap counts from the original stage start
+    assert _reset(resumed)["stage"] == 2.0
+
+
+def test_no_curriculum_means_no_checkpoint_state():
+    assert mdp.soccer_curriculum_state(_env()) is None
+
+
+def test_runner_saves_and_restores_the_curriculum(monkeypatch):
+    from mjlab.rl.runner import MjlabOnPolicyRunner
+    from mjlab.tasks.velocity.rl.runner import VelocityOnPolicyRunner
+    from mjlab_microduck.tasks import SoccerOnPolicyRunner
+
+    saved = {}
+    monkeypatch.setattr(VelocityOnPolicyRunner, "save", lambda self, path, infos=None: saved.update(infos or {}))
+    monkeypatch.setattr(MjlabOnPolicyRunner, "load", lambda self, path, *a, **k: dict(saved))
+
+    trained = _env()
+    _reset(trained)
+    trained.common_step_counter = 10 * 120
+    _reset(trained)
+    runner = object.__new__(SoccerOnPolicyRunner)
+    runner.env = SimpleNamespace(unwrapped=trained)
+    runner.save("model.pt")
+    assert saved["soccer_curriculum"]["stage"] == 1
+
+    for warm_start, expected_stage in (("", 1), ("1", 0)):
+        monkeypatch.setenv(mdp.WARM_START_ENV, warm_start)
+        fresh = _env()
+        _reset(fresh)
+        runner.env = SimpleNamespace(unwrapped=fresh)
+        runner.load("model.pt")
+        assert fresh._soccer_curriculum_stage == expected_stage
