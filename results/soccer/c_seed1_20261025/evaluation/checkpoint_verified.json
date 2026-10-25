@@ -1,0 +1,26 @@
+{
+  "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1999.pt",
+  "sha256": "8bda158d82f3e3834ebdc76028cadcc4584294d5e7cc751c84adc7d9d06b4de4",
+  "size_bytes": 591365,
+  "iteration": 1999,
+  "effective_total_updates": 2000,
+  "optimizer_step_min": 40000.0,
+  "optimizer_step_max": 40000.0,
+  "common_step_counter": 240000,
+  "actor_state_entries_changed_from_model_200": 11,
+  "models": {
+    "actor_state_dict": {
+      "floating_tensors": 10,
+      "all_finite": true
+    },
+    "critic_state_dict": {
+      "floating_tensors": 9,
+      "all_finite": true
+    }
+  },
+  "training_returncode": 0,
+  "training_ended_at": "2026-10-24T23:25:24+08:00",
+  "interrupted_continuation": true,
+  "physics_rng_reinitialized_at_recovery": true,
+  "comparison_note": "Original completed updates 201–267 were discarded after driver failure. Restored model_200 and completed 201–1999; not bit-exact uninterrupted training."
+}

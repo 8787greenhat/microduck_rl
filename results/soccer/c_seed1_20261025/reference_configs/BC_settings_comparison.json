@@ -1,0 +1,113 @@
+{
+  "commit": "7fa62987d76dd2ba00ec15ffdd1de5bd93480845",
+  "source_config": "src/mjlab_microduck/tasks/microduck_soccer_env_cfg.py",
+  "PPO_config_differences": {
+    "experiment_name": {
+      "B": "soccer_highlevel",
+      "C": "soccer_highlevel_curriculum"
+    },
+    "run_name": {
+      "B": "soccer_highlevel",
+      "C": "soccer_highlevel_curriculum"
+    }
+  },
+  "all_other_PPO_settings_identical": true,
+  "reward_functions_weights_and_params_identical": true,
+  "additional_reset_curriculum": {
+    "stages": [
+      {
+        "goal_distance_range": [
+          0.45,
+          0.7
+        ],
+        "ball_lateral_range": [
+          -0.1,
+          0.1
+        ],
+        "approach_distance_range": [
+          0.0,
+          0.05
+        ],
+        "approach_lateral_range": [
+          -0.02,
+          0.02
+        ],
+        "heading_error_range": [
+          -0.17453292519943295,
+          0.17453292519943295
+        ]
+      },
+      {
+        "goal_distance_range": [
+          0.45,
+          0.9
+        ],
+        "ball_lateral_range": [
+          -0.2,
+          0.2
+        ],
+        "approach_distance_range": [
+          0.05,
+          0.25
+        ],
+        "approach_lateral_range": [
+          -0.06,
+          0.06
+        ],
+        "heading_error_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      {
+        "goal_distance_range": [
+          0.45,
+          1.1
+        ],
+        "ball_lateral_range": [
+          -0.3,
+          0.3
+        ],
+        "approach_distance_range": [
+          0.1,
+          0.45
+        ],
+        "approach_lateral_range": [
+          -0.12,
+          0.12
+        ],
+        "heading_error_range": [
+          -1.5707963267948966,
+          1.5707963267948966
+        ]
+      }
+    ],
+    "field_length": 2.0,
+    "field_width": 1.2,
+    "promote_goal_rate": 0.5,
+    "max_iterations_per_stage": 300,
+    "steps_per_iteration": 120,
+    "easy_fraction": 0.2
+  },
+  "B_and_C_common_inherited_curricula": [
+    "com_range",
+    "head_com_range"
+  ],
+  "formal_cli_overrides_per_team_docs": {
+    "envs": 2048,
+    "iterations": 2000,
+    "seeds": [
+      1,
+      2,
+      3
+    ]
+  },
+  "exported_yaml_scope": "Defaults from tracked commit; teammate actual run config has not been supplied.",
+  "completed_smoke": {
+    "task": "Mjlab-Soccer-Curriculum-Flat-MicroDuck",
+    "envs": 64,
+    "iterations": 5,
+    "seed": 1
+  },
+  "long_training_started": false
+}

@@ -362,3 +362,7 @@ Development is isolated on `feat/shaolin-duck-soccer`. Existing local changes
 to `scripts/infer_policy.py` are intentionally outside the soccer commit and
 must remain unmodified until their purpose and desired upstream status are
 confirmed.
+
+## Method C seed 1 result artifacts
+
+See [the verified C seed 1 results and source-labelled B/C comparison](soccer_c_seed1_results.md) for configs, the fixed evaluation set, per-episode data, checkpoint ZIP, recovery history and videos.

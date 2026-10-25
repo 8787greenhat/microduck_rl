@@ -1,0 +1,48 @@
+方法 C seed 1：停止原因與恢復紀錄
+檢查時間：2026-10-24T18:10:33+08:00（台灣時間）
+
+停止原因
+原始正式訓練在 2026-10-24 17:39:51 以 returncode 1 結束；最後完成編號 267。
+錯誤為 PyTorch CUDA unknown error，並伴隨 Warp CUDA error 999。
+Windows setupapi.dev.log 明確記錄：Windows Update 在 17:32:37 開始安裝 NVIDIA 驅動，
+17:39:35 啟動 NVIDIA CoInstaller，17:39:45 完成該安裝區段。
+驅動由實測的 595.95 變成 610.62，與 CUDA 故障時間重疊；不需要有人手動操作。
+Windows 已在 17:58:08 重開機。
+
+修復與驗證
+重開機後 CUDA 計算可用，但部分 Warp 模組在 CUDA graph 建立期間載入時崩潰。
+保留既有套件與快取，為新驅動使用獨立 Warp/CUDA cache；指定目前 WSL driver 對應輔助函式庫，
+設定 CUDA_MODULE_LOADING=EAGER，並在建立 CUDA graph 前預載靜態物理模組。
+沒有更改 Windows Update 原則、回退驅動、重裝 Ubuntu、升級 Python 套件或更改 tracked repo 原始碼。
+從 model_200.pt 做 64 環境、5 次更新的恢復測試，已通過：stage 2、clock、optimizer、有限權重、
+實際權重更新、非正懲罰、新 recovery checkpoint 資料皆正確。
+短測試的模型沒有用來啟動正式續訓。
+
+正式續訓
+來源：原始正式 run 的 model_200.pt。
+來源 SHA256：ae27724b09a5d0f36aaf19702dbea1a652249ab441c4a9afd3655bb86bbaadb3
+從編號 201 接續；剩餘 1799 次更新，總目標仍是 2000 次，最終編號 1999。
+新 agent.yaml 中 max_iterations=1799 是剩餘更新數，不是另加 2000 次。
+2048 環境、seed 1、PPO actor/critic/algorithm 和 reward／技能／課程內容維持原設定。
+保留 checkpoint 的模型、觀察 normalizer、optimizer、adaptive learning rate 和 common_step_counter。
+特別處理：舊 checkpoint 沒存 reset curriculum 的 stage，故由同一 run 的編號 200 日誌確認並恢復 stage 2。
+每 25 次更新存檔，第一個接續更新也立即存檔；存檔採暫存後原子替換，並新增課程/RNG/LR恢復資料。
+已實測正式更新 201～205 完成，且 model_201.pt 可讀、權重有限且確實改變。
+model_201 的 optimizer step=4040、common_step_counter=24240、curriculum stage=2。
+model_201 SHA256：69e8cb4da9280aea362f3c8a3d573603f6c3280730fed4f9c893d60211ed3f5d
+目前 GPU 記憶體約 4841/8188 MiB。
+新的正式 run：/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905
+
+中斷的限制與公平比較
+原 run 編號 201～267 的 67 次更新尚未存檔，不能恢復，已捨棄並會重算。
+舊 checkpoint 未存完整 RNG 與物理場景，新的 episodes 重新初始化；舊課程累計 goal/episode 統計歸零。
+因此這是中斷續訓，不能宣稱與完全不中斷的 seed1 軌跡逐位元相同。
+正式比較要揭露驅動變更與中斷；實際運算成本應包含捨棄的更新及恢復測試。
+合併曲線時保留舊 run 0～200，以及新 run 201～1999，排除舊失敗段與短測試。
+
+Bot 接手路徑
+原本的 outputs/formal_C_seed1_20261024_164942/status.json、launch.json、console.log 仍是目前有效路徑。
+status 內含新的 training PID、actual_run_dir、resume_validation_path。
+原始錯誤日誌保留為 console.failed_20261024_173951.log，原失敗狀態與啟動設定也已另存。
+沒有重新開啟定時 AI 監控，沒有啟動 seed2／3。
+尚未完成 2000 次更新，也尚未做正式固定評估；續訓成功不代表最終足球表現已通過。
