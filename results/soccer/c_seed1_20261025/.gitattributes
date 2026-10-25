@@ -1,0 +1,2 @@
+# Preserve raw artifact bytes, including CRLF and padded console output.
+* -text -whitespace

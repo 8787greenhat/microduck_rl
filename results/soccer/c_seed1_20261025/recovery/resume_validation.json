@@ -1,0 +1,20 @@
+{
+  "source_checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_16-50-00_seed1_4060_20261024_164942/model_200.pt",
+  "source_sha256": "ae27724b09a5d0f36aaf19702dbea1a652249ab441c4a9afd3655bb86bbaadb3",
+  "actual_run_dir": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905",
+  "source_completed_iteration": 200,
+  "next_iteration": 201,
+  "stop_at_exclusive": 2000,
+  "remaining_updates_this_process": 1799,
+  "envs": 2048,
+  "curriculum_stage": 2,
+  "common_step_counter": 24120,
+  "learning_rate": 0.0019753086419753083,
+  "optimizer_step_min": 4020.0,
+  "weights_match_source_exactly": true,
+  "warp_cache_path": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/.local-runtime/warp-cache-driver610",
+  "cuda_cache_path": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/.local-runtime/cuda-cache-driver610",
+  "cuda_module_loading": "EAGER",
+  "legacy_curriculum_counters_reinitialized": true,
+  "physics_episodes_reinitialized": true
+}

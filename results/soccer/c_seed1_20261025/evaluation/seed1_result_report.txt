@@ -1,0 +1,57 @@
+Microduck 方法 C（PPO＋reset curriculum）seed 1 結果
+整理日期：2026-10-25，Asia/Taipei。
+
+訓練已於 2026-10-24 23:25:24 正常結束，returncode=0。最終為 iteration 1999（從 0 起算，共 2000 次有效 PPO iterations），最後 checkpoint 已讀取、複製並驗證。
+
+固定評測結果：100 組場景各測 3 次，共 300 局。
+合法進球：282／300（94.0%）。失敗：18／300（6.0%）。
+- 球出界：9 局（全部測試的 3.0%；失敗局的 50.0%）。
+- 機器人出界：4 局（全部測試的 1.33%）。
+- 超時：3 局（全部測試的 1.0%）。
+- 跌倒：2 局（全部測試的 0.67%）。
+本次沒有失敗終止旗標重疊，四類合計為 18 局；原始旗標與互斥原因組合均已保存。
+
+成功進球時間（只統計 282 局成功案例，不將失敗算成 0 秒）：
+平均 3.321 秒；中位數 3.200 秒；第 90 百分位 4.300 秒。依 10 Hz 高階步長計時，解析度 0.1 秒。
+三次重複各自的進球數：93／100、95／100、94／100。
+100 個固定場景中，85 組三次都成功，13 組成功兩次，1 組成功一次，1 組三次都失敗。這三次是同一個模型在相同場景的重複測試，並非三個獨立訓練 seeds；也不是 300 組不同場景。
+
+結果判讀：seed 1 在這份固定集達到文件 ≥70% 的工程目標，已有很好的單次訓練結果。仍不能據此證明 C 優於 B，或推論不同訓練 seed 一定相同。需核對隊友 B 的場景 JSON／hash、實際 run 設定與結果，再依專題設計比較多個訓練 seeds。固定集的 seed 早已由 repo 指定，但這份檔案是本機在訓練期間依官方 generator 保存，並非已取得的隊友檔案。
+合法進球沿用官方定義：觸發踢球、指定腳接觸球、球離腳，之後從球門開口穿過；並非只計球的位置。訓練 goal_rate 約89.7% 是訓練統計，不用來替代本次 94.0% 正式評測。
+
+評測方式：使用 pin 版本 scripts/eval_soccer.py，固定 full-reset 場景，未套用 C 的 reset curriculum；保留官方共用的其他物理／觀測／domain randomization 設定。訓練 seed=1；評測 RNG seed=0；場景 generator seed=20261023。模型使用 inference policy，沒有 optimizer update。
+評測 JSON SHA256：3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464
+
+Checkpoint：model_1999.pt，591365 bytes。
+SHA256：8bda158d82f3e3834ebdc76028cadcc4584294d5e7cc751c84adc7d9d06b4de4
+原始位置：/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1999.pt
+Windows 交付副本：outputs/seed1_evaluation/model_1999.pt。
+Actor 與 critic 的所有浮點 state 均有限，各自所有 mlp 權重／bias 相對 model_200 都已改變（逐項最大差值見 final_audit.json），optimizer step=40000，common_step_counter=240000。恢復段 iteration 201–1999 連續，TensorBoard 全部已記錄 scalar 有限，nan_state=0，四種 weighted penalties 均未變正。上述檢查連同正式評測才支持訓練已產生有效結果，並非僅確認能載入模型。
+
+中斷恢復限制：原 run 在 Windows NVIDIA 驅動更新 595.95→610.62 後失敗。從 model_200 恢復，物理 episodes 與舊 curriculum 累計計數重新初始化，原本已跑的 201–267（67 updates）捨棄，重新完成 201–1999。因此是有中斷的 seed 1 接續訓練，並非 bit-exact uninterrupted run。有效預算 2000×2048×24=98,304,000 筆高階訓練 transitions；被捨棄的 67 iterations 另耗 3,293,184 筆 transitions，以及另外的安裝／診斷／smoke 成本，不應隱藏。恢復後本次程序約 5 小時 16 分鐘，還需另計原 run 的有效前201次、失敗段和修復時間。
+
+程式與環境：
+Repo commit：7fa62987d76dd2ba00ec15ffdd1de5bd93480845。
+訓練：2048 envs、24 steps/env、4 mini-batches（每批12288）、5 epochs；總目標2000 iterations，seed1。
+Python：3.12.14；NVIDIA Windows 驅動610.62，WSL Ubuntu24.04.3，RTX4060 Laptop8GB。
+套件：{"torch": "2.9.1", "mjlab": "1.3.0", "mujoco": "3.10.0", "mujoco-warp": "3.8.1", "warp-lang": "1.12.0", "rsl-rl-lib": "5.0.1", "better-actuator-models": "1.0.1", "onnx": "1.22.0", "onnxruntime": "1.24.4", "imageio": "2.37.2", "imageio-ffmpeg": "0.6.0", "numpy": "2.4.1"}
+torch CUDA runtime12.8，Warp bundled toolkit12.9；driver 顯示的 CUDA13.3 是驅動支援能力，不等於專案已改用該runtime。
+Linux LF uv.lock SHA256：2eeeb680025baa737e7ccf3a87da3695a9d49b228de0bb60d8af0c022ab5f1aa，逐 byte 與釘選 Git blob 相同，未升級套件。
+Windows CRLF 快照 SHA256：2c55b9b2162971e4303ba4ed3937dc5d8835dcad2ea6177f59974e2a9a9a77e4；差異僅是換行編碼，正規化後逐 byte 相同。
+走路 alpha_walking.onnx SHA256：e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c
+右腳踢球 ball_kick_right.onnx SHA256：147a32c388c6b19111b3ac3b550a9a6dc8b8bf267118af4d8c3712522eedb5af
+官方技能 Hugging Face revision：1b56c396825c052a4e26e95cf2b8d8298af9e9b4。
+
+評測第一次在模擬開始前遇到驅動搜尋路徑與 Warp 模組尚未匯入的錯誤，沒有產生正式局數；保留 evaluation_console_20261025.log。使用已成功訓練的外部 LD_LIBRARY_PATH，並修正隔離 wrapper 的匯入順序後，第二次評測成功，見 evaluation_console_attempt2_20261025.log。沒有修改 repo、獎勵、課程、低階技能或研究參數，也沒有重新訓練。
+
+實際影片：固定前4組場景，保留第一次 episode 到終止；50 fps正常速度，終止畫面在 auto-reset 前擷取。這是另外一次視覺化 rollout，噪聲／DR與300局評測不同，不能冒充同一條評測軌跡。
+場景 1：valid_goal，3.72 秒，187 frames，50.0 fps。
+場景 2：valid_goal，3.30 秒，166 frames，50.0 fps。
+場景 3：valid_goal，3.14 秒，158 frames，50.0 fps。
+場景 4：valid_goal，3.08 秒，155 frames，50.0 fps。
+影片與 PNG：outputs/seed1_evaluation/videos/。播放器：index.html。
+
+可重現證據：eval_manifest.json、soccer_eval_set.json、checkpoint_verified.json、final_audit.json、agent.yaml、env.yaml、metrics/summary.json、metrics/per_episode.pt、per_episode.csv、evaluation_verified.json、videos/video_manifest.json。
+尚未完成：B 的同檔案比較、其他 training seeds、真實硬體上的足球表現驗證。未啟動 seeds2／3 或其他訓練。
+
+補充近景影片：videos_closeup/layout_001.mp4，正常速度25fps，94幀，3.76秒。固定第一個場景，另一次視覺化rollout，valid_goal，模擬終止時間3.72秒。包含GIF實際影片縮小預覽及6幀時間序列，均直接由模擬MP4解碼，未用生成式影像。

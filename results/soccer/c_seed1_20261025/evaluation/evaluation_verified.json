@@ -1,0 +1,35 @@
+{
+  "episodes": 300,
+  "unique_layouts": 100,
+  "repeats_per_layout": 3,
+  "goal_count": 282,
+  "goal_rate": 0.94,
+  "terminal_flag_counts": {
+    "goal": 282,
+    "fell": 2,
+    "robot_oob": 4,
+    "ball_oob": 9,
+    "timeout": 3
+  },
+  "failed_episodes": 18,
+  "failure_combinations_exclusive_counts": {
+    "ball_oob": 9,
+    "fell": 2,
+    "robot_oob": 4,
+    "timeout": 3
+  },
+  "failures_with_multiple_flags": 0,
+  "note": "Raw terminal flags can overlap. Failure-combination groups are mutually exclusive. Repeated layouts are not 300 independent layouts or three training seeds.",
+  "goal_time_mean_s": 3.3209221363067627,
+  "goal_time_median_s": 3.200000047683716,
+  "goal_time_p90_s": 4.300000190734863,
+  "goal_time_resolution_s": 0.1,
+  "checkpoint_sha256": "8bda158d82f3e3834ebdc76028cadcc4584294d5e7cc751c84adc7d9d06b4de4",
+  "eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+  "training_seed": 1,
+  "evaluation_rng_seed": 0,
+  "video_complete": true,
+  "human_report_complete": true,
+  "closeup_video_complete": true,
+  "delivery_page": "index.html"
+}

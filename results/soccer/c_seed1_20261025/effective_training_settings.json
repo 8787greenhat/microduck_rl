@@ -1,0 +1,56 @@
+{
+  "repo": "https://github.com/8787greenhat/microduck_rl",
+  "football_branch": "feat/shaolin-duck-soccer",
+  "commit": "7fa62987d76dd2ba00ec15ffdd1de5bd93480845",
+  "method": "C: high-level PPO + reset curriculum",
+  "training_seed": 1,
+  "envs": 2048,
+  "rollout_steps_per_env": 24,
+  "transitions_per_iteration": 49152,
+  "effective_total_iterations": 2000,
+  "effective_total_high_level_transitions": 98304000,
+  "ppo_epochs": 5,
+  "ppo_mini_batches": 4,
+  "mini_batch_size": 12288,
+  "optimizer_steps_per_iteration": 20,
+  "final_optimizer_steps": 40000,
+  "actor_hidden_dims": [
+    128,
+    128
+  ],
+  "critic_hidden_dims": [
+    128,
+    128
+  ],
+  "actor_observation_dim": 48,
+  "critic_observation_dim": 55,
+  "high_level_action_dim": 4,
+  "high_level_hz": 10,
+  "low_level_hz": 50,
+  "physics_hz": 200,
+  "checkpoint": "checkpoints/model_1999.pt",
+  "initial_completed_iterations_used": [
+    0,
+    200
+  ],
+  "resumed_completed_iterations_used": [
+    201,
+    1999
+  ],
+  "resume_max_iterations": 1799,
+  "discarded_original_iterations": [
+    201,
+    267
+  ],
+  "discarded_high_level_transitions": 3293184,
+  "initial_save_interval": 100,
+  "resume_save_interval": 25,
+  "evaluation_layouts": 100,
+  "evaluation_repeats": 3,
+  "evaluation_rng_seed": 0,
+  "evaluation_generator_seed": 20261023,
+  "evaluation_episodes": 300,
+  "frozen_skills_hf_revision": "1b56c396825c052a4e26e95cf2b8d8298af9e9b4",
+  "B_actual_run_verified": false,
+  "interrupted_continuation": true
+}

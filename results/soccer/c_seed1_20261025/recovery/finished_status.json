@@ -1,0 +1,15 @@
+{
+  "state": "finished",
+  "started_at": "2026-10-24T18:09:05+08:00",
+  "supervisor_pid": 376,
+  "recovery": true,
+  "source_checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_16-50-00_seed1_4060_20261024_164942/model_200.pt",
+  "next_iteration": 201,
+  "target_iterations": 2000,
+  "resume_validation_path": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/formal_C_seed1_resume200_20261024_180905/resume_validation.json",
+  "recovery_output": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/formal_C_seed1_resume200_20261024_180905",
+  "training_pid": 377,
+  "returncode": 0,
+  "ended_at": "2026-10-24T23:25:24+08:00",
+  "actual_run_dir": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905"
+}
