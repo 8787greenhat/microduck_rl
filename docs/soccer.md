@@ -366,3 +366,7 @@ confirmed.
 ## Method C seed 1 result artifacts
 
 See [the verified C seed 1 results and source-labelled B/C comparison](soccer_c_seed1_results.md) for configs, the fixed evaluation set, per-episode data, checkpoint ZIP, recovery history and videos.
+
+## Seed-1 fixed-evaluation checkpoint learning curves
+
+See [the B/C checkpoint comparison](soccer_seed1_checkpoint_comparison.md) for the 21 matched checkpoints, unchanged 100-layout × 3 protocol, per-episode data and reproducibility records.

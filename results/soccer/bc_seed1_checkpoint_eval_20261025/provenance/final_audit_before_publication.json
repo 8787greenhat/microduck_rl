@@ -1,0 +1,22 @@
+{
+  "completed_at_utc": "2026-10-25T08:33:34.697039+00:00",
+  "state": "complete",
+  "returncode": 0,
+  "checkpoint_points_per_method": 21,
+  "verified_results": 42,
+  "new_completed_evaluations": 40,
+  "reused_original_final_evaluations": 2,
+  "all_scored_episodes": 12600,
+  "new_scored_episodes": 12000,
+  "input_checkpoint_hashes_unchanged": 42,
+  "CPU_to_GPU_actor_exact_match_checks": 34,
+  "prior_completed_outputs_preserved_across_restarts_checks": 42,
+  "original_evaluation_source_unchanged": true,
+  "original_fixed_set_unchanged": true,
+  "training_started": false,
+  "plot_visually_reviewed": true,
+  "incomplete_process_attempts_saved": 3,
+  "runtime_crash_root_cause": "not definitively identified",
+  "artifact_location": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025",
+  "new_results_pushed_to_GitHub": false
+}

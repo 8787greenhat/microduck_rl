@@ -1,0 +1,91 @@
+{
+  "created_at_utc": "2026-10-25T07:48:43.003132+00:00",
+  "training_commit": "7fa62987d76dd2ba00ec15ffdd1de5bd93480845",
+  "reviewed_PR1_head": "80c4725f0ba918741252b2e675aa75bc2ad6da45",
+  "B_checkpoints_source_commit": "348f703d2bcbb7fc0fcb64db940fc13bd7ed887f",
+  "B_results_unchanged_in_latest_commit": true,
+  "evaluation_script_sha256": "2d8bd0f9fc840aa54fa858181e16ccb88813b4fc4579db42c6b49c7a85ba0757",
+  "fixed_eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+  "evaluation_rng_seed": 0,
+  "training_seed": 1,
+  "layouts": 100,
+  "repeats": 3,
+  "episodes_per_checkpoint": 300,
+  "checkpoint_points_per_method": 21,
+  "new_GPU_evaluations": 40,
+  "reused_final_evaluations": 2,
+  "new_training": false,
+  "modified_evaluation_settings": false,
+  "thresholds_declared_before_evaluation": [
+    0.7,
+    0.9
+  ],
+  "C_recovery_note": "Retain original 0-200 then resumed 201-1999; exclude discarded original 201-267 and recovery smoke. Physics episodes/RNG and legacy curriculum counters reinitialized on resume.",
+  "checkpoint_indices_0based": [
+    0,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1500,
+    1600,
+    1700,
+    1800,
+    1900,
+    1999
+  ],
+  "counter_behavior": {
+    "checkpoint_common_step_counter_restored_even_for_actor_only_load": true,
+    "matched_B_C_points_have_equal_common_step_counter": true,
+    "inherited_COM_randomization_curricula_retained_unchanged": true,
+    "trunk_COM_half_range_m_by_common_step_threshold": [
+      [
+        0,
+        0.003
+      ],
+      [
+        12000,
+        0.005
+      ],
+      [
+        24000,
+        0.01
+      ],
+      [
+        36000,
+        0.015
+      ]
+    ],
+    "head_COM_half_range_m_by_common_step_threshold": [
+      [
+        0,
+        0.003
+      ],
+      [
+        12000,
+        0.005
+      ],
+      [
+        24000,
+        0.01
+      ]
+    ],
+    "note": "Fixed reset JSON is identical at all points. The original evaluator also restores the checkpoint clock, so inherited COM randomization schedules can differ across training progress. B and C at the same checkpoint index have the same clock and schedule. No curriculum or evaluation behavior was changed for this batch."
+  },
+  "input_models": {
+    "C_archive": "inputs/method_C_seed1_selected_checkpoints.zip",
+    "C_archive_sha256": "4e0dd61005f5025d1dc2c79067c83ce796f018b5d2398680114ded57cea88762",
+    "B_source_commit": "348f703d2bcbb7fc0fcb64db940fc13bd7ed887f",
+    "B_source_tree": "https://github.com/8787greenhat/microduck_rl/tree/348f703d2bcbb7fc0fcb64db940fc13bd7ed887f/results/soccer/b_seed1_comparison_20261025/checkpoints"
+  }
+}

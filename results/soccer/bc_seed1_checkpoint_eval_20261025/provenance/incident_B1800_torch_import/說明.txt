@@ -1,0 +1,2 @@
+B model_1800 子程序在 import torch 階段（functools.update_wrapper、Garbage-collecting）發生 SIGSEGV，returncode=-11。尚未載入 checkpoint 或開始場景，沒有產生評測分數。
+已保存完整堆疊與前 36 份完成結果。未更改任何版本或設定，將以相同 CPU 反序列化流程接續；只採首次完成的結果。

@@ -1,0 +1,2 @@
+# Preserve audited bytes and raw log whitespace.
+* -text -whitespace
