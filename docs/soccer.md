@@ -219,7 +219,7 @@ Status as of 2026-10-23:
   (0.19 m/s vs 0.001 m/s), and it faces 2.7° left of the shot line at the kick,
   consistent with partly offsetting the kick's 8° right bias. About one kick per
   episode; the video shows real shots. Training first collapsed to never
-  kicking (iterations 50–100, the kick-attempt cost was active from the start)
+  kicking (episodes timed out from about iteration 5 to 140; the kick-attempt cost was active from the start)
   and found kicking before iteration 200. One seed so far.
 - `soccer_goal_crossing` rejected every ball rolling on the floor: MuJoCo's soft
   contact rests the ball centre 0.4 mm below its radius, under the old
