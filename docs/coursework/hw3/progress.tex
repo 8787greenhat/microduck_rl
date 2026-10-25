@@ -207,7 +207,7 @@ Fig.~\ref{fig:sweep} sweeps the baseline's kick tolerance over the held-out layo
 \end{figure}
 
 \subsection{Methods B and C}
-Table~\ref{tab:main} and Fig.~\ref{fig:abc} compare the three methods on the same 300 held-out episodes. B and C share commit, skills (identical SHA-256), budget and seed; their configurations differ only in C's curriculum term. Both PPO controllers exceed the 70\% target with the official skills. C evaluated on its own machine scored 94.0\%; on the same machine as B it scored 92.3\%. With 300 episodes the standard error is about 1.4 points, so the 3-point B--C gap is about 1.5 standard errors and not significant, and the three evaluation repeats re-test one trained policy rather than measure seed-to-seed variance.
+Table~\ref{tab:main} and Fig.~\ref{fig:abc} compare the three methods on the same 300 held-out episodes. B and C share commit, skills (identical SHA-256), budget and seed; their configurations differ only in C's curriculum term. Both PPO controllers exceed the 70\% target with the official skills. C evaluated on its own machine scored 94.0\%; on the same machine as B it scored 92.3\%. With only one trained seed per method, the 3-point same-machine B--C gap is descriptive: it does not estimate seed-to-seed training variance and therefore cannot support an algorithm-level claim that B outperforms C. The three evaluation repeats re-test one trained policy rather than provide additional training seeds.
 
 \begin{table*}[t]
 \centering
