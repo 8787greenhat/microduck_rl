@@ -7,28 +7,58 @@
     {
       "method": "B",
       "machine": "teammate",
-      "provenance": "PR1 docs/soccer.md and HW3 table",
-      "raw_artifacts_obtained": false,
+      "provenance": "Received Discord archive; SHA256/CSV/tensor/summary cross-checked",
+      "raw_artifacts_obtained": true,
       "reported_goal_pct": 95.3,
-      "raw_goal_count": null,
+      "raw_goal_count": 286,
       "reported_mean_goal_time_s": 3.2,
       "reported_ball_oob_pct": 2.3,
       "reported_robot_oob_pct": 1.3,
       "reported_timeout_pct": 0.3,
-      "reported_fell_pct": 0.7
+      "reported_fell_pct": 0.7,
+      "episodes": 300,
+      "verified_goal_pct": 95.33333333333334,
+      "verified_mean_goal_time_s": 3.181118881118881,
+      "terminal_counts": {
+        "goal": 286,
+        "fell": 2,
+        "robot_oob": 4,
+        "ball_oob": 7,
+        "timeout": 1
+      },
+      "repeat_goal_counts": [
+        96,
+        95,
+        95
+      ]
     },
     {
       "method": "C",
       "machine": "teammate, reported same evaluator machine as B",
-      "provenance": "PR1 HW3 table",
-      "raw_artifacts_obtained": false,
+      "provenance": "Received Discord archive; SHA256/CSV/tensor/summary cross-checked",
+      "raw_artifacts_obtained": true,
       "reported_goal_pct": 92.3,
-      "raw_goal_count": null,
+      "raw_goal_count": 277,
       "reported_mean_goal_time_s": 3.3,
       "reported_ball_oob_pct": 5.3,
       "reported_robot_oob_pct": 1.0,
       "reported_timeout_pct": 0.3,
-      "reported_fell_pct": 1.0
+      "reported_fell_pct": 1.0,
+      "episodes": 300,
+      "verified_goal_pct": 92.33333333333333,
+      "verified_mean_goal_time_s": 3.2873646209386282,
+      "terminal_counts": {
+        "goal": 277,
+        "fell": 3,
+        "robot_oob": 3,
+        "ball_oob": 16,
+        "timeout": 1
+      },
+      "repeat_goal_counts": [
+        88,
+        95,
+        94
+      ]
     },
     {
       "method": "C",
@@ -44,23 +74,68 @@
       "robot_oob_count": 4,
       "timeout_count": 3,
       "fell_count": 2
+    },
+    {
+      "method": "B",
+      "machine": "original C RTX4060/WSL, driver610.62, Python3.12.14, torch2.9.1+cu128",
+      "provenance": "One new fixed evaluation on original C machine; verification and per-episode rows supplied",
+      "raw_artifacts_obtained": true,
+      "goal_count": 287,
+      "episodes": 300,
+      "verified_goal_pct": 95.66666666666667,
+      "verified_mean_goal_time_s": 3.179791212081909,
+      "checkpoint_sha256": "0e5c124a7d1461259f198efbd47d3e30347c8be9c6098e83314367dcf15b7c53",
+      "terminal_counts": {
+        "goal": 287,
+        "fell": 3,
+        "robot_oob": 3,
+        "ball_oob": 6,
+        "timeout": 1
+      }
     }
   ],
   "reported_same_machine_B_minus_C_percentage_points": 3.0,
   "C_teammate_minus_original_percentage_points": -1.7,
-  "B_eval_set_hash": null,
-  "B_checkpoint_hash": null,
+  "B_eval_set_hash": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+  "B_checkpoint_hash": "0e5c124a7d1461259f198efbd47d3e30347c8be9c6098e83314367dcf15b7c53",
   "C_teammate_checkpoint_hash": null,
   "C_original_eval_set_hash": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
   "C_original_checkpoint_hash": "8bda158d82f3e3834ebdc76028cadcc4584294d5e7cc751c84adc7d9d06b4de4",
   "PR_claims_shared_eval_hash": true,
-  "shared_eval_hash_independently_verified": false,
+  "shared_eval_hash_independently_verified": true,
   "paired_significance_test": null,
   "training_seed_variance_estimated": false,
   "missing_for_full_comparison": [
-    "B comparison ZIP/checkpoint and actual run settings",
-    "B and teammate C summary.json and per_episode outputs",
-    "literal evaluation-set hashes on both machines",
-    "B training curve and common-checkpoint held-out evaluations"
-  ]
+    "Explicit C checkpoint SHA256 in teammate rerun provenance",
+    "Matched-checkpoint held-out evaluations for sample efficiency",
+    "Independent training seeds 2 and 3 per method"
+  ],
+  "B_config_and_budget_verified": true,
+  "B_raw_checkpoint_finite_and_optimizer_steps_verified": true,
+  "B_archive_sha256": "c4d1ea2a0b3fffdf656bb0e91ef9499672b61cc4c07fe2be84a88549f3aa60f1",
+  "same_machine_paired_outcomes": {
+    "both_goal": 267,
+    "B_only_goal": 19,
+    "neither_goal": 4,
+    "C_only_goal": 10
+  },
+  "unique_layout_comparison": {
+    "B_more_goals": 15,
+    "C_more_goals": 8,
+    "equal": 77
+  },
+  "C_teammate_checkpoint_identity": {
+    "status": "claimed by author; no C checkpoint or literal C SHA256 in B archive",
+    "literal_C_hash_mentions": []
+  },
+  "B_curve_scalars_verified_against_events": 60000,
+  "verified_original_machine_B_minus_C_percentage_points": 1.6666666666666667,
+  "verified_teammate_machine_B_minus_C_percentage_points": 3.0,
+  "own_B_rerun": "comparison_audit/B_on_4060",
+  "original_machine_paired_outcomes": {
+    "both_goal": 275,
+    "B_only_goal": 12,
+    "C_only_goal": 7,
+    "neither_goal": 6
+  }
 }

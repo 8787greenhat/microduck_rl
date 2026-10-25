@@ -1,0 +1,452 @@
+{
+  "B_archive_sha256": "c4d1ea2a0b3fffdf656bb0e91ef9499672b61cc4c07fe2be84a88549f3aa60f1",
+  "B_archive_bytes": 2313286,
+  "hash_manifest_verified_files": 30,
+  "zip_crc_and_extracted_byte_match": true,
+  "same_eval_set_bytes": true,
+  "same_uv_lock_bytes": true,
+  "frozen_skill_hash_metadata_matches": true,
+  "B_skill_onnx_files_included": false,
+  "B_checkpoint_sha256": "0e5c124a7d1461259f198efbd47d3e30347c8be9c6098e83314367dcf15b7c53",
+  "B_checkpoint_iteration": 1999,
+  "B_optimizer_steps": 40000,
+  "B_model_floats_finite": true,
+  "config_differences": {
+    "agent.yaml": [
+      {
+        "path": "experiment_name",
+        "B": "soccer_highlevel",
+        "C": "soccer_highlevel_curriculum"
+      },
+      {
+        "path": "logger",
+        "B": "wandb",
+        "C": "tensorboard"
+      },
+      {
+        "path": "run_name",
+        "B": "seed1",
+        "C": "seed1_4060_20261024_164942"
+      }
+    ],
+    "env.yaml": [
+      {
+        "path": "curriculum.reset_layout",
+        "B": null,
+        "C": {
+          "func": {
+            "__literal_yaml_tag__": "tag:yaml.org,2002:python/name:mjlab_microduck.tasks.mdp.soccer_reset_curriculum",
+            "value": ""
+          },
+          "params": {
+            "stages": [
+              {
+                "goal_distance_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    0.45,
+                    0.7
+                  ]
+                },
+                "ball_lateral_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    -0.1,
+                    0.1
+                  ]
+                },
+                "approach_distance_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    0.0,
+                    0.05
+                  ]
+                },
+                "approach_lateral_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    -0.02,
+                    0.02
+                  ]
+                },
+                "heading_error_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    -0.17453292519943295,
+                    0.17453292519943295
+                  ]
+                }
+              },
+              {
+                "goal_distance_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    0.45,
+                    0.9
+                  ]
+                },
+                "ball_lateral_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    -0.2,
+                    0.2
+                  ]
+                },
+                "approach_distance_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    0.05,
+                    0.25
+                  ]
+                },
+                "approach_lateral_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    -0.06,
+                    0.06
+                  ]
+                },
+                "heading_error_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    -0.7853981633974483,
+                    0.7853981633974483
+                  ]
+                }
+              },
+              {
+                "goal_distance_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    0.45,
+                    1.1
+                  ]
+                },
+                "ball_lateral_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    -0.3,
+                    0.3
+                  ]
+                },
+                "approach_distance_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    0.1,
+                    0.45
+                  ]
+                },
+                "approach_lateral_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    -0.12,
+                    0.12
+                  ]
+                },
+                "heading_error_range": {
+                  "__literal_yaml_tag__": "tag:yaml.org,2002:python/tuple",
+                  "value": [
+                    -1.5707963267948966,
+                    1.5707963267948966
+                  ]
+                }
+              }
+            ],
+            "field_length": 2.0,
+            "field_width": 1.2,
+            "promote_goal_rate": 0.5,
+            "max_iterations_per_stage": 300,
+            "steps_per_iteration": 120,
+            "easy_fraction": 0.2
+          }
+        }
+      }
+    ]
+  },
+  "same_training_commit_and_effective_budget": true,
+  "B_machine_metadata": {
+    "python": "3.12.3",
+    "packages": {
+      "torch": "2.9.1",
+      "mjlab": "1.3.0",
+      "mujoco": "3.10.0",
+      "mujoco-warp": "3.8.1",
+      "warp-lang": "1.12.0",
+      "rsl-rl-lib": "5.0.1",
+      "better-actuator-models": "1.0.1",
+      "onnx": "1.22.0",
+      "onnxruntime": "1.24.4",
+      "numpy": "2.4.1"
+    },
+    "torch_cuda_runtime": "12.8",
+    "gpu_and_driver": "NVIDIA GeForce RTX 4050 Laptop GPU, 595.99.02",
+    "os": "Ubuntu (native Linux), prime-select on-demand",
+    "uv_lock_sha256": "2eeeb680025baa737e7ccf3a87da3695a9d49b228de0bb60d8af0c022ab5f1aa",
+    "frozen_skills": {
+      "hf_repo": "pollen-robotics/microduck-policies",
+      "hf_revision": "1b56c396825c052a4e26e95cf2b8d8298af9e9b4",
+      "alpha_walking.onnx_sha256": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+      "ball_kick_right.onnx_sha256": "147a32c388c6b19111b3ac3b550a9a6dc8b8bf267118af4d8c3712522eedb5af"
+    }
+  },
+  "C_machine_audit": {
+    "torch": "2.9.1",
+    "mjlab": "1.3.0",
+    "mujoco": "3.10.0",
+    "mujoco-warp": "3.8.1",
+    "warp-lang": "1.12.0",
+    "rsl-rl-lib": "5.0.1",
+    "better-actuator-models": "1.0.1",
+    "onnx": "1.22.0",
+    "onnxruntime": "1.24.4",
+    "imageio": "2.37.2",
+    "imageio-ffmpeg": "0.6.0",
+    "numpy": "2.4.1"
+  },
+  "verified_metrics": {
+    "A_baseline_tol5cm": {
+      "episodes": 300,
+      "goal_count": 121,
+      "goal_rate": 0.4033333333333333,
+      "terminal_counts": {
+        "goal": 121,
+        "fell": 1,
+        "robot_oob": 3,
+        "ball_oob": 95,
+        "timeout": 80
+      },
+      "failure_combinations": {
+        "ball_oob": 95,
+        "timeout": 80,
+        "robot_oob": 3,
+        "fell": 1
+      },
+      "mean_goal_time_s": 4.872727272727273,
+      "repeat_goal_counts": [
+        37,
+        40,
+        44
+      ]
+    },
+    "B_seed1": {
+      "episodes": 300,
+      "goal_count": 286,
+      "goal_rate": 0.9533333333333334,
+      "terminal_counts": {
+        "goal": 286,
+        "fell": 2,
+        "robot_oob": 4,
+        "ball_oob": 7,
+        "timeout": 1
+      },
+      "failure_combinations": {
+        "fell": 2,
+        "ball_oob": 7,
+        "robot_oob": 4,
+        "timeout": 1
+      },
+      "mean_goal_time_s": 3.181118881118881,
+      "repeat_goal_counts": [
+        96,
+        95,
+        95
+      ]
+    },
+    "C_seed1_rerun_on_dennis_laptop": {
+      "episodes": 300,
+      "goal_count": 277,
+      "goal_rate": 0.9233333333333333,
+      "terminal_counts": {
+        "goal": 277,
+        "fell": 3,
+        "robot_oob": 3,
+        "ball_oob": 16,
+        "timeout": 1
+      },
+      "failure_combinations": {
+        "ball_oob": 16,
+        "fell": 3,
+        "robot_oob": 3,
+        "timeout": 1
+      },
+      "mean_goal_time_s": 3.2873646209386282,
+      "repeat_goal_counts": [
+        88,
+        95,
+        94
+      ]
+    }
+  },
+  "same_machine_paired_outcomes": {
+    "both_goal": 267,
+    "B_only_goal": 19,
+    "neither_goal": 4,
+    "C_only_goal": 10
+  },
+  "layout_success_count_differences_B_minus_C": [
+    0,
+    0,
+    0,
+    0,
+    -1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    -1,
+    0,
+    1,
+    -1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    -1,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    -1,
+    1,
+    -1,
+    0,
+    1,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    1,
+    0,
+    0,
+    0
+  ],
+  "layout_comparison": {
+    "B_more_goals": 15,
+    "C_more_goals": 8,
+    "equal": 77
+  },
+  "B_curve_rows": 2000,
+  "B_curve_scalars_checked_against_raw_events": 60000,
+  "training_samples": [
+    {
+      "iteration": 25,
+      "B_mean_episode_steps": 119.13999938964844,
+      "C_mean_episode_steps": 81.36000061035156,
+      "B_mean_training_reward": -0.8967574834823608,
+      "C_mean_training_reward": -0.9677039980888367
+    },
+    {
+      "iteration": 50,
+      "B_mean_episode_steps": 120.0,
+      "C_mean_episode_steps": 63.4900016784668,
+      "B_mean_training_reward": -0.37896499037742615,
+      "C_mean_training_reward": -0.6388387084007263
+    },
+    {
+      "iteration": 100,
+      "B_mean_episode_steps": 120.0,
+      "C_mean_episode_steps": 34.68000030517578,
+      "B_mean_training_reward": -0.27717262506484985,
+      "C_mean_training_reward": 3.5732054710388184
+    },
+    {
+      "iteration": 150,
+      "B_mean_episode_steps": 87.33000183105469,
+      "C_mean_episode_steps": 27.280000686645508,
+      "B_mean_training_reward": 3.473130464553833,
+      "C_mean_training_reward": 8.14491081237793
+    },
+    {
+      "iteration": 200,
+      "B_mean_episode_steps": 42.54999923706055,
+      "C_mean_episode_steps": 37.43000030517578,
+      "B_mean_training_reward": 10.353507041931152,
+      "C_mean_training_reward": 9.17943286895752
+    }
+  ],
+  "C_stage_changes": [
+    {
+      "iteration": 0,
+      "stage": 0
+    },
+    {
+      "iteration": 15,
+      "stage": 1
+    },
+    {
+      "iteration": 174,
+      "stage": 2
+    }
+  ],
+  "C_rerun_checkpoint_identity": {
+    "status": "claimed by author; no C checkpoint or literal C SHA256 in B archive",
+    "literal_C_hash_mentions": []
+  },
+  "new_GPU_evaluation_run": false,
+  "new_training_run": false
+}

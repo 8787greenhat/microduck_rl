@@ -10,6 +10,8 @@
 - [Package versions and skill hashes](reproducibility/versions_and_models.json)
 - [Full audit](evaluation/final_audit.json), [checkpoint verification](evaluation/checkpoint_verified.json), and [recovery](recovery)
 
-The B default config under `reference_configs` is a source-code reference, not the teammate's actual run settings. The original C evaluation is 94.0%; PR #1 separately reports 92.3% for C on the teammate machine. Preserve both provenance records.
+The B default config under `reference_configs` is still a source-code reference. The actual B archive has now been received through Discord and audited: see [the verification record and figures](comparison_audit). It confirms B286/300 and teammate-C277/300; the original C evaluation remains282/300. Raw B files remain in the supplied archive rather than being copied into this C result folder.
 
 The final `.pt` checkpoint is inside the ZIP. Low-level skill ONNX files are not bundled; their official download revision and exact hashes are recorded. The original package README explains how to compare B.
+
+The subsequent B audit and one local RTX4060 rerun are in `comparison_audit/`. B scored287/300 here against the original C282/300. The original C ZIP is an unchanged historical delivery snapshot; its older notes saying B was not yet supplied describe the state at packaging time. Use the current comparison document/audit for the latest status.
