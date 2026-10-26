@@ -210,16 +210,27 @@ Status as of 2026-10-23:
   (median placement error at the kick 3.0 cm; the foot touches the ball in
   ~2/3 of kicks). Next: §2.1's fallback of retraining the kick with ball/goal
   observations and a direction-aware reward.
+- **Method B (PPO, no curriculum) scores 95.3 %** on the same 300 held-out
+  episodes (seed 1, 2048 envs, 2000 iterations, commit 7fa6298): foot contact
+  98.7 %, ball out 2.3 %, falls 0.7 %, timeouts 0.3 %, 3.2 s to goal, median
+  placement error at the kick 1.4 cm (method A: 3.0 cm). Same skills, different
+  use: near the ball 96 % of its commands are above the walking dead zone
+  (median 0.31 m/s vs 0.07 m/s for A), it triggers the kick while still walking
+  (0.19 m/s vs 0.001 m/s), and it faces 2.7° left of the shot line at the kick,
+  consistent with partly offsetting the kick's 8° right bias. About one kick per
+  episode; the video shows real shots. Training first collapsed to never
+  kicking (episodes timed out from about iteration 5 to 140; the kick-attempt cost was active from the start)
+  and found kicking before iteration 200. One seed so far.
 - `soccer_goal_crossing` rejected every ball rolling on the floor: MuJoCo's soft
   contact rests the ball centre 0.4 mm below its radius, under the old
   `z >= ball_radius` check. Fixed with a 5 mm ground tolerance and a test.
 
-## Handoff: train method C on another machine
+## Method C training handoff and completed seed-1 result
 
-Status 2026-10-24: method A is evaluated (≈40 %, see findings), method B is
-training on the laptop RTX 4050 (`--agent.seed 1`), and method C is ready to
-train. Run C with the exact same settings as B so the comparison only measures
-the curriculum.
+Status 2026-10-25: method A scores 40.3 %, method B seed 1 scores 95.3 %,
+and method C seed 1 is complete. Method C scores 94.0 % on its training
+machine and 92.3 % in the same-machine comparison with B. The procedure below
+records the matched settings used so the B--C comparison isolates the curriculum.
 
 1. **Get the branch and dependencies.**
 

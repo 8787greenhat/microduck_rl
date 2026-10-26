@@ -6856,6 +6856,38 @@ def soccer_reset_curriculum(
     return {"stage": float(stage), "goal_rate": float(goal_rate)}
 
 
+def soccer_curriculum_state(env: ManagerBasedRlEnv) -> dict | None:
+    """The success-gated curriculum's progress, for checkpoints (None if no curriculum).
+
+    mjlab checkpoints only keep ``common_step_counter``, which is enough for
+    step-scheduled curricula but not for this one: the stage depends on the
+    goal rates seen so far, so it cannot be recomputed from the step count.
+    """
+    if not hasattr(env, "_soccer_curriculum_stage"):
+        return None
+    return {
+        "stage": int(env._soccer_curriculum_stage),
+        "stage_start_step": int(env._soccer_curriculum_stage_start),
+        "goals": int(env._soccer_curriculum_goals),
+        "episodes": int(env._soccer_curriculum_episodes),
+    }
+
+
+def restore_soccer_curriculum_state(env: ManagerBasedRlEnv, state: dict) -> None:
+    """Resume the curriculum from ``soccer_curriculum_state`` output.
+
+    Episodes already running were sampled before the restore (from stage 0),
+    so they are marked unscored and simply finish; every later reset samples
+    the restored stage.
+    """
+    env._soccer_curriculum_stage = int(state["stage"])
+    env._soccer_curriculum_stage_start = int(state["stage_start_step"])
+    env._soccer_curriculum_goals = int(state["goals"])
+    env._soccer_curriculum_episodes = int(state["episodes"])
+    if hasattr(env, "_soccer_episode_stage"):
+        env._soccer_episode_stage[:] = -1
+
+
 # ---- High-level observations -------------------------------------------------
 
 def soccer_ball_obs(env: ManagerBasedRlEnv) -> torch.Tensor:

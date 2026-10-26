@@ -1,0 +1,43 @@
+Microduck 方法 B seed 1 對照包（2026-10-25）
+
+回覆你們 C seed 1 對照包要的資料，以及我這邊的核對結果。
+
+一、結論先講
+- B seed 1：300 局進球 286 局 = 95.3%（我的 RTX 4050 筆電）。
+- 你們的 C seed 1 checkpoint 在我筆電上重測：92.3%（你們那邊 94.0%，差 5 局，在誤差範圍內）。
+- 同一台機器 B 95.3% vs C 92.3%：差約 1.5 個標準誤，不顯著；兩邊都只有一個 training seed，現在不能說哪個比較好。
+- 方法 A（幾何規則）同一套技能、同一份考題只有 40.3%。
+
+二、你們要的資料都在這裡
+| 你們要的 | 位置 |
+| B 實際 commit | run_info_B_seed1.json → commit 7fa62987d76dd2ba00ec15ffdd1de5bd93480845，啟動時 working tree clean（training_configs/git_state_at_launch.txt） |
+| agent.yaml / env.yaml | training_configs/ |
+| seed 與訓練預算 | run_info_B_seed1.json：seed 1、2048 envs、24 steps、2000 iterations、98,304,000 transitions、未中斷 |
+| 低階模型 revision / hash | reproducibility/versions_and_models.json（與你們的 SHA256 完全相同） |
+| 最終 checkpoint | checkpoints/model_1999.pt（SHA256 在 run_info_B_seed1.json） |
+| 固定評測 JSON / hash | evaluation_set/soccer_eval_set.json，SHA256 3a59dee2…53464，與你們的檔案逐 byte 相同 |
+| summary.json / per_episode | results/B_seed1/（per_episode.csv 是 per_episode.pt 轉出來的，好讀） |
+| TensorBoard 或學習曲線 | raw_logs/（原始 event 檔）、learning_curves/B_seed1.csv（全部 scalar 逐 iteration） |
+
+三、我這邊額外做的
+- training_configs/diff_B_vs_C_*.txt：B 和 C 的設定逐行比對。env.yaml 只差 C 的 reset_layout 課程（55 行），agent.yaml 只差名稱和 logger。
+- results/C_seed1_rerun_on_dennis_laptop/：你們 checkpoint 在我機器上的重測（SHA256 已核對、先用 weights_only 安全載入檢查）。
+- results/A_baseline_*：方法 A 的結果與踢球門檻掃描。
+- analysis/B_vs_C_seed1_analysis.md：完整分析，包括：
+  * B 和 C 學到不同策略：C 往左瞄 7.8°，幾乎抵銷官方踢球往右偏 8.2°；B 只往左 3.1°。
+  * B 在 iteration 約 5–140 卡在「完全不踢」（每局都超時），C 沒有卡住，第 75 次 mean reward 就轉正。這是 proposal 預期課程學習會改善初期探索的現象，但只看到一次。
+  * C 的課程在 iteration 15 升到 stage 1、174 升到 stage 2，都是靠 50% 成功率提早升級，所以 C 約 91% 的訓練和 B 是同一個分佈。
+
+四、要在報告揭露的限制
+1. 每種方法只有一個 training seed。
+2. C 中斷後從 model_200 恢復（你們已記錄）。
+3. 課程 stage 原本沒有存進 checkpoint（我寫課程程式的疏漏），你們這次是手動從日誌恢復 stage 2，所以 seed 1 結果不受影響。
+   已修好：checkpoint 現在會存 stage，續訓自動恢復（dennis 分支 commit 64c57e5，30 個測試通過，實測續訓維持原 stage）。
+   合併進 feat/shaolin-duck-soccer 後再跑 C 的 seed 2、3。
+4. 「邊走邊踢」只在模擬成立，不推論到實機。
+
+五、下一步建議
+- B、C 各跑 seed 2、3，設定和 seed 1 完全一樣。
+- 對 B、C 每個存檔都用同一份 300 局考題評估，畫「固定考題上的學習曲線」，才能公平比較樣本效率。
+
+完整性：SHA256SUMS.txt 列出包內每個檔案的 SHA256。
