@@ -20,6 +20,10 @@
 \usepackage{amsmath,amssymb,booktabs}
 \usepackage{graphicx}
 \usepackage{xcolor}
+% HW3: every figure/table caption is new, so label and text are blue.
+\usepackage{caption}
+\DeclareCaptionFont{blue}{\color{blue}}
+\captionsetup{labelfont=blue,textfont=blue}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
 \usepackage{titlesec}
@@ -249,8 +253,17 @@ C & 81 & 64 & 35 & 27 & 37 \\
 \end{center}
 B first collapsed to never kicking (nearly every episode timed out from about iteration 5 to 140) because the kick-attempt cost was active from the start, and its mean reward turned positive only around iteration 150. C never collapsed: early kicks score on the near-ready stage, and its mean reward was positive by iteration 75. This is the early-exploration benefit the plan predicted, observed once. C's curriculum promoted at iterations 15 and 174, both by the 50\% gate, so C spent about 91\% of its training iterations in stage~2; even there, 20\% of resets still drew from the easier stages, so C never trained on exactly B's distribution.
 
+\textbf{Fixed-test learning curves.} We also evaluated the checkpoints saved every 100 iterations (21 per method) on the same 300 held-out episodes (Fig.~\ref{fig:curve}; one RTX 4060, a separate batch from Table~\ref{tab:main}). After 101 updates C already scored 38.7\% while B scored 0\%, but B first reached 90\% at checkpoint 200 (92.7\%) and C only at 400 (94.3\%). From checkpoint 200 on, B scored at least as high as C at every checkpoint, ending at 95.7\% versus 94.0\%. In this single seed the curriculum sped up early learning but did not reach a high goal rate sooner. With checkpoints 100 iterations apart these are first observed crossings, not exact convergence times; checkpoints 0--200 were also evaluated with weaker centre-of-mass randomization than later ones, identically for B and C.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{learning_speed_seed1.png}
+\caption{\new{Valid goal rate of every saved checkpoint on the 300 held-out episodes (training seed 1, RTX 4060). C was resumed from checkpoint 200 after a driver update.}}
+\label{fig:curve}
+\end{figure}
+
 \subsection{Limitations and Next Steps}
-Each learned method has one training seed so far. C's run was interrupted by a GPU driver update and resumed from iteration 200 (iterations 201--267 recomputed); its curriculum stage, not yet checkpointed at that commit, was restored from the log. Kicking on the move succeeds in simulation although the kick was trained from a standing start; we make no hardware claim. Next we will run seeds 2 and 3 for B and C, evaluate every saved checkpoint on the held-out set to compare learning efficiency on a fixed test, and build spatial success maps over start positions. Because B and C already exceed the target with the official skills, retraining the kick is no longer needed for the core comparison and becomes an extension.
+Each learned method has one training seed so far. C's run was interrupted by a GPU driver update and resumed from iteration 200 (iterations 201--267 recomputed); its curriculum stage, not yet checkpointed at that commit, was restored from the log. Kicking on the move succeeds in simulation although the kick was trained from a standing start; we make no hardware claim. Next we will run seeds 2 and 3 for B and C, repeat the checkpoint evaluation on them, and build spatial success maps over start positions. Because B and C already exceed the target with the official skills, retraining the kick is no longer needed for the core comparison and becomes an extension.
 \par}
 
 \begin{thebibliography}{11}
