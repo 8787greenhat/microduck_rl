@@ -85,7 +85,13 @@ from .backlash import make_backlash_variant
 
 
 class SoccerOnPolicyRunner(MicroduckOnPolicyRunner):
-    """High-level PPO: re-wraps the env so each action is 5 frozen-skill steps."""
+    """High-level PPO: re-wraps the env so each action is 5 frozen-skill steps.
+
+    Checkpoints also carry the success-gated reset curriculum (method C), so a
+    resumed run continues on the stage it reached instead of restarting at
+    stage 0. A warm start (MICRODUCK_WARM_START=1) restarts it, like every
+    other curriculum.
+    """
 
     def __init__(self, env, train_cfg: dict, log_dir=None, device="cpu", **kwargs):
         from mjlab_microduck.soccer_adapter import SoccerSkillAdapter
@@ -93,6 +99,26 @@ class SoccerOnPolicyRunner(MicroduckOnPolicyRunner):
         if not isinstance(env, SoccerSkillAdapter):
             env = SoccerSkillAdapter(env.unwrapped)
         super().__init__(env, train_cfg, log_dir, device, **kwargs)
+
+    def save(self, path: str, infos=None):
+        from mjlab_microduck.tasks import mdp as microduck_mdp
+
+        state = microduck_mdp.soccer_curriculum_state(self.env.unwrapped)
+        if state is not None:
+            infos = {**(infos or {}), "soccer_curriculum": state}
+        super().save(path, infos)
+
+    def load(self, path: str, *args, **kwargs):
+        import os
+
+        from mjlab_microduck.tasks import mdp as microduck_mdp
+
+        infos = super().load(path, *args, **kwargs)
+        state = (infos or {}).get("soccer_curriculum")
+        if state is not None and os.environ.get(microduck_mdp.WARM_START_ENV, "") in ("", "0"):
+            microduck_mdp.restore_soccer_curriculum_state(self.env.unwrapped, state)
+            print(f"[soccer] curriculum restored from {path}: {state}")
+        return infos
 
 # Standard velocity task
 register_mjlab_task(
