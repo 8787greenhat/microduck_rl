@@ -1,0 +1,514 @@
+{
+  "created_at_utc": "2026-10-25T08:32:02.319823+00:00",
+  "protocol": {
+    "created_at_utc": "2026-10-25T07:48:43.003132+00:00",
+    "training_commit": "7fa62987d76dd2ba00ec15ffdd1de5bd93480845",
+    "reviewed_PR1_head": "80c4725f0ba918741252b2e675aa75bc2ad6da45",
+    "B_checkpoints_source_commit": "348f703d2bcbb7fc0fcb64db940fc13bd7ed887f",
+    "B_results_unchanged_in_latest_commit": true,
+    "evaluation_script_sha256": "2d8bd0f9fc840aa54fa858181e16ccb88813b4fc4579db42c6b49c7a85ba0757",
+    "fixed_eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+    "evaluation_rng_seed": 0,
+    "training_seed": 1,
+    "layouts": 100,
+    "repeats": 3,
+    "episodes_per_checkpoint": 300,
+    "checkpoint_points_per_method": 21,
+    "new_GPU_evaluations": 40,
+    "reused_final_evaluations": 2,
+    "new_training": false,
+    "modified_evaluation_settings": false,
+    "thresholds_declared_before_evaluation": [
+      0.7,
+      0.9
+    ],
+    "C_recovery_note": "Retain original 0-200 then resumed 201-1999; exclude discarded original 201-267 and recovery smoke. Physics episodes/RNG and legacy curriculum counters reinitialized on resume."
+  },
+  "thresholds": {
+    "B": {
+      "70pct": {
+        "first_observed": {
+          "iteration_0based": 200,
+          "completed_iterations": 201,
+          "training_high_level_transitions": 9879552,
+          "goal_count": 278,
+          "goal_rate": 0.9266666666666666
+        },
+        "first_observed_without_later_sampled_points_below_threshold": {
+          "iteration_0based": 200,
+          "completed_iterations": 201,
+          "goal_count": 278
+        }
+      },
+      "90pct": {
+        "first_observed": {
+          "iteration_0based": 200,
+          "completed_iterations": 201,
+          "training_high_level_transitions": 9879552,
+          "goal_count": 278,
+          "goal_rate": 0.9266666666666666
+        },
+        "first_observed_without_later_sampled_points_below_threshold": {
+          "iteration_0based": 200,
+          "completed_iterations": 201,
+          "goal_count": 278
+        }
+      }
+    },
+    "C": {
+      "70pct": {
+        "first_observed": {
+          "iteration_0based": 200,
+          "completed_iterations": 201,
+          "training_high_level_transitions": 9879552,
+          "goal_count": 257,
+          "goal_rate": 0.8566666666666667
+        },
+        "first_observed_without_later_sampled_points_below_threshold": {
+          "iteration_0based": 200,
+          "completed_iterations": 201,
+          "goal_count": 257
+        }
+      },
+      "90pct": {
+        "first_observed": {
+          "iteration_0based": 400,
+          "completed_iterations": 401,
+          "training_high_level_transitions": 19709952,
+          "goal_count": 283,
+          "goal_rate": 0.9433333333333334
+        },
+        "first_observed_without_later_sampled_points_below_threshold": {
+          "iteration_0based": 400,
+          "completed_iterations": 401,
+          "goal_count": 283
+        }
+      }
+    }
+  },
+  "exploratory_trapezoidal_AUC": {
+    "B": {
+      "trapezoidal_area_iteration_units": 1779.0383333333334,
+      "normalized_mean_goal_rate_over_observed_range": 0.8899641487410372,
+      "observed_completed_iteration_range": [
+        1,
+        2000
+      ]
+    },
+    "C": {
+      "trapezoidal_area_iteration_units": 1762.7266666666667,
+      "normalized_mean_goal_rate_over_observed_range": 0.8818042354510589,
+      "observed_completed_iteration_range": [
+        1,
+        2000
+      ]
+    }
+  },
+  "paired_checkpoint_results": [
+    {
+      "iteration_0based": 0,
+      "completed_iterations": 1,
+      "training_high_level_transitions": 49152,
+      "B_goals": 1,
+      "C_goals": 0,
+      "B_goal_pct": 0.33333333333333337,
+      "C_goal_pct": 0.0,
+      "C_minus_B_percentage_points": -0.33333333333333337,
+      "B_mean_goal_time_s": 7.0,
+      "C_mean_goal_time_s": null,
+      "both_goal": 0,
+      "B_only_goal": 1,
+      "C_only_goal": 0,
+      "neither_goal": 299
+    },
+    {
+      "iteration_0based": 100,
+      "completed_iterations": 101,
+      "training_high_level_transitions": 4964352,
+      "B_goals": 0,
+      "C_goals": 116,
+      "B_goal_pct": 0.0,
+      "C_goal_pct": 38.666666666666664,
+      "C_minus_B_percentage_points": 38.666666666666664,
+      "B_mean_goal_time_s": null,
+      "C_mean_goal_time_s": 3.774137931034483,
+      "both_goal": 0,
+      "B_only_goal": 0,
+      "C_only_goal": 116,
+      "neither_goal": 184
+    },
+    {
+      "iteration_0based": 200,
+      "completed_iterations": 201,
+      "training_high_level_transitions": 9879552,
+      "B_goals": 278,
+      "C_goals": 257,
+      "B_goal_pct": 92.66666666666666,
+      "C_goal_pct": 85.66666666666667,
+      "C_minus_B_percentage_points": -6.999999999999995,
+      "B_mean_goal_time_s": 3.7435251798561144,
+      "C_mean_goal_time_s": 3.4926070038910506,
+      "both_goal": 243,
+      "B_only_goal": 35,
+      "C_only_goal": 14,
+      "neither_goal": 8
+    },
+    {
+      "iteration_0based": 300,
+      "completed_iterations": 301,
+      "training_high_level_transitions": 14794752,
+      "B_goals": 284,
+      "C_goals": 266,
+      "B_goal_pct": 94.66666666666667,
+      "C_goal_pct": 88.66666666666667,
+      "C_minus_B_percentage_points": -5.999999999999995,
+      "B_mean_goal_time_s": 3.5478873239436624,
+      "C_mean_goal_time_s": 3.519924812030075,
+      "both_goal": 256,
+      "B_only_goal": 28,
+      "C_only_goal": 10,
+      "neither_goal": 6
+    },
+    {
+      "iteration_0based": 400,
+      "completed_iterations": 401,
+      "training_high_level_transitions": 19709952,
+      "B_goals": 284,
+      "C_goals": 283,
+      "B_goal_pct": 94.66666666666667,
+      "C_goal_pct": 94.33333333333334,
+      "C_minus_B_percentage_points": -0.33333333333332993,
+      "B_mean_goal_time_s": 3.5707746478873235,
+      "C_mean_goal_time_s": 3.4484098939929324,
+      "both_goal": 272,
+      "B_only_goal": 12,
+      "C_only_goal": 11,
+      "neither_goal": 5
+    },
+    {
+      "iteration_0based": 500,
+      "completed_iterations": 501,
+      "training_high_level_transitions": 24625152,
+      "B_goals": 284,
+      "C_goals": 277,
+      "B_goal_pct": 94.66666666666667,
+      "C_goal_pct": 92.33333333333333,
+      "C_minus_B_percentage_points": -2.3333333333333317,
+      "B_mean_goal_time_s": 3.4838028169014086,
+      "C_mean_goal_time_s": 3.344404332129964,
+      "both_goal": 268,
+      "B_only_goal": 16,
+      "C_only_goal": 9,
+      "neither_goal": 7
+    },
+    {
+      "iteration_0based": 600,
+      "completed_iterations": 601,
+      "training_high_level_transitions": 29540352,
+      "B_goals": 287,
+      "C_goals": 276,
+      "B_goal_pct": 95.66666666666667,
+      "C_goal_pct": 92.0,
+      "C_minus_B_percentage_points": -3.6666666666666625,
+      "B_mean_goal_time_s": 3.374216027874564,
+      "C_mean_goal_time_s": 3.33768115942029,
+      "both_goal": 269,
+      "B_only_goal": 18,
+      "C_only_goal": 7,
+      "neither_goal": 6
+    },
+    {
+      "iteration_0based": 700,
+      "completed_iterations": 701,
+      "training_high_level_transitions": 34455552,
+      "B_goals": 291,
+      "C_goals": 278,
+      "B_goal_pct": 97.0,
+      "C_goal_pct": 92.66666666666666,
+      "C_minus_B_percentage_points": -4.333333333333334,
+      "B_mean_goal_time_s": 3.344329896907216,
+      "C_mean_goal_time_s": 3.3413669064748204,
+      "both_goal": 275,
+      "B_only_goal": 16,
+      "C_only_goal": 3,
+      "neither_goal": 6
+    },
+    {
+      "iteration_0based": 800,
+      "completed_iterations": 801,
+      "training_high_level_transitions": 39370752,
+      "B_goals": 291,
+      "C_goals": 288,
+      "B_goal_pct": 97.0,
+      "C_goal_pct": 96.0,
+      "C_minus_B_percentage_points": -1.0000000000000009,
+      "B_mean_goal_time_s": 3.3075601374570445,
+      "C_mean_goal_time_s": 3.3659722222222226,
+      "both_goal": 283,
+      "B_only_goal": 8,
+      "C_only_goal": 5,
+      "neither_goal": 4
+    },
+    {
+      "iteration_0based": 900,
+      "completed_iterations": 901,
+      "training_high_level_transitions": 44285952,
+      "B_goals": 288,
+      "C_goals": 285,
+      "B_goal_pct": 96.0,
+      "C_goal_pct": 95.0,
+      "C_minus_B_percentage_points": -1.0000000000000009,
+      "B_mean_goal_time_s": 3.310069444444445,
+      "C_mean_goal_time_s": 3.3614035087719296,
+      "both_goal": 278,
+      "B_only_goal": 10,
+      "C_only_goal": 7,
+      "neither_goal": 5
+    },
+    {
+      "iteration_0based": 1000,
+      "completed_iterations": 1001,
+      "training_high_level_transitions": 49201152,
+      "B_goals": 287,
+      "C_goals": 283,
+      "B_goal_pct": 95.66666666666667,
+      "C_goal_pct": 94.33333333333334,
+      "C_minus_B_percentage_points": -1.3333333333333308,
+      "B_mean_goal_time_s": 3.2731707317073164,
+      "C_mean_goal_time_s": 3.3727915194346294,
+      "both_goal": 277,
+      "B_only_goal": 10,
+      "C_only_goal": 6,
+      "neither_goal": 7
+    },
+    {
+      "iteration_0based": 1100,
+      "completed_iterations": 1101,
+      "training_high_level_transitions": 54116352,
+      "B_goals": 292,
+      "C_goals": 286,
+      "B_goal_pct": 97.33333333333334,
+      "C_goal_pct": 95.33333333333334,
+      "C_minus_B_percentage_points": -2.0000000000000018,
+      "B_mean_goal_time_s": 3.33013698630137,
+      "C_mean_goal_time_s": 3.297202797202797,
+      "both_goal": 282,
+      "B_only_goal": 10,
+      "C_only_goal": 4,
+      "neither_goal": 4
+    },
+    {
+      "iteration_0based": 1200,
+      "completed_iterations": 1201,
+      "training_high_level_transitions": 59031552,
+      "B_goals": 293,
+      "C_goals": 284,
+      "B_goal_pct": 97.66666666666667,
+      "C_goal_pct": 94.66666666666667,
+      "C_minus_B_percentage_points": -3.0000000000000027,
+      "B_mean_goal_time_s": 3.247098976109215,
+      "C_mean_goal_time_s": 3.3250000000000006,
+      "both_goal": 281,
+      "B_only_goal": 12,
+      "C_only_goal": 3,
+      "neither_goal": 4
+    },
+    {
+      "iteration_0based": 1300,
+      "completed_iterations": 1301,
+      "training_high_level_transitions": 63946752,
+      "B_goals": 291,
+      "C_goals": 283,
+      "B_goal_pct": 97.0,
+      "C_goal_pct": 94.33333333333334,
+      "C_minus_B_percentage_points": -2.6666666666666616,
+      "B_mean_goal_time_s": 3.2628865979381443,
+      "C_mean_goal_time_s": 3.2787985865724383,
+      "both_goal": 279,
+      "B_only_goal": 12,
+      "C_only_goal": 4,
+      "neither_goal": 5
+    },
+    {
+      "iteration_0based": 1400,
+      "completed_iterations": 1401,
+      "training_high_level_transitions": 68861952,
+      "B_goals": 293,
+      "C_goals": 280,
+      "B_goal_pct": 97.66666666666667,
+      "C_goal_pct": 93.33333333333333,
+      "C_minus_B_percentage_points": -4.333333333333334,
+      "B_mean_goal_time_s": 3.2928327645051194,
+      "C_mean_goal_time_s": 3.2503571428571427,
+      "both_goal": 277,
+      "B_only_goal": 16,
+      "C_only_goal": 3,
+      "neither_goal": 4
+    },
+    {
+      "iteration_0based": 1500,
+      "completed_iterations": 1501,
+      "training_high_level_transitions": 73777152,
+      "B_goals": 289,
+      "C_goals": 287,
+      "B_goal_pct": 96.33333333333334,
+      "C_goal_pct": 95.66666666666667,
+      "C_minus_B_percentage_points": -0.666666666666671,
+      "B_mean_goal_time_s": 3.2719723183391,
+      "C_mean_goal_time_s": 3.3177700348432055,
+      "both_goal": 280,
+      "B_only_goal": 9,
+      "C_only_goal": 7,
+      "neither_goal": 4
+    },
+    {
+      "iteration_0based": 1600,
+      "completed_iterations": 1601,
+      "training_high_level_transitions": 78692352,
+      "B_goals": 293,
+      "C_goals": 279,
+      "B_goal_pct": 97.66666666666667,
+      "C_goal_pct": 93.0,
+      "C_minus_B_percentage_points": -4.666666666666663,
+      "B_mean_goal_time_s": 3.2515358361774744,
+      "C_mean_goal_time_s": 3.292831541218638,
+      "both_goal": 276,
+      "B_only_goal": 17,
+      "C_only_goal": 3,
+      "neither_goal": 4
+    },
+    {
+      "iteration_0based": 1700,
+      "completed_iterations": 1701,
+      "training_high_level_transitions": 83607552,
+      "B_goals": 292,
+      "C_goals": 282,
+      "B_goal_pct": 97.33333333333334,
+      "C_goal_pct": 94.0,
+      "C_minus_B_percentage_points": -3.3333333333333437,
+      "B_mean_goal_time_s": 3.2842465753424657,
+      "C_mean_goal_time_s": 3.266312056737589,
+      "both_goal": 279,
+      "B_only_goal": 13,
+      "C_only_goal": 3,
+      "neither_goal": 5
+    },
+    {
+      "iteration_0based": 1800,
+      "completed_iterations": 1801,
+      "training_high_level_transitions": 88522752,
+      "B_goals": 289,
+      "C_goals": 278,
+      "B_goal_pct": 96.33333333333334,
+      "C_goal_pct": 92.66666666666666,
+      "C_minus_B_percentage_points": -3.6666666666666736,
+      "B_mean_goal_time_s": 3.2134948096885814,
+      "C_mean_goal_time_s": 3.2823741007194243,
+      "both_goal": 272,
+      "B_only_goal": 17,
+      "C_only_goal": 6,
+      "neither_goal": 5
+    },
+    {
+      "iteration_0based": 1900,
+      "completed_iterations": 1901,
+      "training_high_level_transitions": 93437952,
+      "B_goals": 290,
+      "C_goals": 282,
+      "B_goal_pct": 96.66666666666667,
+      "C_goal_pct": 94.0,
+      "C_minus_B_percentage_points": -2.6666666666666727,
+      "B_mean_goal_time_s": 3.2362068965517246,
+      "C_mean_goal_time_s": 3.3826241134751776,
+      "both_goal": 275,
+      "B_only_goal": 15,
+      "C_only_goal": 7,
+      "neither_goal": 3
+    },
+    {
+      "iteration_0based": 1999,
+      "completed_iterations": 2000,
+      "training_high_level_transitions": 98304000,
+      "B_goals": 287,
+      "C_goals": 282,
+      "B_goal_pct": 95.66666666666667,
+      "C_goal_pct": 94.0,
+      "C_minus_B_percentage_points": -1.6666666666666718,
+      "B_mean_goal_time_s": 3.17979094076655,
+      "C_mean_goal_time_s": 3.3209219858156023,
+      "both_goal": 275,
+      "B_only_goal": 12,
+      "C_only_goal": 7,
+      "neither_goal": 6
+    }
+  ],
+  "total_scored_episodes": 12600,
+  "new_scored_episodes": 12000,
+  "reused_original_final_episodes": 600,
+  "incomplete_process_attempts": [
+    {
+      "method": "B",
+      "iteration": 300,
+      "attempts": 2,
+      "scored_output_saved": false,
+      "evidence": "incident_B300_startup_20261025_1555"
+    },
+    {
+      "method": "B",
+      "iteration": 1800,
+      "attempts": 1,
+      "scored_output_saved": false,
+      "evidence": "incident_B1800_torch_import"
+    }
+  ],
+  "training_weights_unchanged": true,
+  "existing_evaluator_counter_behavior": {
+    "checkpoint_common_step_counter_restored_even_for_actor_only_load": true,
+    "matched_B_C_points_have_equal_common_step_counter": true,
+    "inherited_COM_randomization_curricula_retained_unchanged": true,
+    "trunk_COM_half_range_m_by_common_step_threshold": [
+      [
+        0,
+        0.003
+      ],
+      [
+        12000,
+        0.005
+      ],
+      [
+        24000,
+        0.01
+      ],
+      [
+        36000,
+        0.015
+      ]
+    ],
+    "head_COM_half_range_m_by_common_step_threshold": [
+      [
+        0,
+        0.003
+      ],
+      [
+        12000,
+        0.005
+      ],
+      [
+        24000,
+        0.01
+      ]
+    ],
+    "note": "Fixed reset JSON is identical at all points. The original evaluator also restores the checkpoint clock, so inherited COM randomization schedules can differ across training progress. B and C at the same checkpoint index have the same clock and schedule. No curriculum or evaluation behavior was changed for this batch."
+  },
+  "interpretation_limitations": [
+    "One training seed for each method; no algorithm-level superiority claim.",
+    "Checkpoint sampling is every 100 iterations; first crossing is observed on this grid, not exact convergence time.",
+    "model_0 is after one update, not an untrained checkpoint.",
+    "Repeated layouts are not independent training seeds.",
+    "C resumed after model_200 with physical episodes/RNG reinitialized; discarded branch excluded.",
+    "Final endpoint evaluations are the preserved original RTX4060 results, not fresh reruns.",
+    "Original evaluator restores checkpoint clock and retains inherited COM curricula; matching indices compare the same schedule, but physical randomization strength is not frozen across the entire training curve.",
+    "Successful goal time conditions on scoring and cannot alone measure overall task quality.",
+    "AUC interpolates sparsely measured points and is descriptive, not a formal significance test."
+  ]
+}

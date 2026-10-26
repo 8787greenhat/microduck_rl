@@ -1,0 +1,10 @@
+Checkpoint 評測異常紀錄
+
+第一次批次在完成 B/C 的 model_0、100、200 共六份評測後，B model_300 子程序以 returncode=-11（SIGSEGV）退出。
+該次 console.log 為空，沒有產生 summary.json 或 per_episode.pt，因此沒有任何完成分數可挑選或覆蓋。
+已保存 failed_status.json、原空日誌與 job.json。
+之後只在隔離 wrapper 加入啟動訊息及 Python faulthandler／即時輸出，未改 official evaluator、模型、固定場景、seed 或其他研究設定。
+已完成的六份 summary／per_episode 沿用；從 B model_300 未完成點接續。確切崩潰原因尚未證實，不能直接歸因於模型或訓練。
+
+第二次嘗試同樣在模型載入後 reset 時發生 segmentation fault；保留 faulthandler 堆疊後，僅清理卡住的評測子程序。第三次改用 CPU 反序列化，確認 GPU actor 每個 tensor（含正規化）與來源完全相同，B model_300 首次完成結果為 284/300。前兩次均沒有產生分數。
+

@@ -1,0 +1,446 @@
+{
+  "created_at_utc": "2026-10-25T07:48:43.003132+00:00",
+  "training_commit": "7fa62987d76dd2ba00ec15ffdd1de5bd93480845",
+  "reviewed_PR1_head": "80c4725f0ba918741252b2e675aa75bc2ad6da45",
+  "B_checkpoints_source_commit": "348f703d2bcbb7fc0fcb64db940fc13bd7ed887f",
+  "B_results_unchanged_in_latest_commit": true,
+  "evaluation_script_sha256": "2d8bd0f9fc840aa54fa858181e16ccb88813b4fc4579db42c6b49c7a85ba0757",
+  "fixed_eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+  "evaluation_rng_seed": 0,
+  "training_seed": 1,
+  "layouts": 100,
+  "repeats": 3,
+  "episodes_per_checkpoint": 300,
+  "checkpoint_points_per_method": 21,
+  "new_GPU_evaluations": 40,
+  "reused_final_evaluations": 2,
+  "new_training": false,
+  "modified_evaluation_settings": false,
+  "thresholds_declared_before_evaluation": [
+    0.7,
+    0.9
+  ],
+  "C_recovery_note": "Retain original 0-200 then resumed 201-1999; exclude discarded original 201-267 and recovery smoke. Physics episodes/RNG and legacy curriculum counters reinitialized on resume.",
+  "jobs": [
+    {
+      "method": "B",
+      "iteration_0based": 0,
+      "completed_iterations": 1,
+      "training_high_level_transitions": 49152,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_0.pt",
+      "checkpoint_sha256": "61576a4d0229ba2f1733ef162d2f735a1a090485629443a786f0a79f9ec396ce",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_0",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 0,
+      "completed_iterations": 1,
+      "training_high_level_transitions": 49152,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_16-50-00_seed1_4060_20261024_164942/model_0.pt",
+      "checkpoint_sha256": "3aa94dfce71a855e2c86332dd6fe8d619b324dd66a7662cf3f31a98354073777",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_0",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 100,
+      "completed_iterations": 101,
+      "training_high_level_transitions": 4964352,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_100.pt",
+      "checkpoint_sha256": "75f1a633eb03844025a63ecb370741b6d7c0e70eb3bd62e72b056e53cb794d0c",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_100",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 100,
+      "completed_iterations": 101,
+      "training_high_level_transitions": 4964352,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_16-50-00_seed1_4060_20261024_164942/model_100.pt",
+      "checkpoint_sha256": "cf38c20d0314f78ee3a745c19338b08c3df73f418915b8512074f50f05794c6a",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_100",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 200,
+      "completed_iterations": 201,
+      "training_high_level_transitions": 9879552,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_200.pt",
+      "checkpoint_sha256": "1da5371516ffcbc0be364f772111d3f0712a65525a2add039a1049a971c8706a",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_200",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 200,
+      "completed_iterations": 201,
+      "training_high_level_transitions": 9879552,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_16-50-00_seed1_4060_20261024_164942/model_200.pt",
+      "checkpoint_sha256": "ae27724b09a5d0f36aaf19702dbea1a652249ab441c4a9afd3655bb86bbaadb3",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_200",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 300,
+      "completed_iterations": 301,
+      "training_high_level_transitions": 14794752,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_300.pt",
+      "checkpoint_sha256": "5262c8304dc9ae75e7c266186bbd1c468d223528fdf0807424f4937e7b88f6a8",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_300",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 300,
+      "completed_iterations": 301,
+      "training_high_level_transitions": 14794752,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_300.pt",
+      "checkpoint_sha256": "dc6e7fa6fbd9e44d3d49d8e5d63a9b8d369010f0778c5a3c732451e9541519b8",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_300",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 400,
+      "completed_iterations": 401,
+      "training_high_level_transitions": 19709952,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_400.pt",
+      "checkpoint_sha256": "2c2913296c7fabfda77f3487b998c55ed3bc527b3331f9f446c954bf715598f3",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_400",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 400,
+      "completed_iterations": 401,
+      "training_high_level_transitions": 19709952,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_400.pt",
+      "checkpoint_sha256": "cb9ace58139fe2030325fdc1456f753fb2c38089fd3227aac552cc976e72f046",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_400",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 500,
+      "completed_iterations": 501,
+      "training_high_level_transitions": 24625152,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_500.pt",
+      "checkpoint_sha256": "7be1757a3a6f464d9e9bcab6e723460977217424a46543046e8306c7d091862c",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_500",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 500,
+      "completed_iterations": 501,
+      "training_high_level_transitions": 24625152,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_500.pt",
+      "checkpoint_sha256": "10494c4a65f18621754abb64b12a975ee0ad9cc596cfaa60b82dd51f5d497867",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_500",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 600,
+      "completed_iterations": 601,
+      "training_high_level_transitions": 29540352,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_600.pt",
+      "checkpoint_sha256": "1a8a5ee716ba09227550dda4040ab2641e7815d9d3b1fbc5a26ddb64a856245a",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_600",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 600,
+      "completed_iterations": 601,
+      "training_high_level_transitions": 29540352,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_600.pt",
+      "checkpoint_sha256": "6c459688df417466caa6a118f0270e5eeff4d343da8c27fd2136ecfaf6d7f2a5",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_600",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 700,
+      "completed_iterations": 701,
+      "training_high_level_transitions": 34455552,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_700.pt",
+      "checkpoint_sha256": "21b74d1cd5c9c338dad4e26fe8b14e29401c4c953dd2641ee6727ab4a18e1a5d",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_700",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 700,
+      "completed_iterations": 701,
+      "training_high_level_transitions": 34455552,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_700.pt",
+      "checkpoint_sha256": "730fd3968f70ec1bceb7be47a6997f55075b96ec11605f55fec92126baf3424b",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_700",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 800,
+      "completed_iterations": 801,
+      "training_high_level_transitions": 39370752,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_800.pt",
+      "checkpoint_sha256": "cb7a71ec1c38295c382bfbdb140be0d74a5b42899f8c35299dea044c20efde91",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_800",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 800,
+      "completed_iterations": 801,
+      "training_high_level_transitions": 39370752,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_800.pt",
+      "checkpoint_sha256": "0371a4b97198f0e7a7e38d9fbcf8fef72feda67276c43d938904ffa5c0dc373b",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_800",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 900,
+      "completed_iterations": 901,
+      "training_high_level_transitions": 44285952,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_900.pt",
+      "checkpoint_sha256": "a4e9344062060fad3b3719a3df1219bc6de9cde4a7ec121579fbc47546c2762e",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_900",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 900,
+      "completed_iterations": 901,
+      "training_high_level_transitions": 44285952,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_900.pt",
+      "checkpoint_sha256": "9ad9957e521a5f18abee0e7f34adae1f5d67d1f99b20a9841b43913eca3ac896",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_900",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 1000,
+      "completed_iterations": 1001,
+      "training_high_level_transitions": 49201152,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_1000.pt",
+      "checkpoint_sha256": "98027345d2f6f4c4df46a496572a11074d6446bddeac9b0450820520da36a593",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_1000",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 1000,
+      "completed_iterations": 1001,
+      "training_high_level_transitions": 49201152,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1000.pt",
+      "checkpoint_sha256": "5d1b09ac743cd4ada188c17bc2c8cd54dd39ee9ec586ea45c7cbd2f8b828c41a",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_1000",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 1100,
+      "completed_iterations": 1101,
+      "training_high_level_transitions": 54116352,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_1100.pt",
+      "checkpoint_sha256": "257fdd6a418a748747ba6ecd00d35cbd1deaba45f6731de94f9dd5cb1e691023",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_1100",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 1100,
+      "completed_iterations": 1101,
+      "training_high_level_transitions": 54116352,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1100.pt",
+      "checkpoint_sha256": "5ece2e2b919474c1c74326578950cacb1bc7a9cf75580d015fca01a2f87505bf",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_1100",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 1200,
+      "completed_iterations": 1201,
+      "training_high_level_transitions": 59031552,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_1200.pt",
+      "checkpoint_sha256": "1ffcb6ad8c69413b2971cfb77e93d7ae1d0aa6fe05f4f5a4f389895ffc0ba88e",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_1200",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 1200,
+      "completed_iterations": 1201,
+      "training_high_level_transitions": 59031552,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1200.pt",
+      "checkpoint_sha256": "b5763e0070d67d5e6db5cbe4ba5c04f56cdf93e3a2748a7c25015c76ebcd2b7d",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_1200",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 1300,
+      "completed_iterations": 1301,
+      "training_high_level_transitions": 63946752,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_1300.pt",
+      "checkpoint_sha256": "41d7c1cac79318838ab4a0bbd7cda5feb3d643ee643733529ec0fa2d88b7250b",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_1300",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 1300,
+      "completed_iterations": 1301,
+      "training_high_level_transitions": 63946752,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1300.pt",
+      "checkpoint_sha256": "14275b3c263542b1f622c628c060735efafd19c14ca0346652360180edc5ec55",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_1300",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 1400,
+      "completed_iterations": 1401,
+      "training_high_level_transitions": 68861952,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_1400.pt",
+      "checkpoint_sha256": "18275d30244c35a6db8400e2cf03c3b2007edf6b8dc1b708ff0f8a8993965927",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_1400",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 1400,
+      "completed_iterations": 1401,
+      "training_high_level_transitions": 68861952,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1400.pt",
+      "checkpoint_sha256": "6db747f864184de261d0fea4dd2a1699990b7c6131ed772e41632467c2fcc62f",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_1400",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 1500,
+      "completed_iterations": 1501,
+      "training_high_level_transitions": 73777152,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_1500.pt",
+      "checkpoint_sha256": "09698108b68294bc264e11df0b2c24781a008e2974569a359828de16ccb26f85",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_1500",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 1500,
+      "completed_iterations": 1501,
+      "training_high_level_transitions": 73777152,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1500.pt",
+      "checkpoint_sha256": "c27866d0adf07224bb85dabbd285d5b9017c301f02021ac5b7c94ef3ce82f42b",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_1500",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 1600,
+      "completed_iterations": 1601,
+      "training_high_level_transitions": 78692352,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_1600.pt",
+      "checkpoint_sha256": "fab92fa7eae9f21e32b55826749c85edc8555cb3098f7a87ffcd2e6a706de5cf",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_1600",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 1600,
+      "completed_iterations": 1601,
+      "training_high_level_transitions": 78692352,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1600.pt",
+      "checkpoint_sha256": "de17945eca4e998e30f19e2d7afbd27d641c3425fda84d2feb38b52d855de9e2",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_1600",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 1700,
+      "completed_iterations": 1701,
+      "training_high_level_transitions": 83607552,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_1700.pt",
+      "checkpoint_sha256": "9df00890a1239dcfa0f45b4141e8310e30726ff933c97e8a1c5e9396c9cea208",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_1700",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 1700,
+      "completed_iterations": 1701,
+      "training_high_level_transitions": 83607552,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1700.pt",
+      "checkpoint_sha256": "2e67e8f97af88c34a6ea4b9c0e5b0ebfc548f9a3690066c2557a69b8a0c5b1cf",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_1700",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 1800,
+      "completed_iterations": 1801,
+      "training_high_level_transitions": 88522752,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_1800.pt",
+      "checkpoint_sha256": "324e3a0e9e9ad7fdadbc8afcaa40cd636a9ca22938556bbfc3f24ed8b2892830",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_1800",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 1800,
+      "completed_iterations": 1801,
+      "training_high_level_transitions": 88522752,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1800.pt",
+      "checkpoint_sha256": "3463582b1d3a136efc9de3c9d3e09f8e35a3dda5afeb45e72d9d99c044bb02e2",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_1800",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 1900,
+      "completed_iterations": 1901,
+      "training_high_level_transitions": 93437952,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_1900.pt",
+      "checkpoint_sha256": "88fd61bd11ab2c454e9494d4fe32f034654742b1a6f8af0b9740594b2da30664",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_1900",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "C",
+      "iteration_0based": 1900,
+      "completed_iterations": 1901,
+      "training_high_level_transitions": 93437952,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1900.pt",
+      "checkpoint_sha256": "d221b3cfa27224a5e0d41aeed1249623614dbaad82c1061ff55b0970b1c6c556",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_1900",
+      "reuse_existing_final_output": null
+    },
+    {
+      "method": "B",
+      "iteration_0based": 1999,
+      "completed_iterations": 2000,
+      "training_high_level_transitions": 98304000,
+      "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_1999.pt",
+      "checkpoint_sha256": "0e5c124a7d1461259f198efbd47d3e30347c8be9c6098e83314367dcf15b7c53",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/B/model_1999",
+      "reuse_existing_final_output": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_comparison_20261025/B_seed1_on_4060"
+    },
+    {
+      "method": "C",
+      "iteration_0based": 1999,
+      "completed_iterations": 2000,
+      "training_high_level_transitions": 98304000,
+      "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_1999.pt",
+      "checkpoint_sha256": "8bda158d82f3e3834ebdc76028cadcc4584294d5e7cc751c84adc7d9d06b4de4",
+      "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_checkpoint_eval_20261025/C/model_1999",
+      "reuse_existing_final_output": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/seed1_evaluation/metrics"
+    }
+  ]
+}

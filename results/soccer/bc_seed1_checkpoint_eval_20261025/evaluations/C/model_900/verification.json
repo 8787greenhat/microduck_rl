@@ -1,0 +1,44 @@
+{
+  "method": "C",
+  "iteration_0based": 900,
+  "completed_iterations": 901,
+  "training_high_level_transitions": 44285952,
+  "checkpoint_sha256": "9ad9957e521a5f18abee0e7f34adae1f5d67d1f99b20a9841b43913eca3ac896",
+  "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/logs/rsl_rl/soccer_highlevel_curriculum/2026-10-24_18-09-25_seed1_resume200_20261024_180905/model_900.pt",
+  "evaluation_script_sha256": "2d8bd0f9fc840aa54fa858181e16ccb88813b4fc4579db42c6b49c7a85ba0757",
+  "fixed_eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+  "training_commit": "7fa62987d76dd2ba00ec15ffdd1de5bd93480845",
+  "evaluation_rng_seed": 0,
+  "training_seed": 1,
+  "envs": 300,
+  "goal_count": 285,
+  "goal_rate": 0.95,
+  "terminal_and_action_counts": {
+    "goal": 285,
+    "fell": 0,
+    "robot_oob": 3,
+    "ball_oob": 9,
+    "timeout": 3,
+    "kicked": 295,
+    "contact": 292
+  },
+  "all_episodes_terminated": true,
+  "mean_goal_time_s": 3.3614035087719296,
+  "median_goal_time_s": 3.2,
+  "p90_goal_time_s": 4.3,
+  "repeat_goal_counts": [
+    95,
+    94,
+    96
+  ],
+  "exclusive_failure_combinations": {
+    "ball_oob": 9,
+    "robot_oob": 3,
+    "timeout": 3
+  },
+  "reused_original_final_evaluation": false,
+  "new_training": false,
+  "summary_sha256": "85f7e64d7e8c62204045299ca0070c1b3194a60c91095fa00cf61e41c3761f9c",
+  "per_episode_pt_sha256": "99a4c75f4049beda4b83a69b53db1ede89fbede2db158879cbc63c9e2c471f76",
+  "verified_at_utc": "2026-10-25T08:28:12.302656+00:00"
+}

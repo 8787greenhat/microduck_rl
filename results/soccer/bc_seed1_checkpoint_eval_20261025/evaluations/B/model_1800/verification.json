@@ -1,0 +1,46 @@
+{
+  "method": "B",
+  "iteration_0based": 1800,
+  "completed_iterations": 1801,
+  "training_high_level_transitions": 88522752,
+  "checkpoint_sha256": "324e3a0e9e9ad7fdadbc8afcaa40cd636a9ca22938556bbfc3f24ed8b2892830",
+  "checkpoint": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/pr1_review_348f703/results/soccer/b_seed1_comparison_20261025/checkpoints/model_1800.pt",
+  "evaluation_script_sha256": "2d8bd0f9fc840aa54fa858181e16ccb88813b4fc4579db42c6b49c7a85ba0757",
+  "fixed_eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+  "training_commit": "7fa62987d76dd2ba00ec15ffdd1de5bd93480845",
+  "evaluation_rng_seed": 0,
+  "training_seed": 1,
+  "envs": 300,
+  "goal_count": 289,
+  "goal_rate": 0.9633333333333334,
+  "terminal_and_action_counts": {
+    "goal": 289,
+    "fell": 2,
+    "robot_oob": 3,
+    "ball_oob": 5,
+    "timeout": 1,
+    "kicked": 297,
+    "contact": 296
+  },
+  "all_episodes_terminated": true,
+  "mean_goal_time_s": 3.2134948096885814,
+  "median_goal_time_s": 3.1,
+  "p90_goal_time_s": 4.2,
+  "repeat_goal_counts": [
+    96,
+    97,
+    96
+  ],
+  "exclusive_failure_combinations": {
+    "fell": 2,
+    "ball_oob": 5,
+    "robot_oob": 3,
+    "timeout": 1
+  },
+  "reused_original_final_evaluation": false,
+  "new_training": false,
+  "summary_sha256": "89f6571a5b306f4888bfc0cd394f5c5a24522fe8911eb7f0a271a78215c5a0b5",
+  "per_episode_pt_sha256": "e40ddece5f0909b9aba6d53892dde4db64a25c984f12cfbf5262b67c3ccbc2eb",
+  "verified_at_utc": "2026-10-25T08:29:04.263392+00:00",
+  "elapsed_wall_s": 49.93918323700018
+}

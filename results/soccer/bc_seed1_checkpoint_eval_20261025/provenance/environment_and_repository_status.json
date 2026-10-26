@@ -1,0 +1,40 @@
+{
+  "captured_at_utc": "2026-10-25T15:55:05.520747+08:00",
+  "python_executable": "/home/lingchentseng/projects/microduck_rl_4060_7fa6298/.venv/bin/python",
+  "python_version": "3.12.14 (main, Sep 29 2026, 15:01:18) [Clang 22.1.3 ]",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.9.1",
+    "mjlab": "1.3.0",
+    "mujoco": "3.10.0",
+    "mujoco-warp": "3.8.1",
+    "warp-lang": "1.12.0",
+    "rsl-rl-lib": "5.0.1",
+    "better-actuator-models": "1.0.1",
+    "onnx": "1.22.0",
+    "onnxruntime": "1.24.4",
+    "numpy": "2.4.1",
+    "matplotlib": "3.10.9"
+  },
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU, 610.62, 8188 MiB",
+  "source_commit": "7fa62987d76dd2ba00ec15ffdd1de5bd93480845",
+  "source_tracked_changes": "",
+  "wrapper_sha256": "63c70c659b43ac771b4a50cec1b44e63d791995e41fb57f25168cb996fe6714f",
+  "PR1_at_start": {
+    "number": 1,
+    "state": "open",
+    "head": "80c4725f0ba918741252b2e675aa75bc2ad6da45"
+  },
+  "PR2_at_start": {
+    "number": 2,
+    "state": "merged",
+    "merge_commit": "adf67c7a2423ae088bc68db29a6d85ff4aafe643"
+  },
+  "latest_change": "80c4725 updates method C completion status and replaces the unsupported significance wording with single-training-seed limitations. Model/config/evaluation code unchanged.",
+  "prior_review_report_items_still_present": [
+    "Reward formula omits dt scaling in progress.tex",
+    "91% stage-2 iterations incorrectly described as 91% B-distribution samples"
+  ],
+  "wrapper_after_runtime_workaround_sha256": "169594d0f23c2ae7fa96b451488e5a9d795ad43849fdeb615f81e119286972da",
+  "runtime_workaround": "B/C model_0,100,200 used original GPU deserialization. From model_300, deserialize checkpoint on CPU then copy identical actor tensors to GPU, including observation normalization; exact equality checked before evaluation. Official evaluator, model weights, fixed layouts, evaluation seed and task configuration unchanged."
+}
