@@ -81,8 +81,10 @@ W_OUT_OF_BOUNDS = -2.0    # one-time; > max time cost saved by ending early
 FELL_LIMIT_ANGLE = 1.2217304763960306  # BallKick's fell_over limit (70°)
 
 # ── Method C: reset-distribution curriculum (rewards identical to method B) ──
-# Easiest first; the last stage IS method B's distribution, so both methods are
-# evaluated on, and finish training on, the same layouts.
+# Easiest first; the last stage's ranges equal method B's, and both methods are
+# evaluated on the same fixed layouts. After promotion CURRICULUM_EASY_FRACTION
+# (20 %) of resets still draw from earlier stages, so even in the last stage
+# method C does not train on exactly method B's reset distribution.
 CURRICULUM_STAGES = [
     {   # near-ready: just settle, align and kick
         "goal_distance_range": (0.45, 0.70),
