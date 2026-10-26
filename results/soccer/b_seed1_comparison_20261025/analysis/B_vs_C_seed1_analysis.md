@@ -70,9 +70,10 @@ From `learning_curves/B_seed1.csv` and the teammate's `learning_curves/accepted_
   mean reward was positive by iteration 75. This is the effect the plan
   predicted for a curriculum (better early exploration), seen once.
 - **C's curriculum left the easy stages early**: stage 1 at iteration 15 and
-  stage 2 (= B's distribution) at iteration 174, both promoted by the 50 % goal
-  rate, not the 300-iteration cap. So ~91 % of C's training used B's
-  distribution, which is consistent with the near-identical final rates.
+  stage 2 (B's ranges) at iteration 174, both promoted by the 50 % goal
+  rate, not the 300-iteration cap. So C spent ~91 % of its training
+  iterations in stage 2, but 20 % of stage-2 resets still came from the
+  easier stages, so this is not the same as training on B's distribution.
 - C's training `goal_rate` and mean reward before iteration 174 are on easier
   layouts and must not be compared with B's directly; sample efficiency should
   be measured on the fixed eval set at matching checkpoints (not done yet).
