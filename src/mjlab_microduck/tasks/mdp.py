@@ -6785,14 +6785,15 @@ def soccer_reset_curriculum(
     """Widen the soccer reset ranges stage by stage (docs/soccer.md, method C).
 
     ``stages`` are ``sample_soccer_reset_layout`` range kwargs, easiest first;
-    the last stage must equal the method-B ranges so both methods end on the
-    same distribution. A stage is left when, over at least ``min_episodes``
-    episodes that started in it, the valid-goal rate reaches
-    ``promote_goal_rate``, OR after ``max_iterations_per_stage`` PPO
-    iterations. The cap matters: the frozen skills bound the goal rate near
-    40 % (method A), so a pure success gate could keep method C on the easy
-    layouts forever. After promotion ``easy_fraction`` of resets still draw
-    from an earlier stage.
+    the last stage must equal the method-B ranges. Because ``easy_fraction``
+    of resets keep drawing from earlier stages, method C never trains on
+    exactly method B's reset distribution, even in the last stage. A stage is
+    left when, over at least ``min_episodes`` episodes that started in it, the
+    valid-goal rate reaches ``promote_goal_rate``, OR after
+    ``max_iterations_per_stage`` PPO iterations. The cap matters: the frozen
+    skills bound the goal rate near 40 % (method A), so a pure success gate
+    could keep method C on the easy layouts forever. After promotion
+    ``easy_fraction`` of resets still draw from an earlier stage.
 
     Runs at reset BEFORE the events (mjlab order), so it scores the episodes
     that just ended and writes the next layouts into the per-env override that
@@ -6816,7 +6817,15 @@ def soccer_reset_curriculum(
     env_ids = env_ids.to(env.device, dtype=torch.long)
 
     stage = env._soccer_curriculum_stage
-    started_here = env._soccer_episode_stage[env_ids] == stage
+    # Score only episodes that actually ran (episode_length_buf is zeroed later
+    # in mjlab's _reset_idx, so it still holds the finished episode's length
+    # here). Training resets every env twice before the first step
+    # (RslRlVecEnvWrapper, then SoccerSkillAdapter re-wraps it); without this
+    # check the second reset counted num_envs goal-less stage-0 "episodes".
+    # Method C seed 1 (2026-10) was trained before this fix.
+    started_here = (env._soccer_episode_stage[env_ids] == stage) & (
+        env.episode_length_buf[env_ids] > 0
+    )
     env._soccer_curriculum_goals += int((env._soccer_valid_goal[env_ids] & started_here).sum())
     env._soccer_curriculum_episodes += int(started_here.sum())
     episodes = env._soccer_curriculum_episodes

@@ -34,7 +34,9 @@ def test_curriculum_is_the_only_difference_from_method_b():
 
 
 def _env(n=64):
-    env = SimpleNamespace(num_envs=n, device="cpu", common_step_counter=0)
+    # episode_length_buf > 0: every reset in these tests ends an episode that ran.
+    env = SimpleNamespace(num_envs=n, device="cpu", common_step_counter=0,
+                          episode_length_buf=torch.ones(n, dtype=torch.long))
     mdp.soccer_state(env)
     return env
 
@@ -68,6 +70,19 @@ def test_does_not_promote_on_low_goal_rate_before_the_cap():
     _reset(env)
     env._soccer_valid_goal[:] = False
     assert _reset(env)["stage"] == 0.0
+
+
+def test_startup_resets_do_not_count_as_finished_episodes():
+    # Training resets every env twice before the first step (RslRlVecEnvWrapper,
+    # then SoccerSkillAdapter); no episode has run, so nothing may be scored.
+    env = _env()
+    env.episode_length_buf[:] = 0
+    _reset(env)
+    _reset(env)
+    assert env._soccer_curriculum_episodes == 0
+    env.episode_length_buf[:] = 1  # now every env has played its episode
+    env._soccer_valid_goal[:] = True
+    assert _reset(env, promote_goal_rate=0.5)["stage"] == 1.0
 
 
 def test_iteration_cap_promotes_even_without_goals():

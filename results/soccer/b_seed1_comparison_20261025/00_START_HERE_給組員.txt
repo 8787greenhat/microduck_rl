@@ -26,7 +26,7 @@ Microduck 方法 B seed 1 對照包（2026-10-25）
 - analysis/B_vs_C_seed1_analysis.md：完整分析，包括：
   * B 和 C 學到不同策略：C 往左瞄 7.8°，幾乎抵銷官方踢球往右偏 8.2°；B 只往左 3.1°。
   * B 在 iteration 約 5–140 卡在「完全不踢」（每局都超時），C 沒有卡住，第 75 次 mean reward 就轉正。這是 proposal 預期課程學習會改善初期探索的現象，但只看到一次。
-  * C 的課程在 iteration 15 升到 stage 1、174 升到 stage 2，都是靠 50% 成功率提早升級，所以 C 約 91% 的訓練和 B 是同一個分佈。
+  * C 的課程在 iteration 15 升到 stage 1、174 升到 stage 2，都是靠 50% 成功率提早升級，所以 C 約 91% 的訓練輪數處於 stage 2；但 stage 2 仍有 20% 的局抽回較簡單的情境，所以不等於完全使用 B 的分佈。
 
 四、要在報告揭露的限制
 1. 每種方法只有一個 training seed。
