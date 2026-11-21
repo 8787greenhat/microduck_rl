@@ -1,0 +1,2 @@
+benchmarks/duel/v1/*.json text eol=lf
+results/duel/** text eol=lf
