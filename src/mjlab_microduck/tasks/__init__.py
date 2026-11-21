@@ -296,6 +296,18 @@ register_mjlab_task(
     runner_cls=SoccerOnPolicyRunner,
 )
 
+# Two-robot duel: use scripts/eval_duel.py for the 4D high-level policy.
+from .microduck_duel_env_cfg import make_microduck_duel_env_cfg
+from mjlab_microduck.duel.runner import MicroduckDuelRlCfg, DuelOnPolicyRunner
+
+register_mjlab_task(
+    task_id="Mjlab-Duel-Flat-MicroDuck",
+    env_cfg=make_microduck_duel_env_cfg(),
+    play_env_cfg=make_microduck_duel_env_cfg(num_envs=1, play=True),
+    rl_cfg=MicroduckDuelRlCfg,
+    runner_cls=DuelOnPolicyRunner,
+)
+
 # Backlash variants — ±1° serial gear play per servo + encoder-through-backlash
 # actuator feedback and joint obs (see tasks/backlash.py). Each family keeps its
 # base task's collision model: Velocity → robot_walk_backlash.xml,

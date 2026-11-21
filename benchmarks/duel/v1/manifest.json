@@ -1,0 +1,39 @@
+{
+  "protocol_id": "microduck-duel-fixed-v1",
+  "layouts_sha256": "02e8cafd3413af366f94f5940e67c3ba03ba8c3aa374b0ae69a241e97dfcadd9",
+  "layouts": 100,
+  "repeats": 3,
+  "sides": [
+    0,
+    1
+  ],
+  "episodes_total": 600,
+  "batch_per_side": 300,
+  "evaluation_rng_seed": 0,
+  "generator_seed": 20261121,
+  "round_seconds": 20,
+  "actor_inference": "deterministic mean; normalization frozen",
+  "nominal_physics": true,
+  "observation_noise": false,
+  "stationary_ball_starts": true,
+  "auto_reset_scoring": "first episode per world only",
+  "goal_rule": "whole ball crosses outward plane and fits clear opening; own goals allowed; no foot-contact gate",
+  "end_priority": [
+    "goal_for",
+    "goal_against",
+    "both_fell",
+    "learner_fell",
+    "opponent_fell",
+    "both_oob",
+    "learner_oob",
+    "opponent_oob",
+    "ball_out",
+    "timeout"
+  ],
+  "outcome_denominator": "all 600 episodes, including aborted/non-goal rounds",
+  "official_skill_sha256": {
+    "alpha_walking.onnx": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+    "ball_kick_right.onnx": "147a32c388c6b19111b3ac3b550a9a6dc8b8bf267118af4d8c3712522eedb5af"
+  },
+  "single_robot_BC_benchmark_changed": false
+}
