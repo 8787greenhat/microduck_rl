@@ -1,0 +1,27 @@
+{
+  "verified": true,
+  "actor_changed": [
+    "mlp.0.weight",
+    "mlp.0.bias",
+    "mlp.2.weight",
+    "mlp.2.bias",
+    "mlp.4.weight",
+    "mlp.4.bias"
+  ],
+  "critic_changed": [
+    "mlp.0.weight",
+    "mlp.0.bias",
+    "mlp.2.weight",
+    "mlp.2.bias",
+    "mlp.4.weight",
+    "mlp.4.bias"
+  ],
+  "optimizer_steps": [
+    100
+  ],
+  "checkpoint_sha256": "484276d4aa6474e5dfb949720f1543892a2aeea7c00f42c016a9d34d5e589d0c",
+  "frozen_skills_unchanged": true,
+  "parallel_goals_and_pitch_aligned": true,
+  "finite": true,
+  "competitive_performance_claimed": false
+}

@@ -1,0 +1,13 @@
+{
+  "episodes": 600,
+  "any_goal_rounds": 106,
+  "ball_out_rounds": 413,
+  "timeouts": 74,
+  "other_robot_safety_ends": 7,
+  "goal_rounds_with_at_least_one_kick_attempt": 106,
+  "goal_rounds_with_observed_right_foot_contact": 106,
+  "goal_rounds_last_touch_is_defending_team": 54,
+  "last_touch_caveat": "Sensor-based last body touch; not proof of a deliberate own-goal kick. Replay is needed to explain mechanisms.",
+  "independent_training_seeds": 0,
+  "long_training_started": false
+}

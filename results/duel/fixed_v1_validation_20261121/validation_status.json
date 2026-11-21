@@ -1,0 +1,51 @@
+{
+  "prior_attempts": {
+    "jobs": [
+      {
+        "name": "baseline600",
+        "started_utc": "2026-11-21T13:07:25.794345+00:00",
+        "running": false,
+        "pid": 370,
+        "returncode": 0,
+        "finished_utc": "2026-11-21T13:10:20.855955+00:00"
+      },
+      {
+        "name": "portable_smoke64x5",
+        "started_utc": "2026-11-21T13:10:20.880395+00:00",
+        "running": false,
+        "pid": 491,
+        "returncode": -4,
+        "finished_utc": "2026-11-21T13:10:48.441603+00:00"
+      }
+    ],
+    "long_training_started": false
+  },
+  "jobs": [
+    {
+      "name": "baseline600",
+      "started_utc": "2026-11-21T13:07:25.794345+00:00",
+      "running": false,
+      "pid": 370,
+      "returncode": 0,
+      "finished_utc": "2026-11-21T13:10:20.855955+00:00"
+    },
+    {
+      "name": "portable_smoke64x5_attempt2",
+      "started_utc": "2026-11-21T13:11:47.053807+00:00",
+      "running": false,
+      "pid": 332,
+      "returncode": 0,
+      "finished_utc": "2026-11-21T13:13:09.207916+00:00"
+    },
+    {
+      "name": "ppo5_fixed600",
+      "started_utc": "2026-11-21T13:13:09.222857+00:00",
+      "running": false,
+      "pid": 439,
+      "returncode": 0,
+      "finished_utc": "2026-11-21T13:15:57.714854+00:00"
+    }
+  ],
+  "long_training_started": false,
+  "complete": true
+}

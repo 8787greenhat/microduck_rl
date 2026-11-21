@@ -1,0 +1,129 @@
+{
+  "source_commit": "d3c06eda69022ee950f5e7ec8b6a3a29fda3ec2b",
+  "source_dirty": false,
+  "source_sha256": {
+    "src/mjlab_microduck/duel/constants.py": "f6c1909f51ae50d51e8f3d4e7f90174f425d75ed3813360ba7141310ceac7d5e",
+    "src/mjlab_microduck/duel/contact.py": "1698a523524c1f36cc5b2f5ae51ae6f9d20230d5a04c180e95f28e383a20cce7",
+    "src/mjlab_microduck/duel/env.py": "5d729f349bebf407efbe448f281485d95150d0e7bd9c8900f1914654fe8b6981",
+    "src/mjlab_microduck/duel/protocol.py": "5d7cce81f8653dd827ca1a5ba4616bf56e716e91f9b8a89d85bf3dd2cab8b1f2",
+    "src/mjlab_microduck/duel/runner.py": "3202467348b4f501c5006ed267871c7edaa573b0f89460c06f3c785a663cda8e",
+    "src/mjlab_microduck/duel/runtime.py": "d0d7255c99e70d805a7a6902de4267db69ef85ddf82871b9e54affd5e3966176",
+    "src/mjlab_microduck/duel/state.py": "ff75e4dbb792a019ca44a6b43bc43a59dfa4ae99a8a45b013208ce57ade36dc4",
+    "src/mjlab_microduck/duel/__init__.py": "0b6bac2a008f3af16fd6082345dc182f81a0c1f40884eda3eeb2b8fb05357e72",
+    "src/mjlab_microduck/tasks/mdp.py": "24738e05f803906db13372c4d86d356b6b036e9cc4a9d10b8e657d6bbc37dad3",
+    "src/mjlab_microduck/tasks/microduck_duel_env_cfg.py": "3e3e0fb50cf0051ed18ea5b6711713a7ad9a7943c4fbd3bdb9e75efa304cc0d6",
+    "src/mjlab_microduck/tasks/__init__.py": "4f6d61cc02ddff979fbf53da193967a3e8cd3db14aac73eef50832808249e9a0",
+    "scripts/eval_duel.py": "28c8d75dcc9696081a7e6346f73faaed7a50fcdb53235bb62ce88a86833a8ffc",
+    "scripts/train_duel.py": "29109ae9a39a895cb08714804af8dcf4ad54238e781c733ae5aa1816917063e6"
+  },
+  "uv_lock_sha256": "2c55b9b2162971e4303ba4ed3937dc5d8835dcad2ea6177f59974e2a9a9a77e4",
+  "python": "3.12.14 (main, Sep 29 2026, 15:01:18) [Clang 22.1.3 ]",
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "versions": {
+    "torch": "2.9.1",
+    "mjlab": "1.3.0",
+    "mujoco": "3.10.0",
+    "mujoco-warp": "3.8.1",
+    "warp-lang": "1.12.0",
+    "rsl-rl-lib": "5.0.1"
+  },
+  "official_skill_sha256": {
+    "alpha_walking.onnx": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+    "ball_kick_right.onnx": "147a32c388c6b19111b3ac3b550a9a6dc8b8bf267118af4d8c3712522eedb5af"
+  },
+  "task": "duel_ppo_vs_fixed_A_v1",
+  "contract": "duel-v1-actor54-critic61",
+  "seed": 1,
+  "num_envs": 64,
+  "iterations": 5,
+  "PPO": {
+    "seed": 1,
+    "num_steps_per_env": 24,
+    "max_iterations": 5,
+    "obs_groups": {
+      "actor": [
+        "actor"
+      ],
+      "critic": [
+        "critic"
+      ]
+    },
+    "save_interval": 5,
+    "experiment_name": "duel_ppo_vs_A_v1",
+    "run_name": "duel_ppo_vs_A_v1",
+    "logger": "tensorboard",
+    "wandb_project": "mjlab_microduck",
+    "wandb_tags": [],
+    "resume": false,
+    "load_run": ".*",
+    "load_checkpoint": "model_.*.pt",
+    "clip_actions": null,
+    "upload_model": true,
+    "class_name": "OnPolicyRunner",
+    "actor": {
+      "hidden_dims": [
+        128,
+        128
+      ],
+      "activation": "elu",
+      "obs_normalization": true,
+      "cnn_cfg": null,
+      "distribution_cfg": {
+        "class_name": "GaussianDistribution",
+        "init_std": 0.5,
+        "std_type": "scalar"
+      },
+      "rnn_type": null,
+      "rnn_hidden_dim": 256,
+      "rnn_num_layers": 1,
+      "class_name": "MLPModel"
+    },
+    "critic": {
+      "hidden_dims": [
+        128,
+        128
+      ],
+      "activation": "elu",
+      "obs_normalization": true,
+      "cnn_cfg": null,
+      "distribution_cfg": null,
+      "rnn_type": null,
+      "rnn_hidden_dim": 256,
+      "rnn_num_layers": 1,
+      "class_name": "MLPModel"
+    },
+    "algorithm": {
+      "num_learning_epochs": 5,
+      "num_mini_batches": 4,
+      "learning_rate": 0.0003,
+      "schedule": "adaptive",
+      "gamma": 0.99,
+      "lam": 0.95,
+      "entropy_coef": 0.005,
+      "desired_kl": 0.01,
+      "max_grad_norm": 1.0,
+      "value_loss_coef": 1.0,
+      "use_clipped_value_loss": true,
+      "clip_param": 0.2,
+      "normalize_advantage_per_mini_batch": false,
+      "optimizer": "adam",
+      "share_cnn_encoders": false,
+      "class_name": "PPO",
+      "symmetry_cfg": null
+    }
+  },
+  "reward_spec": {
+    "goal_for": 10.0,
+    "goal_against": -10.0,
+    "unsafe_or_out": -10.0,
+    "timeout": -2.0,
+    "prep_progress_per_m": 2.0,
+    "align_progress_per_rad": 0.5,
+    "kick_attempt": -0.5,
+    "time_per_s": -0.1
+  },
+  "curriculum": false,
+  "training_side": 0,
+  "opponent": "fixed geometric A",
+  "checkpoint_resume_supported_by_this_entrypoint": false
+}

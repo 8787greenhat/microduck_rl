@@ -8376,3 +8376,170 @@ def roulade_lateral_velocity_penalty(
     """Body-frame lateral (y) linear velocity² — keeps the roll straight."""
     asset: Entity = env.scene[asset_cfg.name]
     return torch.nan_to_num(asset.data.root_link_lin_vel_b[:, 1].pow(2), nan=0.0)
+
+
+# =============================================================================
+# Two-robot duel v1 (does not change the single-robot B/C task)
+# =============================================================================
+from mjlab_microduck.duel import constants as duel_constants
+
+def duel_zero_command(env, dim=3):
+    return torch.zeros(env.num_envs, dim, device=env.device)
+
+def duel_geometric_actions(env, skills, pos_tol=0.05, yaw_tol=0.15, settle_s=0.5):
+    """Method-A preparation-pose control independently for each attack direction."""
+    ball = env.scene['ball'].data.root_link_pos_w[:, :2]
+    commands = []
+    inside = []
+    for index, name in enumerate(duel_constants.ROBOT_NAMES):
+        robot = env.scene[name]
+        goal = env.scene.env_origins[:, :2].clone()
+        goal[:, 0] += (1 if index == 0 else -1) * duel_constants.FIELD_LENGTH / 2
+        prep = soccer_preparation_pose(ball, goal)
+        quat = robot.data.root_link_quat_w
+        duel_yaw = torch.atan2(2 * (quat[:, 0] * quat[:, 3] + quat[:, 1] * quat[:, 2]), 1 - 2 * (quat[:, 2] ** 2 + quat[:, 3] ** 2))
+        delta = prep[:, :2] - robot.data.root_link_pos_w[:, :2]
+        c, s = (torch.cos(duel_yaw), torch.sin(duel_yaw))
+        dx = c * delta[:, 0] + s * delta[:, 1]
+        dy = -s * delta[:, 0] + c * delta[:, 1]
+        err = (prep[:, 2] - duel_yaw + math.pi) % (2 * math.pi) - math.pi
+        cmd = torch.stack((2 * dx, 2 * dy, 2 * err), dim=-1)
+        cmd = torch.clamp(cmd, torch.tensor([-0.4, -0.3, -1.0], device=env.device), torch.tensor([0.4, 0.3, 1.0], device=env.device))
+        speed = torch.linalg.vector_norm(robot.data.root_link_lin_vel_b[:, :2], dim=-1)
+        commands.append(cmd)
+        inside.append((torch.linalg.vector_norm(delta, dim=-1) < pos_tol) & (err.abs() < yaw_tol) & (speed < 0.05))
+    skills.command[:] = torch.stack(commands, dim=1)
+    valid = torch.stack(inside, dim=1) & ~skills.mode
+    skills.settled[:] = torch.where(valid, skills.settled + 0.1, torch.zeros_like(skills.settled))
+    return skills.start(skills.settled >= settle_s)
+
+def duel_goal_crossings(previous, current, origins):
+    scores = []
+    for side in (1.0, -1.0):
+        normal = torch.zeros_like(origins[:, :2])
+        normal[:, 0] = side
+        goal = origins.clone()
+        goal[:, 0] += side * (duel_constants.FIELD_LENGTH / 2 + duel_constants.BALL_RADIUS)
+        scores.append(soccer_goal_crossing(previous, current, goal, normal, duel_constants.GOAL_WIDTH, duel_constants.GOAL_HEIGHT, duel_constants.BALL_RADIUS))
+    return torch.stack(scores, dim=1)
+
+def duel_contact(env, name):
+    return env.scene[name].data.found.reshape(env.num_envs, -1).any(dim=1)
+
+def duel_yaw(robot):
+    q = robot.data.root_link_quat_w
+    return torch.atan2(2 * (q[:, 0] * q[:, 3] + q[:, 1] * q[:, 2]), 1 - 2 * (q[:, 2] ** 2 + q[:, 3] ** 2))
+
+def duel_local(vector, angle):
+    c, s = (torch.cos(angle), torch.sin(angle))
+    return torch.stack((c * vector[:, 0] + s * vector[:, 1], -s * vector[:, 0] + c * vector[:, 1]), dim=-1)
+
+def duel_wrap(angle):
+    return (angle + math.pi) % (2 * math.pi) - math.pi
+
+def duel_place_static_entities(env, env_ids):
+    if env_ids is None:
+        env_ids = torch.arange(env.num_envs, device=env.device)
+    for name in ('goal_right', 'goal_left', 'pitch'):
+        entity = env.scene[name]
+        pose = entity.data.default_root_state[env_ids, :7].clone()
+        pose[:, :3] += env.scene.env_origins[env_ids]
+        entity.write_mocap_pose_to_sim(pose, env_ids)
+
+def duel_assert_static_alignment(env):
+    for name, x in (('goal_right', 1.0), ('goal_left', -1.0), ('pitch', 0.0)):
+        expected = env.scene.env_origins.clone()
+        expected[:, 0] += x
+        assert torch.allclose(env.scene[name].data.root_link_pos_w, expected, atol=1e-05), f'{name} not aligned with per-world origin'
+
+def duel_reset_scene(env, env_ids):
+    if env_ids is None:
+        env_ids = torch.arange(env.num_envs, device=env.device)
+    duel_place_static_entities(env, env_ids)
+    fixed = getattr(env, '_duel_fixed_layout_override', None)
+    if fixed is not None:
+        duel_apply_fixed_scene(env, env_ids, fixed)
+        return
+    n = len(env_ids)
+    origins = env.scene.env_origins[env_ids]
+    ball_xy = origins[:, :2] + torch.rand(n, 2, device=env.device) * torch.tensor([0.6, 0.5], device=env.device) - torch.tensor([0.3, 0.25], device=env.device)
+    for i, name in enumerate(duel_constants.ROBOT_NAMES):
+        robot = env.scene[name]
+        goal = origins[:, :2].clone()
+        goal[:, 0] += 1 if i == 0 else -1
+        prep = soccer_preparation_pose(ball_xy, goal)
+        direction = goal - ball_xy
+        direction /= torch.linalg.vector_norm(direction, dim=-1, keepdim=True)
+        lateral = torch.stack((-direction[:, 1], direction[:, 0]), dim=-1)
+        distance = 0.25 + 0.2 * torch.rand(n, 1, device=env.device)
+        xy = prep[:, :2] - distance * direction + (torch.rand(n, 1, device=env.device) * 0.2 - 0.1) * lateral
+        angle = prep[:, 2] + (torch.rand(n, device=env.device) - 0.5) * (math.pi / 2)
+        roots = robot.data.default_root_state[env_ids].clone()
+        roots[:, :2] = xy
+        roots[:, 2] = origins[:, 2] + 0.115
+        roots[:, 3:7] = 0
+        roots[:, 3] = torch.cos(angle / 2)
+        roots[:, 6] = torch.sin(angle / 2)
+        roots[:, 7:] = 0
+        robot.write_root_state_to_sim(roots, env_ids)
+        robot.write_joint_state_to_sim(robot.data.default_joint_pos[env_ids].clone(), torch.zeros_like(robot.data.default_joint_vel[env_ids]), env_ids=env_ids)
+    ball = env.scene['ball']
+    roots = ball.data.default_root_state[env_ids].clone()
+    roots[:, :2] = ball_xy
+    roots[:, 2] = origins[:, 2] + 0.035
+    roots[:, 3:7] = 0
+    roots[:, 3] = 1
+    roots[:, 7:] = 0
+    ball.write_root_state_to_sim(roots, env_ids)
+
+def duel_geometry(env, learner_index=0):
+    robot = env.scene[duel_constants.ROBOT_NAMES[learner_index]]
+    angle = duel_yaw(robot)
+    ball = env.scene['ball'].data.root_link_pos_w[:, :2]
+    goal = env.scene.env_origins[:, :2].clone()
+    goal[:, 0] += 1 if learner_index == 0 else -1
+    prep = soccer_preparation_pose(ball, goal)
+    delta = duel_local(prep[:, :2] - robot.data.root_link_pos_w[:, :2], angle)
+    err = duel_wrap(prep[:, 2] - angle)
+    return (torch.linalg.vector_norm(delta, dim=-1), err, delta)
+
+def duel_observations(env, skills, low_obs, learner_index=0):
+    robot = env.scene[duel_constants.ROBOT_NAMES[learner_index]]
+    opponent = env.scene[duel_constants.ROBOT_NAMES[1-learner_index]]
+    ball = env.scene['ball']
+    angle = duel_yaw(robot)
+    goal = env.scene.env_origins[:, :2].clone()
+    goal[:, 0] += 1 if learner_index == 0 else -1
+    goal_normal = torch.zeros(env.num_envs, 2, device=env.device)
+    goal_normal[:, 0] = 1 if learner_index == 0 else -1
+    ball_obs = torch.cat((duel_local(ball.data.root_link_pos_w[:, :2] - robot.data.root_link_pos_w[:, :2], angle), duel_local(ball.data.root_link_lin_vel_w[:, :2], angle)), dim=-1)
+    goal_obs = torch.cat((duel_local(goal - robot.data.root_link_pos_w[:, :2], angle), duel_local(goal_normal, angle)), dim=-1)
+    mode = skills.mode[:, learner_index]
+    progress = torch.where(mode, 1 - skills.left[:, learner_index] / 100, torch.zeros(env.num_envs, device=env.device))
+    skill_obs = torch.cat(((~mode).float().unsqueeze(-1), mode.float().unsqueeze(-1), progress.unsqueeze(-1), skills.command[:, learner_index]), dim=-1)
+    relative_heading = duel_wrap(duel_yaw(opponent) - angle)
+    opp_obs = torch.cat((duel_local(opponent.data.root_link_pos_w[:, :2] - robot.data.root_link_pos_w[:, :2], angle), duel_local(opponent.data.root_link_lin_vel_w[:, :2] - robot.data.root_link_lin_vel_w[:, :2], angle), torch.sin(relative_heading).unsqueeze(-1), torch.cos(relative_heading).unsqueeze(-1)), dim=-1)
+    actor = torch.cat((low_obs['skill_a' if learner_index == 0 else 'skill_b'][:, :34], ball_obs, goal_obs, skill_obs, opp_obs), dim=-1)
+    _, err, delta = duel_geometry(env, learner_index)
+    critic = torch.cat((actor, robot.data.root_link_lin_vel_b, delta, torch.sin(err).unsqueeze(-1), torch.cos(err).unsqueeze(-1)), dim=-1)
+    assert actor.shape == (env.num_envs, 54) and critic.shape == (env.num_envs, 61)
+    return {'actor': actor, 'critic': critic}
+
+def duel_rewards(prev_dist, dist, prev_err, err, shaping_enabled, active, win, loss, unsafe, timeout, dt=0.02):
+    gate = active & shaping_enabled
+    return {'goal': 10 * win.float() - 10 * loss.float(), 'failure': -10 * unsafe.float(), 'timeout': -2 * timeout.float(), 'prep': 2 * (prev_dist - dist).clamp(-3 * dt, 3 * dt) * gate, 'align': 0.5 * (prev_err.abs() - err.abs()).clamp(-3 * dt, 3 * dt) * gate, 'time': -0.1 * dt * active.float()}
+
+def duel_apply_fixed_scene(env, env_ids, fixed):
+    """Place only assigned held-out layouts; no reset-layout RNG is consumed."""
+    origins=env.scene.env_origins[env_ids]
+    for index,name in enumerate(duel_constants.ROBOT_NAMES):
+        asset=env.scene[name];pose=fixed['robots'][env_ids,index]
+        root=asset.data.default_root_state[env_ids].clone()
+        root[:,:2]=origins[:,:2]+pose[:,:2];root[:,2]=origins[:,2]+.115
+        root[:,3:7]=0;root[:,3]=torch.cos(pose[:,2]/2);root[:,6]=torch.sin(pose[:,2]/2);root[:,7:]=0
+        asset.write_root_state_to_sim(root,env_ids)
+        asset.write_joint_state_to_sim(asset.data.default_joint_pos[env_ids].clone(),torch.zeros_like(asset.data.default_joint_vel[env_ids]),env_ids=env_ids)
+    ball=env.scene['ball'];root=ball.data.default_root_state[env_ids].clone()
+    root[:,:2]=origins[:,:2]+fixed['ball'][env_ids];root[:,2]=origins[:,2]+.035
+    root[:,3:7]=0;root[:,3]=1;root[:,7:]=0
+    ball.write_root_state_to_sim(root,env_ids)
