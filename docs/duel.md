@@ -83,3 +83,32 @@ uv run --frozen python scripts/eval_duel.py --checkpoint logs/duel_PPO_smoke/che
 正式訓練前共同決定環境／獎勵版本與預算，再分配不同 seed 各自訓練；這不是兩台 GPU 共同更新同一模型。
 回傳固定評測的 manifest.json、summary.json、per_episode.csv 及 checkpoint/hash，才能做配對比較。
 原單鴨 B/C 的訓練來源、參數、100×3 場景與既有結果均保留；這個雙鴨協定是另一個新任務。
+
+## 第一輪正式訓練分工（2026-11-21）
+
+本輪明確使用 **PPO 對固定規則 A，沒有 curriculum，也沒有 self-play**。
+新的雙鴨網路從頭開始，沒有載入原單鴨方法 C 的高階權重。
+場景、獎勵與 PPO 沿用 v1；正式預算為 **1024 環境、2000 iterations**，每 100 iterations 存一次 checkpoint，最後另存 model_1999.pt。
+RTX 4060 8GB 實測 2048×5 雖通過，顯存約 7947 MiB／8188 MiB，故改用 1024 保留餘裕。
+這是此雙鴨任務的新預算，不修改原單鴨 B/C。
+
+| 負責人 | Training seed | 任務 |
+|---|---:|---|
+| Joshua | 1 | PPO 對固定 A |
+| 和穆 | 2 | 相同 PPO 對固定 A；只改 seed 與輸出路徑 |
+| 待分配 | 3 | 先保留，不自動啟動 |
+
+```bash
+# 先在自己的機器通過 64×5 短測試，再啟動下列正式工作。
+# Joshua
+uv run --frozen python scripts/train_duel.py --num-envs 1024 --iterations 2000 --seed 1 --out logs/duel_v1_seed1
+# 和穆：另一次獨立訓練，環境與預算相同
+uv run --frozen python scripts/train_duel.py --num-envs 1024 --iterations 2000 --seed 2 --out logs/duel_v1_seed2
+
+# 完成後各用自己的 model_1999.pt 跑相同固定 600 局；eval RNG 仍為 0。
+uv run --frozen python scripts/eval_duel.py --checkpoint logs/duel_v1_seed1/checkpoints/model_1999.pt --out logs/duel_v1_seed1_fixed600
+```
+
+機器可讀的分工與參數在 [duel_v1_run_config.json](duel_v1_run_config.json)。
+它是實驗計畫，訓練入口用上述 CLI；實際完整 PPO 參數、commit、模型 hash 會寫入每次輸出的 manifest.json。
+不在看到 seed 1 結果後悄悄改 seed 2 的獎勵或環境；若要調整，另開版本並分開報告。
