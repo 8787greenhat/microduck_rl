@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "tensorboard_scalars_all_finite": true,
+  "nonpositive_penalty_tags": [
+    "Duel_Reward/kick_attempt",
+    "Duel_Reward/failure",
+    "Duel_Reward/timeout",
+    "Duel_Reward/time"
+  ],
+  "checkpoint_iteration": 4,
+  "pytorch_build": "2.9.1+cu128",
+  "pytorch_cuda_runtime": "12.8",
+  "driver": "610.62",
+  "canonical_git_uv_lock_sha256": "2eeeb680025baa737e7ccf3a87da3695a9d49b228de0bb60d8af0c022ab5f1aa",
+  "raw_windows_uv_lock_sha256": "2c55b9b2162971e4303ba4ed3937dc5d8835dcad2ea6177f59974e2a9a9a77e4",
+  "uv_lock_difference_is_only_CRLF": true,
+  "baseline_source_dirty_explanation": "Windows clone CRLF was read by WSL git without core.autocrlf. git diff --ignore-space-at-eol was empty; explicit local autocrlf=true then made status clean. Source bytes remained unchanged.",
+  "first_training_launcher_attempt": {
+    "returncode": -4,
+    "stage": "import torch, before environment initialization or updates",
+    "error": "SIGILL / Illegal instruction",
+    "root_cause_identified": false
+  },
+  "same_environment_retry_succeeded": true,
+  "packages_changed": false,
+  "long_training_started": false
+}
