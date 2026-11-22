@@ -1,0 +1,20 @@
+[mdp] Patches 1-2 active: NaN-safe reward/advantage
+[mdp] Patch 4 active: ONNX export filters passive_* joints
+[mdp] Patch 5 active: MICRODUCK_WARM_START=1 restarts curricula after checkpoint load
+test_finite_match_and_unchanged_physics (__main__.ContractTests.test_finite_match_and_unchanged_physics) ... ok
+test_fixed_learning_rate_and_discount_match_potential (__main__.ContractTests.test_fixed_learning_rate_and_discount_match_potential) ... ok
+test_ready_requires_position_heading_base_and_ball_speed (__main__.ContractTests.test_ready_requires_position_heading_base_and_ball_speed) ... ok
+test_entropy_and_likelihood_have_finite_gradients (__main__.DistributionTests.test_entropy_and_likelihood_have_finite_gradients) ... ok
+test_export_module_equals_deterministic_policy (__main__.DistributionTests.test_export_module_equals_deterministic_policy) ... ok
+test_kl_matches_latent_normal_and_is_zero_for_identical_policy (__main__.DistributionTests.test_kl_matches_latent_normal_and_is_zero_for_identical_policy) ... ok
+test_log_probability_matches_transformed_normal (__main__.DistributionTests.test_log_probability_matches_transformed_normal) ... ok
+test_std_and_sample_bounds_under_extreme_parameters (__main__.DistributionTests.test_std_and_sample_bounds_under_extreme_parameters) ... ok
+test_ball_out_is_attributed_and_not_a_positive_reward (__main__.RewardTests.test_ball_out_is_attributed_and_not_a_positive_reward) ... ok
+test_holding_pose_does_not_pay_positive_reward (__main__.RewardTests.test_holding_pose_does_not_pay_positive_reward) ... ok
+test_potential_discounted_return_telescopes_with_terminal_zero (__main__.RewardTests.test_potential_discounted_return_telescopes_with_terminal_zero) ... ok
+test_timeout_is_a_cost_and_own_safety_has_priority (__main__.RewardTests.test_timeout_is_a_cost_and_own_safety_has_priority) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.198s
+
+OK

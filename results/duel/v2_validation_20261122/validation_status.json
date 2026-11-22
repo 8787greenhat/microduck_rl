@@ -1,0 +1,23 @@
+{
+  "state": "complete",
+  "jobs": [
+    {
+      "name": "capacity1024x5",
+      "started_at": "2026-11-22T01:32:25.698081+00:00",
+      "state": "complete",
+      "pid": 316,
+      "returncode": 0,
+      "ended_at": "2026-11-22T01:33:32.042853+00:00"
+    },
+    {
+      "name": "eval_smoke8",
+      "started_at": "2026-11-22T01:33:32.052381+00:00",
+      "state": "complete",
+      "pid": 468,
+      "returncode": 0,
+      "ended_at": "2026-11-22T01:35:04.779401+00:00"
+    }
+  ],
+  "long_training_started": false,
+  "complete": true
+}

@@ -1,0 +1,34 @@
+{
+  "verified": true,
+  "baseline_commit": "20a7b1364f449ccdc8882b41e51e3e6ac3ca3a0d",
+  "old_MDP_functions_and_classes_unchanged": 289,
+  "v1_BC_dependencies_and_fixed_scene_files_unchanged": [
+    "uv.lock",
+    "pyproject.toml",
+    "benchmarks/duel/v1/layouts.json",
+    "benchmarks/duel/v1/manifest.json",
+    "src/mjlab_microduck/tasks/microduck_soccer_env_cfg.py",
+    "src/mjlab_microduck/soccer_adapter.py",
+    "scripts/eval_soccer.py",
+    "src/mjlab_microduck/duel/env.py",
+    "src/mjlab_microduck/duel/runner.py",
+    "scripts/train_duel.py",
+    "scripts/eval_duel.py"
+  ],
+  "new_v2_cpu_tests": [
+    "test_std_and_sample_bounds_under_extreme_parameters",
+    "test_log_probability_matches_transformed_normal",
+    "test_entropy_and_likelihood_have_finite_gradients",
+    "test_kl_matches_latent_normal_and_is_zero_for_identical_policy",
+    "test_export_module_equals_deterministic_policy",
+    "test_holding_pose_does_not_pay_positive_reward",
+    "test_potential_discounted_return_telescopes_with_terminal_zero",
+    "test_ball_out_is_attributed_and_not_a_positive_reward",
+    "test_timeout_is_a_cost_and_own_safety_has_priority",
+    "test_finite_match_and_unchanged_physics",
+    "test_fixed_learning_rate_and_discount_match_potential",
+    "test_ready_requires_position_heading_base_and_ball_speed"
+  ],
+  "new_v2_cpu_test_count": 12,
+  "fixed_layout_sha256": "02e8cafd3413af366f94f5940e67c3ba03ba8c3aa374b0ae69a241e97dfcadd9"
+}

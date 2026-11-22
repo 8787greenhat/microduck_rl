@@ -1,0 +1,34 @@
+{
+  "verified": true,
+  "latent_std": [
+    0.40005046129226685,
+    0.3991817831993103,
+    0.4000275731086731,
+    0.40054649114608765
+  ],
+  "fixed_learning_rate": 0.0003,
+  "actor_changed": [
+    "mlp.0.weight",
+    "mlp.0.bias",
+    "mlp.2.weight",
+    "mlp.2.bias",
+    "mlp.4.weight",
+    "mlp.4.bias"
+  ],
+  "critic_changed": [
+    "mlp.0.weight",
+    "mlp.0.bias",
+    "mlp.2.weight",
+    "mlp.2.bias",
+    "mlp.4.weight",
+    "mlp.4.bias"
+  ],
+  "optimizer_steps": [
+    100
+  ],
+  "checkpoint_sha256": "aa21c70c05a290be2d5c9f12cc3538bc01b5fe4fda6bcbf9a33b46f2e541c852",
+  "frozen_skills_unchanged": true,
+  "parallel_goals_and_pitch_aligned": true,
+  "finite": true,
+  "competitive_performance_claimed": false
+}

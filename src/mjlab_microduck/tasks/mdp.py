@@ -8543,3 +8543,49 @@ def duel_apply_fixed_scene(env, env_ids, fixed):
     root[:,:2]=origins[:,:2]+fixed['ball'][env_ids];root[:,2]=origins[:,2]+.035
     root[:,3:7]=0;root[:,3]=1;root[:,7:]=0
     ball.write_root_state_to_sim(root,env_ids)
+
+# =============================================================================
+# Duel v2: bounded-policy adapter MDP (v1 and single-robot B/C stay unchanged)
+# =============================================================================
+def duel_v2_ready(env, learner_index=0):
+    distance,error,_=duel_geometry(env,learner_index)
+    robot=env.scene[duel_constants.ROBOT_NAMES[learner_index]]
+    speed=torch.linalg.vector_norm(robot.data.root_link_lin_vel_b[:,:2],dim=-1)
+    ball_speed=torch.linalg.vector_norm(env.scene['ball'].data.root_link_lin_vel_w[:,:2],dim=-1)
+    return (distance<.05)&(error.abs()<.15)&(speed<.05)&(ball_speed<.15)
+
+
+def duel_v2_potential(env,learner_index=0):
+    distance,error,_=duel_geometry(env,learner_index)
+    return 2*torch.exp(-distance/.25)+.25*(1+torch.cos(error))
+
+
+def duel_v2_potential_reward(previous,current,terminal,gamma=.99):
+    """Discount-consistent bounded potential; no positive holding jackpot."""
+    return gamma*torch.where(terminal,torch.zeros_like(current),current)-previous
+
+
+def duel_v2_terminal_rewards(win,loss,unsafe,timeout,ball_out,self_fell,opp_fell,self_out,opp_out,last_touch,learner_index):
+    own=unsafe&(self_fell|self_out)
+    opponent=unsafe&(opp_fell|opp_out)&~own
+    own_ball_out=unsafe&ball_out&~own&~opponent&(last_touch==learner_index)
+    return {'goal':10*win.float()-10*loss.float(),
+        'self_safety':-5*own.float(),'opponent_safety':-opponent.float(),
+        'self_ball_out':-5*own_ball_out.float(),'timeout':-5*timeout.float()}
+
+
+def duel_v2_observations(env,skills,low_obs,ready_time,elapsed,last_touch,learner_index=0):
+    base=duel_observations(env,skills,low_obs,learner_index)['actor']
+    robot=env.scene[duel_constants.ROBOT_NAMES[learner_index]]
+    _,error,delta=duel_geometry(env,learner_index)
+    oi=1-learner_index;mode=skills.mode[:,oi]
+    progress=torch.where(mode,1-skills.left[:,oi]/100,torch.zeros_like(elapsed))
+    touch=torch.stack((last_touch==learner_index,last_touch==oi,last_touch<0),dim=-1).float()
+    extra=torch.cat((delta,torch.sin(error).unsqueeze(-1),torch.cos(error).unsqueeze(-1),
+        robot.data.root_link_lin_vel_b,(1-elapsed/20).clamp(0,1).unsqueeze(-1),
+        (ready_time/.2).clamp(0,1).unsqueeze(-1),
+        (~mode).float().unsqueeze(-1),mode.float().unsqueeze(-1),progress.unsqueeze(-1),
+        (skills.settled[:,oi]/.5).clamp(0,1).unsqueeze(-1),touch),dim=-1)
+    actor=torch.cat((base,extra),dim=-1)
+    assert actor.shape==(env.num_envs,70)
+    return {'actor':actor,'critic':actor.clone()}

@@ -1,0 +1,9 @@
+scene_id,repeat,learner_side,attack_direction,end_reason,elapsed_s,last_touch,learner_kick_attempts,opponent_kick_attempts,training_reward_not_score,flag_goal_for,flag_goal_against,flag_ball_out,flag_learner_fell,flag_opponent_fell,flag_learner_oob,flag_opponent_oob,flag_timeout,physics_samples_ball_body_0,physics_samples_ball_body_1,physics_samples_ball_foot_0,physics_samples_ball_foot_1,physics_samples_robot_robot
+0,0,0,+X,timeout,20.0,-1,0,8,-10.137269973754883,False,False,False,False,False,False,False,True,0,0,0,0,0
+1,0,0,+X,timeout,20.0,-1,0,8,-9.954387664794922,False,False,False,False,False,False,False,True,0,0,0,0,0
+2,0,0,+X,ball_out,10.8,1,0,1,-2.6404905319213867,False,False,True,False,False,False,False,False,0,2,0,2,0
+3,0,0,+X,goal_against,4.5,1,0,1,-11.805588722229004,False,True,True,False,False,False,False,False,0,3,0,3,0
+0,0,1,-X,goal_against,5.0,1,0,1,-12.044944763183594,False,True,True,False,False,False,False,False,4,6,4,0,0
+1,0,1,-X,ball_out,5.2,1,0,1,-7.043439865112305,False,False,True,False,False,False,False,False,2,38,2,0,0
+2,0,1,-X,ball_out,6.46,0,0,1,-2.0354716777801514,False,False,True,False,False,False,False,False,1,0,1,0,0
+3,0,1,-X,goal_against,4.6,0,0,1,-11.828840255737305,False,True,True,False,False,False,False,False,3,0,3,0,0
