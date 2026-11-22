@@ -1,0 +1,73 @@
+{
+  "verified": true,
+  "verified_at": "2026-11-22T14:12:24.016920+00:00",
+  "base_commit": "3c6bcc768790e1bd4a0f3f492eba0df23fe92e65",
+  "candidate_source_sha256": {
+    "src/mjlab_microduck/duel/stop_settle.py": "48e2801f66c243d5deb9206fea36a66c3e7e0c30334c07a5f4344d5631db5be4",
+    "src/mjlab_microduck/duel/stop_settle_env.py": "4c3ee2b0a2933bd36c91751dab62e215c03a061722488b84c9cce82bc443a9a6"
+  },
+  "CPU_tests_passed": 20,
+  "bounded_inference_tests": 5,
+  "rows": [
+    {
+      "case": "original_policy_control",
+      "source": "policy",
+      "layout": "approach",
+      "side": 0,
+      "episodes": 64,
+      "kick_skill_rounds": 0,
+      "all_goal_rounds": 43,
+      "goals_after_kick_and_rightfoot_contact": 0
+    },
+    {
+      "case": "final_synthetic_side0",
+      "source": "synthetic_request",
+      "layout": "approach",
+      "side": 0,
+      "episodes": 64,
+      "kick_skill_rounds": 56,
+      "all_goal_rounds": 41,
+      "goals_after_kick_and_rightfoot_contact": 41
+    },
+    {
+      "case": "final_frozen_policy_side0",
+      "source": "policy",
+      "layout": "approach",
+      "side": 0,
+      "episodes": 64,
+      "kick_skill_rounds": 52,
+      "all_goal_rounds": 49,
+      "goals_after_kick_and_rightfoot_contact": 43
+    },
+    {
+      "case": "final_synthetic_side1",
+      "source": "synthetic_request",
+      "layout": "approach",
+      "side": 1,
+      "episodes": 64,
+      "kick_skill_rounds": 58,
+      "all_goal_rounds": 39,
+      "goals_after_kick_and_rightfoot_contact": 39
+    },
+    {
+      "case": "final_fixed_short64",
+      "source": "policy",
+      "layout": "fixed",
+      "side": 0,
+      "episodes": 64,
+      "kick_skill_rounds": 27,
+      "all_goal_rounds": 1,
+      "goals_after_kick_and_rightfoot_contact": 1
+    }
+  ],
+  "all_kicks_passed_original_position_heading_base_speed_ball_speed_guard": true,
+  "max_kick_start_base_speed_mps": 0.01655937172472477,
+  "max_kick_start_ball_speed_mps": 0.12632247805595398,
+  "original_v2_source_unchanged": true,
+  "original_checkpoint_and_normalizer_unchanged": true,
+  "official_skill_hashes_unchanged": true,
+  "long_training_started": false,
+  "PPO_optimizer_steps": 0,
+  "not_official_600_episode_evaluation": true,
+  "GitHub_updated": false
+}
