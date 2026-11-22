@@ -1,0 +1,14 @@
+{
+  "verified": true,
+  "envs": 64,
+  "actor_dim": 70,
+  "critic_dim": 70,
+  "far_away_kick_requests_blocked": true,
+  "finite_match_timeout_tested": true,
+  "terminal_timeouts_not_bootstrapped": true,
+  "clock_and_ready_timer_reset": true,
+  "training_performed": false,
+  "ready_pose_positive_control_kicks": 64,
+  "ready_pose_positive_control_goals": 64,
+  "positive_control_is_not_formal_evaluation": true
+}

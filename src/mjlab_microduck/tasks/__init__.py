@@ -308,6 +308,17 @@ register_mjlab_task(
     runner_cls=DuelOnPolicyRunner,
 )
 
+from .microduck_duel_v2_env_cfg import make_microduck_duel_v2_env_cfg
+from mjlab_microduck.duel.v2_runner import MicroduckDuelV2RlCfg, DuelV2OnPolicyRunner
+
+register_mjlab_task(
+    task_id="Mjlab-Duel-V2-Flat-MicroDuck",
+    env_cfg=make_microduck_duel_v2_env_cfg(),
+    play_env_cfg=make_microduck_duel_v2_env_cfg(num_envs=1, play=True),
+    rl_cfg=MicroduckDuelV2RlCfg,
+    runner_cls=DuelV2OnPolicyRunner,
+)
+
 # Backlash variants — ±1° serial gear play per servo + encoder-through-backlash
 # actuator feedback and joint obs (see tasks/backlash.py). Each family keeps its
 # base task's collision model: Velocity → robot_walk_backlash.xml,
