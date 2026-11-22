@@ -1,0 +1,1433 @@
+{
+  "training_commit": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+  "checkpoints": [
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 0,
+      "completed_iterations": 1,
+      "training_high_level_transitions": 49152,
+      "path": "checkpoints/B/seed2/model_0.pt",
+      "bytes": 591097,
+      "sha256": "6ce7d1634be95026e01b9836b05d3908b91a2985f8be470bec59963379e041e4",
+      "optimizer_steps": 20,
+      "common_step_counter": 120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 0,
+        "critic_state_dict": 0
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 100,
+      "completed_iterations": 101,
+      "training_high_level_transitions": 4964352,
+      "path": "checkpoints/B/seed2/model_100.pt",
+      "bytes": 591233,
+      "sha256": "f4622fc654edacad03f623b56a316a9d575fbe11db11b728b8a3ba6c18cff3f1",
+      "optimizer_steps": 2020,
+      "common_step_counter": 12120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 200,
+      "completed_iterations": 201,
+      "training_high_level_transitions": 9879552,
+      "path": "checkpoints/B/seed2/model_200.pt",
+      "bytes": 591233,
+      "sha256": "7f72268e2019dbd43d8aa04bc3c4416997dcd82bfb840878f92e1583d84c6399",
+      "optimizer_steps": 4020,
+      "common_step_counter": 24120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 300,
+      "completed_iterations": 301,
+      "training_high_level_transitions": 14794752,
+      "path": "checkpoints/B/seed2/model_300.pt",
+      "bytes": 591233,
+      "sha256": "acdaf4f93b460377ba00b6a473dbdf7e44f4913b5985beef770aaf39e1b8e56e",
+      "optimizer_steps": 6020,
+      "common_step_counter": 36120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 400,
+      "completed_iterations": 401,
+      "training_high_level_transitions": 19709952,
+      "path": "checkpoints/B/seed2/model_400.pt",
+      "bytes": 591233,
+      "sha256": "48168ee9b45ec0cd4a69722930a3ba2158c8e7fe98fd9b8b09c8ce0eb81ea6cb",
+      "optimizer_steps": 8020,
+      "common_step_counter": 48120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 500,
+      "completed_iterations": 501,
+      "training_high_level_transitions": 24625152,
+      "path": "checkpoints/B/seed2/model_500.pt",
+      "bytes": 591233,
+      "sha256": "8d27af176e9fd99178579a0251c77fed8a2da473867bd954e2ee92de34f9ee39",
+      "optimizer_steps": 10020,
+      "common_step_counter": 60120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 600,
+      "completed_iterations": 601,
+      "training_high_level_transitions": 29540352,
+      "path": "checkpoints/B/seed2/model_600.pt",
+      "bytes": 591233,
+      "sha256": "839272818591c74dae88ea39943abc37f5209730d7c3cc8622d11a47133711ed",
+      "optimizer_steps": 12020,
+      "common_step_counter": 72120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 700,
+      "completed_iterations": 701,
+      "training_high_level_transitions": 34455552,
+      "path": "checkpoints/B/seed2/model_700.pt",
+      "bytes": 591233,
+      "sha256": "06f5927da848730d7d9fd7e330ce5d6173997eb6861f878113c7787d1ea48233",
+      "optimizer_steps": 14020,
+      "common_step_counter": 84120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 800,
+      "completed_iterations": 801,
+      "training_high_level_transitions": 39370752,
+      "path": "checkpoints/B/seed2/model_800.pt",
+      "bytes": 591233,
+      "sha256": "3210233e1dc6ead0dead36810562dd2ede13fdfa1505fe0658e2ee963dad9926",
+      "optimizer_steps": 16020,
+      "common_step_counter": 96120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 900,
+      "completed_iterations": 901,
+      "training_high_level_transitions": 44285952,
+      "path": "checkpoints/B/seed2/model_900.pt",
+      "bytes": 591233,
+      "sha256": "a2d91e0521b912b8e84bb31835ab1431e251f494d0e4ebcc895b23679e98225e",
+      "optimizer_steps": 18020,
+      "common_step_counter": 108120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 1000,
+      "completed_iterations": 1001,
+      "training_high_level_transitions": 49201152,
+      "path": "checkpoints/B/seed2/model_1000.pt",
+      "bytes": 591301,
+      "sha256": "d5f221dc4ecc788443b64ee0f864e51171a0b7e53c9884dc8953d40459a0913a",
+      "optimizer_steps": 20020,
+      "common_step_counter": 120120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 1100,
+      "completed_iterations": 1101,
+      "training_high_level_transitions": 54116352,
+      "path": "checkpoints/B/seed2/model_1100.pt",
+      "bytes": 591301,
+      "sha256": "73f9830059729dfecaa284fb7886f1c1a3395ef9f4be1b9db4316d2670fc0e8d",
+      "optimizer_steps": 22020,
+      "common_step_counter": 132120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 1200,
+      "completed_iterations": 1201,
+      "training_high_level_transitions": 59031552,
+      "path": "checkpoints/B/seed2/model_1200.pt",
+      "bytes": 591301,
+      "sha256": "dd1c482d0994e701d598cc55671697efc5a98e63713813b5a03bda3362132904",
+      "optimizer_steps": 24020,
+      "common_step_counter": 144120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 1300,
+      "completed_iterations": 1301,
+      "training_high_level_transitions": 63946752,
+      "path": "checkpoints/B/seed2/model_1300.pt",
+      "bytes": 591301,
+      "sha256": "740078c7a071db1f4aa52e8fecd38b73d06a6239bf5819022efa1e5cc3d7bc37",
+      "optimizer_steps": 26020,
+      "common_step_counter": 156120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 1400,
+      "completed_iterations": 1401,
+      "training_high_level_transitions": 68861952,
+      "path": "checkpoints/B/seed2/model_1400.pt",
+      "bytes": 591301,
+      "sha256": "3ff3ab72340b51f2c48447cc6dcc0681c72223a5956528e1c46092cada04a20b",
+      "optimizer_steps": 28020,
+      "common_step_counter": 168120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 1500,
+      "completed_iterations": 1501,
+      "training_high_level_transitions": 73777152,
+      "path": "checkpoints/B/seed2/model_1500.pt",
+      "bytes": 591301,
+      "sha256": "716187b30406448bf45fc2e8cba4b84b9e5b9a4b240f143ca89e084b3b24d198",
+      "optimizer_steps": 30020,
+      "common_step_counter": 180120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 1600,
+      "completed_iterations": 1601,
+      "training_high_level_transitions": 78692352,
+      "path": "checkpoints/B/seed2/model_1600.pt",
+      "bytes": 591301,
+      "sha256": "210dd671286b657e4c648c601f69945b468ff0c45d2665cf6367346638391a80",
+      "optimizer_steps": 32020,
+      "common_step_counter": 192120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 1700,
+      "completed_iterations": 1701,
+      "training_high_level_transitions": 83607552,
+      "path": "checkpoints/B/seed2/model_1700.pt",
+      "bytes": 591301,
+      "sha256": "cfb866038f0c081729b0079bdbbf731c517a60f0aab255c304b1ed872eee5331",
+      "optimizer_steps": 34020,
+      "common_step_counter": 204120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 1800,
+      "completed_iterations": 1801,
+      "training_high_level_transitions": 88522752,
+      "path": "checkpoints/B/seed2/model_1800.pt",
+      "bytes": 591301,
+      "sha256": "2306185b31617d79c96b959592c2894e5f67e8e669ed29dbeed72c114892da95",
+      "optimizer_steps": 36020,
+      "common_step_counter": 216120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 1900,
+      "completed_iterations": 1901,
+      "training_high_level_transitions": 93437952,
+      "path": "checkpoints/B/seed2/model_1900.pt",
+      "bytes": 591301,
+      "sha256": "c383eb706bbebb65ef66c20daa13c0c9329999e7f529b292cfbb1a6217ec3e11",
+      "optimizer_steps": 38020,
+      "common_step_counter": 228120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 1999,
+      "completed_iterations": 2000,
+      "training_high_level_transitions": 98304000,
+      "path": "checkpoints/B/seed2/model_1999.pt",
+      "bytes": 591301,
+      "sha256": "bf3390c96a1165a86dda9e737810dea166b2e98d95d9d0127d85283db84cad72",
+      "optimizer_steps": 40000,
+      "common_step_counter": 240000,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 0,
+      "completed_iterations": 1,
+      "training_high_level_transitions": 49152,
+      "path": "checkpoints/B/seed3/model_0.pt",
+      "bytes": 591097,
+      "sha256": "670548b5f714cfbd6e7fcef303a26c085b20a9c8393ec864ca391e31f403c8b6",
+      "optimizer_steps": 20,
+      "common_step_counter": 120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 0,
+        "critic_state_dict": 0
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 100,
+      "completed_iterations": 101,
+      "training_high_level_transitions": 4964352,
+      "path": "checkpoints/B/seed3/model_100.pt",
+      "bytes": 591233,
+      "sha256": "71b1ce0507fc4fb34b08e272c03f2239281ccb9ebbccf4f799fdca37619e75d4",
+      "optimizer_steps": 2020,
+      "common_step_counter": 12120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 200,
+      "completed_iterations": 201,
+      "training_high_level_transitions": 9879552,
+      "path": "checkpoints/B/seed3/model_200.pt",
+      "bytes": 591233,
+      "sha256": "98476f0a56c737d4b2a7394d73c10b4efd15c5ffee1a6322d3571e340869b3f7",
+      "optimizer_steps": 4020,
+      "common_step_counter": 24120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 300,
+      "completed_iterations": 301,
+      "training_high_level_transitions": 14794752,
+      "path": "checkpoints/B/seed3/model_300.pt",
+      "bytes": 591233,
+      "sha256": "bd54bda24c331234639d3f3a8195924b6aba8fc5a947d39bd121769c2ea43b48",
+      "optimizer_steps": 6020,
+      "common_step_counter": 36120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 400,
+      "completed_iterations": 401,
+      "training_high_level_transitions": 19709952,
+      "path": "checkpoints/B/seed3/model_400.pt",
+      "bytes": 591233,
+      "sha256": "3fd1be88fbe402f5fe63678bf941753cc2fe336a55eddfa795d6158f66808303",
+      "optimizer_steps": 8020,
+      "common_step_counter": 48120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 500,
+      "completed_iterations": 501,
+      "training_high_level_transitions": 24625152,
+      "path": "checkpoints/B/seed3/model_500.pt",
+      "bytes": 591233,
+      "sha256": "2c7b576bdc1b2605f7645f6e0873e918fa50baaf9d477bc88e573a7384e0eede",
+      "optimizer_steps": 10020,
+      "common_step_counter": 60120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 600,
+      "completed_iterations": 601,
+      "training_high_level_transitions": 29540352,
+      "path": "checkpoints/B/seed3/model_600.pt",
+      "bytes": 591233,
+      "sha256": "0edf9a6f4a324639b288a83c8f326fafd62b5ae843ebeb480d8c13d57a21b5bd",
+      "optimizer_steps": 12020,
+      "common_step_counter": 72120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 700,
+      "completed_iterations": 701,
+      "training_high_level_transitions": 34455552,
+      "path": "checkpoints/B/seed3/model_700.pt",
+      "bytes": 591233,
+      "sha256": "134e5e1537bdda214f3696679c3e1a31480523c761d14baf05348df04053f4d2",
+      "optimizer_steps": 14020,
+      "common_step_counter": 84120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 800,
+      "completed_iterations": 801,
+      "training_high_level_transitions": 39370752,
+      "path": "checkpoints/B/seed3/model_800.pt",
+      "bytes": 591233,
+      "sha256": "664101321609db7f8d99f3901ff624d866e14726f481b3fa047592ecaea90987",
+      "optimizer_steps": 16020,
+      "common_step_counter": 96120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 900,
+      "completed_iterations": 901,
+      "training_high_level_transitions": 44285952,
+      "path": "checkpoints/B/seed3/model_900.pt",
+      "bytes": 591233,
+      "sha256": "be1d121a429701b550616ed30f0508956011d3bf5ceb9a9e3c1e8d52326b1aba",
+      "optimizer_steps": 18020,
+      "common_step_counter": 108120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 1000,
+      "completed_iterations": 1001,
+      "training_high_level_transitions": 49201152,
+      "path": "checkpoints/B/seed3/model_1000.pt",
+      "bytes": 591301,
+      "sha256": "7acb556169bdf8c21d02f531e3da2e826fe89831652835867cc3484ada4b6ca8",
+      "optimizer_steps": 20020,
+      "common_step_counter": 120120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 1100,
+      "completed_iterations": 1101,
+      "training_high_level_transitions": 54116352,
+      "path": "checkpoints/B/seed3/model_1100.pt",
+      "bytes": 591301,
+      "sha256": "3f3bc56dac907548d2b5d516a43b71d54c90ab740d7568da8e7c8e9296f91d77",
+      "optimizer_steps": 22020,
+      "common_step_counter": 132120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 1200,
+      "completed_iterations": 1201,
+      "training_high_level_transitions": 59031552,
+      "path": "checkpoints/B/seed3/model_1200.pt",
+      "bytes": 591301,
+      "sha256": "ccefaa4983d6a91acb77dc5d1ae8cf5eb5f26f8863097112a5949acba0ff91b1",
+      "optimizer_steps": 24020,
+      "common_step_counter": 144120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 1300,
+      "completed_iterations": 1301,
+      "training_high_level_transitions": 63946752,
+      "path": "checkpoints/B/seed3/model_1300.pt",
+      "bytes": 591301,
+      "sha256": "7c971826dfc639c4ecb764bc9c3103cdff54e3139951cc6f3b9c3c8f5a6d4ed1",
+      "optimizer_steps": 26020,
+      "common_step_counter": 156120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 1400,
+      "completed_iterations": 1401,
+      "training_high_level_transitions": 68861952,
+      "path": "checkpoints/B/seed3/model_1400.pt",
+      "bytes": 591301,
+      "sha256": "d0c2166385448733aeaa11c07ca35e9fc0ba446e6991e54a8bea12c6f5e24051",
+      "optimizer_steps": 28020,
+      "common_step_counter": 168120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 1500,
+      "completed_iterations": 1501,
+      "training_high_level_transitions": 73777152,
+      "path": "checkpoints/B/seed3/model_1500.pt",
+      "bytes": 591301,
+      "sha256": "44b4fdf288ca558b1fb6a70894ec189422b4a69c6c1ddf3c48f8e489d2448520",
+      "optimizer_steps": 30020,
+      "common_step_counter": 180120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 1600,
+      "completed_iterations": 1601,
+      "training_high_level_transitions": 78692352,
+      "path": "checkpoints/B/seed3/model_1600.pt",
+      "bytes": 591301,
+      "sha256": "125c005ba9c044150016403f75eb62750a4c687fdebebdcfbd75896481b38ee7",
+      "optimizer_steps": 32020,
+      "common_step_counter": 192120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 1700,
+      "completed_iterations": 1701,
+      "training_high_level_transitions": 83607552,
+      "path": "checkpoints/B/seed3/model_1700.pt",
+      "bytes": 591301,
+      "sha256": "c560ab38d0522eeb70c31ad6724d3214b63f19ebb5bdda23985bd119ff545e78",
+      "optimizer_steps": 34020,
+      "common_step_counter": 204120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 1800,
+      "completed_iterations": 1801,
+      "training_high_level_transitions": 88522752,
+      "path": "checkpoints/B/seed3/model_1800.pt",
+      "bytes": 591301,
+      "sha256": "c024f5c4aa419b3d7a65460fc994b5fee57e0766ec5cb06b41752a578830f4a5",
+      "optimizer_steps": 36020,
+      "common_step_counter": 216120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 1900,
+      "completed_iterations": 1901,
+      "training_high_level_transitions": 93437952,
+      "path": "checkpoints/B/seed3/model_1900.pt",
+      "bytes": 591301,
+      "sha256": "d28b03c25baa7511ea7a02d670bb4ca7f93f28b360685199c37467da4a5c1bcc",
+      "optimizer_steps": 38020,
+      "common_step_counter": 228120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 1999,
+      "completed_iterations": 2000,
+      "training_high_level_transitions": 98304000,
+      "path": "checkpoints/B/seed3/model_1999.pt",
+      "bytes": 591301,
+      "sha256": "e2dc60834b05226f2ae7c7f22a61b5349bc6da364127b60cc723a394534a78c0",
+      "optimizer_steps": 40000,
+      "common_step_counter": 240000,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 0,
+      "completed_iterations": 1,
+      "training_high_level_transitions": 49152,
+      "path": "checkpoints/C/seed2/model_0.pt",
+      "bytes": 591225,
+      "sha256": "36cd95643d6d51e0debb2271aaad6adbe6cc2de6cbe391a14fcd64fb571a21dc",
+      "optimizer_steps": 20,
+      "common_step_counter": 120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 0,
+        "critic_state_dict": 0
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 100,
+      "completed_iterations": 101,
+      "training_high_level_transitions": 4964352,
+      "path": "checkpoints/C/seed2/model_100.pt",
+      "bytes": 591361,
+      "sha256": "6234fa03447e269d886d7406a34337924bd812923189f9df1fc40a7fe7d1ea50",
+      "optimizer_steps": 2020,
+      "common_step_counter": 12120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 200,
+      "completed_iterations": 201,
+      "training_high_level_transitions": 9879552,
+      "path": "checkpoints/C/seed2/model_200.pt",
+      "bytes": 591361,
+      "sha256": "41b6b45f17fb1175760fddd4c41c62e39600341c7cd6744d1e0c1369b9d772db",
+      "optimizer_steps": 4020,
+      "common_step_counter": 24120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 300,
+      "completed_iterations": 301,
+      "training_high_level_transitions": 14794752,
+      "path": "checkpoints/C/seed2/model_300.pt",
+      "bytes": 591361,
+      "sha256": "926cd82a56d9437ca0fc9e456b0307700a96b868d243aa4399f6ccb559e0fbd8",
+      "optimizer_steps": 6020,
+      "common_step_counter": 36120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 400,
+      "completed_iterations": 401,
+      "training_high_level_transitions": 19709952,
+      "path": "checkpoints/C/seed2/model_400.pt",
+      "bytes": 591361,
+      "sha256": "1c6c7cf215d9adac953753d863ffb9fa43e21b06568757f264c20fb1b64a8f0b",
+      "optimizer_steps": 8020,
+      "common_step_counter": 48120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 500,
+      "completed_iterations": 501,
+      "training_high_level_transitions": 24625152,
+      "path": "checkpoints/C/seed2/model_500.pt",
+      "bytes": 591361,
+      "sha256": "562dccc16b32615ea1588333d8bff2b50b468bee6eb4c662c877a86769be380f",
+      "optimizer_steps": 10020,
+      "common_step_counter": 60120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 600,
+      "completed_iterations": 601,
+      "training_high_level_transitions": 29540352,
+      "path": "checkpoints/C/seed2/model_600.pt",
+      "bytes": 591361,
+      "sha256": "96b43ab968914657eb8d03ac88e9cd5693ae468bd865fc93c26bc46d9fba55c1",
+      "optimizer_steps": 12020,
+      "common_step_counter": 72120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 700,
+      "completed_iterations": 701,
+      "training_high_level_transitions": 34455552,
+      "path": "checkpoints/C/seed2/model_700.pt",
+      "bytes": 591361,
+      "sha256": "a70ef241f2d25c02aa72244b224836f140354b0e8698ab2299ce1f1c89a6b3e2",
+      "optimizer_steps": 14020,
+      "common_step_counter": 84120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 800,
+      "completed_iterations": 801,
+      "training_high_level_transitions": 39370752,
+      "path": "checkpoints/C/seed2/model_800.pt",
+      "bytes": 591361,
+      "sha256": "5e5727efd175fa42fee90ae8c3e1750eda51644df1303b416f9fe5a065ad168e",
+      "optimizer_steps": 16020,
+      "common_step_counter": 96120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 900,
+      "completed_iterations": 901,
+      "training_high_level_transitions": 44285952,
+      "path": "checkpoints/C/seed2/model_900.pt",
+      "bytes": 591361,
+      "sha256": "0e18e71742590db955a843f4cd99ff47c2ac0d9d680da3887a5d45840127e2b4",
+      "optimizer_steps": 18020,
+      "common_step_counter": 108120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 1000,
+      "completed_iterations": 1001,
+      "training_high_level_transitions": 49201152,
+      "path": "checkpoints/C/seed2/model_1000.pt",
+      "bytes": 591429,
+      "sha256": "2ad5d629cf6a7bcc0614ecd66cdd4156ac5d64a76fa3daa944220ba3d6eaa574",
+      "optimizer_steps": 20020,
+      "common_step_counter": 120120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 1100,
+      "completed_iterations": 1101,
+      "training_high_level_transitions": 54116352,
+      "path": "checkpoints/C/seed2/model_1100.pt",
+      "bytes": 591429,
+      "sha256": "578739287057ca989e2b557a76241fe780769d562b73ebf89e05eb9a19a7ed85",
+      "optimizer_steps": 22020,
+      "common_step_counter": 132120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 1200,
+      "completed_iterations": 1201,
+      "training_high_level_transitions": 59031552,
+      "path": "checkpoints/C/seed2/model_1200.pt",
+      "bytes": 591429,
+      "sha256": "c5242bcd610cdc26336f3894edc82bf32a077dfde64dc862921f42d13f227d2b",
+      "optimizer_steps": 24020,
+      "common_step_counter": 144120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 1300,
+      "completed_iterations": 1301,
+      "training_high_level_transitions": 63946752,
+      "path": "checkpoints/C/seed2/model_1300.pt",
+      "bytes": 591429,
+      "sha256": "0d3a06948a0325ec1696fd4de4e395399d4e7136b7b40bf179c476f960bbccf9",
+      "optimizer_steps": 26020,
+      "common_step_counter": 156120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 1400,
+      "completed_iterations": 1401,
+      "training_high_level_transitions": 68861952,
+      "path": "checkpoints/C/seed2/model_1400.pt",
+      "bytes": 591429,
+      "sha256": "af0942f0da71a9912ec0da8bfd71ec9269d447d5168e2fba3b83642b7898ebd0",
+      "optimizer_steps": 28020,
+      "common_step_counter": 168120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 1500,
+      "completed_iterations": 1501,
+      "training_high_level_transitions": 73777152,
+      "path": "checkpoints/C/seed2/model_1500.pt",
+      "bytes": 591429,
+      "sha256": "557233b618079f1343bdbcf8e7f4685ec56a562134b1525526bee13ff3420025",
+      "optimizer_steps": 30020,
+      "common_step_counter": 180120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 1600,
+      "completed_iterations": 1601,
+      "training_high_level_transitions": 78692352,
+      "path": "checkpoints/C/seed2/model_1600.pt",
+      "bytes": 591429,
+      "sha256": "8a13ea3a8cdafe3c64c5f0d294a7ed2fc9a177fb268e712726d6c0a1cbb88da8",
+      "optimizer_steps": 32020,
+      "common_step_counter": 192120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 1700,
+      "completed_iterations": 1701,
+      "training_high_level_transitions": 83607552,
+      "path": "checkpoints/C/seed2/model_1700.pt",
+      "bytes": 591429,
+      "sha256": "b15a65fcf34e4dafbce40b09385f6889e2a20daa5c87555f3220d46b36edf208",
+      "optimizer_steps": 34020,
+      "common_step_counter": 204120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 1800,
+      "completed_iterations": 1801,
+      "training_high_level_transitions": 88522752,
+      "path": "checkpoints/C/seed2/model_1800.pt",
+      "bytes": 591429,
+      "sha256": "a2d3f2a13e1e5f573527b7e43667ab34c22d91fe6f19afef2445a299b1a3e9cc",
+      "optimizer_steps": 36020,
+      "common_step_counter": 216120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 1900,
+      "completed_iterations": 1901,
+      "training_high_level_transitions": 93437952,
+      "path": "checkpoints/C/seed2/model_1900.pt",
+      "bytes": 591429,
+      "sha256": "6d9349d497d6243d2e10f57b1e828887850a13272c69aad9484bde1c7d51f091",
+      "optimizer_steps": 38020,
+      "common_step_counter": 228120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 1999,
+      "completed_iterations": 2000,
+      "training_high_level_transitions": 98304000,
+      "path": "checkpoints/C/seed2/model_1999.pt",
+      "bytes": 591429,
+      "sha256": "a84cff62f42dcfe41833e5cf2a54a6e5f4aec31b592b121f0f06a75b932bfa29",
+      "optimizer_steps": 40000,
+      "common_step_counter": 240000,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 0,
+      "completed_iterations": 1,
+      "training_high_level_transitions": 49152,
+      "path": "checkpoints/C/seed3/model_0.pt",
+      "bytes": 591225,
+      "sha256": "43f6ffd04b0efbc1beed9baef0990d62c18befeed1ee131fc02447d7733e9213",
+      "optimizer_steps": 20,
+      "common_step_counter": 120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 0,
+        "critic_state_dict": 0
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 100,
+      "completed_iterations": 101,
+      "training_high_level_transitions": 4964352,
+      "path": "checkpoints/C/seed3/model_100.pt",
+      "bytes": 591361,
+      "sha256": "279591ecc59855f8ce8bbcd96b29a23c1c81c4fc3c73b87b97395e6bd8bce3af",
+      "optimizer_steps": 2020,
+      "common_step_counter": 12120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 200,
+      "completed_iterations": 201,
+      "training_high_level_transitions": 9879552,
+      "path": "checkpoints/C/seed3/model_200.pt",
+      "bytes": 591361,
+      "sha256": "558c02d3a95fe857baf4200b2ce2f4ccc7773c593b0f881f2c09960eb74c2786",
+      "optimizer_steps": 4020,
+      "common_step_counter": 24120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 300,
+      "completed_iterations": 301,
+      "training_high_level_transitions": 14794752,
+      "path": "checkpoints/C/seed3/model_300.pt",
+      "bytes": 591361,
+      "sha256": "e37133be646a0b296a57276868de9212c0408041f2672b5bd2a21624aade4a5c",
+      "optimizer_steps": 6020,
+      "common_step_counter": 36120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 400,
+      "completed_iterations": 401,
+      "training_high_level_transitions": 19709952,
+      "path": "checkpoints/C/seed3/model_400.pt",
+      "bytes": 591361,
+      "sha256": "e1e7a911bacdf399f455e220fffa0d759c7c3d7a7fadd508c9272121e0f54fa6",
+      "optimizer_steps": 8020,
+      "common_step_counter": 48120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 500,
+      "completed_iterations": 501,
+      "training_high_level_transitions": 24625152,
+      "path": "checkpoints/C/seed3/model_500.pt",
+      "bytes": 591361,
+      "sha256": "6bd0651968e182362631013822170968aa713d4c29727de25fcaa2ec9d936251",
+      "optimizer_steps": 10020,
+      "common_step_counter": 60120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 600,
+      "completed_iterations": 601,
+      "training_high_level_transitions": 29540352,
+      "path": "checkpoints/C/seed3/model_600.pt",
+      "bytes": 591361,
+      "sha256": "95ddea9e6599191abfee80c9b41ea5c7a72054569a1a8cea5df6ef4a817f80b2",
+      "optimizer_steps": 12020,
+      "common_step_counter": 72120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 700,
+      "completed_iterations": 701,
+      "training_high_level_transitions": 34455552,
+      "path": "checkpoints/C/seed3/model_700.pt",
+      "bytes": 591361,
+      "sha256": "40192f7902dfb23e07eb4107fb48bdf6d32fabc5574893749156cf4711d1c4a2",
+      "optimizer_steps": 14020,
+      "common_step_counter": 84120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 800,
+      "completed_iterations": 801,
+      "training_high_level_transitions": 39370752,
+      "path": "checkpoints/C/seed3/model_800.pt",
+      "bytes": 591361,
+      "sha256": "0d81f6aa2fe8b01b3b14e813cc0f935a9b573ec1a5b3716c4e7833500a7d1abf",
+      "optimizer_steps": 16020,
+      "common_step_counter": 96120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 900,
+      "completed_iterations": 901,
+      "training_high_level_transitions": 44285952,
+      "path": "checkpoints/C/seed3/model_900.pt",
+      "bytes": 591361,
+      "sha256": "86c6a28917b313a6b695a11cab6b58081a5ce9eb5104fd0b1da57ff2a0cc7a90",
+      "optimizer_steps": 18020,
+      "common_step_counter": 108120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 1000,
+      "completed_iterations": 1001,
+      "training_high_level_transitions": 49201152,
+      "path": "checkpoints/C/seed3/model_1000.pt",
+      "bytes": 591429,
+      "sha256": "eb10bb1204ffc90f3c83cb224da9cd74a11b2c731825e175bf613d96ed05e4aa",
+      "optimizer_steps": 20020,
+      "common_step_counter": 120120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 1100,
+      "completed_iterations": 1101,
+      "training_high_level_transitions": 54116352,
+      "path": "checkpoints/C/seed3/model_1100.pt",
+      "bytes": 591429,
+      "sha256": "5b25453485d182cf37f0b19f61c885cfecf6e9fb28588631f44c330bf11ae73a",
+      "optimizer_steps": 22020,
+      "common_step_counter": 132120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 1200,
+      "completed_iterations": 1201,
+      "training_high_level_transitions": 59031552,
+      "path": "checkpoints/C/seed3/model_1200.pt",
+      "bytes": 591429,
+      "sha256": "3e3475cfa2a5d8fba91f87c705f9a7d1868b6fb3195503eb702dbf4be10e1404",
+      "optimizer_steps": 24020,
+      "common_step_counter": 144120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 1300,
+      "completed_iterations": 1301,
+      "training_high_level_transitions": 63946752,
+      "path": "checkpoints/C/seed3/model_1300.pt",
+      "bytes": 591429,
+      "sha256": "4f40706bb1090b425650a75b1b1031128f9395db4a81b6ffa406c13e6a545fca",
+      "optimizer_steps": 26020,
+      "common_step_counter": 156120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 1400,
+      "completed_iterations": 1401,
+      "training_high_level_transitions": 68861952,
+      "path": "checkpoints/C/seed3/model_1400.pt",
+      "bytes": 591429,
+      "sha256": "f2c54fafdd5ea90fe74baec8e2f00ae69fbcf3b78d82731fd88f02c29c202b33",
+      "optimizer_steps": 28020,
+      "common_step_counter": 168120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 1500,
+      "completed_iterations": 1501,
+      "training_high_level_transitions": 73777152,
+      "path": "checkpoints/C/seed3/model_1500.pt",
+      "bytes": 591429,
+      "sha256": "e219af3262adad208282bcb1b78c9fa227e4d74c585d182aaf7f738d712db88f",
+      "optimizer_steps": 30020,
+      "common_step_counter": 180120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 1600,
+      "completed_iterations": 1601,
+      "training_high_level_transitions": 78692352,
+      "path": "checkpoints/C/seed3/model_1600.pt",
+      "bytes": 591429,
+      "sha256": "8763c1851d101d27e7a0562c2fcbcc9c1f39451d8180c451392730f89906c81b",
+      "optimizer_steps": 32020,
+      "common_step_counter": 192120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 1700,
+      "completed_iterations": 1701,
+      "training_high_level_transitions": 83607552,
+      "path": "checkpoints/C/seed3/model_1700.pt",
+      "bytes": 591429,
+      "sha256": "4b91ce034ac16977d27e890dae04b1d630b985cf0ff4b26cebb3e4c88926b274",
+      "optimizer_steps": 34020,
+      "common_step_counter": 204120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 1800,
+      "completed_iterations": 1801,
+      "training_high_level_transitions": 88522752,
+      "path": "checkpoints/C/seed3/model_1800.pt",
+      "bytes": 591429,
+      "sha256": "fa55f8ebe4fd45069cf95782a636adf44d1037ffdfd8e5afe87ef89976fb6319",
+      "optimizer_steps": 36020,
+      "common_step_counter": 216120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 1900,
+      "completed_iterations": 1901,
+      "training_high_level_transitions": 93437952,
+      "path": "checkpoints/C/seed3/model_1900.pt",
+      "bytes": 591429,
+      "sha256": "4ecb0203b28b76d31440d7f02a3aa7bebc32f758136bf2eaa6ae8149cf510e99",
+      "optimizer_steps": 38020,
+      "common_step_counter": 228120,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 1999,
+      "completed_iterations": 2000,
+      "training_high_level_transitions": 98304000,
+      "path": "checkpoints/C/seed3/model_1999.pt",
+      "bytes": 591429,
+      "sha256": "59863baf46735118390ebeeb47dba271077893cbf7e87ca77edbcc9ab348982e",
+      "optimizer_steps": 40000,
+      "common_step_counter": 240000,
+      "all_actor_critic_tensors_finite": true,
+      "MLP_tensors_changed_vs_model0": {
+        "actor_state_dict": 6,
+        "critic_state_dict": 6
+      }
+    }
+  ]
+}

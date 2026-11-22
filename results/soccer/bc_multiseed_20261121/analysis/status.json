@@ -1,0 +1,13 @@
+{
+  "state": "finished",
+  "pid": 288,
+  "started_at_utc": "2026-11-21T08:45:36.409513+00:00",
+  "completed": 48,
+  "total": 48,
+  "current": null,
+  "training": false,
+  "updated_at_utc": "2026-11-21T10:02:17.586567+00:00",
+  "child_pid": 3198,
+  "returncode": 0,
+  "finished_at_utc": "2026-11-21T10:02:17.619310+00:00"
+}

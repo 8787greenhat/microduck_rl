@@ -1,0 +1,17 @@
+{
+  "controller": "model_1999.pt",
+  "envs": 300,
+  "rates": {
+    "goal": 0.9800000190734863,
+    "fell": 0.0,
+    "robot_oob": 0.009999999776482582,
+    "ball_oob": 0.006666666828095913,
+    "timeout": 0.0033333334140479565,
+    "kicked": 0.9866666793823242,
+    "contact": 0.9833333492279053
+  },
+  "mean_goal_time_s": 3.148299217224121,
+  "median_min_prep_dist_m": 0.008853578008711338,
+  "median_prep_dist_at_kick_m": 0.012003403156995773,
+  "median_yaw_err_at_kick_rad": 0.062354326248168945
+}

@@ -1,0 +1,7 @@
+method,training_seed,goal_count,success_mean_s,success_median_s,success_p90_s,p90_definition
+B,1,287,3.1797909407665506,3.1,4.1,linear interpolation (n-1)*0.9
+C,1,282,3.3209219858156027,3.2,4.3,linear interpolation (n-1)*0.9
+B,2,289,3.2110726643598615,3.1,4.1,linear interpolation (n-1)*0.9
+C,2,277,3.415884476534296,3.3,4.4,linear interpolation (n-1)*0.9
+B,3,287,3.2958188153310104,3.2,4.2,linear interpolation (n-1)*0.9
+C,3,294,3.148299319727891,3.1,4.1,linear interpolation (n-1)*0.9

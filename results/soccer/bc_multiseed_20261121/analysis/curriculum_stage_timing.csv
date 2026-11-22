@@ -1,0 +1,5 @@
+﻿training_seed,stage,first_logged_iteration_0based,first_logged_completed_iterations,tag
+2,1,13,14,Curriculum/reset_layout/stage
+2,2,245,246,Curriculum/reset_layout/stage
+3,1,15,16,Curriculum/reset_layout/stage
+3,2,168,169,Curriculum/reset_layout/stage

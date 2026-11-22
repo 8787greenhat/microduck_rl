@@ -1,0 +1,864 @@
+{
+  "final_aggregate": {
+    "B": {
+      "goal_rate_mean": 0.9588888888888889,
+      "goal_rate_sample_sd": 0.00384900179459753,
+      "mean_of_seed_success_time_means_s": 3.228894140152474,
+      "success_time_sample_sd_s": 0.06003183046148532
+    },
+    "C": {
+      "goal_rate_mean": 0.9477777777777777,
+      "goal_rate_sample_sd": 0.029122983160180343,
+      "mean_of_seed_success_time_means_s": 3.295035260692597,
+      "success_time_sample_sd_s": 0.13565782667790555
+    }
+  },
+  "early_thresholds": [
+    {
+      "training_seed": 1,
+      "method": "B",
+      "threshold": 0.7,
+      "first_observed_iteration_0based": 200,
+      "first_observed_completed_iterations": 201,
+      "first_observed_transitions": 9879552,
+      "first_sampled_point_without_later_sample_below_threshold_through_600": 200
+    },
+    {
+      "training_seed": 1,
+      "method": "B",
+      "threshold": 0.9,
+      "first_observed_iteration_0based": 200,
+      "first_observed_completed_iterations": 201,
+      "first_observed_transitions": 9879552,
+      "first_sampled_point_without_later_sample_below_threshold_through_600": 200
+    },
+    {
+      "training_seed": 1,
+      "method": "C",
+      "threshold": 0.7,
+      "first_observed_iteration_0based": 200,
+      "first_observed_completed_iterations": 201,
+      "first_observed_transitions": 9879552,
+      "first_sampled_point_without_later_sample_below_threshold_through_600": 200
+    },
+    {
+      "training_seed": 1,
+      "method": "C",
+      "threshold": 0.9,
+      "first_observed_iteration_0based": 400,
+      "first_observed_completed_iterations": 401,
+      "first_observed_transitions": 19709952,
+      "first_sampled_point_without_later_sample_below_threshold_through_600": 400
+    },
+    {
+      "training_seed": 2,
+      "method": "B",
+      "threshold": 0.7,
+      "first_observed_iteration_0based": 300,
+      "first_observed_completed_iterations": 301,
+      "first_observed_transitions": 14794752,
+      "first_sampled_point_without_later_sample_below_threshold_through_600": 300
+    },
+    {
+      "training_seed": 2,
+      "method": "B",
+      "threshold": 0.9,
+      "first_observed_iteration_0based": 300,
+      "first_observed_completed_iterations": 301,
+      "first_observed_transitions": 14794752,
+      "first_sampled_point_without_later_sample_below_threshold_through_600": 300
+    },
+    {
+      "training_seed": 2,
+      "method": "C",
+      "threshold": 0.7,
+      "first_observed_iteration_0based": 200,
+      "first_observed_completed_iterations": 201,
+      "first_observed_transitions": 9879552,
+      "first_sampled_point_without_later_sample_below_threshold_through_600": 200
+    },
+    {
+      "training_seed": 2,
+      "method": "C",
+      "threshold": 0.9,
+      "first_observed_iteration_0based": 500,
+      "first_observed_completed_iterations": 501,
+      "first_observed_transitions": 24625152,
+      "first_sampled_point_without_later_sample_below_threshold_through_600": 500
+    },
+    {
+      "training_seed": 3,
+      "method": "B",
+      "threshold": 0.7,
+      "first_observed_iteration_0based": 200,
+      "first_observed_completed_iterations": 201,
+      "first_observed_transitions": 9879552,
+      "first_sampled_point_without_later_sample_below_threshold_through_600": 200
+    },
+    {
+      "training_seed": 3,
+      "method": "B",
+      "threshold": 0.9,
+      "first_observed_iteration_0based": 200,
+      "first_observed_completed_iterations": 201,
+      "first_observed_transitions": 9879552,
+      "first_sampled_point_without_later_sample_below_threshold_through_600": 200
+    },
+    {
+      "training_seed": 3,
+      "method": "C",
+      "threshold": 0.7,
+      "first_observed_iteration_0based": 200,
+      "first_observed_completed_iterations": 201,
+      "first_observed_transitions": 9879552,
+      "first_sampled_point_without_later_sample_below_threshold_through_600": 200
+    },
+    {
+      "training_seed": 3,
+      "method": "C",
+      "threshold": 0.9,
+      "first_observed_iteration_0based": 300,
+      "first_observed_completed_iterations": 301,
+      "first_observed_transitions": 14794752,
+      "first_sampled_point_without_later_sample_below_threshold_through_600": 300
+    }
+  ],
+  "early_AUC": [
+    {
+      "training_seed": 1,
+      "method": "B",
+      "window_start_completed_iterations": 1,
+      "window_end_completed_iterations": 601,
+      "normalized_trapezoidal_goal_rate": 0.7077777777777778
+    },
+    {
+      "training_seed": 1,
+      "method": "C",
+      "window_start_completed_iterations": 1,
+      "window_end_completed_iterations": 601,
+      "normalized_trapezoidal_goal_rate": 0.7427777777777778
+    },
+    {
+      "training_seed": 2,
+      "method": "B",
+      "window_start_completed_iterations": 1,
+      "window_end_completed_iterations": 601,
+      "normalized_trapezoidal_goal_rate": 0.5583333333333333
+    },
+    {
+      "training_seed": 2,
+      "method": "C",
+      "window_start_completed_iterations": 1,
+      "window_end_completed_iterations": 601,
+      "normalized_trapezoidal_goal_rate": 0.6638888888888889
+    },
+    {
+      "training_seed": 3,
+      "method": "B",
+      "window_start_completed_iterations": 1,
+      "window_end_completed_iterations": 601,
+      "normalized_trapezoidal_goal_rate": 0.7608333333333334
+    },
+    {
+      "training_seed": 3,
+      "method": "C",
+      "window_start_completed_iterations": 1,
+      "window_end_completed_iterations": 601,
+      "normalized_trapezoidal_goal_rate": 0.7594444444444445
+    }
+  ],
+  "paired_learning_curve": [
+    {
+      "iteration_0based": 0,
+      "completed_iterations": 1,
+      "B_mean_pct": 0.1111111111111111,
+      "B_sd_pp": 0.19245008972987526,
+      "C_mean_pct": 0.0,
+      "C_sd_pp": 0.0,
+      "C_minus_B_pp": -0.1111111111111111
+    },
+    {
+      "iteration_0based": 100,
+      "completed_iterations": 101,
+      "B_mean_pct": 11.444444444444445,
+      "B_sd_pp": 19.82235924217715,
+      "C_mean_pct": 33.77777777777778,
+      "C_sd_pp": 14.62620681947052,
+      "C_minus_B_pp": 22.333333333333336
+    },
+    {
+      "iteration_0based": 200,
+      "completed_iterations": 201,
+      "B_mean_pct": 63.22222222222222,
+      "B_sd_pp": 50.42302531068006,
+      "C_mean_pct": 80.88888888888889,
+      "C_sd_pp": 6.619276003825106,
+      "C_minus_B_pp": 17.666666666666664
+    },
+    {
+      "iteration_0based": 300,
+      "completed_iterations": 301,
+      "B_mean_pct": 92.77777777777779,
+      "B_sd_pp": 1.6442942874387487,
+      "C_mean_pct": 87.77777777777777,
+      "C_sd_pp": 4.729732589731728,
+      "C_minus_B_pp": -5.000000000000014
+    },
+    {
+      "iteration_0based": 400,
+      "completed_iterations": 401,
+      "B_mean_pct": 94.33333333333334,
+      "B_sd_pp": 0.5773502691896263,
+      "C_mean_pct": 91.33333333333333,
+      "C_sd_pp": 3.1797973380564866,
+      "C_minus_B_pp": -3.000000000000014
+    },
+    {
+      "iteration_0based": 500,
+      "completed_iterations": 501,
+      "B_mean_pct": 95.55555555555554,
+      "B_sd_pp": 0.7698003589194996,
+      "C_mean_pct": 92.88888888888889,
+      "C_sd_pp": 1.89541356769244,
+      "C_minus_B_pp": -2.666666666666657
+    },
+    {
+      "iteration_0based": 600,
+      "completed_iterations": 601,
+      "B_mean_pct": 96.0,
+      "B_sd_pp": 0.5773502691896263,
+      "C_mean_pct": 93.11111111111111,
+      "C_sd_pp": 2.523959264800119,
+      "C_minus_B_pp": -2.8888888888888857
+    },
+    {
+      "iteration_0based": 1999,
+      "completed_iterations": 2000,
+      "B_mean_pct": 95.88888888888889,
+      "B_sd_pp": 0.384900179459753,
+      "C_mean_pct": 94.77777777777777,
+      "C_sd_pp": 2.9122983160180342,
+      "C_minus_B_pp": -1.1111111111111143
+    }
+  ],
+  "curriculum_stages": [
+    {
+      "training_seed": 2,
+      "stage": 1,
+      "first_logged_iteration_0based": 13,
+      "first_logged_completed_iterations": 14,
+      "tag": "Curriculum/reset_layout/stage"
+    },
+    {
+      "training_seed": 2,
+      "stage": 2,
+      "first_logged_iteration_0based": 245,
+      "first_logged_completed_iterations": 246,
+      "tag": "Curriculum/reset_layout/stage"
+    },
+    {
+      "training_seed": 3,
+      "stage": 1,
+      "first_logged_iteration_0based": 15,
+      "first_logged_completed_iterations": 16,
+      "tag": "Curriculum/reset_layout/stage"
+    },
+    {
+      "training_seed": 3,
+      "stage": 2,
+      "first_logged_iteration_0based": 168,
+      "first_logged_completed_iterations": 169,
+      "tag": "Curriculum/reset_layout/stage"
+    }
+  ],
+  "subgroups": [
+    {
+      "iteration_0based": 100,
+      "feature": "ball_goal_distance_m",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.13742690058479531,
+      "B_goal_rate_sd": 0.23803037413958256,
+      "layouts_per_seed": 38,
+      "C_goal_rate_mean": 0.391812865497076,
+      "C_goal_rate_sd": 0.17984238964540095,
+      "C_minus_B_pp": 25.438596491228072
+    },
+    {
+      "iteration_0based": 100,
+      "feature": "ball_goal_distance_m",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.0992063492063492,
+      "B_goal_rate_sd": 0.1718304372588172,
+      "layouts_per_seed": 28,
+      "C_goal_rate_mean": 0.38095238095238093,
+      "C_goal_rate_sd": 0.1729266553134994,
+      "C_minus_B_pp": 28.174603174603174
+    },
+    {
+      "iteration_0based": 100,
+      "feature": "ball_goal_distance_m",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.10130718954248365,
+      "B_goal_rate_sd": 0.17546919945959213,
+      "layouts_per_seed": 34,
+      "C_goal_rate_mean": 0.24183006535947713,
+      "C_goal_rate_sd": 0.10014087219636969,
+      "C_minus_B_pp": 14.052287581699346
+    },
+    {
+      "iteration_0based": 100,
+      "feature": "initial_heading_error_deg",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.11711711711711713,
+      "B_goal_rate_sd": 0.2028527972828415,
+      "layouts_per_seed": 37,
+      "C_goal_rate_mean": 0.40540540540540543,
+      "C_goal_rate_sd": 0.16538342117734972,
+      "C_minus_B_pp": 28.82882882882883
+    },
+    {
+      "iteration_0based": 100,
+      "feature": "initial_heading_error_deg",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.13580246913580246,
+      "B_goal_rate_sd": 0.2352167763365142,
+      "layouts_per_seed": 36,
+      "C_goal_rate_mean": 0.3333333333333333,
+      "C_goal_rate_sd": 0.1363974061357059,
+      "C_minus_B_pp": 19.753086419753085
+    },
+    {
+      "iteration_0based": 100,
+      "feature": "initial_heading_error_deg",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.0823045267489712,
+      "B_goal_rate_sd": 0.14255562202212982,
+      "layouts_per_seed": 27,
+      "C_goal_rate_mean": 0.2510288065843621,
+      "C_goal_rate_sd": 0.1488324388479434,
+      "C_minus_B_pp": 16.87242798353909
+    },
+    {
+      "iteration_0based": 100,
+      "feature": "robot_ball_distance_m",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.1497584541062802,
+      "B_goal_rate_sd": 0.25938925137504926,
+      "layouts_per_seed": 23,
+      "C_goal_rate_mean": 0.357487922705314,
+      "C_goal_rate_sd": 0.15360495744526229,
+      "C_minus_B_pp": 20.772946859903378
+    },
+    {
+      "iteration_0based": 100,
+      "feature": "robot_ball_distance_m",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.10335917312661498,
+      "B_goal_rate_sd": 0.1790233392836049,
+      "layouts_per_seed": 43,
+      "C_goal_rate_mean": 0.32299741602067183,
+      "C_goal_rate_sd": 0.1121578005902362,
+      "C_minus_B_pp": 21.963824289405686
+    },
+    {
+      "iteration_0based": 100,
+      "feature": "robot_ball_distance_m",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.10457516339869281,
+      "B_goal_rate_sd": 0.1811294962163532,
+      "layouts_per_seed": 34,
+      "C_goal_rate_mean": 0.3431372549019608,
+      "C_goal_rate_sd": 0.20020174369276605,
+      "C_minus_B_pp": 23.856209150326794
+    },
+    {
+      "iteration_0based": 100,
+      "feature": "shot_line_obliqueness_deg",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.11904761904761905,
+      "B_goal_rate_sd": 0.20619652471058064,
+      "layouts_per_seed": 42,
+      "C_goal_rate_mean": 0.36243386243386244,
+      "C_goal_rate_sd": 0.17681380752917403,
+      "C_minus_B_pp": 24.33862433862434
+    },
+    {
+      "iteration_0based": 100,
+      "feature": "shot_line_obliqueness_deg",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.1111111111111111,
+      "B_goal_rate_sd": 0.19245008972987523,
+      "layouts_per_seed": 41,
+      "C_goal_rate_mean": 0.3170731707317073,
+      "C_goal_rate_sd": 0.12195121951219512,
+      "C_minus_B_pp": 20.59620596205962
+    },
+    {
+      "iteration_0based": 100,
+      "feature": "shot_line_obliqueness_deg",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.1111111111111111,
+      "B_goal_rate_sd": 0.19245008972987523,
+      "layouts_per_seed": 17,
+      "C_goal_rate_mean": 0.32679738562091504,
+      "C_goal_rate_sd": 0.148468192047066,
+      "C_minus_B_pp": 21.568627450980394
+    },
+    {
+      "iteration_0based": 200,
+      "feature": "ball_goal_distance_m",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.6257309941520468,
+      "B_goal_rate_sd": 0.5118128521333802,
+      "layouts_per_seed": 38,
+      "C_goal_rate_mean": 0.8596491228070176,
+      "C_goal_rate_sd": 0.046416689667799854,
+      "C_minus_B_pp": 23.391812865497073
+    },
+    {
+      "iteration_0based": 200,
+      "feature": "ball_goal_distance_m",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.6309523809523809,
+      "B_goal_rate_sd": 0.5052165517600701,
+      "layouts_per_seed": 28,
+      "C_goal_rate_mean": 0.8492063492063492,
+      "C_goal_rate_sd": 0.05368154467646301,
+      "C_minus_B_pp": 21.825396825396826
+    },
+    {
+      "iteration_0based": 200,
+      "feature": "ball_goal_distance_m",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.6405228758169934,
+      "B_goal_rate_sd": 0.495300224037208,
+      "layouts_per_seed": 34,
+      "C_goal_rate_mean": 0.7189542483660131,
+      "C_goal_rate_sd": 0.10483016295650616,
+      "C_minus_B_pp": 7.843137254901967
+    },
+    {
+      "iteration_0based": 200,
+      "feature": "initial_heading_error_deg",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.6366366366366366,
+      "B_goal_rate_sd": 0.5279566247876019,
+      "layouts_per_seed": 37,
+      "C_goal_rate_mean": 0.8468468468468469,
+      "C_goal_rate_sd": 0.054799662435119086,
+      "C_minus_B_pp": 21.021021021021024
+    },
+    {
+      "iteration_0based": 200,
+      "feature": "initial_heading_error_deg",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.6234567901234568,
+      "B_goal_rate_sd": 0.49181689597634787,
+      "layouts_per_seed": 36,
+      "C_goal_rate_mean": 0.8117283950617284,
+      "C_goal_rate_sd": 0.06302647486624122,
+      "C_minus_B_pp": 18.827160493827165
+    },
+    {
+      "iteration_0based": 200,
+      "feature": "initial_heading_error_deg",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.6378600823045267,
+      "B_goal_rate_sd": 0.4882920245661299,
+      "layouts_per_seed": 27,
+      "C_goal_rate_mean": 0.7530864197530864,
+      "C_goal_rate_sd": 0.08641975308641972,
+      "C_minus_B_pp": 11.52263374485597
+    },
+    {
+      "iteration_0based": 200,
+      "feature": "robot_ball_distance_m",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.6183574879227053,
+      "B_goal_rate_sd": 0.5106168217091328,
+      "layouts_per_seed": 23,
+      "C_goal_rate_mean": 0.7536231884057971,
+      "C_goal_rate_sd": 0.0631724484571112,
+      "C_minus_B_pp": 13.526570048309184
+    },
+    {
+      "iteration_0based": 200,
+      "feature": "robot_ball_distance_m",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.6304909560723514,
+      "B_goal_rate_sd": 0.5057409334761838,
+      "layouts_per_seed": 43,
+      "C_goal_rate_mean": 0.8036175710594315,
+      "C_goal_rate_sd": 0.06592946161329755,
+      "C_minus_B_pp": 17.312661498708014
+    },
+    {
+      "iteration_0based": 200,
+      "feature": "robot_ball_distance_m",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.6437908496732027,
+      "B_goal_rate_sd": 0.4981061145949713,
+      "layouts_per_seed": 34,
+      "C_goal_rate_mean": 0.8529411764705882,
+      "C_goal_rate_sd": 0.06862745098039215,
+      "C_minus_B_pp": 20.915032679738555
+    },
+    {
+      "iteration_0based": 200,
+      "feature": "shot_line_obliqueness_deg",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.6507936507936508,
+      "B_goal_rate_sd": 0.5292526236421972,
+      "layouts_per_seed": 42,
+      "C_goal_rate_mean": 0.8597883597883598,
+      "C_goal_rate_sd": 0.051024607201020915,
+      "C_minus_B_pp": 20.899470899470895
+    },
+    {
+      "iteration_0based": 200,
+      "feature": "shot_line_obliqueness_deg",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.6422764227642276,
+      "B_goal_rate_sd": 0.49292703711297947,
+      "layouts_per_seed": 41,
+      "C_goal_rate_mean": 0.7615176151761518,
+      "C_goal_rate_sd": 0.0830436501140627,
+      "C_minus_B_pp": 11.924119241192422
+    },
+    {
+      "iteration_0based": 200,
+      "feature": "shot_line_obliqueness_deg",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.5620915032679739,
+      "B_goal_rate_sd": 0.4707243811772769,
+      "layouts_per_seed": 17,
+      "C_goal_rate_mean": 0.7973856209150326,
+      "C_goal_rate_sd": 0.07924415459465452,
+      "C_minus_B_pp": 23.529411764705877
+    },
+    {
+      "iteration_0based": 600,
+      "feature": "ball_goal_distance_m",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.9502923976608187,
+      "B_goal_rate_sd": 0.018260228065492386,
+      "layouts_per_seed": 38,
+      "C_goal_rate_mean": 0.9298245614035088,
+      "C_goal_rate_sd": 0.017543859649122806,
+      "C_minus_B_pp": -2.046783625730997
+    },
+    {
+      "iteration_0based": 600,
+      "feature": "ball_goal_distance_m",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.9761904761904762,
+      "B_goal_rate_sd": 0.011904761904761918,
+      "layouts_per_seed": 28,
+      "C_goal_rate_mean": 0.9404761904761905,
+      "C_goal_rate_sd": 0.023809523809523836,
+      "C_minus_B_pp": -3.57142857142857
+    },
+    {
+      "iteration_0based": 600,
+      "feature": "ball_goal_distance_m",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.9575163398692811,
+      "B_goal_rate_sd": 0.014975737565215171,
+      "layouts_per_seed": 34,
+      "C_goal_rate_mean": 0.9248366013071896,
+      "C_goal_rate_sd": 0.04081698038168886,
+      "C_minus_B_pp": -3.26797385620915
+    },
+    {
+      "iteration_0based": 600,
+      "feature": "initial_heading_error_deg",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.978978978978979,
+      "B_goal_rate_sd": 0.01875374774293811,
+      "layouts_per_seed": 37,
+      "C_goal_rate_mean": 0.9519519519519519,
+      "C_goal_rate_sd": 0.010402707552966252,
+      "C_minus_B_pp": -2.7027027027027084
+    },
+    {
+      "iteration_0based": 600,
+      "feature": "initial_heading_error_deg",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.9444444444444444,
+      "B_goal_rate_sd": 0.01851851851851849,
+      "layouts_per_seed": 36,
+      "C_goal_rate_mean": 0.9290123456790124,
+      "C_goal_rate_sd": 0.03854937036048394,
+      "C_minus_B_pp": -1.5432098765432056
+    },
+    {
+      "iteration_0based": 600,
+      "feature": "initial_heading_error_deg",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.9547325102880658,
+      "B_goal_rate_sd": 0.025699580240322616,
+      "layouts_per_seed": 27,
+      "C_goal_rate_mean": 0.9053497942386831,
+      "C_goal_rate_sd": 0.037716672386467816,
+      "C_minus_B_pp": -4.938271604938271
+    },
+    {
+      "iteration_0based": 600,
+      "feature": "robot_ball_distance_m",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.961352657004831,
+      "B_goal_rate_sd": 0.008367395205646723,
+      "layouts_per_seed": 23,
+      "C_goal_rate_mean": 0.927536231884058,
+      "C_goal_rate_sd": 0.05020437123388053,
+      "C_minus_B_pp": -3.3816425120772986
+    },
+    {
+      "iteration_0based": 600,
+      "feature": "robot_ball_distance_m",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.9457364341085271,
+      "B_goal_rate_sd": 0.015503875968992276,
+      "layouts_per_seed": 43,
+      "C_goal_rate_mean": 0.9198966408268734,
+      "C_goal_rate_sd": 0.027223911506079418,
+      "C_minus_B_pp": -2.5839793281653756
+    },
+    {
+      "iteration_0based": 600,
+      "feature": "robot_ball_distance_m",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.9771241830065359,
+      "B_goal_rate_sd": 0.011320593513522098,
+      "layouts_per_seed": 34,
+      "C_goal_rate_mean": 0.9477124183006536,
+      "C_goal_rate_sd": 0.014975737565215159,
+      "C_minus_B_pp": -2.941176470588236
+    },
+    {
+      "iteration_0based": 600,
+      "feature": "shot_line_obliqueness_deg",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.9761904761904762,
+      "B_goal_rate_sd": 0.007936507936507908,
+      "layouts_per_seed": 42,
+      "C_goal_rate_mean": 0.9497354497354498,
+      "C_goal_rate_sd": 0.0255123036005105,
+      "C_minus_B_pp": -2.64550264550264
+    },
+    {
+      "iteration_0based": 600,
+      "feature": "shot_line_obliqueness_deg",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.959349593495935,
+      "B_goal_rate_sd": 0.02151017326068774,
+      "layouts_per_seed": 41,
+      "C_goal_rate_mean": 0.929539295392954,
+      "C_goal_rate_sd": 0.044776996319399166,
+      "C_minus_B_pp": -2.981029810298097
+    },
+    {
+      "iteration_0based": 600,
+      "feature": "shot_line_obliqueness_deg",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.9215686274509803,
+      "B_goal_rate_sd": 0.03396178054056623,
+      "layouts_per_seed": 17,
+      "C_goal_rate_mean": 0.888888888888889,
+      "C_goal_rate_sd": 0.02264118702704413,
+      "C_minus_B_pp": -3.2679738562091387
+    },
+    {
+      "iteration_0based": 1999,
+      "feature": "ball_goal_distance_m",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.9444444444444444,
+      "B_goal_rate_sd": 0.005064476045522985,
+      "layouts_per_seed": 38,
+      "C_goal_rate_mean": 0.9444444444444444,
+      "C_goal_rate_sd": 0.018260228065492386,
+      "C_minus_B_pp": 0.0
+    },
+    {
+      "iteration_0based": 1999,
+      "feature": "ball_goal_distance_m",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.9603174603174603,
+      "B_goal_rate_sd": 0.006873217490352727,
+      "layouts_per_seed": 28,
+      "C_goal_rate_mean": 0.9682539682539683,
+      "C_goal_rate_sd": 0.02478173808888255,
+      "C_minus_B_pp": 0.7936507936507908
+    },
+    {
+      "iteration_0based": 1999,
+      "feature": "ball_goal_distance_m",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.9738562091503268,
+      "B_goal_rate_sd": 0.011320593513522034,
+      "layouts_per_seed": 34,
+      "C_goal_rate_mean": 0.934640522875817,
+      "C_goal_rate_sd": 0.05030981803379299,
+      "C_minus_B_pp": -3.9215686274509776
+    },
+    {
+      "iteration_0based": 1999,
+      "feature": "initial_heading_error_deg",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.975975975975976,
+      "B_goal_rate_sd": 0.013761488573440929,
+      "layouts_per_seed": 37,
+      "C_goal_rate_mean": 0.978978978978979,
+      "C_goal_rate_sd": 0.01875374774293811,
+      "C_minus_B_pp": 0.30030030030030463
+    },
+    {
+      "iteration_0based": 1999,
+      "feature": "initial_heading_error_deg",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.9475308641975309,
+      "B_goal_rate_sd": 0.014143752144925387,
+      "layouts_per_seed": 36,
+      "C_goal_rate_mean": 0.9320987654320988,
+      "C_goal_rate_sd": 0.035054989788890566,
+      "C_minus_B_pp": -1.5432098765432056
+    },
+    {
+      "iteration_0based": 1999,
+      "feature": "initial_heading_error_deg",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.9506172839506173,
+      "B_goal_rate_sd": 0.021383343303319438,
+      "layouts_per_seed": 27,
+      "C_goal_rate_mean": 0.9259259259259259,
+      "C_goal_rate_sd": 0.037037037037037035,
+      "C_minus_B_pp": -2.4691358024691357
+    },
+    {
+      "iteration_0based": 1999,
+      "feature": "robot_ball_distance_m",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.9420289855072463,
+      "B_goal_rate_sd": 0.02898550724637683,
+      "layouts_per_seed": 23,
+      "C_goal_rate_mean": 0.9468599033816425,
+      "C_goal_rate_sd": 0.03647263012208097,
+      "C_minus_B_pp": 0.48309178743961567
+    },
+    {
+      "iteration_0based": 1999,
+      "feature": "robot_ball_distance_m",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.9534883720930233,
+      "B_goal_rate_sd": 0.007751937984496138,
+      "layouts_per_seed": 43,
+      "C_goal_rate_mean": 0.9431524547803617,
+      "C_goal_rate_sd": 0.022377917410450587,
+      "C_minus_B_pp": -1.033591731266159
+    },
+    {
+      "iteration_0based": 1999,
+      "feature": "robot_ball_distance_m",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.9771241830065359,
+      "B_goal_rate_sd": 0.014975737565215159,
+      "layouts_per_seed": 34,
+      "C_goal_rate_mean": 0.954248366013072,
+      "C_goal_rate_sd": 0.0463315257475746,
+      "C_minus_B_pp": -2.287581699346397
+    },
+    {
+      "iteration_0based": 1999,
+      "feature": "shot_line_obliqueness_deg",
+      "bin_index": 0,
+      "B_goal_rate_mean": 0.9788359788359788,
+      "B_goal_rate_sd": 0.004582144993568443,
+      "layouts_per_seed": 42,
+      "C_goal_rate_mean": 0.9656084656084656,
+      "C_goal_rate_sd": 0.027872099875271807,
+      "C_minus_B_pp": -1.3227513227513255
+    },
+    {
+      "iteration_0based": 1999,
+      "feature": "shot_line_obliqueness_deg",
+      "bin_index": 1,
+      "B_goal_rate_mean": 0.964769647696477,
+      "B_goal_rate_sd": 0.004693904627557958,
+      "layouts_per_seed": 41,
+      "C_goal_rate_mean": 0.943089430894309,
+      "C_goal_rate_sd": 0.03543820279301361,
+      "C_minus_B_pp": -2.168021680216803
+    },
+    {
+      "iteration_0based": 1999,
+      "feature": "shot_line_obliqueness_deg",
+      "bin_index": 2,
+      "B_goal_rate_mean": 0.8954248366013071,
+      "B_goal_rate_sd": 0.02264118702704413,
+      "layouts_per_seed": 17,
+      "C_goal_rate_mean": 0.9150326797385621,
+      "C_goal_rate_sd": 0.02264118702704413,
+      "C_minus_B_pp": 1.9607843137254943
+    }
+  ],
+  "episodes_analyzed": 14400,
+  "new_scored_episodes": 8400,
+  "reused_scored_episodes": 6000,
+  "protocol": {
+    "created_at_utc": "2026-11-21T08:44:52.979565+00:00",
+    "commit_for_new_evaluations": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+    "fixed_eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+    "evaluation_script_sha256": "2d8bd0f9fc840aa54fa858181e16ccb88813b4fc4579db42c6b49c7a85ba0757",
+    "evaluation_rng_seed": 0,
+    "points_0based": [
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      1999
+    ],
+    "early_window_completed_iterations": [
+      1,
+      601
+    ],
+    "thresholds": [
+      0.7,
+      0.9
+    ],
+    "layouts": 100,
+    "repeats": 3,
+    "new_GPU_evaluations": 28,
+    "reused_evaluations": 20,
+    "new_training": false,
+    "modified_evaluator": false,
+    "github_updates": false,
+    "subgroup_boundaries_prespecified": {
+      "robot_ball_distance_m": [
+        0.3,
+        0.45
+      ],
+      "initial_heading_error_deg": [
+        30,
+        60
+      ],
+      "ball_goal_distance_m": [
+        0.7,
+        0.9
+      ],
+      "shot_line_obliqueness_deg": [
+        10,
+        20
+      ]
+    },
+    "notes": [
+      "model_0 is after one PPO update, not an untrained policy.",
+      "Seed1 C resumed after model_200; physical episodes and RNG reinitialized.",
+      "Original evaluator restores checkpoint clock; shared COM randomization changes with clock, matched B/C points share the same schedule.",
+      "Final endpoints are reused; no interpolation across 601 to 2000 for early AUC.",
+      "Thresholds are observed on saved checkpoint grid; stability refers only to measured points."
+    ]
+  }
+}

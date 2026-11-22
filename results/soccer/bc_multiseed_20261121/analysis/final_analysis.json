@@ -1,0 +1,218 @@
+{
+  "records": [
+    {
+      "method": "B",
+      "training_seed": 1,
+      "goal_count": 287,
+      "goal_rate": 0.9566666666666667,
+      "mean_goal_time_s": 3.1797909407665506,
+      "median_first_kick_prep_error_m": 0.012640533037483692,
+      "median_first_kick_heading_error_deg": 3.194247248383183,
+      "summary_sha256": "795693bf07aadfe02fb0ff5436c907b6ac819d89320b5c4e56a0be8255d19150"
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "goal_count": 282,
+      "goal_rate": 0.94,
+      "mean_goal_time_s": 3.3209219858156027,
+      "median_first_kick_prep_error_m": 0.023259324952960014,
+      "median_first_kick_heading_error_deg": 7.572193600686256,
+      "summary_sha256": "b61d5009871344c011f4b9d4d119e359212163750d7c202372c9df01a0a0951f"
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "goal_count": 289,
+      "goal_rate": 0.9633333333333334,
+      "mean_goal_time_s": 3.2110726643598615,
+      "median_first_kick_prep_error_m": 0.01217123493552208,
+      "median_first_kick_heading_error_deg": 3.338200315330372,
+      "summary_sha256": "a463031c6f89ccd38ba87f870601e124c9be4a05196c01224abea251cd186bcc"
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "goal_count": 277,
+      "goal_rate": 0.9233333333333333,
+      "mean_goal_time_s": 3.415884476534296,
+      "median_first_kick_prep_error_m": 0.020960411056876183,
+      "median_first_kick_heading_error_deg": 7.790554748451564,
+      "summary_sha256": "3af4fa1231224381d036dcf5f994308fdb19172cca4be0cb558ebdea34d99eae"
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "goal_count": 287,
+      "goal_rate": 0.9566666666666667,
+      "mean_goal_time_s": 3.2958188153310104,
+      "median_first_kick_prep_error_m": 0.012719389982521534,
+      "median_first_kick_heading_error_deg": 2.601291205777696,
+      "summary_sha256": "344bb294765066ecc2976917c7cb054878e4697d4cc29d282600c08501e2adaf"
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "goal_count": 294,
+      "goal_rate": 0.98,
+      "mean_goal_time_s": 3.148299319727891,
+      "median_first_kick_prep_error_m": 0.012003403156995773,
+      "median_first_kick_heading_error_deg": 3.5726397284018896,
+      "summary_sha256": "5fc22b1364157e9b9ed95f53b97ad353254b39d00675ad2c58cc36909d513f8a"
+    }
+  ],
+  "aggregate": {
+    "B": {
+      "goal_rate_mean": 0.9588888888888889,
+      "goal_rate_sample_sd": 0.00384900179459753,
+      "mean_of_seed_success_time_means_s": 3.228894140152474,
+      "success_time_sample_sd_s": 0.06003183046148532
+    },
+    "C": {
+      "goal_rate_mean": 0.9477777777777777,
+      "goal_rate_sample_sd": 0.029122983160180343,
+      "mean_of_seed_success_time_means_s": 3.295035260692597,
+      "success_time_sample_sd_s": 0.13565782667790555
+    }
+  },
+  "failure_combinations": [
+    {
+      "method": "B",
+      "training_seed": 1,
+      "failure_flags_combination": "ball_oob",
+      "count": 6
+    },
+    {
+      "method": "B",
+      "training_seed": 1,
+      "failure_flags_combination": "robot_oob",
+      "count": 3
+    },
+    {
+      "method": "B",
+      "training_seed": 1,
+      "failure_flags_combination": "fell",
+      "count": 3
+    },
+    {
+      "method": "B",
+      "training_seed": 1,
+      "failure_flags_combination": "timeout",
+      "count": 1
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "failure_flags_combination": "ball_oob",
+      "count": 9
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "failure_flags_combination": "fell",
+      "count": 2
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "failure_flags_combination": "robot_oob",
+      "count": 4
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "failure_flags_combination": "timeout",
+      "count": 3
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "failure_flags_combination": "ball_oob",
+      "count": 5
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "failure_flags_combination": "robot_oob",
+      "count": 3
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "failure_flags_combination": "timeout",
+      "count": 2
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "failure_flags_combination": "fell",
+      "count": 1
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "failure_flags_combination": "ball_oob",
+      "count": 15
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "failure_flags_combination": "timeout",
+      "count": 5
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "failure_flags_combination": "robot_oob",
+      "count": 3
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "failure_flags_combination": "timeout",
+      "count": 2
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "failure_flags_combination": "ball_oob",
+      "count": 7
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "failure_flags_combination": "robot_oob",
+      "count": 3
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "failure_flags_combination": "fell",
+      "count": 1
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "failure_flags_combination": "robot_oob",
+      "count": 3
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "failure_flags_combination": "ball_oob",
+      "count": 2
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "failure_flags_combination": "timeout",
+      "count": 1
+    }
+  ],
+  "paired_layouts": {
+    "C_more_goals": 11,
+    "B_more_goals": 23,
+    "tied": 66
+  },
+  "interpretation": "Three training seeds; repeated layouts are not independent training runs. Descriptive, no significance claim."
+}

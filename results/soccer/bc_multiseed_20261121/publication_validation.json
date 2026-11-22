@@ -1,0 +1,52 @@
+{
+  "verified_at": "2026-11-22T10:21:09.701779+00:00",
+  "verified": true,
+  "new_training": false,
+  "GPU_used": false,
+  "runs": [
+    {
+      "method": "B",
+      "seed": 2,
+      "training_returncode": 0,
+      "completed_iterations": 2000,
+      "source_commit": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+      "checkpoint_count": 21,
+      "final_sha256": "bf3390c96a1165a86dda9e737810dea166b2e98d95d9d0127d85283db84cad72"
+    },
+    {
+      "method": "B",
+      "seed": 3,
+      "training_returncode": 0,
+      "completed_iterations": 2000,
+      "source_commit": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+      "checkpoint_count": 21,
+      "final_sha256": "e2dc60834b05226f2ae7c7f22a61b5349bc6da364127b60cc723a394534a78c0"
+    },
+    {
+      "method": "C",
+      "seed": 2,
+      "training_returncode": 0,
+      "completed_iterations": 2000,
+      "source_commit": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+      "checkpoint_count": 21,
+      "final_sha256": "a84cff62f42dcfe41833e5cf2a54a6e5f4aec31b592b121f0f06a75b932bfa29"
+    },
+    {
+      "method": "C",
+      "seed": 3,
+      "training_returncode": 0,
+      "completed_iterations": 2000,
+      "source_commit": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+      "checkpoint_count": 21,
+      "final_sha256": "59863baf46735118390ebeeb47dba271077893cbf7e87ca77edbcc9ab348982e"
+    }
+  ],
+  "checkpoints_verified": 84,
+  "checkpoint_bytes": 49671396,
+  "evaluations_verified": 48,
+  "episodes_verified": 14400,
+  "all_checkpoint_hashes_and_finite_tensors_verified_on_CPU": true,
+  "all_CSV_rows_matched_raw_PT": true,
+  "all_48_evaluation_inputs_hash_matched": true,
+  "bytes_of_copied_files_verified_identical": true
+}
