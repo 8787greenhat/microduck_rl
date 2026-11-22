@@ -1,0 +1,34 @@
+{
+  "method": "C",
+  "training_seed": 2,
+  "iteration_0based": 1999,
+  "completed_iterations": 2000,
+  "training_high_level_transitions": 98304000,
+  "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel_curriculum/2026-11-20_19-48-08_C_seed2_legacyrep_20261120/model_1999.pt",
+  "checkpoint_sha256": "a84cff62f42dcfe41833e5cf2a54a6e5f4aec31b592b121f0f06a75b932bfa29",
+  "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_multiseed_analysis_20261121/seed2/C/model_1999",
+  "reuse": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/multiseed_20261120_legacy_seed1/formal_C_seed2/evaluation",
+  "verified": true,
+  "goal_count": 277,
+  "goal_rate": 0.9233333333333333,
+  "mean_goal_time_s": 3.415884476534296,
+  "counts": {
+    "goal": 277,
+    "fell": 0,
+    "robot_oob": 3,
+    "ball_oob": 15,
+    "timeout": 5,
+    "kicked": 294,
+    "contact": 292
+  },
+  "summary_sha256": "3af4fa1231224381d036dcf5f994308fdb19172cca4be0cb558ebdea34d99eae",
+  "per_episode_sha256": "32610fa47242fc715fba5e20a771c64a55a8e797b7240f3779beacb41fb1dda7",
+  "all_episodes_terminated": true,
+  "fixed_eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+  "evaluation_rng_seed": 0,
+  "failure_combinations": {
+    "ball_oob": 15,
+    "timeout": 5,
+    "robot_oob": 3
+  }
+}

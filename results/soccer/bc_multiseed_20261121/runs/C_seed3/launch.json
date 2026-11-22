@@ -1,0 +1,32 @@
+{
+  "created_at_utc": "2026-11-21T00:34:45.552167+00:00",
+  "commit": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+  "method": "C",
+  "seed": 3,
+  "task": "Mjlab-Soccer-Curriculum-Flat-MicroDuck",
+  "repo": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105",
+  "python": "3.12.14 (main, Sep 29 2026, 15:01:18) [Clang 22.1.3 ]",
+  "envs": 2048,
+  "iterations": 2000,
+  "rollout_steps_per_env": 24,
+  "minibatches": 4,
+  "epochs": 5,
+  "save_interval": 100,
+  "resume": false,
+  "logger": "tensorboard",
+  "run_name": "C_seed3_legacyrep_20261120",
+  "fresh_initialization": true,
+  "original_seed1_compatible_fresh_training_behavior": true,
+  "pending_PR4_startup_change_applied": false,
+  "versions": {
+    "torch": "2.9.1",
+    "mjlab": "1.3.0",
+    "mujoco": "3.10.0",
+    "mujoco-warp": "3.8.1",
+    "warp-lang": "1.12.0",
+    "rsl-rl-lib": "5.0.1"
+  },
+  "driver_library_path": "/usr/lib/wsl/lib:/usr/lib/wsl/drivers/nvacegpu.inf_amd64_75303a74d1223c32",
+  "atomic_checkpoint_wrapper": true,
+  "smoke": false
+}

@@ -1,0 +1,45 @@
+本機分析：三個 training seeds 的課程效果
+
+沒有更新 GitHub，也沒有重新訓練。
+
+先看狀態：
+status.json 是 48 份評測的總進度，其中 20 份重用已完成結果、28 份新增。
+analysis_process_status.json 的 analysis_complete=true 才代表完整報告與學習曲線產生成功。
+若 status.json 是 failed，請保留資料檢查錯誤，不要把部分結果當成完成。
+
+已能讀取的最終結果分析：
+final_results.csv：六個最終模型的進球率、成功時間與第一腳觸發時的準備偏差。
+final_analysis.json：三 seeds 的平均、sample SD、失敗原因與相同場景比較。
+final_failure_combinations.csv：未進球局的終止旗標組合；不把重疊旗標當成多局。
+layout_geometry.csv：每個固定場景的距離、初始朝向偏差、射門線斜角。
+subgroups_per_seed.csv、subgroup_comparison.csv：按事先固定的邊界分組。
+final_layout_pairs.csv：每個場景在三 seeds 各三次（每方法九局）的進球數。
+final_geometry_groups.png：最終模型的場景分組圖。
+curriculum_stage_timing.csv：新 seeds 的課程升級日誌時點。
+
+完整評測結束後自動產生：
+三seed課程分析報告.txt：含結果、解讀限制、角度與距離的定義。
+analysis_summary.json：完整分析與來源協定。
+early_learning_by_seed.png：三個 seeds 各自的前期學習曲線。
+early_learning_mean_sd.png：三個 seeds 的平均與 sample SD（不是信賴區間）。
+learning_curve.csv、learning_curve_aggregate.csv：各 seed 與彙整曲線資料。
+early_thresholds.csv：共同存檔點首次達到 70%、90% 的位置。
+early_AUC.csv：完成 1～601 次更新間的梯形近似曲線面積。
+all_per_episode.csv：這次分析的所有 14,400 局，包含重用資料。
+
+各份原始 summary.json、per_episode.pt、per_episode.csv、verification.json
+位於 seed1/、seed2/、seed3/ 內，再依 B/C 和 model_編號分資料夾。
+新增評測都有 console.log 與 job.json，checkpoint 原檔與 SHA256 保留。
+
+計算流程：本機背景程式逐份評測；完成後本機 postprocessor 產圖與報告。
+這不是 Codex AI 定期監控，也沒有新增 recurring automation。
+
+重要限制：
+前期新測點為 model_0、100、200、300、400、500、600；model_1999 重用最終評測。
+model_0 已做過一次 PPO 更新，不是未訓練狀態。
+達標時間是每 100 次共同存檔的首次觀察，並非確切達標 iteration。
+C seed 1 的恢復訓練限制仍保留；新 seeds 沒有改套 PR #4 的課程版本。
+固定場景與 evaluation RNG seed 0 不變；原評測仍恢復 checkpoint clock，
+因此共用 CoM 物理隨機化隨存檔進度改變，相同 B/C 存檔點條件一致。
+場景分組是描述性分析，三次重複不是三個獨立訓練 seeds。
+C 的 stage 2 仍有 20% reset 抽回較早階段，不是 100% 完整任務 reset。

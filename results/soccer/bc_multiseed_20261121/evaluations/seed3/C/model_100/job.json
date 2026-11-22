@@ -1,0 +1,11 @@
+{
+  "method": "C",
+  "training_seed": 3,
+  "iteration_0based": 100,
+  "completed_iterations": 101,
+  "training_high_level_transitions": 4964352,
+  "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel_curriculum/2026-11-21_08-34-45_C_seed3_legacyrep_20261120/model_100.pt",
+  "checkpoint_sha256": "279591ecc59855f8ce8bbcd96b29a23c1c81c4fc3c73b87b97395e6bd8bce3af",
+  "out": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/bc_multiseed_analysis_20261121/seed3/C/model_100",
+  "reuse": null
+}

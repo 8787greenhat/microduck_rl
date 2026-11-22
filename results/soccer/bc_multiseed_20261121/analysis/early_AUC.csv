@@ -1,0 +1,7 @@
+﻿training_seed,method,window_start_completed_iterations,window_end_completed_iterations,normalized_trapezoidal_goal_rate
+1,B,1,601,0.7077777777777778
+1,C,1,601,0.7427777777777778
+2,B,1,601,0.5583333333333333
+2,C,1,601,0.6638888888888889
+3,B,1,601,0.7608333333333334
+3,C,1,601,0.7594444444444445

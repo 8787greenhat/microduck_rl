@@ -1,0 +1,7 @@
+{
+  "action": "one explicit fresh retry after pre-update native crash",
+  "changed_training_parameters": false,
+  "changed_repo": false,
+  "failed_attempt_preserved": "C:\\Users\\LingChengTseng\\Documents\\Codex\\2026-10-24\\mac-microduck-rl-1-00-start-2\\outputs\\multiseed_20261120_legacy_seed1\\failed_attempt1_before_first_update",
+  "reason": "No completed PPO update and no checkpoint in failed attempt; root cause remains unconfirmed"
+}

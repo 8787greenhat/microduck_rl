@@ -1,0 +1,28 @@
+{
+  "verified": true,
+  "method": "C",
+  "seed": 2,
+  "smoke": false,
+  "iterations": 2000,
+  "actual_run_dir": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel_curriculum/2026-11-20_19-48-08_C_seed2_legacyrep_20261120",
+  "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel_curriculum/2026-11-20_19-48-08_C_seed2_legacyrep_20261120/model_1999.pt",
+  "checkpoint_sha256": "a84cff62f42dcfe41833e5cf2a54a6e5f4aec31b592b121f0f06a75b932bfa29",
+  "MLP_tensors_changed_vs_model0": {
+    "actor_state_dict": 6,
+    "critic_state_dict": 6
+  },
+  "optimizer_steps": [
+    40000
+  ],
+  "common_step_counter": 240000,
+  "all_model_and_logged_scalars_finite": true,
+  "nan_state_max": 0,
+  "curriculum_state_saved": {
+    "stage": 2,
+    "stage_start_step": 29379,
+    "goals": 1689418,
+    "episodes": 1915578
+  },
+  "fresh_seed_not_warm_start": true,
+  "formal_evaluation_completed": false
+}

@@ -1,0 +1,322 @@
+{
+  "state": "finished",
+  "started_at_utc": "2026-11-20T06:17:18.296154+00:00",
+  "supervisor_pid": 286,
+  "commit": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+  "experiment_label": "legacy seed1-protocol replication",
+  "envs_per_job": 2048,
+  "iterations_per_job": 2000,
+  "order": [
+    "B2",
+    "C2",
+    "B3",
+    "C3"
+  ],
+  "completed_jobs": 4,
+  "jobs": [
+    {
+      "method": "B",
+      "seed": 2,
+      "state": "verified",
+      "started_at_utc": "2026-11-20T06:17:18.308934+00:00",
+      "folder": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/multiseed_20261120_legacy_seed1/formal_B_seed2",
+      "command": [
+        "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/.venv/bin/python",
+        "-u",
+        "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/train_multiseed_20261120.py",
+        "--method",
+        "B",
+        "--seed",
+        "2"
+      ],
+      "training_pid": 306,
+      "progress": {
+        "method": "B",
+        "seed": 2,
+        "state": "training",
+        "iteration_0based": 1995,
+        "completed_iterations": 1996,
+        "target_iterations": 2000,
+        "collection_time_s": 9.579901456832886,
+        "PPO_update_time_s": 0.07082343101501465,
+        "actual_run_dir": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel/2026-11-20_14-17-35_B_seed2_legacyrep_20261120",
+        "updated_at_utc": "2026-11-20T11:46:10.973546+00:00"
+      },
+      "returncode": 0,
+      "ended_at_utc": "2026-11-20T11:46:56.648259+00:00",
+      "verification": {
+        "verified": true,
+        "method": "B",
+        "seed": 2,
+        "smoke": false,
+        "iterations": 2000,
+        "actual_run_dir": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel/2026-11-20_14-17-35_B_seed2_legacyrep_20261120",
+        "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel/2026-11-20_14-17-35_B_seed2_legacyrep_20261120/model_1999.pt",
+        "checkpoint_sha256": "bf3390c96a1165a86dda9e737810dea166b2e98d95d9d0127d85283db84cad72",
+        "MLP_tensors_changed_vs_model0": {
+          "actor_state_dict": 6,
+          "critic_state_dict": 6
+        },
+        "optimizer_steps": [
+          40000
+        ],
+        "common_step_counter": 240000,
+        "all_model_and_logged_scalars_finite": true,
+        "nan_state_max": 0,
+        "curriculum_state_saved": null,
+        "fresh_seed_not_warm_start": true,
+        "formal_evaluation_completed": false
+      },
+      "evaluation": {
+        "verified": true,
+        "method": "B",
+        "training_seed": 2,
+        "evaluation_rng_seed": 0,
+        "goal_count": 289,
+        "episodes": 300,
+        "layouts": 100,
+        "repeats": 3,
+        "goal_rate": 0.9633333333333334,
+        "mean_goal_time_s": 3.2110729217529297,
+        "checkpoint_sha256": "bf3390c96a1165a86dda9e737810dea166b2e98d95d9d0127d85283db84cad72",
+        "fixed_eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+        "source_commit": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+        "evaluator_identical_to_seed1": true,
+        "full_task_without_reset_curriculum": true,
+        "actor_exact_match_to_source": true
+      }
+    },
+    {
+      "method": "C",
+      "seed": 2,
+      "state": "verified",
+      "started_at_utc": "2026-11-20T11:47:54.634370+00:00",
+      "folder": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/multiseed_20261120_legacy_seed1/formal_C_seed2",
+      "command": [
+        "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/.venv/bin/python",
+        "-u",
+        "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/train_multiseed_20261120.py",
+        "--method",
+        "C",
+        "--seed",
+        "2"
+      ],
+      "training_pid": 7986,
+      "progress": {
+        "method": "C",
+        "seed": 2,
+        "state": "training",
+        "iteration_0based": 1995,
+        "completed_iterations": 1996,
+        "target_iterations": 2000,
+        "collection_time_s": 14.367473602294922,
+        "PPO_update_time_s": 0.13116025924682617,
+        "actual_run_dir": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel_curriculum/2026-11-20_19-48-08_C_seed2_legacyrep_20261120",
+        "updated_at_utc": "2026-11-20T18:08:06.248391+00:00"
+      },
+      "returncode": 0,
+      "ended_at_utc": "2026-11-20T18:09:06.194352+00:00",
+      "verification": {
+        "verified": true,
+        "method": "C",
+        "seed": 2,
+        "smoke": false,
+        "iterations": 2000,
+        "actual_run_dir": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel_curriculum/2026-11-20_19-48-08_C_seed2_legacyrep_20261120",
+        "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel_curriculum/2026-11-20_19-48-08_C_seed2_legacyrep_20261120/model_1999.pt",
+        "checkpoint_sha256": "a84cff62f42dcfe41833e5cf2a54a6e5f4aec31b592b121f0f06a75b932bfa29",
+        "MLP_tensors_changed_vs_model0": {
+          "actor_state_dict": 6,
+          "critic_state_dict": 6
+        },
+        "optimizer_steps": [
+          40000
+        ],
+        "common_step_counter": 240000,
+        "all_model_and_logged_scalars_finite": true,
+        "nan_state_max": 0,
+        "curriculum_state_saved": {
+          "stage": 2,
+          "stage_start_step": 29379,
+          "goals": 1689418,
+          "episodes": 1915578
+        },
+        "fresh_seed_not_warm_start": true,
+        "formal_evaluation_completed": false
+      },
+      "evaluation": {
+        "verified": true,
+        "method": "C",
+        "training_seed": 2,
+        "evaluation_rng_seed": 0,
+        "goal_count": 277,
+        "episodes": 300,
+        "layouts": 100,
+        "repeats": 3,
+        "goal_rate": 0.9233333333333333,
+        "mean_goal_time_s": 3.415884494781494,
+        "checkpoint_sha256": "a84cff62f42dcfe41833e5cf2a54a6e5f4aec31b592b121f0f06a75b932bfa29",
+        "fixed_eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+        "source_commit": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+        "evaluator_identical_to_seed1": true,
+        "full_task_without_reset_curriculum": true,
+        "actor_exact_match_to_source": true
+      }
+    },
+    {
+      "method": "B",
+      "seed": 3,
+      "state": "verified",
+      "started_at_utc": "2026-11-20T18:10:05.060103+00:00",
+      "folder": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/multiseed_20261120_legacy_seed1/formal_B_seed3",
+      "command": [
+        "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/.venv/bin/python",
+        "-u",
+        "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/train_multiseed_20261120.py",
+        "--method",
+        "B",
+        "--seed",
+        "3"
+      ],
+      "training_pid": 8743,
+      "progress": {
+        "method": "B",
+        "seed": 3,
+        "state": "training",
+        "iteration_0based": 1995,
+        "completed_iterations": 1996,
+        "target_iterations": 2000,
+        "collection_time_s": 11.333800554275513,
+        "PPO_update_time_s": 0.09999442100524902,
+        "actual_run_dir": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel/2026-11-21_02-10-18_B_seed3_legacyrep_20261120",
+        "updated_at_utc": "2026-11-21T00:32:52.923687+00:00"
+      },
+      "returncode": 0,
+      "ended_at_utc": "2026-11-21T00:33:37.083098+00:00",
+      "verification": {
+        "verified": true,
+        "method": "B",
+        "seed": 3,
+        "smoke": false,
+        "iterations": 2000,
+        "actual_run_dir": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel/2026-11-21_02-10-18_B_seed3_legacyrep_20261120",
+        "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel/2026-11-21_02-10-18_B_seed3_legacyrep_20261120/model_1999.pt",
+        "checkpoint_sha256": "e2dc60834b05226f2ae7c7f22a61b5349bc6da364127b60cc723a394534a78c0",
+        "MLP_tensors_changed_vs_model0": {
+          "actor_state_dict": 6,
+          "critic_state_dict": 6
+        },
+        "optimizer_steps": [
+          40000
+        ],
+        "common_step_counter": 240000,
+        "all_model_and_logged_scalars_finite": true,
+        "nan_state_max": 0,
+        "curriculum_state_saved": null,
+        "fresh_seed_not_warm_start": true,
+        "formal_evaluation_completed": false
+      },
+      "evaluation": {
+        "verified": true,
+        "method": "B",
+        "training_seed": 3,
+        "evaluation_rng_seed": 0,
+        "goal_count": 287,
+        "episodes": 300,
+        "layouts": 100,
+        "repeats": 3,
+        "goal_rate": 0.9566666666666667,
+        "mean_goal_time_s": 3.29581880569458,
+        "checkpoint_sha256": "e2dc60834b05226f2ae7c7f22a61b5349bc6da364127b60cc723a394534a78c0",
+        "fixed_eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+        "source_commit": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+        "evaluator_identical_to_seed1": true,
+        "full_task_without_reset_curriculum": true,
+        "actor_exact_match_to_source": true
+      }
+    },
+    {
+      "method": "C",
+      "seed": 3,
+      "state": "verified",
+      "started_at_utc": "2026-11-21T00:34:31.587922+00:00",
+      "folder": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/multiseed_20261120_legacy_seed1/formal_C_seed3",
+      "command": [
+        "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/.venv/bin/python",
+        "-u",
+        "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/work/train_multiseed_20261120.py",
+        "--method",
+        "C",
+        "--seed",
+        "3"
+      ],
+      "training_pid": 16815,
+      "progress": {
+        "method": "C",
+        "seed": 3,
+        "state": "training",
+        "iteration_0based": 1995,
+        "completed_iterations": 1996,
+        "target_iterations": 2000,
+        "collection_time_s": 9.18740701675415,
+        "PPO_update_time_s": 0.07520580291748047,
+        "actual_run_dir": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel_curriculum/2026-11-21_08-34-45_C_seed3_legacyrep_20261120",
+        "updated_at_utc": "2026-11-21T07:56:07.139759+00:00"
+      },
+      "returncode": 0,
+      "ended_at_utc": "2026-11-21T07:57:00.678472+00:00",
+      "verification": {
+        "verified": true,
+        "method": "C",
+        "seed": 3,
+        "smoke": false,
+        "iterations": 2000,
+        "actual_run_dir": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel_curriculum/2026-11-21_08-34-45_C_seed3_legacyrep_20261120",
+        "checkpoint": "/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/logs/rsl_rl/soccer_highlevel_curriculum/2026-11-21_08-34-45_C_seed3_legacyrep_20261120/model_1999.pt",
+        "checkpoint_sha256": "59863baf46735118390ebeeb47dba271077893cbf7e87ca77edbcc9ab348982e",
+        "MLP_tensors_changed_vs_model0": {
+          "actor_state_dict": 6,
+          "critic_state_dict": 6
+        },
+        "optimizer_steps": [
+          40000
+        ],
+        "common_step_counter": 240000,
+        "all_model_and_logged_scalars_finite": true,
+        "nan_state_max": 0,
+        "curriculum_state_saved": {
+          "stage": 2,
+          "stage_start_step": 20154,
+          "goals": 2097330,
+          "episodes": 2251221
+        },
+        "fresh_seed_not_warm_start": true,
+        "formal_evaluation_completed": false
+      },
+      "evaluation": {
+        "verified": true,
+        "method": "C",
+        "training_seed": 3,
+        "evaluation_rng_seed": 0,
+        "goal_count": 294,
+        "episodes": 300,
+        "layouts": 100,
+        "repeats": 3,
+        "goal_rate": 0.98,
+        "mean_goal_time_s": 3.148299217224121,
+        "checkpoint_sha256": "59863baf46735118390ebeeb47dba271077893cbf7e87ca77edbcc9ab348982e",
+        "fixed_eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+        "source_commit": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+        "evaluator_identical_to_seed1": true,
+        "full_task_without_reset_curriculum": true,
+        "actor_exact_match_to_source": true
+      }
+    }
+  ],
+  "current": null,
+  "automatically_retry_failed_training": false,
+  "AI_polling_automation_created": false,
+  "updated_at_utc": "2026-11-21T07:56:50.641164+00:00",
+  "returncode": 0,
+  "finished_at_utc": "2026-11-21T07:57:56.977711+00:00"
+}

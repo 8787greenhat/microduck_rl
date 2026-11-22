@@ -1,0 +1,518 @@
+{
+  "training_commit_seeds_2_3": "1a8a1053533210d6695454cf51026551f3e4dbbc",
+  "training_commit_seed_1": "7fa62987d76dd2ba00ec15ffdd1de5bd93480845",
+  "training_num_envs": 2048,
+  "training_iterations": 2000,
+  "rollout_steps": 24,
+  "minibatches": 4,
+  "learning_epochs": 5,
+  "seed2_3_fresh_initialization": true,
+  "PR4_startup_fix_applied": false,
+  "eval_set_sha256": "3a59dee2c22b5129fcb10685192630443a29550790ee5ccbffc04e414d053464",
+  "evaluation_script_sha256": "2d8bd0f9fc840aa54fa858181e16ccb88813b4fc4579db42c6b49c7a85ba0757",
+  "uv_lock_sha256": "2eeeb680025baa737e7ccf3a87da3695a9d49b228de0bb60d8af0c022ab5f1aa",
+  "official_skill_sha256": {
+    "alpha_walking.onnx": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+    "ball_kick_right.onnx": "147a32c388c6b19111b3ac3b550a9a6dc8b8bf267118af4d8c3712522eedb5af"
+  },
+  "layouts": 100,
+  "repeats": 3,
+  "eval_rng_seed": 0,
+  "evaluation_task": "full task without reset curriculum",
+  "checkpoint_points_evaluated_0based": [
+    0,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    1999
+  ],
+  "evaluation_clock": "original evaluator restores checkpoint clock; CoM randomization follows that clock",
+  "seed1_C_resume": "Resumed model_200; old iterations 201-267 discarded; physical episodes and RNG reinitialized",
+  "seed1_checkpoints": "See PR #3 and existing seed1 result directories; this publication adds all seed2/3 checkpoints",
+  "new_training_or_GPU_evaluation_during_publication": false,
+  "evaluation_records": [
+    {
+      "method": "B",
+      "training_seed": 1,
+      "iteration_0based": 0,
+      "episodes": 300,
+      "goal_count": 1,
+      "checkpoint_sha256": "61576a4d0229ba2f1733ef162d2f735a1a090485629443a786f0a79f9ec396ce",
+      "path": "evaluations/seed1/B/model_0",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "iteration_0based": 0,
+      "episodes": 300,
+      "goal_count": 0,
+      "checkpoint_sha256": "3aa94dfce71a855e2c86332dd6fe8d619b324dd66a7662cf3f31a98354073777",
+      "path": "evaluations/seed1/C/model_0",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "B",
+      "training_seed": 1,
+      "iteration_0based": 100,
+      "episodes": 300,
+      "goal_count": 0,
+      "checkpoint_sha256": "75f1a633eb03844025a63ecb370741b6d7c0e70eb3bd62e72b056e53cb794d0c",
+      "path": "evaluations/seed1/B/model_100",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "iteration_0based": 100,
+      "episodes": 300,
+      "goal_count": 116,
+      "checkpoint_sha256": "cf38c20d0314f78ee3a745c19338b08c3df73f418915b8512074f50f05794c6a",
+      "path": "evaluations/seed1/C/model_100",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "B",
+      "training_seed": 1,
+      "iteration_0based": 200,
+      "episodes": 300,
+      "goal_count": 278,
+      "checkpoint_sha256": "1da5371516ffcbc0be364f772111d3f0712a65525a2add039a1049a971c8706a",
+      "path": "evaluations/seed1/B/model_200",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "iteration_0based": 200,
+      "episodes": 300,
+      "goal_count": 257,
+      "checkpoint_sha256": "ae27724b09a5d0f36aaf19702dbea1a652249ab441c4a9afd3655bb86bbaadb3",
+      "path": "evaluations/seed1/C/model_200",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "B",
+      "training_seed": 1,
+      "iteration_0based": 300,
+      "episodes": 300,
+      "goal_count": 284,
+      "checkpoint_sha256": "5262c8304dc9ae75e7c266186bbd1c468d223528fdf0807424f4937e7b88f6a8",
+      "path": "evaluations/seed1/B/model_300",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "iteration_0based": 300,
+      "episodes": 300,
+      "goal_count": 266,
+      "checkpoint_sha256": "dc6e7fa6fbd9e44d3d49d8e5d63a9b8d369010f0778c5a3c732451e9541519b8",
+      "path": "evaluations/seed1/C/model_300",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "B",
+      "training_seed": 1,
+      "iteration_0based": 400,
+      "episodes": 300,
+      "goal_count": 284,
+      "checkpoint_sha256": "2c2913296c7fabfda77f3487b998c55ed3bc527b3331f9f446c954bf715598f3",
+      "path": "evaluations/seed1/B/model_400",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "iteration_0based": 400,
+      "episodes": 300,
+      "goal_count": 283,
+      "checkpoint_sha256": "cb9ace58139fe2030325fdc1456f753fb2c38089fd3227aac552cc976e72f046",
+      "path": "evaluations/seed1/C/model_400",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "B",
+      "training_seed": 1,
+      "iteration_0based": 500,
+      "episodes": 300,
+      "goal_count": 284,
+      "checkpoint_sha256": "7be1757a3a6f464d9e9bcab6e723460977217424a46543046e8306c7d091862c",
+      "path": "evaluations/seed1/B/model_500",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "iteration_0based": 500,
+      "episodes": 300,
+      "goal_count": 277,
+      "checkpoint_sha256": "10494c4a65f18621754abb64b12a975ee0ad9cc596cfaa60b82dd51f5d497867",
+      "path": "evaluations/seed1/C/model_500",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "B",
+      "training_seed": 1,
+      "iteration_0based": 600,
+      "episodes": 300,
+      "goal_count": 287,
+      "checkpoint_sha256": "1a8a5ee716ba09227550dda4040ab2641e7815d9d3b1fbc5a26ddb64a856245a",
+      "path": "evaluations/seed1/B/model_600",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "iteration_0based": 600,
+      "episodes": 300,
+      "goal_count": 276,
+      "checkpoint_sha256": "6c459688df417466caa6a118f0270e5eeff4d343da8c27fd2136ecfaf6d7f2a5",
+      "path": "evaluations/seed1/C/model_600",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "B",
+      "training_seed": 1,
+      "iteration_0based": 1999,
+      "episodes": 300,
+      "goal_count": 287,
+      "checkpoint_sha256": "0e5c124a7d1461259f198efbd47d3e30347c8be9c6098e83314367dcf15b7c53",
+      "path": "evaluations/seed1/B/model_1999",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "C",
+      "training_seed": 1,
+      "iteration_0based": 1999,
+      "episodes": 300,
+      "goal_count": 282,
+      "checkpoint_sha256": "8bda158d82f3e3834ebdc76028cadcc4584294d5e7cc751c84adc7d9d06b4de4",
+      "path": "evaluations/seed1/C/model_1999",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 0,
+      "episodes": 300,
+      "goal_count": 0,
+      "checkpoint_sha256": "6ce7d1634be95026e01b9836b05d3908b91a2985f8be470bec59963379e041e4",
+      "path": "evaluations/seed2/B/model_0",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 0,
+      "episodes": 300,
+      "goal_count": 0,
+      "checkpoint_sha256": "36cd95643d6d51e0debb2271aaad6adbe6cc2de6cbe391a14fcd64fb571a21dc",
+      "path": "evaluations/seed2/C/model_0",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 100,
+      "episodes": 300,
+      "goal_count": 0,
+      "checkpoint_sha256": "f4622fc654edacad03f623b56a316a9d575fbe11db11b728b8a3ba6c18cff3f1",
+      "path": "evaluations/seed2/B/model_100",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 100,
+      "episodes": 300,
+      "goal_count": 52,
+      "checkpoint_sha256": "6234fa03447e269d886d7406a34337924bd812923189f9df1fc40a7fe7d1ea50",
+      "path": "evaluations/seed2/C/model_100",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 200,
+      "episodes": 300,
+      "goal_count": 15,
+      "checkpoint_sha256": "7f72268e2019dbd43d8aa04bc3c4416997dcd82bfb840878f92e1583d84c6399",
+      "path": "evaluations/seed2/B/model_200",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 200,
+      "episodes": 300,
+      "goal_count": 220,
+      "checkpoint_sha256": "41b6b45f17fb1175760fddd4c41c62e39600341c7cd6744d1e0c1369b9d772db",
+      "path": "evaluations/seed2/C/model_200",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 300,
+      "episodes": 300,
+      "goal_count": 276,
+      "checkpoint_sha256": "acdaf4f93b460377ba00b6a473dbdf7e44f4913b5985beef770aaf39e1b8e56e",
+      "path": "evaluations/seed2/B/model_300",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 300,
+      "episodes": 300,
+      "goal_count": 248,
+      "checkpoint_sha256": "926cd82a56d9437ca0fc9e456b0307700a96b868d243aa4399f6ccb559e0fbd8",
+      "path": "evaluations/seed2/C/model_300",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 400,
+      "episodes": 300,
+      "goal_count": 281,
+      "checkpoint_sha256": "48168ee9b45ec0cd4a69722930a3ba2158c8e7fe98fd9b8b09c8ce0eb81ea6cb",
+      "path": "evaluations/seed2/B/model_400",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 400,
+      "episodes": 300,
+      "goal_count": 264,
+      "checkpoint_sha256": "1c6c7cf215d9adac953753d863ffb9fa43e21b06568757f264c20fb1b64a8f0b",
+      "path": "evaluations/seed2/C/model_400",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 500,
+      "episodes": 300,
+      "goal_count": 288,
+      "checkpoint_sha256": "8d27af176e9fd99178579a0251c77fed8a2da473867bd954e2ee92de34f9ee39",
+      "path": "evaluations/seed2/B/model_500",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 500,
+      "episodes": 300,
+      "goal_count": 274,
+      "checkpoint_sha256": "562dccc16b32615ea1588333d8bff2b50b468bee6eb4c662c877a86769be380f",
+      "path": "evaluations/seed2/C/model_500",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 600,
+      "episodes": 300,
+      "goal_count": 290,
+      "checkpoint_sha256": "839272818591c74dae88ea39943abc37f5209730d7c3cc8622d11a47133711ed",
+      "path": "evaluations/seed2/B/model_600",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 600,
+      "episodes": 300,
+      "goal_count": 274,
+      "checkpoint_sha256": "96b43ab968914657eb8d03ac88e9cd5693ae468bd865fc93c26bc46d9fba55c1",
+      "path": "evaluations/seed2/C/model_600",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 2,
+      "iteration_0based": 1999,
+      "episodes": 300,
+      "goal_count": 289,
+      "checkpoint_sha256": "bf3390c96a1165a86dda9e737810dea166b2e98d95d9d0127d85283db84cad72",
+      "path": "evaluations/seed2/B/model_1999",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "C",
+      "training_seed": 2,
+      "iteration_0based": 1999,
+      "episodes": 300,
+      "goal_count": 277,
+      "checkpoint_sha256": "a84cff62f42dcfe41833e5cf2a54a6e5f4aec31b592b121f0f06a75b932bfa29",
+      "path": "evaluations/seed2/C/model_1999",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 0,
+      "episodes": 300,
+      "goal_count": 0,
+      "checkpoint_sha256": "670548b5f714cfbd6e7fcef303a26c085b20a9c8393ec864ca391e31f403c8b6",
+      "path": "evaluations/seed3/B/model_0",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 0,
+      "episodes": 300,
+      "goal_count": 0,
+      "checkpoint_sha256": "43f6ffd04b0efbc1beed9baef0990d62c18befeed1ee131fc02447d7733e9213",
+      "path": "evaluations/seed3/C/model_0",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 100,
+      "episodes": 300,
+      "goal_count": 103,
+      "checkpoint_sha256": "71b1ce0507fc4fb34b08e272c03f2239281ccb9ebbccf4f799fdca37619e75d4",
+      "path": "evaluations/seed3/B/model_100",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 100,
+      "episodes": 300,
+      "goal_count": 136,
+      "checkpoint_sha256": "279591ecc59855f8ce8bbcd96b29a23c1c81c4fc3c73b87b97395e6bd8bce3af",
+      "path": "evaluations/seed3/C/model_100",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 200,
+      "episodes": 300,
+      "goal_count": 276,
+      "checkpoint_sha256": "98476f0a56c737d4b2a7394d73c10b4efd15c5ffee1a6322d3571e340869b3f7",
+      "path": "evaluations/seed3/B/model_200",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 200,
+      "episodes": 300,
+      "goal_count": 251,
+      "checkpoint_sha256": "558c02d3a95fe857baf4200b2ce2f4ccc7773c593b0f881f2c09960eb74c2786",
+      "path": "evaluations/seed3/C/model_200",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 300,
+      "episodes": 300,
+      "goal_count": 275,
+      "checkpoint_sha256": "bd54bda24c331234639d3f3a8195924b6aba8fc5a947d39bd121769c2ea43b48",
+      "path": "evaluations/seed3/B/model_300",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 300,
+      "episodes": 300,
+      "goal_count": 276,
+      "checkpoint_sha256": "e37133be646a0b296a57276868de9212c0408041f2672b5bd2a21624aade4a5c",
+      "path": "evaluations/seed3/C/model_300",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 400,
+      "episodes": 300,
+      "goal_count": 284,
+      "checkpoint_sha256": "3fd1be88fbe402f5fe63678bf941753cc2fe336a55eddfa795d6158f66808303",
+      "path": "evaluations/seed3/B/model_400",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 400,
+      "episodes": 300,
+      "goal_count": 275,
+      "checkpoint_sha256": "e1e7a911bacdf399f455e220fffa0d759c7c3d7a7fadd508c9272121e0f54fa6",
+      "path": "evaluations/seed3/C/model_400",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 500,
+      "episodes": 300,
+      "goal_count": 288,
+      "checkpoint_sha256": "2c7b576bdc1b2605f7645f6e0873e918fa50baaf9d477bc88e573a7384e0eede",
+      "path": "evaluations/seed3/B/model_500",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 500,
+      "episodes": 300,
+      "goal_count": 285,
+      "checkpoint_sha256": "6bd0651968e182362631013822170968aa713d4c29727de25fcaa2ec9d936251",
+      "path": "evaluations/seed3/C/model_500",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 600,
+      "episodes": 300,
+      "goal_count": 287,
+      "checkpoint_sha256": "0edf9a6f4a324639b288a83c8f326fafd62b5ae843ebeb480d8c13d57a21b5bd",
+      "path": "evaluations/seed3/B/model_600",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 600,
+      "episodes": 300,
+      "goal_count": 288,
+      "checkpoint_sha256": "95ddea9e6599191abfee80c9b41ea5c7a72054569a1a8cea5df6ef4a817f80b2",
+      "path": "evaluations/seed3/C/model_600",
+      "reused_existing_evaluation": false
+    },
+    {
+      "method": "B",
+      "training_seed": 3,
+      "iteration_0based": 1999,
+      "episodes": 300,
+      "goal_count": 287,
+      "checkpoint_sha256": "e2dc60834b05226f2ae7c7f22a61b5349bc6da364127b60cc723a394534a78c0",
+      "path": "evaluations/seed3/B/model_1999",
+      "reused_existing_evaluation": true
+    },
+    {
+      "method": "C",
+      "training_seed": 3,
+      "iteration_0based": 1999,
+      "episodes": 300,
+      "goal_count": 294,
+      "checkpoint_sha256": "59863baf46735118390ebeeb47dba271077893cbf7e87ca77edbcc9ab348982e",
+      "path": "evaluations/seed3/C/model_1999",
+      "reused_existing_evaluation": true
+    }
+  ]
+}

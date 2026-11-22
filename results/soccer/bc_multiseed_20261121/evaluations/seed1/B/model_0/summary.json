@@ -1,0 +1,17 @@
+{
+  "controller": "model_0.pt",
+  "envs": 300,
+  "rates": {
+    "goal": 0.0033333334140479565,
+    "fell": 0.0,
+    "robot_oob": 0.013333333656191826,
+    "ball_oob": 0.006666666828095913,
+    "timeout": 0.9766666889190674,
+    "kicked": 0.27666667103767395,
+    "contact": 0.006666666828095913
+  },
+  "mean_goal_time_s": 7.0,
+  "median_min_prep_dist_m": 0.25716647505760193,
+  "median_prep_dist_at_kick_m": 0.2708369195461273,
+  "median_yaw_err_at_kick_rad": 1.2939717769622803
+}

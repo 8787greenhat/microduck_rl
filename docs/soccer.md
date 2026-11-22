@@ -377,3 +377,7 @@ confirmed.
 ## Method C seed 1 result artifacts
 
 See [the verified C seed 1 results and source-labelled B/C comparison](soccer_c_seed1_results.md) for configs, the fixed evaluation set, per-episode data, checkpoint ZIP, recovery history and videos.
+
+## Methods B/C: three training seeds and seed 2/3 checkpoints
+
+See [the B/C seeds 1-3 result package](../results/soccer/bc_multiseed_20261121/README.md) for all 84 seed 2/3 checkpoints, actual run configs, fixed 100-layout x 3-repeat evaluations, per-episode data, and three-seed learning curves. These are single-robot soccer results under the original seed 1 protocol; they are separate from the two-robot duel experiments.
