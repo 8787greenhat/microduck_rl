@@ -6,6 +6,11 @@
       "bytes": 10
     },
     {
+      "path": ".gitignore",
+      "sha256": "33a311bdfcd7920277a54c9a3adb39d7b9b3c35b123eead77622903e92ca1ec3",
+      "bytes": 22
+    },
+    {
       "path": "cpu_stop_settle_tests.log",
       "sha256": "e7b6b42ae617484bd4c96dfa2d6c82d98778a9331b6c8694dfcbe700c4cb14b7",
       "bytes": 1183
@@ -36,19 +41,39 @@
       "bytes": 60804
     },
     {
+      "path": "inputs/model_1999.pt",
+      "sha256": "52fcc4eed3e7428f78e4b006365e49ebb1f1dc8c982259f3f6e88192bda8823a",
+      "bytes": 642869
+    },
+    {
+      "path": "inputs/model_1999.pt.sha256",
+      "sha256": "665ba3ed3bd3ca292064c1c046db382827cd7d00270af3bc799c9830ddc20891",
+      "bytes": 80
+    },
+    {
       "path": "original_policy_control.json",
       "sha256": "56956f6173964da249b3879902027f40104d1d97539e8df612d8bc698ed3cfd9",
       "bytes": 41835
     },
     {
+      "path": "publication_manifest.json",
+      "sha256": "febee1acdf33bace64b4fca049ec9d07e59478eeb2a04621a9c52e42e8084f5f",
+      "bytes": 1760
+    },
+    {
       "path": "README.md",
-      "sha256": "0e221a6b9549fa61f4300f1d75403b3a0461a5825a192e51fcdaee46fd1c63b4",
-      "bytes": 1407
+      "sha256": "3905ed3d59c895dd2971f19ff350a9823c137f6d6f4b4db7c15bf6893a5ac334",
+      "bytes": 2613
     },
     {
       "path": "verification.json",
       "sha256": "e3c0dbda1751c5596f98f7c19beebb97d01522fbeadaa04a045c0f1321f5f88c",
       "bytes": 2321
+    },
+    {
+      "path": "verify_package.py",
+      "sha256": "45e9efd84c03675bdbc8376b44269d49baa3d1b40d1431566075aa1e70a462df",
+      "bytes": 2601
     }
   ]
 }

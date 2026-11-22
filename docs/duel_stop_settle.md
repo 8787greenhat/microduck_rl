@@ -16,27 +16,43 @@
 
 ## 短測方式
 
-依原 Python 3.12 和 `uv.lock` 環境執行，不升級依賴：
+在 Linux／WSL2＋CUDA 環境執行。PR 尚未合併，先切結果分支；依原 Python 3.12 和 `uv.lock` 安裝，不升級依賴。
+本分支已附這次使用的 v2 seed 1 最終 checkpoint，不需要重新訓練或另外向他人索取。單鴨 B/C 或雙鴨 v1 的 checkpoint 不能替代它。
 
 ```bash
+git fetch origin
+git switch joshua/duel-stop-settle
+uv sync --frozen --python 3.12
+
+# 官方低階技能仍須放在 policies/，與原 v2 相同；啟動時會驗證原 SHA256。
+uv run --frozen hf download pollen-robotics/microduck-policies alpha_walking.onnx ball_kick_right.onnx --local-dir policies
+
+# 只用 Python 標準函式庫，核對結果包、checkpoint 與控制器來源；不使用 GPU。
+uv run --frozen python results/duel/stop_settle_validation_20261122/verify_package.py
 uv run --frozen python tests/test_duel_stop_settle.py
 uv run --frozen python tests/test_duel_v2.py
 
 # 上限是 64 個環境、200 個高階步（每局最多20秒），沒有 learn()/PPO更新。
 uv run --frozen python scripts/check_duel_stop_settle.py \
-  --checkpoint /path/to/v2_seed1/model_1999.pt \
-  --source synthetic_request --layout approach --side 0 --out /path/to/new_control_out
+  --checkpoint results/duel/stop_settle_validation_20261122/inputs/model_1999.pt \
+  --source synthetic_request --layout approach --side 0 --out logs/stop_settle_control_01
 
 # 載入相同、凍結的 PPO actor；控制器套用到 PPO 真實請求。
 uv run --frozen python scripts/check_duel_stop_settle.py \
-  --checkpoint /path/to/v2_seed1/model_1999.pt \
-  --source policy --layout approach --side 0 --out /path/to/new_policy_out
+  --checkpoint results/duel/stop_settle_validation_20261122/inputs/model_1999.pt \
+  --source policy --layout approach --side 0 --out logs/stop_settle_policy_01
 
 # 原固定場景的前32組各2次，64局對戰短測；不是正式600局評測。
 uv run --frozen python scripts/check_duel_stop_settle.py \
-  --checkpoint /path/to/v2_seed1/model_1999.pt \
-  --source policy --layout fixed --side 0 --out /path/to/new_fixed_short_out
+  --checkpoint results/duel/stop_settle_validation_20261122/inputs/model_1999.pt \
+  --source policy --layout fixed --side 0 --out logs/stop_settle_fixed64_01
 ```
+
+輸出資料夾必須不存在；重新測試時換一個新名稱。上述都只有推論，每次最多64個環境、200個高階步，沒有 optimizer 更新。
+物理接觸可能使跨機器／不同執行的個別終局略有差異，請保留每次 `result.json`，不要覆蓋或只回傳最好的一次。
+若官方下載模型的 hash 不符，請保留錯誤並核對版本，不要用其他技能或升級套件來繞過檢查。
+
+請和穆回傳：三個短測資料夾的 `result.json`、執行 commit、GPU／driver／Python 及 torch、mjlab、mujoco-warp、warp 版本；若失敗，附完整 console。模型 hash 已包含在結果中。
 
 `--controller original_v2` 可測原控制流程。`--side 1` 使用旋轉換邊後的右腳技能情境，沒有把動作鏡射成左腳。
 
@@ -47,6 +63,7 @@ uv run --frozen python scripts/check_duel_stop_settle.py \
 
 - 基於 v2 commit `3c6bcc768790e1bd4a0f3f492eba0df23fe92e65`，新增 `stop_settle.py`、`stop_settle_env.py`、短測腳本與 CPU 測試。
 - 凍結 actor 為既有 seed 1 `model_1999.pt`，SHA256 `52fcc4eed3e7428f78e4b006365e49ebb1f1dc8c982259f3f6e88192bda8823a`。
+- 該模型包含 actor、normalizer 與原 checkpoint state，放在結果包 `inputs/model_1999.pt`；是舊模型的逐位元複本，沒有重新訓練。
 - 每次短測驗證 actor／normalizer 未改、optimizer state 沒有更新、技能 hash 一致、所有出腳都通過原 guard。
 - 這個候選控制器只由新短測入口明確選用。原 `train_duel_v2.py` 不會自動套用它，也沒有新增長訓練入口。
 - 未來訓練前，仍需決定控制器狀態的觀測契約、訓練／推論一致性，再做固定對戰評測。不能沿用舊 v2 的 106/600 當作此候選版的新分數。
@@ -62,3 +79,5 @@ uv run --frozen python scripts/check_duel_stop_settle.py \
 | 新流程＋凍結 PPO：前32固定場景各2次 | 27 | 1 | 1 |
 
 完整逐局與出腳事件見 [短測結果包](../results/duel/stop_settle_validation_20261122/README.md)。
+
+`scripts/check_duel_stop_settle.py` 的短程序目前停用循環垃圾回收（GC），用來避開本機曾在 PyTorch import 時遇到的程序中止；沒有改 actor、Torch RNG 或物理設定。這項隔離程序處理尚未在隊友機器驗證。

@@ -18,3 +18,16 @@
 修正的是高階控制器，不能說PPO自己已經學會停步或射門，也尚未證明整體對戰優於原v2。
 
 程式與流程見 [說明文件](../../../docs/duel_stop_settle.md)。原v2的106/600及B/C資料均保留。
+
+## 和穆先看這裡
+
+切到 `joshua/duel-stop-settle`，照上方說明文件的 Linux／WSL2 指令測試。此 PR 以尚未合併的 v2 PR #6 分支為基底，已包含執行所需的 v2 程式。
+
+- [inputs/model_1999.pt](inputs/model_1999.pt)：這次所有短測使用的凍結 v2 seed 1 模型，並非新訓練成果。
+- [inputs/model_1999.pt.sha256](inputs/model_1999.pt.sha256)：完整 SHA256；不要換成 B/C 或 v1 模型。
+- [verification.json](verification.json)：原本本機短測的驗證紀錄，其中 `GitHub_updated=false` 是驗證當時的歷史狀態。
+- [publication_manifest.json](publication_manifest.json)：本次發布的模型、技能與檔案版本／來源。
+- [verify_package.py](verify_package.py)：僅用 Python 標準函式庫驗證檔案完整性與結果；不訓練、不使用 GPU。
+
+原始逐局、出腳當下的速度／距離／角度，以及部分原始與套用指令均在各測試 JSON。右腳接觸是出腳後的感測紀錄，不等於已證明每一次進球都只由該腳的一次碰撞造成。
+這次發布只有程式／結果整理，未重跑 GPU 評測或長訓練。隊友機器的可重現性仍待實際測試。
