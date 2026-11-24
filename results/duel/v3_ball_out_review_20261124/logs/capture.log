@@ -1,0 +1,448 @@
+[mdp] Patches 1-2 active: NaN-safe reward/advantage
+[mdp] Patch 4 active: ONNX export filters passive_* joints
+[mdp] Patch 5 active: MICRODUCK_WARM_START=1 restarts curricula after checkpoint load
+Warp 1.12.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.3
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4060 Laptop GPU" (8 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /home/lingchentseng/projects/microduck_rl_4060_7fa6298/.local-runtime/warp-cache-driver610
+Module mujoco_warp._src.smooth 95a0b8b load on device 'cuda:0' took 11.23 ms  (cached)
+Module mujoco_warp._src.constraint 27c5750 load on device 'cuda:0' took 6.26 ms  (cached)
+Module mujoco_warp._src.collision_driver 88f7770 load on device 'cuda:0' took 2.65 ms  (cached)
+Module mujoco_warp._src.sensor 7fc0378 load on device 'cuda:0' took 6.62 ms  (cached)
+Module mujoco_warp._src.forward 8ebfcb1 load on device 'cuda:0' took 4.59 ms  (cached)
+Module mujoco_warp._src.passive 1a5e55c load on device 'cuda:0' took 3.56 ms  (cached)
+Module mujoco_warp._src.support dd3f924 load on device 'cuda:0' took 2.90 ms  (cached)
+Module mujoco_warp._src.solver b116efb load on device 'cuda:0' took 4.47 ms  (cached)
+Module mujoco_warp._src.derivative d0e2fd7 load on device 'cuda:0' took 2.96 ms  (cached)
+Module mujoco_warp._src.io 4b387a0 load on device 'cuda:0' took 4.33 ms  (cached)
+Setting seed: 0
+/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/.venv/lib/python3.12/site-packages/mjlab/entity/entity.py:149: UserWarning: Actuator config matched 14 joint(s) but the same expressions also match 7 site(s): imu, left_foot, head_camera, tof, head_imu, mouth_tip, right_foot. Add a separate config with transmission_type=TransmissionType.SITE if those should be actuated too.
+  self._add_actuators()
+Warp DeprecationWarning: The symbol `warp.context.runtime` will soon be removed from the public API. It can still be accessed from `warp._src.context.runtime` but might be changed or removed without notice.
+Module _nxn_broadphase__locals__kernel_e73b1315 e73b131 load on device 'cuda:0' took 2.72 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_c1d0c893 c1d0c89 load on device 'cuda:0' took 5.35 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_bd5ecce0 bd5ecce load on device 'cuda:0' took 7.15 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_079dfa94 079dfa9 load on device 'cuda:0' took 5.43 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_2b8f1747 2b8f174 load on device 'cuda:0' took 4.28 ms  (cached)
+Module _efc_contact_init__locals__kernel_346f6f0c 346f6f0 load on device 'cuda:0' took 2.79 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_86e47ecb 86e47ec load on device 'cuda:0' took 2.59 ms  (cached)
+Module _efc_contact_update__locals__kernel_90315d53 90315d5 load on device 'cuda:0' took 2.79 ms  (cached)
+Module mujoco_warp._src.forward f60f76d load on device 'cuda:0' took 4.25 ms  (cached)
+Module _solve_LD_sparse_fused__locals__kernel_423e8dbe 4a2f9d7 load on device 'cuda:0' took 2.84 ms  (cached)
+Module solve_init_jaref__locals__kernel_eec718da eec718d load on device 'cuda:0' took 3.80 ms  (cached)
+Module mul_m_sparse__locals___mul_m_sparse_0e88d329 0e88d32 load on device 'cuda:0' took 2.55 ms  (cached)
+Module update_constraint_efc__locals__kernel_32935e9d 32935e9 load on device 'cuda:0' took 3.96 ms  (cached)
+Module update_constraint_gauss_cost__locals__kernel_1a5175eb 1a5175e load on device 'cuda:0' took 3.21 ms  (cached)
+Module update_gradient_cholesky_blocked__locals__kernel_3f89bed4 cfaeb41 load on device 'cuda:0' took 323.80 ms  (cached)
+Module linesearch_jv_fused__locals__kernel_814cce74 814cce7 load on device 'cuda:0' took 2.25 ms  (cached)
+Module linesearch_prepare_gauss__locals__kernel_2db7a2e8 2db7a2e load on device 'cuda:0' took 2.59 ms  (cached)
+Module update_constraint_efc__locals__kernel_3c1a9816 3c1a981 load on device 'cuda:0' took 2.28 ms  (cached)
+Module update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_b35f4e9a 59f6439 load on device 'cuda:0' took 279.42 ms  (cached)
+Module _contact_sort__locals__contact_sort_304c86df 6c97b35 load on device 'cuda:0' took 2.38 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_e7898c5c e7898c5 load on device 'cuda:0' took 2.45 ms  (cached)
+Module reset_data__locals__reset_qM_10d3c793 10d3c79 load on device 'cuda:0' took 2.22 ms  (cached)
+Module reset_data__locals__reset_mocap_ff71f630 ff71f63 load on device 'cuda:0' took 2.57 ms  (cached)
+Module reset_data__locals__reset_contact_df686d47 df686d4 load on device 'cuda:0' took 2.16 ms  (cached)
+Module reset_data__locals__reset_nworld_6e0d904e 6e0d904 load on device 'cuda:0' took 2.46 ms  (cached)
+[BamActuator] model='m6' joints=14 kt=0.3660 R=2.8114 vin=range=(6.5, 8.2) drop_gain_range=(0.0, 0.2) force_limit=±1.07Nm friction_base=0.0048 friction_viscous=0.0054 envs=300 device=cuda:0
+[BamActuator] model='m6' joints=14 kt=0.3660 R=2.8114 vin=range=(6.5, 8.2) drop_gain_range=(0.0, 0.2) force_limit=±1.07Nm friction_base=0.0048 friction_viscous=0.0054 envs=300 device=cuda:0
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 300    |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 2 active terms.
++---------------------------------------+
+| Active Event Terms in Mode: 'startup' |
++-------------+-------------------------+
+|    Index    | Name                    |
++-------------+-------------------------+
+|      0      | bam_fields              |
++-------------+-------------------------+
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+------------------------+
+|   Index    | Name                   |
++------------+------------------------+
+|     0      | duel_reset             |
++------------+------------------------+
++-----------------------------+
+| Domain Randomization Fields |
++-------+---------------------+
+| Index | Field Name          |
++-------+---------------------+
+|   0   | dof_frictionloss    |
+|   1   | dof_damping         |
++-------+---------------------+
+
+Module repeat_array_kernel_39317a34 75ac26a load on device 'cuda:0' took 1.95 ms  (cached)
+[INFO] <NullCommandManager> (inactive)
+[INFO] <ActionManager> contains 2 active terms.
++---------------------------------+
+| Active Action Terms (shape: 28) |
++-------+----------+--------------+
+| Index | Name     |    Dimension |
++-------+----------+--------------+
+|   0   | joint_a  |           14 |
+|   1   | joint_b  |           14 |
++-------+----------+--------------+
+
+[INFO] <ObservationManager> contains 2 groups.
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'skill_a' (shape: (61,)) |
++-----------+-----------------------------------+-------------+
+|   Index   | Name                              |    Shape    |
++-----------+-----------------------------------+-------------+
+|     0     | base_ang_vel                      |     (3,)    |
+|     1     | projected_gravity                 |     (3,)    |
+|     2     | joint_pos                         |    (14,)    |
+|     3     | joint_vel                         |    (14,)    |
+|     4     | actions                           |    (14,)    |
+|     5     | command                           |     (3,)    |
+|     6     | head_command                      |     (4,)    |
+|     7     | body_command                      |     (6,)    |
++-----------+-----------------------------------+-------------+
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'skill_b' (shape: (61,)) |
++-----------+-----------------------------------+-------------+
+|   Index   | Name                              |    Shape    |
++-----------+-----------------------------------+-------------+
+|     0     | base_ang_vel                      |     (3,)    |
+|     1     | projected_gravity                 |     (3,)    |
+|     2     | joint_pos                         |    (14,)    |
+|     3     | joint_vel                         |    (14,)    |
+|     4     | actions                           |    (14,)    |
+|     5     | command                           |     (3,)    |
+|     6     | head_command                      |     (4,)    |
+|     7     | body_command                      |     (6,)    |
++-----------+-----------------------------------+-------------+
+
+[INFO] <TerminationManager> contains 0 active terms.
++--------------------------+
+| Active Termination Terms |
++-------+------+-----------+
+| Index | Name |  Time Out |
++-------+------+-----------+
++-------+------+-----------+
+
+[INFO] <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 actor :  ['actor']
+	 critic :  ['critic']
+--------------------------------------------------------------------------------
+Actor Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (distribution): BoundedSquashedGaussian()
+  (mlp): MLP(
+    (0): Linear(in_features=76, out_features=128, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=128, out_features=128, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=128, out_features=4, bias=True)
+  )
+)
+Critic Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (mlp): MLP(
+    (0): Linear(in_features=76, out_features=128, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=128, out_features=128, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=128, out_features=1, bias=True)
+  )
+)
+capture step 1: 0/300 finished
+capture step 21: 0/300 finished
+capture step 41: 102/300 finished
+capture step 61: 206/300 finished
+capture step 81: 247/300 finished
+capture step 101: 271/300 finished
+capture step 121: 282/300 finished
+capture step 141: 287/300 finished
+capture step 161: 291/300 finished
+capture step 181: 293/300 finished
+capture step 200: 300/300 finished
+{
+  "capture_complete": true,
+  "mismatches_vs_official": 291,
+  "clips": [
+    {
+      "scene_id": 0,
+      "repeat": 0,
+      "learner_side": 0,
+      "end_reason": "goal_for",
+      "elapsed_s": 3.1,
+      "last_touch": 1,
+      "learner_kick_attempts": 1,
+      "opponent_kick_attempts": 0,
+      "layout": {
+        "scene_id": 0,
+        "learner_xy_yaw": [
+          -0.1506730458,
+          -0.1886632268,
+          -0.0379577242
+        ],
+        "opponent_xy_yaw": [
+          0.6039680883,
+          -0.1845154423,
+          2.7960849681
+        ],
+        "ball_xy": [
+          0.2631597498,
+          -0.1626696166
+        ]
+      },
+      "env_index": 0,
+      "origin_xyz": [
+        34.0,
+        -32.0,
+        0.0
+      ],
+      "selection_category": "out_after_kick_opponent_last",
+      "selection_official_row": {
+        "scene_id": "0",
+        "repeat": "0",
+        "learner_side": "0",
+        "attack_direction": "+X",
+        "end_reason": "ball_out",
+        "elapsed_s": "4.08",
+        "last_touch": "1",
+        "learner_kick_attempts": "1",
+        "opponent_kick_attempts": "0",
+        "training_reward_not_score": "-1.9673800468444824",
+        "flag_goal_for": "False",
+        "flag_goal_against": "False",
+        "flag_ball_out": "True",
+        "flag_learner_fell": "False",
+        "flag_opponent_fell": "False",
+        "flag_learner_oob": "False",
+        "flag_opponent_oob": "False",
+        "flag_timeout": "False",
+        "physics_samples_ball_body_0": "4",
+        "physics_samples_ball_body_1": "12",
+        "physics_samples_ball_foot_0": "4",
+        "physics_samples_ball_foot_1": "12",
+        "physics_samples_robot_robot": "0"
+      },
+      "states_file": "scene_000_states.npz",
+      "states_sha256": "e0845d44c79fa3e7ae47a9c32c4c12af9866f1ee51ead45d8920d3fe6553cb20",
+      "low_level_samples": 156,
+      "independent_visualization_rollout": true,
+      "matched_official_outcome": false
+    },
+    {
+      "scene_id": 1,
+      "repeat": 0,
+      "learner_side": 0,
+      "end_reason": "goal_for",
+      "elapsed_s": 3.82,
+      "last_touch": 0,
+      "learner_kick_attempts": 1,
+      "opponent_kick_attempts": 0,
+      "layout": {
+        "scene_id": 1,
+        "learner_xy_yaw": [
+          -0.6155579095,
+          0.0750430377,
+          0.5896737139
+        ],
+        "opponent_xy_yaw": [
+          0.198131134,
+          -0.0547470895,
+          -3.1312659141
+        ],
+        "ball_xy": [
+          -0.1975836255,
+          0.0476051843
+        ]
+      },
+      "env_index": 3,
+      "origin_xyz": [
+        34.0,
+        -20.0,
+        0.0
+      ],
+      "selection_category": "out_after_kick_learner_last",
+      "selection_official_row": {
+        "scene_id": "1",
+        "repeat": "0",
+        "learner_side": "0",
+        "attack_direction": "+X",
+        "end_reason": "ball_out",
+        "elapsed_s": "3.96",
+        "last_touch": "0",
+        "learner_kick_attempts": "1",
+        "opponent_kick_attempts": "0",
+        "training_reward_not_score": "-6.9355902671813965",
+        "flag_goal_for": "False",
+        "flag_goal_against": "False",
+        "flag_ball_out": "True",
+        "flag_learner_fell": "False",
+        "flag_opponent_fell": "False",
+        "flag_learner_oob": "False",
+        "flag_opponent_oob": "False",
+        "flag_timeout": "False",
+        "physics_samples_ball_body_0": "6",
+        "physics_samples_ball_body_1": "0",
+        "physics_samples_ball_foot_0": "6",
+        "physics_samples_ball_foot_1": "0",
+        "physics_samples_robot_robot": "0"
+      },
+      "states_file": "scene_001_states.npz",
+      "states_sha256": "671c7820a25661eff5b7fdbcca09d9359eccbe1da9f611c1fbe13ff9fd701baf",
+      "low_level_samples": 192,
+      "independent_visualization_rollout": true,
+      "matched_official_outcome": false
+    },
+    {
+      "scene_id": 6,
+      "repeat": 1,
+      "learner_side": 0,
+      "end_reason": "ball_out",
+      "elapsed_s": 8.46,
+      "last_touch": 0,
+      "learner_kick_attempts": 1,
+      "opponent_kick_attempts": 1,
+      "layout": {
+        "scene_id": 6,
+        "learner_xy_yaw": [
+          -0.323840045,
+          0.0600295627,
+          0.8280784936
+        ],
+        "opponent_xy_yaw": [
+          0.4685782179,
+          -0.2031800843,
+          -2.5233974742
+        ],
+        "ball_xy": [
+          0.116159736,
+          -0.0538254078
+        ]
+      },
+      "env_index": 19,
+      "origin_xyz": [
+        30.0,
+        -24.0,
+        0.0
+      ],
+      "selection_category": "out_no_kick_learner_last",
+      "selection_official_row": {
+        "scene_id": "6",
+        "repeat": "1",
+        "learner_side": "0",
+        "attack_direction": "+X",
+        "end_reason": "ball_out",
+        "elapsed_s": "5.36",
+        "last_touch": "0",
+        "learner_kick_attempts": "0",
+        "opponent_kick_attempts": "1",
+        "training_reward_not_score": "-7.128410339355469",
+        "flag_goal_for": "False",
+        "flag_goal_against": "False",
+        "flag_ball_out": "True",
+        "flag_learner_fell": "False",
+        "flag_opponent_fell": "False",
+        "flag_learner_oob": "False",
+        "flag_opponent_oob": "False",
+        "flag_timeout": "False",
+        "physics_samples_ball_body_0": "26",
+        "physics_samples_ball_body_1": "3",
+        "physics_samples_ball_foot_0": "0",
+        "physics_samples_ball_foot_1": "3",
+        "physics_samples_robot_robot": "0"
+      },
+      "states_file": "scene_006_states.npz",
+      "states_sha256": "fc105d8e68407bddbe3e156695bd272831a97c6c73d7eb409e209fbd6764f3d8",
+      "low_level_samples": 424,
+      "independent_visualization_rollout": true,
+      "matched_official_outcome": true
+    },
+    {
+      "scene_id": 2,
+      "repeat": 0,
+      "learner_side": 0,
+      "end_reason": "goal_for",
+      "elapsed_s": 3.86,
+      "last_touch": 0,
+      "learner_kick_attempts": 1,
+      "opponent_kick_attempts": 0,
+      "layout": {
+        "scene_id": 2,
+        "learner_xy_yaw": [
+          -0.5739545263,
+          -0.2747481548,
+          0.8264789132
+        ],
+        "opponent_xy_yaw": [
+          0.3046022787,
+          -0.414138838,
+          -3.1382693885
+        ],
+        "ball_xy": [
+          -0.1031416469,
+          -0.204037997
+        ]
+      },
+      "env_index": 6,
+      "origin_xyz": [
+        34.0,
+        -8.0,
+        0.0
+      ],
+      "selection_category": "goal_reference",
+      "selection_official_row": {
+        "scene_id": "2",
+        "repeat": "0",
+        "learner_side": "0",
+        "attack_direction": "+X",
+        "end_reason": "goal_for",
+        "elapsed_s": "4.02",
+        "last_touch": "0",
+        "learner_kick_attempts": "1",
+        "opponent_kick_attempts": "0",
+        "training_reward_not_score": "8.15231990814209",
+        "flag_goal_for": "True",
+        "flag_goal_against": "False",
+        "flag_ball_out": "True",
+        "flag_learner_fell": "False",
+        "flag_opponent_fell": "False",
+        "flag_learner_oob": "False",
+        "flag_opponent_oob": "False",
+        "flag_timeout": "False",
+        "physics_samples_ball_body_0": "5",
+        "physics_samples_ball_body_1": "0",
+        "physics_samples_ball_foot_0": "5",
+        "physics_samples_ball_foot_1": "0",
+        "physics_samples_robot_robot": "0"
+      },
+      "states_file": "scene_002_states.npz",
+      "states_sha256": "1efe4f7a3b9aefe6b3a4949704b66b4e7b2264feab1ce815037f46042dc40c1b",
+      "low_level_samples": 194,
+      "independent_visualization_rollout": true,
+      "matched_official_outcome": true
+    }
+  ]
+}

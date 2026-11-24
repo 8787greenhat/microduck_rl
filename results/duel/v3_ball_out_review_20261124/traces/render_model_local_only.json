@@ -1,0 +1,6 @@
+{
+  "excluded_from_git": true,
+  "reason": "161865964-byte compiled render-only model exceeds GitHub file size limit; numeric ball/contact traces and verified video included.",
+  "bytes": 161865964,
+  "sha256": "d9758c389dcae46632a7214eba602eae28f10549bb21a84b3d679da70c3466bb"
+}

@@ -1,0 +1,7866 @@
+{
+  "complete": true,
+  "source_commit": "e8b9756c03ae66a693275ee84b61a36aab367b2f",
+  "checkpoint_sha256": "f50f7fade3a12abea06f12acdfc904d2029a57238ed864aaa940e73a1df9cfc2",
+  "selection": "For each predeclared category, first CSV row on side 0 with a new scene id; descriptive examples, not a random or representative sample.",
+  "clips": [
+    {
+      "scene_id": 0,
+      "repeat": 0,
+      "learner_side": 0,
+      "end_reason": "goal_for",
+      "elapsed_s": 3.1,
+      "last_touch": 1,
+      "learner_kick_attempts": 1,
+      "opponent_kick_attempts": 0,
+      "layout": {
+        "scene_id": 0,
+        "learner_xy_yaw": [
+          -0.1506730458,
+          -0.1886632268,
+          -0.0379577242
+        ],
+        "opponent_xy_yaw": [
+          0.6039680883,
+          -0.1845154423,
+          2.7960849681
+        ],
+        "ball_xy": [
+          0.2631597498,
+          -0.1626696166
+        ]
+      },
+      "env_index": 0,
+      "origin_xyz": [
+        34.0,
+        -32.0,
+        0.0
+      ],
+      "selection_category": "out_after_kick_opponent_last",
+      "selection_official_row": {
+        "scene_id": "0",
+        "repeat": "0",
+        "learner_side": "0",
+        "attack_direction": "+X",
+        "end_reason": "ball_out",
+        "elapsed_s": "4.08",
+        "last_touch": "1",
+        "learner_kick_attempts": "1",
+        "opponent_kick_attempts": "0",
+        "training_reward_not_score": "-1.9673800468444824",
+        "flag_goal_for": "False",
+        "flag_goal_against": "False",
+        "flag_ball_out": "True",
+        "flag_learner_fell": "False",
+        "flag_opponent_fell": "False",
+        "flag_learner_oob": "False",
+        "flag_opponent_oob": "False",
+        "flag_timeout": "False",
+        "physics_samples_ball_body_0": "4",
+        "physics_samples_ball_body_1": "12",
+        "physics_samples_ball_foot_0": "4",
+        "physics_samples_ball_foot_1": "12",
+        "physics_samples_robot_robot": "0"
+      },
+      "states_file": "scene_000_states.npz",
+      "states_sha256": "e0845d44c79fa3e7ae47a9c32c4c12af9866f1ee51ead45d8920d3fe6553cb20",
+      "low_level_samples": 156,
+      "independent_visualization_rollout": true,
+      "matched_official_outcome": false,
+      "video": "scene_000.mp4",
+      "frames": 104,
+      "decoded_duration_s": 4.16,
+      "fps": 25,
+      "terminal_hold_s": 1,
+      "sha256": "4c79dcee42645d18839bbc99f2a82ad9e36edd9e87511ad9cef590776687386b"
+    },
+    {
+      "scene_id": 1,
+      "repeat": 0,
+      "learner_side": 0,
+      "end_reason": "goal_for",
+      "elapsed_s": 3.82,
+      "last_touch": 0,
+      "learner_kick_attempts": 1,
+      "opponent_kick_attempts": 0,
+      "layout": {
+        "scene_id": 1,
+        "learner_xy_yaw": [
+          -0.6155579095,
+          0.0750430377,
+          0.5896737139
+        ],
+        "opponent_xy_yaw": [
+          0.198131134,
+          -0.0547470895,
+          -3.1312659141
+        ],
+        "ball_xy": [
+          -0.1975836255,
+          0.0476051843
+        ]
+      },
+      "env_index": 3,
+      "origin_xyz": [
+        34.0,
+        -20.0,
+        0.0
+      ],
+      "selection_category": "out_after_kick_learner_last",
+      "selection_official_row": {
+        "scene_id": "1",
+        "repeat": "0",
+        "learner_side": "0",
+        "attack_direction": "+X",
+        "end_reason": "ball_out",
+        "elapsed_s": "3.96",
+        "last_touch": "0",
+        "learner_kick_attempts": "1",
+        "opponent_kick_attempts": "0",
+        "training_reward_not_score": "-6.9355902671813965",
+        "flag_goal_for": "False",
+        "flag_goal_against": "False",
+        "flag_ball_out": "True",
+        "flag_learner_fell": "False",
+        "flag_opponent_fell": "False",
+        "flag_learner_oob": "False",
+        "flag_opponent_oob": "False",
+        "flag_timeout": "False",
+        "physics_samples_ball_body_0": "6",
+        "physics_samples_ball_body_1": "0",
+        "physics_samples_ball_foot_0": "6",
+        "physics_samples_ball_foot_1": "0",
+        "physics_samples_robot_robot": "0"
+      },
+      "states_file": "scene_001_states.npz",
+      "states_sha256": "671c7820a25661eff5b7fdbcca09d9359eccbe1da9f611c1fbe13ff9fd701baf",
+      "low_level_samples": 192,
+      "independent_visualization_rollout": true,
+      "matched_official_outcome": false,
+      "video": "scene_001.mp4",
+      "frames": 122,
+      "decoded_duration_s": 4.88,
+      "fps": 25,
+      "terminal_hold_s": 1,
+      "sha256": "2e6f972ff12894e4521d8322df695d020891293bf967f34558cd6a0cd12ff472"
+    },
+    {
+      "scene_id": 6,
+      "repeat": 1,
+      "learner_side": 0,
+      "end_reason": "ball_out",
+      "elapsed_s": 8.46,
+      "last_touch": 0,
+      "learner_kick_attempts": 1,
+      "opponent_kick_attempts": 1,
+      "layout": {
+        "scene_id": 6,
+        "learner_xy_yaw": [
+          -0.323840045,
+          0.0600295627,
+          0.8280784936
+        ],
+        "opponent_xy_yaw": [
+          0.4685782179,
+          -0.2031800843,
+          -2.5233974742
+        ],
+        "ball_xy": [
+          0.116159736,
+          -0.0538254078
+        ]
+      },
+      "env_index": 19,
+      "origin_xyz": [
+        30.0,
+        -24.0,
+        0.0
+      ],
+      "selection_category": "out_no_kick_learner_last",
+      "selection_official_row": {
+        "scene_id": "6",
+        "repeat": "1",
+        "learner_side": "0",
+        "attack_direction": "+X",
+        "end_reason": "ball_out",
+        "elapsed_s": "5.36",
+        "last_touch": "0",
+        "learner_kick_attempts": "0",
+        "opponent_kick_attempts": "1",
+        "training_reward_not_score": "-7.128410339355469",
+        "flag_goal_for": "False",
+        "flag_goal_against": "False",
+        "flag_ball_out": "True",
+        "flag_learner_fell": "False",
+        "flag_opponent_fell": "False",
+        "flag_learner_oob": "False",
+        "flag_opponent_oob": "False",
+        "flag_timeout": "False",
+        "physics_samples_ball_body_0": "26",
+        "physics_samples_ball_body_1": "3",
+        "physics_samples_ball_foot_0": "0",
+        "physics_samples_ball_foot_1": "3",
+        "physics_samples_robot_robot": "0"
+      },
+      "states_file": "scene_006_states.npz",
+      "states_sha256": "fc105d8e68407bddbe3e156695bd272831a97c6c73d7eb409e209fbd6764f3d8",
+      "low_level_samples": 424,
+      "independent_visualization_rollout": true,
+      "matched_official_outcome": true,
+      "video": "scene_006.mp4",
+      "frames": 238,
+      "decoded_duration_s": 9.52,
+      "fps": 25,
+      "terminal_hold_s": 1,
+      "sha256": "9bf4999d726fd1db8d4a657bd4dc796b913079d5ffd84aeac1a45d52c826b4c7"
+    },
+    {
+      "scene_id": 2,
+      "repeat": 0,
+      "learner_side": 0,
+      "end_reason": "goal_for",
+      "elapsed_s": 3.86,
+      "last_touch": 0,
+      "learner_kick_attempts": 1,
+      "opponent_kick_attempts": 0,
+      "layout": {
+        "scene_id": 2,
+        "learner_xy_yaw": [
+          -0.5739545263,
+          -0.2747481548,
+          0.8264789132
+        ],
+        "opponent_xy_yaw": [
+          0.3046022787,
+          -0.414138838,
+          -3.1382693885
+        ],
+        "ball_xy": [
+          -0.1031416469,
+          -0.204037997
+        ]
+      },
+      "env_index": 6,
+      "origin_xyz": [
+        34.0,
+        -8.0,
+        0.0
+      ],
+      "selection_category": "goal_reference",
+      "selection_official_row": {
+        "scene_id": "2",
+        "repeat": "0",
+        "learner_side": "0",
+        "attack_direction": "+X",
+        "end_reason": "goal_for",
+        "elapsed_s": "4.02",
+        "last_touch": "0",
+        "learner_kick_attempts": "1",
+        "opponent_kick_attempts": "0",
+        "training_reward_not_score": "8.15231990814209",
+        "flag_goal_for": "True",
+        "flag_goal_against": "False",
+        "flag_ball_out": "True",
+        "flag_learner_fell": "False",
+        "flag_opponent_fell": "False",
+        "flag_learner_oob": "False",
+        "flag_opponent_oob": "False",
+        "flag_timeout": "False",
+        "physics_samples_ball_body_0": "5",
+        "physics_samples_ball_body_1": "0",
+        "physics_samples_ball_foot_0": "5",
+        "physics_samples_ball_foot_1": "0",
+        "physics_samples_robot_robot": "0"
+      },
+      "states_file": "scene_002_states.npz",
+      "states_sha256": "1efe4f7a3b9aefe6b3a4949704b66b4e7b2264feab1ce815037f46042dc40c1b",
+      "low_level_samples": 194,
+      "independent_visualization_rollout": true,
+      "matched_official_outcome": true,
+      "video": "scene_002.mp4",
+      "frames": 123,
+      "decoded_duration_s": 4.92,
+      "fps": 25,
+      "terminal_hold_s": 1,
+      "sha256": "fbee2f327d77bd9ccab0597518b0f8fee4c35a073216279ca1dc894cf5fc8855"
+    }
+  ],
+  "combined_video": "duel_v3_seed1_diagnostics.mp4",
+  "combined_sha256": "1719053ddab30c33d9d671cd9b51ceea3071e07b3fb16e64c774db700ac30e21",
+  "decoded_frames": 587,
+  "decoded_duration_s": 23.48,
+  "normal_speed": true,
+  "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "rendering": "Unchanged mjlab OffscreenRenderer on saved qpos/qvel/mocap states; full mj_forward; shadows/reflections/MSAA off",
+  "new_simulation_or_training_during_rendering": false,
+  "independent_rollout_not_original_official_trajectory": true,
+  "outcome_mismatches_vs_official": [
+    {
+      "key": [
+        86,
+        2
+      ],
+      "actual": {
+        "scene_id": 86,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 2.98,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 86,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.02,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        0,
+        0
+      ],
+      "actual": {
+        "scene_id": 0,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.1,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 0,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.08,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        86,
+        1
+      ],
+      "actual": {
+        "scene_id": 86,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.02,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 86,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.04,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        0,
+        1
+      ],
+      "actual": {
+        "scene_id": 0,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.16,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 0,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.32,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        22,
+        2
+      ],
+      "actual": {
+        "scene_id": 22,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.2,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 22,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.16,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        58,
+        1
+      ],
+      "actual": {
+        "scene_id": 58,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.18,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 58,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.2,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        66,
+        2
+      ],
+      "actual": {
+        "scene_id": 66,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.14,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 66,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.26,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        86,
+        0
+      ],
+      "actual": {
+        "scene_id": 86,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.18,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 86,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        92,
+        1
+      ],
+      "actual": {
+        "scene_id": 92,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.18,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 92,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.26,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        0,
+        2
+      ],
+      "actual": {
+        "scene_id": 0,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.26,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 0,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.26,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        21,
+        2
+      ],
+      "actual": {
+        "scene_id": 21,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.28,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 21,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.4,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        22,
+        0
+      ],
+      "actual": {
+        "scene_id": 22,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.26,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 22,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.2,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        22,
+        1
+      ],
+      "actual": {
+        "scene_id": 22,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.24,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 22,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.42,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        24,
+        2
+      ],
+      "actual": {
+        "scene_id": 24,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.26,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 24,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.34,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        58,
+        0
+      ],
+      "actual": {
+        "scene_id": 58,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.22,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 58,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.32,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        58,
+        2
+      ],
+      "actual": {
+        "scene_id": 58,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.24,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 58,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.16,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        63,
+        0
+      ],
+      "actual": {
+        "scene_id": 63,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.24,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 63,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.98,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        87,
+        2
+      ],
+      "actual": {
+        "scene_id": 87,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.24,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 87,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.36,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        89,
+        0
+      ],
+      "actual": {
+        "scene_id": 89,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.26,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 89,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.22,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        95,
+        1
+      ],
+      "actual": {
+        "scene_id": 95,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.3,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 95,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.3,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        23,
+        0
+      ],
+      "actual": {
+        "scene_id": 23,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.48,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 23,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.48,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        24,
+        0
+      ],
+      "actual": {
+        "scene_id": 24,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.48,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 24,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.5,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        34,
+        1
+      ],
+      "actual": {
+        "scene_id": 34,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.46,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 34,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.48,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        39,
+        0
+      ],
+      "actual": {
+        "scene_id": 39,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.42,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 39,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.38,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        39,
+        1
+      ],
+      "actual": {
+        "scene_id": 39,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.42,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 39,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.36,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        66,
+        1
+      ],
+      "actual": {
+        "scene_id": 66,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.5,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 66,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.78,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        74,
+        1
+      ],
+      "actual": {
+        "scene_id": 74,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.5,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 74,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.52,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        84,
+        1
+      ],
+      "actual": {
+        "scene_id": 84,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.48,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 84,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.62,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        92,
+        2
+      ],
+      "actual": {
+        "scene_id": 92,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.46,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 92,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.18,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        11,
+        0
+      ],
+      "actual": {
+        "scene_id": 11,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.52,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 11,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.74,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        28,
+        0
+      ],
+      "actual": {
+        "scene_id": 28,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.56,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 28,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.6,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        35,
+        0
+      ],
+      "actual": {
+        "scene_id": 35,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.6,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 35,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.44,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        35,
+        1
+      ],
+      "actual": {
+        "scene_id": 35,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.52,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 35,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.5,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        42,
+        0
+      ],
+      "actual": {
+        "scene_id": 42,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.56,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 42,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.98,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        46,
+        1
+      ],
+      "actual": {
+        "scene_id": 46,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.6,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 46,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.42,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        49,
+        2
+      ],
+      "actual": {
+        "scene_id": 49,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.56,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 49,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.9,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        55,
+        0
+      ],
+      "actual": {
+        "scene_id": 55,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.52,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 55,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.68,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        68,
+        1
+      ],
+      "actual": {
+        "scene_id": 68,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.56,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 68,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.76,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        70,
+        1
+      ],
+      "actual": {
+        "scene_id": 70,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.54,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 70,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.52,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        74,
+        0
+      ],
+      "actual": {
+        "scene_id": 74,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.56,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 74,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.54,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        74,
+        2
+      ],
+      "actual": {
+        "scene_id": 74,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.56,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 74,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.48,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        80,
+        1
+      ],
+      "actual": {
+        "scene_id": 80,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.58,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 80,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.64,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        81,
+        2
+      ],
+      "actual": {
+        "scene_id": 81,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.56,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 81,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.4,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        84,
+        2
+      ],
+      "actual": {
+        "scene_id": 84,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.58,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 84,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.54,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        9,
+        2
+      ],
+      "actual": {
+        "scene_id": 9,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.66,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 9,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.6,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        11,
+        1
+      ],
+      "actual": {
+        "scene_id": 11,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.62,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 11,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.6,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        11,
+        2
+      ],
+      "actual": {
+        "scene_id": 11,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.66,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 11,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.84,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        24,
+        1
+      ],
+      "actual": {
+        "scene_id": 24,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.66,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 24,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.72,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        34,
+        0
+      ],
+      "actual": {
+        "scene_id": 34,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.7,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 34,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.5,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        34,
+        2
+      ],
+      "actual": {
+        "scene_id": 34,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.7,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 34,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.8,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        48,
+        1
+      ],
+      "actual": {
+        "scene_id": 48,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.62,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 48,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.94,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        55,
+        1
+      ],
+      "actual": {
+        "scene_id": 55,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.68,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 55,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.9,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        55,
+        2
+      ],
+      "actual": {
+        "scene_id": 55,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.62,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 55,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.7,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        70,
+        2
+      ],
+      "actual": {
+        "scene_id": 70,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.7,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 70,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.98,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        71,
+        1
+      ],
+      "actual": {
+        "scene_id": 71,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.66,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 71,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.48,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        88,
+        1
+      ],
+      "actual": {
+        "scene_id": 88,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.64,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 88,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.3,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        89,
+        2
+      ],
+      "actual": {
+        "scene_id": 89,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.68,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 89,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.72,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        48,
+        2
+      ],
+      "actual": {
+        "scene_id": 48,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.76,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 48,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.78,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        62,
+        1
+      ],
+      "actual": {
+        "scene_id": 62,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.74,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 62,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 10.7,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        64,
+        0
+      ],
+      "actual": {
+        "scene_id": 64,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.74,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 64,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.66,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        64,
+        1
+      ],
+      "actual": {
+        "scene_id": 64,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.76,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 64,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.78,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        78,
+        2
+      ],
+      "actual": {
+        "scene_id": 78,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.76,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 78,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.16,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        82,
+        0
+      ],
+      "actual": {
+        "scene_id": 82,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.72,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 82,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        84,
+        0
+      ],
+      "actual": {
+        "scene_id": 84,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.78,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 84,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.9,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        92,
+        0
+      ],
+      "actual": {
+        "scene_id": 92,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.74,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 92,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.32,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        1,
+        0
+      ],
+      "actual": {
+        "scene_id": 1,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.82,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 1,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.96,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        2,
+        0
+      ],
+      "actual": {
+        "scene_id": 2,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.86,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 2,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.02,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        3,
+        1
+      ],
+      "actual": {
+        "scene_id": 3,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.9,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 3,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.36,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        3,
+        2
+      ],
+      "actual": {
+        "scene_id": 3,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.9,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 3,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.92,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        5,
+        0
+      ],
+      "actual": {
+        "scene_id": 5,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.84,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 5,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.42,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        7,
+        2
+      ],
+      "actual": {
+        "scene_id": 7,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.84,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 7,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.02,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        48,
+        0
+      ],
+      "actual": {
+        "scene_id": 48,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.84,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 48,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.24,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        49,
+        1
+      ],
+      "actual": {
+        "scene_id": 49,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.86,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 49,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.84,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        64,
+        2
+      ],
+      "actual": {
+        "scene_id": 64,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.88,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 64,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.9,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        80,
+        0
+      ],
+      "actual": {
+        "scene_id": 80,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.86,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 80,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.88,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        87,
+        1
+      ],
+      "actual": {
+        "scene_id": 87,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.88,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 87,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.62,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        2,
+        2
+      ],
+      "actual": {
+        "scene_id": 2,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.92,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 2,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.78,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        7,
+        0
+      ],
+      "actual": {
+        "scene_id": 7,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.92,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 7,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.12,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        8,
+        0
+      ],
+      "actual": {
+        "scene_id": 8,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 8,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.04,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        12,
+        2
+      ],
+      "actual": {
+        "scene_id": 12,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.94,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 12,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.14,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        14,
+        1
+      ],
+      "actual": {
+        "scene_id": 14,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.98,
+        "last_touch": -2,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 14,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.32,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        14,
+        2
+      ],
+      "actual": {
+        "scene_id": 14,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.96,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 14,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.88,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        45,
+        0
+      ],
+      "actual": {
+        "scene_id": 45,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 45,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        45,
+        2
+      ],
+      "actual": {
+        "scene_id": 45,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.92,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 45,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.14,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        69,
+        1
+      ],
+      "actual": {
+        "scene_id": 69,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.94,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 69,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.44,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        76,
+        2
+      ],
+      "actual": {
+        "scene_id": 76,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.96,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 76,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.1,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        82,
+        1
+      ],
+      "actual": {
+        "scene_id": 82,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.98,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 82,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.02,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        13,
+        0
+      ],
+      "actual": {
+        "scene_id": 13,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.06,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 13,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.32,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        26,
+        0
+      ],
+      "actual": {
+        "scene_id": 26,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.1,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 26,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.38,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        26,
+        2
+      ],
+      "actual": {
+        "scene_id": 26,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.02,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 26,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.84,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        49,
+        0
+      ],
+      "actual": {
+        "scene_id": 49,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.04,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 49,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.32,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        76,
+        0
+      ],
+      "actual": {
+        "scene_id": 76,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.02,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 76,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.88,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        76,
+        1
+      ],
+      "actual": {
+        "scene_id": 76,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.04,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 76,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        1,
+        1
+      ],
+      "actual": {
+        "scene_id": 1,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.12,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 1,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.86,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        7,
+        1
+      ],
+      "actual": {
+        "scene_id": 7,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.16,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 7,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.28,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        12,
+        0
+      ],
+      "actual": {
+        "scene_id": 12,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.2,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 12,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.18,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        25,
+        1
+      ],
+      "actual": {
+        "scene_id": 25,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.18,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 25,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.04,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        26,
+        1
+      ],
+      "actual": {
+        "scene_id": 26,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.12,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 26,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.2,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        46,
+        2
+      ],
+      "actual": {
+        "scene_id": 46,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.18,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 46,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.24,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        47,
+        2
+      ],
+      "actual": {
+        "scene_id": 47,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.16,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 47,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.38,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        82,
+        2
+      ],
+      "actual": {
+        "scene_id": 82,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.18,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 82,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.12,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        83,
+        1
+      ],
+      "actual": {
+        "scene_id": 83,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.18,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 83,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.38,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        95,
+        2
+      ],
+      "actual": {
+        "scene_id": 95,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.12,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 95,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.14,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        13,
+        1
+      ],
+      "actual": {
+        "scene_id": 13,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.22,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 13,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.32,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        37,
+        1
+      ],
+      "actual": {
+        "scene_id": 37,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.22,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 37,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.38,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        41,
+        2
+      ],
+      "actual": {
+        "scene_id": 41,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.3,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 41,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.48,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        57,
+        0
+      ],
+      "actual": {
+        "scene_id": 57,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.26,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 57,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.74,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        20,
+        2
+      ],
+      "actual": {
+        "scene_id": 20,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.38,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 20,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.7,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        51,
+        0
+      ],
+      "actual": {
+        "scene_id": 51,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.38,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 51,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.38,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        53,
+        0
+      ],
+      "actual": {
+        "scene_id": 53,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.38,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 53,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 12.5,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        71,
+        0
+      ],
+      "actual": {
+        "scene_id": 71,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.34,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 71,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.94,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        78,
+        0
+      ],
+      "actual": {
+        "scene_id": 78,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.4,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 78,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.58,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        87,
+        0
+      ],
+      "actual": {
+        "scene_id": 87,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.4,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 87,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.14,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        8,
+        1
+      ],
+      "actual": {
+        "scene_id": 8,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.42,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 8,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.28,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        10,
+        0
+      ],
+      "actual": {
+        "scene_id": 10,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.5,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 10,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.46,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        10,
+        2
+      ],
+      "actual": {
+        "scene_id": 10,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.44,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 10,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.68,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        20,
+        0
+      ],
+      "actual": {
+        "scene_id": 20,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.44,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 20,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.3,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        47,
+        0
+      ],
+      "actual": {
+        "scene_id": 47,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.44,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 47,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.68,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        50,
+        2
+      ],
+      "actual": {
+        "scene_id": 50,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.5,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 50,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.34,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        51,
+        1
+      ],
+      "actual": {
+        "scene_id": 51,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.46,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 51,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.1,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        52,
+        0
+      ],
+      "actual": {
+        "scene_id": 52,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.48,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 52,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.06,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        62,
+        2
+      ],
+      "actual": {
+        "scene_id": 62,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.5,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 62,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.64,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        83,
+        2
+      ],
+      "actual": {
+        "scene_id": 83,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.48,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 83,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.36,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        6,
+        2
+      ],
+      "actual": {
+        "scene_id": 6,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.52,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 6,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.28,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        15,
+        0
+      ],
+      "actual": {
+        "scene_id": 15,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.58,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 15,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 10.24,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        78,
+        1
+      ],
+      "actual": {
+        "scene_id": 78,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.54,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 78,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.82,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        21,
+        0
+      ],
+      "actual": {
+        "scene_id": 21,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.68,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 21,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.3,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        42,
+        1
+      ],
+      "actual": {
+        "scene_id": 42,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.66,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 42,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.64,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        56,
+        1
+      ],
+      "actual": {
+        "scene_id": 56,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.68,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 56,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.58,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        93,
+        2
+      ],
+      "actual": {
+        "scene_id": 93,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.66,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 93,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.38,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        1,
+        2
+      ],
+      "actual": {
+        "scene_id": 1,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.76,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 1,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.18,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        16,
+        0
+      ],
+      "actual": {
+        "scene_id": 16,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.74,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 16,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.02,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        36,
+        1
+      ],
+      "actual": {
+        "scene_id": 36,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.74,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 36,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.26,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        41,
+        1
+      ],
+      "actual": {
+        "scene_id": 41,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.78,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 41,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.3,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        42,
+        2
+      ],
+      "actual": {
+        "scene_id": 42,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.78,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 42,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.4,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        56,
+        0
+      ],
+      "actual": {
+        "scene_id": 56,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.78,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 56,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.94,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        70,
+        0
+      ],
+      "actual": {
+        "scene_id": 70,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.78,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 70,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.36,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        8,
+        2
+      ],
+      "actual": {
+        "scene_id": 8,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.9,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 8,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.92,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        23,
+        2
+      ],
+      "actual": {
+        "scene_id": 23,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.88,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 23,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.44,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        35,
+        2
+      ],
+      "actual": {
+        "scene_id": 35,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.88,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 35,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.08,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        52,
+        2
+      ],
+      "actual": {
+        "scene_id": 52,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.84,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 52,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.54,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        54,
+        1
+      ],
+      "actual": {
+        "scene_id": 54,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.86,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 54,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        66,
+        0
+      ],
+      "actual": {
+        "scene_id": 66,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.88,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 66,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.32,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        91,
+        0
+      ],
+      "actual": {
+        "scene_id": 91,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.88,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 91,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.16,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        5,
+        2
+      ],
+      "actual": {
+        "scene_id": 5,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.94,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 5,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.5,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        9,
+        0
+      ],
+      "actual": {
+        "scene_id": 9,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.92,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 9,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.72,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        16,
+        2
+      ],
+      "actual": {
+        "scene_id": 16,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 16,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.68,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        43,
+        2
+      ],
+      "actual": {
+        "scene_id": 43,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.98,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 43,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.48,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        79,
+        0
+      ],
+      "actual": {
+        "scene_id": 79,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.94,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 79,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 16.82,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        88,
+        0
+      ],
+      "actual": {
+        "scene_id": 88,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.94,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 88,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.3,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        93,
+        0
+      ],
+      "actual": {
+        "scene_id": 93,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.94,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 93,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.7,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        97,
+        2
+      ],
+      "actual": {
+        "scene_id": 97,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.92,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 97,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.6,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        30,
+        1
+      ],
+      "actual": {
+        "scene_id": 30,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.04,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 30,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.2,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        37,
+        2
+      ],
+      "actual": {
+        "scene_id": 37,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.08,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 37,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        68,
+        2
+      ],
+      "actual": {
+        "scene_id": 68,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 5.02,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 68,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.46,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        83,
+        0
+      ],
+      "actual": {
+        "scene_id": 83,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.08,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 83,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        88,
+        2
+      ],
+      "actual": {
+        "scene_id": 88,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.1,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 88,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.04,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        97,
+        1
+      ],
+      "actual": {
+        "scene_id": 97,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.06,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 97,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.5,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        4,
+        2
+      ],
+      "actual": {
+        "scene_id": 4,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.2,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 4,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 2,
+        "opponent_kick_attempts": 3
+      }
+    },
+    {
+      "key": [
+        38,
+        0
+      ],
+      "actual": {
+        "scene_id": 38,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.16,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 38,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 10.58,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        43,
+        1
+      ],
+      "actual": {
+        "scene_id": 43,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.2,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 43,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 15.7,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        51,
+        2
+      ],
+      "actual": {
+        "scene_id": 51,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.14,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 51,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.76,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        63,
+        2
+      ],
+      "actual": {
+        "scene_id": 63,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.18,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 63,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.7,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        73,
+        1
+      ],
+      "actual": {
+        "scene_id": 73,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.22,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 73,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.08,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        25,
+        2
+      ],
+      "actual": {
+        "scene_id": 25,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.4,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 25,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.8,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        27,
+        2
+      ],
+      "actual": {
+        "scene_id": 27,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.38,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 27,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.34,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        36,
+        0
+      ],
+      "actual": {
+        "scene_id": 36,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.32,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 36,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.2,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        44,
+        0
+      ],
+      "actual": {
+        "scene_id": 44,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.36,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 44,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.3,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        60,
+        1
+      ],
+      "actual": {
+        "scene_id": 60,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.4,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 60,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.64,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        63,
+        1
+      ],
+      "actual": {
+        "scene_id": 63,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.34,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 63,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.72,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        71,
+        2
+      ],
+      "actual": {
+        "scene_id": 71,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.36,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 71,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 12.34,
+        "last_touch": 0,
+        "learner_kick_attempts": 2,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        79,
+        2
+      ],
+      "actual": {
+        "scene_id": 79,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.38,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 79,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.34,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        4,
+        1
+      ],
+      "actual": {
+        "scene_id": 4,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.5,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 4,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.88,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        31,
+        2
+      ],
+      "actual": {
+        "scene_id": 31,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.44,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 31,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 10.56,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 2
+      }
+    },
+    {
+      "key": [
+        60,
+        2
+      ],
+      "actual": {
+        "scene_id": 60,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.42,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 60,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.22,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        90,
+        0
+      ],
+      "actual": {
+        "scene_id": 90,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.42,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 90,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 16.46,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 2
+      }
+    },
+    {
+      "key": [
+        3,
+        0
+      ],
+      "actual": {
+        "scene_id": 3,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.54,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 3,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.84,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        6,
+        0
+      ],
+      "actual": {
+        "scene_id": 6,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.52,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 6,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 14.36,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        31,
+        1
+      ],
+      "actual": {
+        "scene_id": 31,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.56,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 31,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.88,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        72,
+        1
+      ],
+      "actual": {
+        "scene_id": 72,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.58,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 72,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.78,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        77,
+        2
+      ],
+      "actual": {
+        "scene_id": 77,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.56,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 77,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        19,
+        1
+      ],
+      "actual": {
+        "scene_id": 19,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.62,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 19,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_against",
+        "elapsed_s": 6.62,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        29,
+        0
+      ],
+      "actual": {
+        "scene_id": 29,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 5.62,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 29,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.86,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        65,
+        1
+      ],
+      "actual": {
+        "scene_id": 65,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.68,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 65,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.4,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        75,
+        1
+      ],
+      "actual": {
+        "scene_id": 75,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.66,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 75,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.88,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        91,
+        1
+      ],
+      "actual": {
+        "scene_id": 91,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.64,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 91,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.92,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        17,
+        1
+      ],
+      "actual": {
+        "scene_id": 17,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.78,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 17,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.58,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        31,
+        0
+      ],
+      "actual": {
+        "scene_id": 31,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.74,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 31,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.32,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        56,
+        2
+      ],
+      "actual": {
+        "scene_id": 56,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.72,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 56,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.06,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        94,
+        1
+      ],
+      "actual": {
+        "scene_id": 94,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.72,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 94,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.18,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        38,
+        2
+      ],
+      "actual": {
+        "scene_id": 38,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.86,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 38,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.64,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        17,
+        2
+      ],
+      "actual": {
+        "scene_id": 17,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.98,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 17,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.06,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        40,
+        2
+      ],
+      "actual": {
+        "scene_id": 40,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.98,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 40,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.44,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        77,
+        1
+      ],
+      "actual": {
+        "scene_id": 77,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.98,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 77,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.32,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        95,
+        0
+      ],
+      "actual": {
+        "scene_id": 95,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.96,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 95,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.3,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        97,
+        0
+      ],
+      "actual": {
+        "scene_id": 97,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.98,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 97,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.7,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        46,
+        0
+      ],
+      "actual": {
+        "scene_id": 46,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 6.06,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 46,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.6,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        30,
+        2
+      ],
+      "actual": {
+        "scene_id": 30,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.14,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 30,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.36,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        39,
+        2
+      ],
+      "actual": {
+        "scene_id": 39,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.2,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 39,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.28,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        44,
+        2
+      ],
+      "actual": {
+        "scene_id": 44,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.2,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 44,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 9.18,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        53,
+        2
+      ],
+      "actual": {
+        "scene_id": 53,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.2,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 53,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.48,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        77,
+        0
+      ],
+      "actual": {
+        "scene_id": 77,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.12,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 77,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.56,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        41,
+        0
+      ],
+      "actual": {
+        "scene_id": 41,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.28,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 41,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.16,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        43,
+        0
+      ],
+      "actual": {
+        "scene_id": 43,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.26,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 43,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.44,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        60,
+        0
+      ],
+      "actual": {
+        "scene_id": 60,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.24,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 60,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.22,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        85,
+        2
+      ],
+      "actual": {
+        "scene_id": 85,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.22,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 85,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.26,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        32,
+        1
+      ],
+      "actual": {
+        "scene_id": 32,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.36,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 32,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.26,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        19,
+        2
+      ],
+      "actual": {
+        "scene_id": 19,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.5,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 19,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_against",
+        "elapsed_s": 19.48,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        33,
+        0
+      ],
+      "actual": {
+        "scene_id": 33,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.48,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 33,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 2,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        18,
+        0
+      ],
+      "actual": {
+        "scene_id": 18,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.6,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 18,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.18,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        32,
+        0
+      ],
+      "actual": {
+        "scene_id": 32,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 6.52,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 32,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        38,
+        1
+      ],
+      "actual": {
+        "scene_id": 38,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_against",
+        "elapsed_s": 6.56,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 38,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 11.02,
+        "last_touch": 1,
+        "learner_kick_attempts": 2,
+        "opponent_kick_attempts": 2
+      }
+    },
+    {
+      "key": [
+        65,
+        2
+      ],
+      "actual": {
+        "scene_id": 65,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 6.74,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 65,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.24,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        96,
+        0
+      ],
+      "actual": {
+        "scene_id": 96,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.78,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 96,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        19,
+        0
+      ],
+      "actual": {
+        "scene_id": 19,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.86,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 19,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.54,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        72,
+        2
+      ],
+      "actual": {
+        "scene_id": 72,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.82,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 72,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.04,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        73,
+        2
+      ],
+      "actual": {
+        "scene_id": 73,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.88,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 73,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.22,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        65,
+        0
+      ],
+      "actual": {
+        "scene_id": 65,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.92,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 65,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 3.48,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        72,
+        0
+      ],
+      "actual": {
+        "scene_id": 72,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.92,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 72,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.86,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        29,
+        1
+      ],
+      "actual": {
+        "scene_id": 29,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.08,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 29,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 2,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        62,
+        0
+      ],
+      "actual": {
+        "scene_id": 62,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.08,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 62,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "opponent_fell",
+        "elapsed_s": 7.04,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        99,
+        2
+      ],
+      "actual": {
+        "scene_id": 99,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.02,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 99,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 10.84,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        85,
+        0
+      ],
+      "actual": {
+        "scene_id": 85,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.16,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 85,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.62,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        90,
+        2
+      ],
+      "actual": {
+        "scene_id": 90,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.16,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 90,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.42,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        45,
+        1
+      ],
+      "actual": {
+        "scene_id": 45,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.36,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 45,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.62,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        91,
+        2
+      ],
+      "actual": {
+        "scene_id": 91,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.48,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 91,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.46,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        61,
+        0
+      ],
+      "actual": {
+        "scene_id": 61,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.6,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 61,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.56,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        16,
+        1
+      ],
+      "actual": {
+        "scene_id": 16,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.62,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 16,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.78,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        67,
+        1
+      ],
+      "actual": {
+        "scene_id": 67,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.62,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 67,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 12.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        13,
+        2
+      ],
+      "actual": {
+        "scene_id": 13,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.78,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 13,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.34,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        29,
+        2
+      ],
+      "actual": {
+        "scene_id": 29,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.76,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 29,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.22,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        79,
+        1
+      ],
+      "actual": {
+        "scene_id": 79,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.72,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 79,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.16,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        5,
+        1
+      ],
+      "actual": {
+        "scene_id": 5,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.82,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 5,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.26,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        18,
+        2
+      ],
+      "actual": {
+        "scene_id": 18,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.98,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 18,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 11.98,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        37,
+        0
+      ],
+      "actual": {
+        "scene_id": 37,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.98,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 37,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.6,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        52,
+        1
+      ],
+      "actual": {
+        "scene_id": 52,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.98,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 52,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.3,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        10,
+        1
+      ],
+      "actual": {
+        "scene_id": 10,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.08,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 10,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.72,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        14,
+        0
+      ],
+      "actual": {
+        "scene_id": 14,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.02,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 14,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.58,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        4,
+        0
+      ],
+      "actual": {
+        "scene_id": 4,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.12,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 4,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.8,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        20,
+        1
+      ],
+      "actual": {
+        "scene_id": 20,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.2,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 20,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 4.9,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        67,
+        0
+      ],
+      "actual": {
+        "scene_id": 67,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.38,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 67,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        99,
+        1
+      ],
+      "actual": {
+        "scene_id": 99,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.34,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 99,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.26,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        6,
+        1
+      ],
+      "actual": {
+        "scene_id": 6,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.46,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 6,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.36,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        33,
+        1
+      ],
+      "actual": {
+        "scene_id": 33,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.44,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 33,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.54,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        85,
+        1
+      ],
+      "actual": {
+        "scene_id": 85,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.48,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 85,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        36,
+        2
+      ],
+      "actual": {
+        "scene_id": 36,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.7,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 36,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.18,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        59,
+        2
+      ],
+      "actual": {
+        "scene_id": 59,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.82,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 59,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.56,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        40,
+        0
+      ],
+      "actual": {
+        "scene_id": 40,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.04,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 40,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 6.38,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        50,
+        0
+      ],
+      "actual": {
+        "scene_id": 50,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_against",
+        "elapsed_s": 9.04,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 50,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 13.58,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        40,
+        1
+      ],
+      "actual": {
+        "scene_id": 40,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.2,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 40,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_against",
+        "elapsed_s": 9.88,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        94,
+        0
+      ],
+      "actual": {
+        "scene_id": 94,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "goal_against",
+        "elapsed_s": 9.12,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 2
+      },
+      "official": {
+        "scene_id": 94,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.08,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        15,
+        1
+      ],
+      "actual": {
+        "scene_id": 15,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.22,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 15,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.06,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        75,
+        2
+      ],
+      "actual": {
+        "scene_id": 75,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.3,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 75,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.5,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        59,
+        0
+      ],
+      "actual": {
+        "scene_id": 59,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.46,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 59,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.5,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        15,
+        2
+      ],
+      "actual": {
+        "scene_id": 15,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.54,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 15,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.02,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        94,
+        2
+      ],
+      "actual": {
+        "scene_id": 94,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.58,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 94,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.24,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        98,
+        1
+      ],
+      "actual": {
+        "scene_id": 98,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "opponent_oob",
+        "elapsed_s": 9.52,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 98,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.56,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        54,
+        0
+      ],
+      "actual": {
+        "scene_id": 54,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.68,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 54,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.44,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        93,
+        1
+      ],
+      "actual": {
+        "scene_id": 93,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.7,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 93,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.58,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        54,
+        2
+      ],
+      "actual": {
+        "scene_id": 54,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.8,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 54,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.06,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        90,
+        1
+      ],
+      "actual": {
+        "scene_id": 90,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.98,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 2
+      },
+      "official": {
+        "scene_id": 90,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.56,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        50,
+        1
+      ],
+      "actual": {
+        "scene_id": 50,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 10.02,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 50,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.48,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        44,
+        1
+      ],
+      "actual": {
+        "scene_id": 44,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 10.18,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 44,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.16,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        96,
+        2
+      ],
+      "actual": {
+        "scene_id": 96,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 10.26,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 96,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 15.5,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        98,
+        0
+      ],
+      "actual": {
+        "scene_id": 98,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 10.46,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 98,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.78,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        75,
+        0
+      ],
+      "actual": {
+        "scene_id": 75,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 10.8,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 75,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.12,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        30,
+        0
+      ],
+      "actual": {
+        "scene_id": 30,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 11.1,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 30,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.1,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        32,
+        2
+      ],
+      "actual": {
+        "scene_id": 32,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_against",
+        "elapsed_s": 11.16,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 32,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.52,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        73,
+        0
+      ],
+      "actual": {
+        "scene_id": 73,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 11.5,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 2
+      },
+      "official": {
+        "scene_id": 73,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 7.4,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        69,
+        2
+      ],
+      "actual": {
+        "scene_id": 69,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 11.52,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 69,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.98,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        27,
+        0
+      ],
+      "actual": {
+        "scene_id": 27,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 11.96,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 27,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 11.52,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        96,
+        1
+      ],
+      "actual": {
+        "scene_id": 96,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 12.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 96,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        98,
+        2
+      ],
+      "actual": {
+        "scene_id": 98,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 11.96,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 98,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        21,
+        1
+      ],
+      "actual": {
+        "scene_id": 21,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 12.26,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 21,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.06,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        23,
+        1
+      ],
+      "actual": {
+        "scene_id": 23,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 12.46,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 23,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 10.16,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        17,
+        0
+      ],
+      "actual": {
+        "scene_id": 17,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 12.86,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 17,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.04,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        67,
+        2
+      ],
+      "actual": {
+        "scene_id": 67,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 12.82,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 67,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 3
+      }
+    },
+    {
+      "key": [
+        53,
+        1
+      ],
+      "actual": {
+        "scene_id": 53,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 13.06,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 2
+      },
+      "official": {
+        "scene_id": 53,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 10.14,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        27,
+        1
+      ],
+      "actual": {
+        "scene_id": 27,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 14.3,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 27,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 12.88,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        18,
+        1
+      ],
+      "actual": {
+        "scene_id": 18,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 14.44,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 2
+      },
+      "official": {
+        "scene_id": 18,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.66,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        25,
+        0
+      ],
+      "actual": {
+        "scene_id": 25,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 15.32,
+        "last_touch": 0,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 25,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 5.14,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        61,
+        1
+      ],
+      "actual": {
+        "scene_id": 61,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 15.36,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 2
+      },
+      "official": {
+        "scene_id": 61,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.02,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        33,
+        2
+      ],
+      "actual": {
+        "scene_id": 33,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 16.24,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 33,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 4.98,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        61,
+        2
+      ],
+      "actual": {
+        "scene_id": 61,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 17.88,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 61,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.04,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        28,
+        2
+      ],
+      "actual": {
+        "scene_id": 28,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 28,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 3.26,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      }
+    },
+    {
+      "key": [
+        47,
+        1
+      ],
+      "actual": {
+        "scene_id": 47,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 0
+      },
+      "official": {
+        "scene_id": 47,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.64,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        57,
+        1
+      ],
+      "actual": {
+        "scene_id": 57,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 57,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "goal_for",
+        "elapsed_s": 9.1,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        57,
+        2
+      ],
+      "actual": {
+        "scene_id": 57,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 5,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 57,
+        "repeat": 2,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.62,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        59,
+        1
+      ],
+      "actual": {
+        "scene_id": 59,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 59,
+        "repeat": 1,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 8.92,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        69,
+        0
+      ],
+      "actual": {
+        "scene_id": 69,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 1,
+        "learner_kick_attempts": 0,
+        "opponent_kick_attempts": 2
+      },
+      "official": {
+        "scene_id": 69,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 6.54,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    },
+    {
+      "key": [
+        99,
+        0
+      ],
+      "actual": {
+        "scene_id": 99,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "timeout",
+        "elapsed_s": 20.0,
+        "last_touch": 0,
+        "learner_kick_attempts": 2,
+        "opponent_kick_attempts": 1
+      },
+      "official": {
+        "scene_id": 99,
+        "repeat": 0,
+        "learner_side": 0,
+        "end_reason": "ball_out",
+        "elapsed_s": 9.92,
+        "last_touch": 0,
+        "learner_kick_attempts": 1,
+        "opponent_kick_attempts": 1
+      }
+    }
+  ],
+  "wall_seconds": 44.166365222
+}

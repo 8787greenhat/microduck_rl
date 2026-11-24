@@ -1,0 +1,673 @@
+{
+  "source_commit": "e8b9756c03ae66a693275ee84b61a36aab367b2f",
+  "checkpoint_sha256": "f50f7fade3a12abea06f12acdfc904d2029a57238ed864aaa940e73a1df9cfc2",
+  "per_episode_csv_sha256": "3514c78643c81b1a84a7925176e8b13e76df7632684508706a60fe5bee7d4f01",
+  "episodes": 600,
+  "ball_out_as_primary_end_reason": 402,
+  "raw_ball_out_flags": 576,
+  "end_reason_priority_warning": "Goal rounds can also set ball_out; use end_reason to count mutually exclusive outcomes.",
+  "ball_out_last_observed_touch": {
+    "opponent": 260,
+    "learner": 141,
+    "simultaneous": 1
+  },
+  "strata": [
+    {
+      "learner_kick_skill_in_episode": false,
+      "last_observed_touch": "learner",
+      "episodes": 52
+    },
+    {
+      "learner_kick_skill_in_episode": false,
+      "last_observed_touch": "opponent",
+      "episodes": 22
+    },
+    {
+      "learner_kick_skill_in_episode": false,
+      "last_observed_touch": "simultaneous",
+      "episodes": 0
+    },
+    {
+      "learner_kick_skill_in_episode": false,
+      "last_observed_touch": "unknown",
+      "episodes": 0
+    },
+    {
+      "learner_kick_skill_in_episode": true,
+      "last_observed_touch": "learner",
+      "episodes": 89
+    },
+    {
+      "learner_kick_skill_in_episode": true,
+      "last_observed_touch": "opponent",
+      "episodes": 238
+    },
+    {
+      "learner_kick_skill_in_episode": true,
+      "last_observed_touch": "simultaneous",
+      "episodes": 1
+    },
+    {
+      "learner_kick_skill_in_episode": true,
+      "last_observed_touch": "unknown",
+      "episodes": 0
+    }
+  ],
+  "ball_out_with_learner_kick_skill": 328,
+  "by_side": {
+    "0": {
+      "ball_out": 196
+    },
+    "1": {
+      "ball_out": 206
+    }
+  },
+  "scenes": [
+    {
+      "scene_id": 0,
+      "episodes": 6,
+      "ball_out": 2,
+      "goals": 4
+    },
+    {
+      "scene_id": 1,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 2,
+      "episodes": 6,
+      "ball_out": 0,
+      "goals": 6
+    },
+    {
+      "scene_id": 3,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 4,
+      "episodes": 6,
+      "ball_out": 2,
+      "goals": 2
+    },
+    {
+      "scene_id": 5,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 6,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 2
+    },
+    {
+      "scene_id": 7,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 8,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 9,
+      "episodes": 6,
+      "ball_out": 2,
+      "goals": 4
+    },
+    {
+      "scene_id": 10,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 2
+    },
+    {
+      "scene_id": 11,
+      "episodes": 6,
+      "ball_out": 0,
+      "goals": 6
+    },
+    {
+      "scene_id": 12,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 13,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 14,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 15,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 0
+    },
+    {
+      "scene_id": 16,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 17,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 18,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 19,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 0
+    },
+    {
+      "scene_id": 20,
+      "episodes": 6,
+      "ball_out": 3,
+      "goals": 3
+    },
+    {
+      "scene_id": 21,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 2
+    },
+    {
+      "scene_id": 22,
+      "episodes": 6,
+      "ball_out": 0,
+      "goals": 6
+    },
+    {
+      "scene_id": 23,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 24,
+      "episodes": 6,
+      "ball_out": 0,
+      "goals": 6
+    },
+    {
+      "scene_id": 25,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 26,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 27,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 0
+    },
+    {
+      "scene_id": 28,
+      "episodes": 6,
+      "ball_out": 2,
+      "goals": 4
+    },
+    {
+      "scene_id": 29,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 0
+    },
+    {
+      "scene_id": 30,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 0
+    },
+    {
+      "scene_id": 31,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 32,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 0
+    },
+    {
+      "scene_id": 33,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 0
+    },
+    {
+      "scene_id": 34,
+      "episodes": 6,
+      "ball_out": 1,
+      "goals": 5
+    },
+    {
+      "scene_id": 35,
+      "episodes": 6,
+      "ball_out": 0,
+      "goals": 6
+    },
+    {
+      "scene_id": 36,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 37,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 0
+    },
+    {
+      "scene_id": 38,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 0
+    },
+    {
+      "scene_id": 39,
+      "episodes": 6,
+      "ball_out": 0,
+      "goals": 6
+    },
+    {
+      "scene_id": 40,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 1
+    },
+    {
+      "scene_id": 41,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 42,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 43,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 44,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 2
+    },
+    {
+      "scene_id": 45,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 0
+    },
+    {
+      "scene_id": 46,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 2
+    },
+    {
+      "scene_id": 47,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 48,
+      "episodes": 6,
+      "ball_out": 0,
+      "goals": 6
+    },
+    {
+      "scene_id": 49,
+      "episodes": 6,
+      "ball_out": 3,
+      "goals": 3
+    },
+    {
+      "scene_id": 50,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 51,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 52,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 53,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 54,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 0
+    },
+    {
+      "scene_id": 55,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 56,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 57,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 58,
+      "episodes": 6,
+      "ball_out": 1,
+      "goals": 5
+    },
+    {
+      "scene_id": 59,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 60,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 61,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 62,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 0
+    },
+    {
+      "scene_id": 63,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 2
+    },
+    {
+      "scene_id": 64,
+      "episodes": 6,
+      "ball_out": 0,
+      "goals": 6
+    },
+    {
+      "scene_id": 65,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 1
+    },
+    {
+      "scene_id": 66,
+      "episodes": 6,
+      "ball_out": 1,
+      "goals": 5
+    },
+    {
+      "scene_id": 67,
+      "episodes": 6,
+      "ball_out": 3,
+      "goals": 0
+    },
+    {
+      "scene_id": 68,
+      "episodes": 6,
+      "ball_out": 0,
+      "goals": 6
+    },
+    {
+      "scene_id": 69,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 2
+    },
+    {
+      "scene_id": 70,
+      "episodes": 6,
+      "ball_out": 3,
+      "goals": 3
+    },
+    {
+      "scene_id": 71,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 72,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 0
+    },
+    {
+      "scene_id": 73,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 74,
+      "episodes": 6,
+      "ball_out": 1,
+      "goals": 5
+    },
+    {
+      "scene_id": 75,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 76,
+      "episodes": 6,
+      "ball_out": 0,
+      "goals": 6
+    },
+    {
+      "scene_id": 77,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 0
+    },
+    {
+      "scene_id": 78,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 2
+    },
+    {
+      "scene_id": 79,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 80,
+      "episodes": 6,
+      "ball_out": 1,
+      "goals": 5
+    },
+    {
+      "scene_id": 81,
+      "episodes": 6,
+      "ball_out": 1,
+      "goals": 5
+    },
+    {
+      "scene_id": 82,
+      "episodes": 6,
+      "ball_out": 3,
+      "goals": 3
+    },
+    {
+      "scene_id": 83,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 84,
+      "episodes": 6,
+      "ball_out": 0,
+      "goals": 6
+    },
+    {
+      "scene_id": 85,
+      "episodes": 6,
+      "ball_out": 3,
+      "goals": 0
+    },
+    {
+      "scene_id": 86,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 87,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 2
+    },
+    {
+      "scene_id": 88,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 89,
+      "episodes": 6,
+      "ball_out": 2,
+      "goals": 4
+    },
+    {
+      "scene_id": 90,
+      "episodes": 6,
+      "ball_out": 4,
+      "goals": 0
+    },
+    {
+      "scene_id": 91,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 92,
+      "episodes": 6,
+      "ball_out": 0,
+      "goals": 6
+    },
+    {
+      "scene_id": 93,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 94,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 95,
+      "episodes": 6,
+      "ball_out": 3,
+      "goals": 3
+    },
+    {
+      "scene_id": 96,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 0
+    },
+    {
+      "scene_id": 97,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    },
+    {
+      "scene_id": 98,
+      "episodes": 6,
+      "ball_out": 5,
+      "goals": 0
+    },
+    {
+      "scene_id": 99,
+      "episodes": 6,
+      "ball_out": 6,
+      "goals": 0
+    }
+  ],
+  "limitations": [
+    "Last observed touch is not causal attribution.",
+    "An episode-level kick start does not say whether the final touch was an active kick.",
+    "The original CSV/JSON has no final ball position, exit boundary or contact event timeline; cannot count shot misses vs pushes reliably from it.",
+    "Diagnostic rollouts will be independent inference runs and will not replace original 600 scores."
+  ]
+}
