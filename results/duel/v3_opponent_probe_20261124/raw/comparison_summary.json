@@ -1,0 +1,345 @@
+{
+  "complete": true,
+  "official_fixed600": false,
+  "training_seed": 1,
+  "new_training": false,
+  "training_method": "frozen PPO v3; no curriculum/self-play",
+  "total_episodes": 384,
+  "episodes_per_opponent": 128,
+  "num_envs_per_side": 64,
+  "scene_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "repeats": [
+    0,
+    1
+  ],
+  "sides": [
+    0,
+    1
+  ],
+  "eval_rng_seed": 0,
+  "checkpoint_sha256": "f50f7fade3a12abea06f12acdfc904d2029a57238ed864aaa940e73a1df9cfc2",
+  "cpu_wrapper_checks_passed": 5,
+  "all_worker_returncodes_zero": true,
+  "all_actor_and_normalizer_unchanged": true,
+  "original_training_sources_clean": true,
+  "results": {
+    "original_A": {
+      "description": "Unmodified geometric preparation-pose A; dwell .5 seconds",
+      "total": {
+        "episodes": 128,
+        "end_counts": {
+          "goal_for": 36,
+          "goal_against": 2,
+          "ball_out": 87,
+          "learner_fell": 0,
+          "opponent_fell": 1,
+          "learner_oob": 0,
+          "opponent_oob": 1,
+          "timeout": 1,
+          "both_fell": 0,
+          "both_oob": 0
+        },
+        "goal_for_rate": 0.28125,
+        "goal_against_rate": 0.015625,
+        "timeout_rate": 0.0078125,
+        "aborted_rate": 0.6953125,
+        "goal_difference_per_episode": 0.265625,
+        "winning_time_s": {
+          "mean": 3.9272222222222224,
+          "median": 3.6900000000000004,
+          "p90": 4.55
+        },
+        "end_time_mean_s": 5.791875,
+        "contact_attribution_unknown_goal_rounds": 0
+      },
+      "learner_kick_rounds": 111,
+      "opponent_kick_rounds": 45,
+      "by_side": {
+        "0": {
+          "episodes": 64,
+          "end_counts": {
+            "goal_for": 15,
+            "goal_against": 0,
+            "ball_out": 47,
+            "learner_fell": 0,
+            "opponent_fell": 1,
+            "learner_oob": 0,
+            "opponent_oob": 0,
+            "timeout": 1,
+            "both_fell": 0,
+            "both_oob": 0
+          },
+          "goal_for_rate": 0.234375,
+          "goal_against_rate": 0.0,
+          "timeout_rate": 0.015625,
+          "aborted_rate": 0.75,
+          "goal_difference_per_episode": 0.234375,
+          "winning_time_s": {
+            "mean": 4.266666666666667,
+            "median": 3.72,
+            "p90": 5.4159999999999995
+          },
+          "end_time_mean_s": 6.2303125,
+          "contact_attribution_unknown_goal_rounds": 0
+        },
+        "1": {
+          "episodes": 64,
+          "end_counts": {
+            "goal_for": 21,
+            "goal_against": 2,
+            "ball_out": 40,
+            "learner_fell": 0,
+            "opponent_fell": 0,
+            "learner_oob": 0,
+            "opponent_oob": 1,
+            "timeout": 0,
+            "both_fell": 0,
+            "both_oob": 0
+          },
+          "goal_for_rate": 0.328125,
+          "goal_against_rate": 0.03125,
+          "timeout_rate": 0.0,
+          "aborted_rate": 0.640625,
+          "goal_difference_per_episode": 0.296875,
+          "winning_time_s": {
+            "mean": 3.684761904761905,
+            "median": 3.64,
+            "p90": 4.44
+          },
+          "end_time_mean_s": 5.3534375,
+          "contact_attribution_unknown_goal_rounds": 0
+        }
+      }
+    },
+    "short_dwell_A": {
+      "description": "Same geometric preparation-pose A, dwell .2 instead of .5 seconds; original position/yaw/body-speed checks retained",
+      "total": {
+        "episodes": 128,
+        "end_counts": {
+          "goal_for": 37,
+          "goal_against": 2,
+          "ball_out": 86,
+          "learner_fell": 0,
+          "opponent_fell": 0,
+          "learner_oob": 0,
+          "opponent_oob": 0,
+          "timeout": 3,
+          "both_fell": 0,
+          "both_oob": 0
+        },
+        "goal_for_rate": 0.2890625,
+        "goal_against_rate": 0.015625,
+        "timeout_rate": 0.0234375,
+        "aborted_rate": 0.671875,
+        "goal_difference_per_episode": 0.2734375,
+        "winning_time_s": {
+          "mean": 4.048108108108108,
+          "median": 3.58,
+          "p90": 4.451999999999999
+        },
+        "end_time_mean_s": 6.07921875,
+        "contact_attribution_unknown_goal_rounds": 0
+      },
+      "learner_kick_rounds": 94,
+      "opponent_kick_rounds": 75,
+      "by_side": {
+        "0": {
+          "episodes": 64,
+          "end_counts": {
+            "goal_for": 15,
+            "goal_against": 0,
+            "ball_out": 48,
+            "learner_fell": 0,
+            "opponent_fell": 0,
+            "learner_oob": 0,
+            "opponent_oob": 0,
+            "timeout": 1,
+            "both_fell": 0,
+            "both_oob": 0
+          },
+          "goal_for_rate": 0.234375,
+          "goal_against_rate": 0.0,
+          "timeout_rate": 0.015625,
+          "aborted_rate": 0.75,
+          "goal_difference_per_episode": 0.234375,
+          "winning_time_s": {
+            "mean": 3.969333333333333,
+            "median": 3.68,
+            "p90": 4.084
+          },
+          "end_time_mean_s": 5.8521875,
+          "contact_attribution_unknown_goal_rounds": 0
+        },
+        "1": {
+          "episodes": 64,
+          "end_counts": {
+            "goal_for": 22,
+            "goal_against": 2,
+            "ball_out": 38,
+            "learner_fell": 0,
+            "opponent_fell": 0,
+            "learner_oob": 0,
+            "opponent_oob": 0,
+            "timeout": 2,
+            "both_fell": 0,
+            "both_oob": 0
+          },
+          "goal_for_rate": 0.34375,
+          "goal_against_rate": 0.03125,
+          "timeout_rate": 0.03125,
+          "aborted_rate": 0.59375,
+          "goal_difference_per_episode": 0.3125,
+          "winning_time_s": {
+            "mean": 4.101818181818182,
+            "median": 3.55,
+            "p90": 4.742000000000001
+          },
+          "end_time_mean_s": 6.30625,
+          "contact_attribution_unknown_goal_rounds": 0
+        }
+      }
+    },
+    "direct_chase_A": {
+      "description": "Beyond .16 m from ball, chase ball directly; within .16 m, original preparation-pose A and kick checks",
+      "total": {
+        "episodes": 128,
+        "end_counts": {
+          "goal_for": 22,
+          "goal_against": 8,
+          "ball_out": 96,
+          "learner_fell": 0,
+          "opponent_fell": 1,
+          "learner_oob": 0,
+          "opponent_oob": 0,
+          "timeout": 1,
+          "both_fell": 0,
+          "both_oob": 0
+        },
+        "goal_for_rate": 0.171875,
+        "goal_against_rate": 0.0625,
+        "timeout_rate": 0.0078125,
+        "aborted_rate": 0.7578125,
+        "goal_difference_per_episode": 0.109375,
+        "winning_time_s": {
+          "mean": 3.8563636363636364,
+          "median": 3.5300000000000002,
+          "p90": 4.3340000000000005
+        },
+        "end_time_mean_s": 6.33765625,
+        "contact_attribution_unknown_goal_rounds": 0
+      },
+      "learner_kick_rounds": 111,
+      "opponent_kick_rounds": 46,
+      "by_side": {
+        "0": {
+          "episodes": 64,
+          "end_counts": {
+            "goal_for": 9,
+            "goal_against": 6,
+            "ball_out": 48,
+            "learner_fell": 0,
+            "opponent_fell": 1,
+            "learner_oob": 0,
+            "opponent_oob": 0,
+            "timeout": 0,
+            "both_fell": 0,
+            "both_oob": 0
+          },
+          "goal_for_rate": 0.140625,
+          "goal_against_rate": 0.09375,
+          "timeout_rate": 0.0,
+          "aborted_rate": 0.765625,
+          "goal_difference_per_episode": 0.046875,
+          "winning_time_s": {
+            "mean": 3.5533333333333332,
+            "median": 3.52,
+            "p90": 4.056
+          },
+          "end_time_mean_s": 6.3959375,
+          "contact_attribution_unknown_goal_rounds": 0
+        },
+        "1": {
+          "episodes": 64,
+          "end_counts": {
+            "goal_for": 13,
+            "goal_against": 2,
+            "ball_out": 48,
+            "learner_fell": 0,
+            "opponent_fell": 0,
+            "learner_oob": 0,
+            "opponent_oob": 0,
+            "timeout": 1,
+            "both_fell": 0,
+            "both_oob": 0
+          },
+          "goal_for_rate": 0.203125,
+          "goal_against_rate": 0.03125,
+          "timeout_rate": 0.015625,
+          "aborted_rate": 0.75,
+          "goal_difference_per_episode": 0.171875,
+          "winning_time_s": {
+            "mean": 4.0661538461538465,
+            "median": 3.54,
+            "p90": 4.324
+          },
+          "end_time_mean_s": 6.279375,
+          "contact_attribution_unknown_goal_rounds": 0
+        }
+      }
+    }
+  },
+  "paired_nominal_layout_comparison": {
+    "short_dwell_A": {
+      "goal_for_rate_difference_percentage_points": 0.78125,
+      "previously_goal_now_not": 9,
+      "previously_not_goal_now_goal": 10,
+      "caution": "Paired nominal initial layouts; numerical/contact sensitivity and reset-level RNG may affect outcomes. Not a significance test."
+    },
+    "direct_chase_A": {
+      "goal_for_rate_difference_percentage_points": -10.9375,
+      "previously_goal_now_not": 22,
+      "previously_not_goal_now_goal": 8,
+      "caution": "Paired nominal initial layouts; numerical/contact sensitivity and reset-level RNG may affect outcomes. Not a significance test."
+    }
+  },
+  "limitations": [
+    "Diagnostic subset and batch64, not the historical official600 batch300; compare to the new original_A condition only.",
+    "One frozen training seed; rule variants are not proven stronger opponents, learned opponents or self-play.",
+    "Learner uses the trained v3 actor plus FastStopController; rules use geometric preparation control. This compares complete control systems, not PPO alone.",
+    "No generalization claim to arbitrary opponents, unseen layouts, moving-ball starts or real hardware.",
+    "Repeated scene trials are not independent training seeds; no significance claim."
+  ]
+}

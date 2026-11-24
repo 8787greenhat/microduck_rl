@@ -1,0 +1,180 @@
+{
+  "files": {
+    "all_384_episodes.csv": {
+      "bytes": 46035,
+      "sha256": "4c664a205521663f0b9555bb0c0b82def9c3ebfa335af141e6ee1b5f09007ed6"
+    },
+    "comparison_summary.json": {
+      "bytes": 10098,
+      "sha256": "9516decdac8c8c85c0415eb4d809591022098054ec7ede6a3f934d477634ee6a"
+    },
+    "direct_chase_A_side0/episodes.json": {
+      "bytes": 47154,
+      "sha256": "be790f29b88d6d4fbe8b678ffbe96eb269db646367d7a75e82a110f95d886d75"
+    },
+    "direct_chase_A_side0/manifest.json": {
+      "bytes": 6209,
+      "sha256": "b8784db40aef6cc385fc594c52bf5874e3e92408cde9de9de65f0814b2861551"
+    },
+    "direct_chase_A_side0/per_episode.csv": {
+      "bytes": 8212,
+      "sha256": "cd45d13dda7418155088cef54798c68e8ebe8b374851cacab75d01d3568a051f"
+    },
+    "direct_chase_A_side0/progress.json": {
+      "bytes": 79,
+      "sha256": "2828d6459896d1b1cd6d5495916829e97ad98c6e5866afa8419c257fe1baa3ca"
+    },
+    "direct_chase_A_side0/summary.json": {
+      "bytes": 984,
+      "sha256": "1268501eb94eca409f82431e321b0746cc17c406ccfd10c2b957f5db6ab39b49"
+    },
+    "direct_chase_A_side0.log": {
+      "bytes": 10359,
+      "sha256": "0d6e26e719530ee208580f2a7af88f90f98106645aa1f38e46febca08e79c6af"
+    },
+    "direct_chase_A_side1/episodes.json": {
+      "bytes": 47098,
+      "sha256": "336f6f86f8de94e61f38e7acb4babb85ce712baf219dfa2ae10cd7e59deb55db"
+    },
+    "direct_chase_A_side1/manifest.json": {
+      "bytes": 6209,
+      "sha256": "c3b71e5622c64335b43d49d2fda2d09147c3043a460ccf7bfb6cb8c2f85e8d93"
+    },
+    "direct_chase_A_side1/per_episode.csv": {
+      "bytes": 8156,
+      "sha256": "963dcdafc071c825675afbf91bdf0152e3305c10c236a4226b15dcd045c60439"
+    },
+    "direct_chase_A_side1/progress.json": {
+      "bytes": 78,
+      "sha256": "fc03cf076dc735be62b352d944227cc088b5447889f8b3938d8762cd5f930392"
+    },
+    "direct_chase_A_side1/summary.json": {
+      "bytes": 980,
+      "sha256": "f61190b5ca9d1e1038fb0ed5a3a9b7dd0aafa65bc3c9addb8953a4d17a1faaa1"
+    },
+    "direct_chase_A_side1.log": {
+      "bytes": 10397,
+      "sha256": "0075e82b77a0348686d95fd9df1783bba9af50a4192e21f59505592fa3c9c894"
+    },
+    "duel_opponent_variants.py": {
+      "bytes": 1808,
+      "sha256": "c459883a21f667495a22f62271b9d0824c7b3487383f197c297dde71dcef533b"
+    },
+    "eval_duel_opponent_variants.py": {
+      "bytes": 7476,
+      "sha256": "28adc5823d1e26a4a9a78b5000c78eaa35b62e579f4ffdae951dbefc2220cccd"
+    },
+    "original_A_side0/episodes.json": {
+      "bytes": 46803,
+      "sha256": "42ee28af3237d01564c0e14fcc45afef8f2d01756d27335687be639dd19aaca4"
+    },
+    "original_A_side0/manifest.json": {
+      "bytes": 6160,
+      "sha256": "83f94e772f6365a9bf326431bde9e8b65d60792bb703c9ecc0528c8c021d2850"
+    },
+    "original_A_side0/per_episode.csv": {
+      "bytes": 7861,
+      "sha256": "bab953a57385534112909886745383746fda82f4784f5d94fb7798db5bc19aac"
+    },
+    "original_A_side0/progress.json": {
+      "bytes": 73,
+      "sha256": "1b3abf3ed5eab6c87e79eda4770b6548480dcf5987229644032885974f23f1fe"
+    },
+    "original_A_side0/summary.json": {
+      "bytes": 989,
+      "sha256": "74bccfd460bb5b2c62f74bf423ec4a084f2fc55aaa21f741b7e817d56bdddc4b"
+    },
+    "original_A_side0.log": {
+      "bytes": 10374,
+      "sha256": "0f66f0ec8e07f0fdd25f162353499f7544ed4f0a6cb98ef8aab0a2edbe00ebe8"
+    },
+    "original_A_side1/episodes.json": {
+      "bytes": 46772,
+      "sha256": "27f066029ed3aaccdc26ed5a010a129e16678e863aba4451e7cc638d3a88adf5"
+    },
+    "original_A_side1/manifest.json": {
+      "bytes": 6160,
+      "sha256": "0840e1b7e25fe19501a2040d9b9f802cd0d927feb31f24f5f217223c95aaa1e0"
+    },
+    "original_A_side1/per_episode.csv": {
+      "bytes": 7830,
+      "sha256": "80b1a87ed490ddaa641c5d77293347ffff6ec6d8dd0af3067e4776c7ea1f3c19"
+    },
+    "original_A_side1/progress.json": {
+      "bytes": 73,
+      "sha256": "e8e9fb675acefbc333ecacef560ea9f13d302f7e7129555f8d91dc1446dec095"
+    },
+    "original_A_side1/summary.json": {
+      "bytes": 984,
+      "sha256": "76a6728e4ccb290112df881f857e39b6c7886e016c9b456b706822c8f9ec90f7"
+    },
+    "original_A_side1.log": {
+      "bytes": 10339,
+      "sha256": "f84a29eea5faeedbeb4267f8a21577f7f5e4b3e9bf81a1608acfe229fe7e988d"
+    },
+    "short_dwell_A_side0/episodes.json": {
+      "bytes": 46999,
+      "sha256": "6431eddda29e2cf1400a38f7b51d999ae8a9fd711ac82aa227d788ec413c4afb"
+    },
+    "short_dwell_A_side0/manifest.json": {
+      "bytes": 6221,
+      "sha256": "cc8108d9609650a7cfb5db9b59c5c35feecf1b45a8213be0eaaad4ae4d33c69d"
+    },
+    "short_dwell_A_side0/per_episode.csv": {
+      "bytes": 8057,
+      "sha256": "d46752639c979d2171fd581bda3d084991ce94d67955121833b3fb3da9a03149"
+    },
+    "short_dwell_A_side0/progress.json": {
+      "bytes": 78,
+      "sha256": "168a79ea18f78f9b1ec1284037bb3a0be5259d0dbb62ca94de6702fa955e891e"
+    },
+    "short_dwell_A_side0/summary.json": {
+      "bytes": 981,
+      "sha256": "ac5422a9355f4ee1feab1c39e01f7c17ed9c651fc856841d321985434150e762"
+    },
+    "short_dwell_A_side0.log": {
+      "bytes": 10391,
+      "sha256": "c63c03e25395415a22dbcb3cb5ea2f5ce9987a5c09ae857b18cf4f5419f6a1f1"
+    },
+    "short_dwell_A_side1/episodes.json": {
+      "bytes": 46966,
+      "sha256": "525a7ec8e6a53a48267a7f48fccf49a44b0d31decb7a715de05881762656f0a7"
+    },
+    "short_dwell_A_side1/manifest.json": {
+      "bytes": 6221,
+      "sha256": "e8c59668f1c9031043c50511f9cf330a817aba3415b6af48a99f99ed4178a13b"
+    },
+    "short_dwell_A_side1/per_episode.csv": {
+      "bytes": 8024,
+      "sha256": "aa16fa159f88ccea60bf3a89ae4fc39a30071c80b0c3fbf7b991244a1440411c"
+    },
+    "short_dwell_A_side1/progress.json": {
+      "bytes": 78,
+      "sha256": "467d1f44d23a5259ba7dc5c37d6fc2da6554b69ccec16d602799c425fde75381"
+    },
+    "short_dwell_A_side1/summary.json": {
+      "bytes": 994,
+      "sha256": "8c3c3d6ac1ba0bf9422f3f6a0177fb3135dc53390eed5070fcb738ad79291ef3"
+    },
+    "short_dwell_A_side1.log": {
+      "bytes": 10391,
+      "sha256": "eabc57d31983d533267c57935b2fbb857a701e990101909c8a7d7c3f7b803b92"
+    },
+    "status.json": {
+      "bytes": 669,
+      "sha256": "a7aa9f465d245096aab2544a6232ac8df3b3f49105cad135c135914b495f3982"
+    },
+    "summarize_duel_opponent_probe.py": {
+      "bytes": 8330,
+      "sha256": "eac3ed837401a1c5c73ae82c27481d54e2a0fff8d1dd68299d466796821a4e54"
+    },
+    "test_duel_opponent_variants.py": {
+      "bytes": 2546,
+      "sha256": "7d4e4f65a391bd1f41eb8417e8cdd8649d0d5a4fb68282f4cf0124218755f081"
+    },
+    "結果說明.txt": {
+      "bytes": 2192,
+      "sha256": "e4f07cf6e2bb1d502cea3e788a982801e4b6742b7e4de1bb7e45dee0ff689768"
+    }
+  }
+}
