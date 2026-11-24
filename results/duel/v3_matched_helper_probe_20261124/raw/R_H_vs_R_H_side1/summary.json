@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "official": false,
+  "total": {
+    "episodes": 64,
+    "end_counts": {
+      "goal_for": 4,
+      "goal_against": 8,
+      "ball_out": 51,
+      "learner_fell": 0,
+      "opponent_fell": 0,
+      "learner_oob": 0,
+      "opponent_oob": 0,
+      "timeout": 1,
+      "both_fell": 0,
+      "both_oob": 0
+    },
+    "goal_for_rate": 0.0625,
+    "goal_against_rate": 0.125,
+    "timeout_rate": 0.015625,
+    "aborted_rate": 0.796875,
+    "goal_difference_per_episode": -0.0625,
+    "winning_time_s": {
+      "mean": 3.7750000000000004,
+      "median": 3.62,
+      "p90": 4.1160000000000005
+    },
+    "end_time_mean_s": 6.0809375,
+    "contact_attribution_unknown_goal_rounds": 0
+  },
+  "actor_and_normalizer_unchanged": true,
+  "checkpoint_sha256": "f50f7fade3a12abea06f12acdfc904d2029a57238ed864aaa940e73a1df9cfc2",
+  "per_episode_csv_sha256": "6348f640426dc80269514db295deccf8e97a7ba1d8c5e0a51afc8f9136c2feb6",
+  "helper_opponent_guard_verified_starts": 141,
+  "helper_opponent_guard_violations": 0,
+  "actor_used": false,
+  "new_training": false,
+  "wall_seconds": 37.76683903200001
+}
