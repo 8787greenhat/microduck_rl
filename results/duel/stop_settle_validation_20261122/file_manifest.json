@@ -1,0 +1,79 @@
+{
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "4ce4b6e6b8435f8c3a8387387732964a2ebf0183e8d77b8247ae8061b033e462",
+      "bytes": 10
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "33a311bdfcd7920277a54c9a3adb39d7b9b3c35b123eead77622903e92ca1ec3",
+      "bytes": 22
+    },
+    {
+      "path": "cpu_stop_settle_tests.log",
+      "sha256": "e7b6b42ae617484bd4c96dfa2d6c82d98778a9331b6c8694dfcbe700c4cb14b7",
+      "bytes": 1183
+    },
+    {
+      "path": "cpu_v2_regression_tests.log",
+      "sha256": "0c6c56b51f7d049c4e2586b0c627f1019e34906b80cef4c16c1b8a0c8cad6b9c",
+      "bytes": 1964
+    },
+    {
+      "path": "final_fixed_short64.json",
+      "sha256": "6f5eb73b4c6b9ba9b2abf859e59d8ba0756b1dd3d90f21047d63ecefa1ec677b",
+      "bytes": 69989
+    },
+    {
+      "path": "final_frozen_policy_side0.json",
+      "sha256": "933ae346674d6199d0825886efaf5a297ef311e8182a7287eb4edb0981434373",
+      "bytes": 58689
+    },
+    {
+      "path": "final_synthetic_side0.json",
+      "sha256": "11318890993e62e3d17212ffd899c4978ea009839b591b992e108443b1bfdabf",
+      "bytes": 60229
+    },
+    {
+      "path": "final_synthetic_side1.json",
+      "sha256": "0bfcfb6cafe51814a4bb964b03ca6b504cc14484f67aa366e034cbcf5bd42f3d",
+      "bytes": 60804
+    },
+    {
+      "path": "inputs/model_1999.pt",
+      "sha256": "52fcc4eed3e7428f78e4b006365e49ebb1f1dc8c982259f3f6e88192bda8823a",
+      "bytes": 642869
+    },
+    {
+      "path": "inputs/model_1999.pt.sha256",
+      "sha256": "665ba3ed3bd3ca292064c1c046db382827cd7d00270af3bc799c9830ddc20891",
+      "bytes": 80
+    },
+    {
+      "path": "original_policy_control.json",
+      "sha256": "56956f6173964da249b3879902027f40104d1d97539e8df612d8bc698ed3cfd9",
+      "bytes": 41835
+    },
+    {
+      "path": "publication_manifest.json",
+      "sha256": "febee1acdf33bace64b4fca049ec9d07e59478eeb2a04621a9c52e42e8084f5f",
+      "bytes": 1760
+    },
+    {
+      "path": "README.md",
+      "sha256": "3905ed3d59c895dd2971f19ff350a9823c137f6d6f4b4db7c15bf6893a5ac334",
+      "bytes": 2613
+    },
+    {
+      "path": "verification.json",
+      "sha256": "e3c0dbda1751c5596f98f7c19beebb97d01522fbeadaa04a045c0f1321f5f88c",
+      "bytes": 2321
+    },
+    {
+      "path": "verify_package.py",
+      "sha256": "45e9efd84c03675bdbc8376b44269d49baa3d1b40d1431566075aa1e70a462df",
+      "bytes": 2601
+    }
+  ]
+}

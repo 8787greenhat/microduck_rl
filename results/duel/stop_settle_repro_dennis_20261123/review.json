@@ -1,0 +1,72 @@
+{
+  "verified_received_files": 11,
+  "original_files_preserved": true,
+  "source_commit": "042b56d4e8de0f85f97912230a30b626e04be1c8",
+  "new_training": false,
+  "formal_fixed600": false,
+  "tests": [
+    {
+      "case": "stop_settle_control_02",
+      "peer": {
+        "kick_rounds": 57,
+        "goals": 34,
+        "kick_then_rightfoot_contact_goals": 34
+      },
+      "joshua": {
+        "kick_rounds": 56,
+        "goals": 41,
+        "kick_then_rightfoot_contact_goals": 41
+      },
+      "peer_end_counts": {
+        "goal_for": 34,
+        "ball_out": 26,
+        "learner_oob": 3,
+        "goal_against": 1
+      }
+    },
+    {
+      "case": "stop_settle_policy_01",
+      "peer": {
+        "kick_rounds": 55,
+        "goals": 48,
+        "kick_then_rightfoot_contact_goals": 44
+      },
+      "joshua": {
+        "kick_rounds": 52,
+        "goals": 49,
+        "kick_then_rightfoot_contact_goals": 43
+      },
+      "peer_end_counts": {
+        "goal_for": 48,
+        "ball_out": 15,
+        "goal_against": 1
+      }
+    },
+    {
+      "case": "stop_settle_fixed64_01",
+      "peer": {
+        "kick_rounds": 26,
+        "goals": 4,
+        "kick_then_rightfoot_contact_goals": 1
+      },
+      "joshua": {
+        "kick_rounds": 27,
+        "goals": 1,
+        "kick_then_rightfoot_contact_goals": 1
+      },
+      "peer_end_counts": {
+        "goal_against": 3,
+        "ball_out": 55,
+        "goal_for": 4,
+        "opponent_oob": 1,
+        "timeout": 1
+      }
+    }
+  ],
+  "peer_versions": "commit: 042b56d4e8de0f85f97912230a30b626e04be1c8 (branch joshua/duel-stop-settle, working tree clean)\ngpu/driver: NVIDIA GeForce RTX 4050 Laptop GPU, 595.99.02\nos: native Ubuntu Linux, kernel 6.8.0-149-generic, prime-select on-demand\npython 3.12.3\ntorch 2.9.1+cu128 cuda runtime 12.8\nmjlab 1.3.0\nmujoco 3.10.0\nmujoco-warp 3.8.1\nwarp-lang 1.12.0\nrsl-rl-lib 5.0.1\nuv.lock sha256: 2eeeb680025baa737e7ccf3a87da3695a9d49b228de0bb60d8af0c022ab5f1aa\ne36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c  policies/alpha_walking.onnx\n147a32c388c6b19111b3ac3b550a9a6dc8b8bf267118af4d8c3712522eedb5af  policies/ball_kick_right.onnx\n",
+  "limitations": [
+    "One peer run per case, 64 episodes; does not establish a statistical cross-machine tolerance.",
+    "Preparation layouts differ from full duel benchmark; no new trained PPO policy.",
+    "No code or installed binaries from the received package were executed during review."
+  ]
+}
