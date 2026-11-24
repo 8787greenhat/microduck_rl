@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/lingchentseng/projects/microduck_duel_v3_seed1_e8b9756/scripts/eval_duel_v3.py", line 156, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/home/lingchentseng/projects/microduck_duel_v3_seed1_e8b9756/scripts/eval_duel_v3.py", line 23, in main
+    if a.worker_side is None: return parent(a)
+                                     ^^^^^^^^^
+  File "/home/lingchentseng/projects/microduck_duel_v3_seed1_e8b9756/scripts/eval_duel_v3.py", line 132, in parent
+    raise RuntimeError(f'Side {side} failed; inspect {a.out}/side_{side}.log. No automatic retry.')
+RuntimeError: Side 0 failed; inspect /mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/duel_v3_PPO_vs_A_seed1_20261124_091746/fixed600_model_100/side_0.log. No automatic retry.
