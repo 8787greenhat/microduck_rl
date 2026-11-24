@@ -1,0 +1,50 @@
+{
+  "complete": true,
+  "CPU_tests_passed": 24,
+  "physics_control_verified": true,
+  "64x5_actual_optimization_verified": true,
+  "1024x5_actual_optimization_verified": true,
+  "76D_ONNX_normalizer_export_verified": true,
+  "two_direction_evaluator_smoke_verified": true,
+  "no_formal_score_claimed": true,
+  "formal_plan": {
+    "version": "duel_v3",
+    "task": "PPO vs fixed geometric A with fast approach and observable stop-settle controller",
+    "num_envs": 1024,
+    "iterations": 2000,
+    "seed": 1,
+    "fresh_initialization": true,
+    "resume": false,
+    "old_or_smoke_checkpoint_loaded": false,
+    "curriculum": false,
+    "self_play": false,
+    "training_learner_side": 0,
+    "actor_critic_observation_dim": 76,
+    "low_level_observation_dim_per_robot": 61,
+    "rollout_steps_per_env": 24,
+    "mini_batches": 4,
+    "learning_epochs": 5,
+    "learning_rate": 0.0003,
+    "learning_rate_schedule": "fixed",
+    "entropy_coefficient": 0.002,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "hidden_dims": [
+      128,
+      128
+    ],
+    "save_interval": 100,
+    "final_checkpoint": "model_1999.pt",
+    "smoke_gate": "64 envs x 5 actual PPO updates",
+    "capacity_gate": "1024 envs x 5 actual PPO updates",
+    "final_evaluation": "100 fixed layouts x 3 repeats x 2 directions; RNG seed 0",
+    "intermediate_checkpoint_evaluations_after_training": [
+      100,
+      500,
+      1000
+    ],
+    "fixed_layouts_sha256": "02e8cafd3413af366f94f5940e67c3ba03ba8c3aa374b0ae69a241e97dfcadd9",
+    "automatic_restart_on_failure": false,
+    "start_other_seeds": false
+  }
+}

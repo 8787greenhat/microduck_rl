@@ -1,0 +1,92 @@
+{
+  "complete": true,
+  "official": true,
+  "policy": "PPO v2 vs fixed A",
+  "total": {
+    "episodes": 600,
+    "end_counts": {
+      "goal_for": 106,
+      "goal_against": 13,
+      "ball_out": 461,
+      "learner_fell": 0,
+      "opponent_fell": 1,
+      "learner_oob": 7,
+      "opponent_oob": 3,
+      "timeout": 9,
+      "both_fell": 0,
+      "both_oob": 0
+    },
+    "goal_for_rate": 0.17666666666666667,
+    "goal_against_rate": 0.021666666666666667,
+    "timeout_rate": 0.015,
+    "aborted_rate": 0.7866666666666666,
+    "goal_difference_per_episode": 0.155,
+    "winning_time_s": {
+      "mean": 5.655471698113208,
+      "median": 4.92,
+      "p90": 8.29
+    },
+    "end_time_mean_s": 6.621133333333334,
+    "contact_attribution_unknown_goal_rounds": 1
+  },
+  "by_side": {
+    "0": {
+      "episodes": 300,
+      "end_counts": {
+        "goal_for": 52,
+        "goal_against": 4,
+        "ball_out": 237,
+        "learner_fell": 0,
+        "opponent_fell": 0,
+        "learner_oob": 4,
+        "opponent_oob": 1,
+        "timeout": 2,
+        "both_fell": 0,
+        "both_oob": 0
+      },
+      "goal_for_rate": 0.17333333333333334,
+      "goal_against_rate": 0.013333333333333334,
+      "timeout_rate": 0.006666666666666667,
+      "aborted_rate": 0.8066666666666666,
+      "goal_difference_per_episode": 0.16,
+      "winning_time_s": {
+        "mean": 5.633846153846154,
+        "median": 4.88,
+        "p90": 7.414
+      },
+      "end_time_mean_s": 6.5502666666666665,
+      "contact_attribution_unknown_goal_rounds": 0
+    },
+    "1": {
+      "episodes": 300,
+      "end_counts": {
+        "goal_for": 54,
+        "goal_against": 9,
+        "ball_out": 224,
+        "learner_fell": 0,
+        "opponent_fell": 1,
+        "learner_oob": 3,
+        "opponent_oob": 2,
+        "timeout": 7,
+        "both_fell": 0,
+        "both_oob": 0
+      },
+      "goal_for_rate": 0.18,
+      "goal_against_rate": 0.03,
+      "timeout_rate": 0.023333333333333334,
+      "aborted_rate": 0.7666666666666667,
+      "goal_difference_per_episode": 0.15,
+      "winning_time_s": {
+        "mean": 5.676296296296297,
+        "median": 4.92,
+        "p90": 8.490000000000002
+      },
+      "end_time_mean_s": 6.692,
+      "contact_attribution_unknown_goal_rounds": 1
+    }
+  },
+  "wall_seconds": 127.63929330999963,
+  "per_episode_csv_sha256": "07cbc1f37eda5f9223a7d4c442d11b38da7923fd0d5f0090b1989b7add02f57d",
+  "training_started": false,
+  "execution": "Fresh process per direction; same v1 layouts, game rules and RNG seed 0"
+}

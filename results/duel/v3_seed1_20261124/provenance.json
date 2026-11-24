@@ -1,0 +1,33 @@
+{
+  "source_commit": "e8b9756c03ae66a693275ee84b61a36aab367b2f",
+  "training_seed": 1,
+  "training_envs": 1024,
+  "completed_iterations": 2000,
+  "optimizer_steps": 40000,
+  "PPO": true,
+  "curriculum": false,
+  "self_play": false,
+  "opponent": "fixed geometric A",
+  "fresh_initialization": true,
+  "resume": false,
+  "final_checkpoint_sha256": "f50f7fade3a12abea06f12acdfc904d2029a57238ed864aaa940e73a1df9cfc2",
+  "uv_lock_sha256": "2eeeb680025baa737e7ccf3a87da3695a9d49b228de0bb60d8af0c022ab5f1aa",
+  "official_skill_sha256": {
+    "alpha_walking.onnx": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+    "ball_kick_right.onnx": "147a32c388c6b19111b3ac3b550a9a6dc8b8bf267118af4d8c3712522eedb5af"
+  },
+  "python": "3.12.14 (main, Sep 29 2026, 15:01:18) [Clang 22.1.3 ]",
+  "versions": {
+    "torch": "2.9.1",
+    "mjlab": "1.3.0",
+    "mujoco": "3.10.0",
+    "mujoco-warp": "3.8.1",
+    "warp-lang": "1.12.0",
+    "rsl-rl-lib": "5.0.1"
+  },
+  "training_and_final_evaluation_complete": true,
+  "intermediate_evaluation_complete": false,
+  "model_100_evaluation": "side 0 worker segfault during PyTorch import; returncode -11, parent returncode 1; cause undetermined",
+  "model_500_and_1000_evaluations": "not started after model_100 worker failed",
+  "this_publication_performed_new_training_or_simulation": false
+}

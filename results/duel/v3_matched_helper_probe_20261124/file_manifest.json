@@ -1,0 +1,256 @@
+{
+  "files": {
+    ".gitattributes": {
+      "bytes": 27,
+      "sha256": "09bc942f7093fc4e9dec54d622092ae5e8622e37deed6f3c55f31e73b19ab2cd"
+    },
+    "raw/all_512_episodes.csv": {
+      "bytes": 59560,
+      "sha256": "36f64bfd8484fcd16389cb1e752bf2d94a0d8171580a0b8c6e0aa49951643938"
+    },
+    "raw/comparison_summary.json": {
+      "bytes": 14338,
+      "sha256": "47ad924c6b580f0a9c3c39821e37170f5db3d545a4841b319b22885095c4a23a"
+    },
+    "raw/duel_matched_helper.py": {
+      "bytes": 4750,
+      "sha256": "8a20a15eb8aa7b0c52024f0869dd2ba85644d613290f871cf7f794a897f414dc"
+    },
+    "raw/eval_duel_matched_helper.py": {
+      "bytes": 8426,
+      "sha256": "95477dce746f5d0a53bf9db5f6a4e846a14c898f401d32ac17feb6ef3c1528b7"
+    },
+    "raw/file_manifest.json": {
+      "bytes": 8311,
+      "sha256": "ff9b2f5958cf85fda902cb61f2187ce2fecc11f807d9bc4099db9ec19120d224"
+    },
+    "raw/P_H_vs_A_side0/episodes.json": {
+      "bytes": 46642,
+      "sha256": "cecd1cddb1b312da8caa36954493a7d11c8f723b518d32e36c1aa2009c7dcf77"
+    },
+    "raw/P_H_vs_A_side0/manifest.json": {
+      "bytes": 6854,
+      "sha256": "67a67e5d0d9c966c538c988248e98a8ae7f0ee102c6f2a4257f77f76c3bf39e5"
+    },
+    "raw/P_H_vs_A_side0/per_episode.csv": {
+      "bytes": 7700,
+      "sha256": "b91867b4ba19afaa83617d562c8fa4648cfed320d570f79cd985dd3e50c3be51"
+    },
+    "raw/P_H_vs_A_side0/progress.json": {
+      "bytes": 73,
+      "sha256": "e0deae2235fc7c1f039a3c6bc14a8143e06bc3e1f82f9a9f7b8abf51d1aa97c1"
+    },
+    "raw/P_H_vs_A_side0/summary.json": {
+      "bytes": 1094,
+      "sha256": "c3bacbc77a45db449f624c5058649b8735fd06e8038163a74079daf6ec206cda"
+    },
+    "raw/P_H_vs_A_side0.log": {
+      "bytes": 10362,
+      "sha256": "a240607789b1e8d1fb8d2c9c7df5d3f5f5f8d7bcb663b5cb38bdc0b90fcb137e"
+    },
+    "raw/P_H_vs_A_side1/episodes.json": {
+      "bytes": 46630,
+      "sha256": "fd572c9b71194b9739c5e4d3df39e898c924f3767aceb43a1004fc8cdf4ece7b"
+    },
+    "raw/P_H_vs_A_side1/manifest.json": {
+      "bytes": 6854,
+      "sha256": "6d0eb38b72e020d88e36eac960a8f3326a7678e5b5fcba5fbc46b8da077f7cc6"
+    },
+    "raw/P_H_vs_A_side1/per_episode.csv": {
+      "bytes": 7688,
+      "sha256": "08103f26c66067fa2c979c82ef2689958a5b5b1cd44e373ff2aad50cd6713541"
+    },
+    "raw/P_H_vs_A_side1/progress.json": {
+      "bytes": 73,
+      "sha256": "27545927c051cc2eaee43667cf67d4f2648608c2c07117773b414d481970486c"
+    },
+    "raw/P_H_vs_A_side1/summary.json": {
+      "bytes": 1123,
+      "sha256": "c18cdfafa3e4cce71e3e5b8be70fdd20f563969c0d89cbb41fb4ed155961691e"
+    },
+    "raw/P_H_vs_A_side1.log": {
+      "bytes": 10361,
+      "sha256": "c13cfb511e7e51b81452a5324c76d54bc8b4bcdb82b0d6f9750ff88376c5ae5e"
+    },
+    "raw/P_H_vs_R_H_side0/episodes.json": {
+      "bytes": 46853,
+      "sha256": "e6d8f7e0739c94803560a65fd9ba9ef683dae63a047d4e7d06f5c293c4c54097"
+    },
+    "raw/P_H_vs_R_H_side0/manifest.json": {
+      "bytes": 6890,
+      "sha256": "94e908e8731545daf03441933ec948616716091a89cd5a3f586a58067e345412"
+    },
+    "raw/P_H_vs_R_H_side0/per_episode.csv": {
+      "bytes": 7911,
+      "sha256": "5558f295b82deee7be6b67b4f3a0ae12c91037742235bd86dae55ec93431408f"
+    },
+    "raw/P_H_vs_R_H_side0/progress.json": {
+      "bytes": 78,
+      "sha256": "4a692f153b0bc776daf723684e0b5d46b0c1763baea70831404fcf935ca73669"
+    },
+    "raw/P_H_vs_R_H_side0/summary.json": {
+      "bytes": 1080,
+      "sha256": "15b30b59b94a15db27472139d8cba6f056643e660e9ff44b34c8bfcfe31607f0"
+    },
+    "raw/P_H_vs_R_H_side0.log": {
+      "bytes": 10373,
+      "sha256": "8387b9136ea405a59cfc2fc3ca419eb424660b07d11ac8db493b752bc0269a24"
+    },
+    "raw/P_H_vs_R_H_side1/episodes.json": {
+      "bytes": 46850,
+      "sha256": "03e4683fc1fa2257558600218e547ee35291c2145a344327cce6c6520808fc86"
+    },
+    "raw/P_H_vs_R_H_side1/manifest.json": {
+      "bytes": 6890,
+      "sha256": "cd58393d4f62eeac956ad1b6caa1ba010f1418dbb73479e434e6e52b604c847b"
+    },
+    "raw/P_H_vs_R_H_side1/per_episode.csv": {
+      "bytes": 7908,
+      "sha256": "147919f9cd6e4fed966b8b56f53ac263c1d6e9a24fd46cb673d34b943fc56c6d"
+    },
+    "raw/P_H_vs_R_H_side1/progress.json": {
+      "bytes": 73,
+      "sha256": "0976b171eba652d73a83d6de02f44b44e7aa331aa23cdb2759b1d9f2bc62a386"
+    },
+    "raw/P_H_vs_R_H_side1/summary.json": {
+      "bytes": 1100,
+      "sha256": "d631fa80f78ae3117ea3d8a026158e461fce10ab7b6bb0828a4a37d993013a70"
+    },
+    "raw/P_H_vs_R_H_side1.log": {
+      "bytes": 10373,
+      "sha256": "5f463bd49f3387f0263e7163913cfd4d8cabf339a2560f553d7ae4fb721a687b"
+    },
+    "raw/R_H_vs_A_side0/episodes.json": {
+      "bytes": 46659,
+      "sha256": "ea685cff5ce40030cdd5c28f96e06403bd0800b3fd151ad53e6389471d9b8e3e"
+    },
+    "raw/R_H_vs_A_side0/manifest.json": {
+      "bytes": 6870,
+      "sha256": "29199437692c9ac53af821991828101cdab433a7b011895573baa033045dbada"
+    },
+    "raw/R_H_vs_A_side0/per_episode.csv": {
+      "bytes": 7717,
+      "sha256": "2ed090fcc4509b23e9732a733912be2992d38f2ad863988c2a48a0e8657ff55c"
+    },
+    "raw/R_H_vs_A_side0/progress.json": {
+      "bytes": 79,
+      "sha256": "a8f18433989494efb1d6156d923886edbb1caf7e43d23cd5001474e8e0f0c927"
+    },
+    "raw/R_H_vs_A_side0/summary.json": {
+      "bytes": 1112,
+      "sha256": "215d7efb485120991f32fc0f44767fcb601e26f8e3a9dfaf8bab51ad7c4c48ed"
+    },
+    "raw/R_H_vs_A_side0.log": {
+      "bytes": 10329,
+      "sha256": "4b74cf9ab7d3eb8cada8da6fe9b250a3974c08898211ef0686841986b00301db"
+    },
+    "raw/R_H_vs_A_side1/episodes.json": {
+      "bytes": 46658,
+      "sha256": "e6edaf6c140b8822dab19932a91b2cf87ecb2ddd0a94118b3aac1f2b892381a2"
+    },
+    "raw/R_H_vs_A_side1/manifest.json": {
+      "bytes": 6870,
+      "sha256": "0c9ec86be763604cd7e10a8c76f1b8ad669554647f4c0f045e8bca5e91843930"
+    },
+    "raw/R_H_vs_A_side1/per_episode.csv": {
+      "bytes": 7716,
+      "sha256": "40f6b724cac3f1387628d3c30875b98a74d3953cb18302393e2597b0fa6135f0"
+    },
+    "raw/R_H_vs_A_side1/progress.json": {
+      "bytes": 78,
+      "sha256": "33bf3f43dc8a9a1155c901e6ff931b143c07a77352ee8477ba9d2748ecf30d12"
+    },
+    "raw/R_H_vs_A_side1/summary.json": {
+      "bytes": 1112,
+      "sha256": "cd055594f7ed72b43be1dcfef488195473aaa79af80941b94ef55745d81df58f"
+    },
+    "raw/R_H_vs_A_side1.log": {
+      "bytes": 10361,
+      "sha256": "286a8eb40267d616d212ebedf874b1258e96fe4fe2811c23484e4756d5718a42"
+    },
+    "raw/R_H_vs_R_H_side0/episodes.json": {
+      "bytes": 46875,
+      "sha256": "280c4c694a84da11c7b9f540c514c54480a61885a72debe0514c869a75e225da"
+    },
+    "raw/R_H_vs_R_H_side0/manifest.json": {
+      "bytes": 6891,
+      "sha256": "b4d60dedc443a227fd97d6fa3d06ad4cc205ea8b57f083a365bd13ed087f0f58"
+    },
+    "raw/R_H_vs_R_H_side0/per_episode.csv": {
+      "bytes": 7933,
+      "sha256": "bca0f3cc33dab39caf42664cb82f06f9fddbeed3bd468cd173f629ea3af4e07f"
+    },
+    "raw/R_H_vs_R_H_side0/progress.json": {
+      "bytes": 78,
+      "sha256": "1d1185acde0363e47a17de1a653be556f90d90539140af4accf62fa1591087d9"
+    },
+    "raw/R_H_vs_R_H_side0/summary.json": {
+      "bytes": 1098,
+      "sha256": "9d679637d73ac2cadc9f531db29c75450ae59cad1e68047007e0f4a55b01230f"
+    },
+    "raw/R_H_vs_R_H_side0.log": {
+      "bytes": 10339,
+      "sha256": "0829785c91f31b56c88d9f71e0fe9bad305080ee855568b0f1ab0f04093eca02"
+    },
+    "raw/R_H_vs_R_H_side1/episodes.json": {
+      "bytes": 46876,
+      "sha256": "c96a7fcd871c17569e955e7e85deb6ad4c66f62862aafd300e0caaa99708b0ee"
+    },
+    "raw/R_H_vs_R_H_side1/manifest.json": {
+      "bytes": 6891,
+      "sha256": "40f58d2a288f771857efdb99e599f9bbc38c6ae317af78ef96079dfc035550a6"
+    },
+    "raw/R_H_vs_R_H_side1/per_episode.csv": {
+      "bytes": 7934,
+      "sha256": "6348f640426dc80269514db295deccf8e97a7ba1d8c5e0a51afc8f9136c2feb6"
+    },
+    "raw/R_H_vs_R_H_side1/progress.json": {
+      "bytes": 78,
+      "sha256": "71f273a8c5a7041483c37ebc5a37032f6ddb1a12452a7e31d9a0d521bba5bc43"
+    },
+    "raw/R_H_vs_R_H_side1/summary.json": {
+      "bytes": 1109,
+      "sha256": "341e5b8afd79342bd316a56410bc4bb8720e83c89114abc8ec8d55062f8e2935"
+    },
+    "raw/R_H_vs_R_H_side1.log": {
+      "bytes": 10373,
+      "sha256": "a9f50dbf1ab6271a3ebb35610b1fc438f4a0467aca9ac2852ee1e4746c42c1cd"
+    },
+    "raw/status.json": {
+      "bytes": 813,
+      "sha256": "a0c855144af0db79cd2f701a87123d9de001aa58482cfba26df6a82b3742c881"
+    },
+    "raw/summarize_duel_matched_helper.py": {
+      "bytes": 10024,
+      "sha256": "9524e75d7abb20635d67b62ccfe96a799e08f067b3c852512c2065026eb06fa5"
+    },
+    "raw/test_duel_matched_helper.py": {
+      "bytes": 3770,
+      "sha256": "a599e065ff28d692ed0b56daeac62d35f8dc6afef051f6b27f1e2be0970bb548"
+    },
+    "raw/公平控制器比較結果.txt": {
+      "bytes": 3009,
+      "sha256": "1edba1cc0ef595b715ec2f59c75141f9451ba46162ee67076eacbe8f7d6c7870"
+    },
+    "README.md": {
+      "bytes": 5037,
+      "sha256": "f5960d75a93be121d49612c4b446cd16276fff7d7712b5da3427385208a128ad"
+    },
+    "reproduce/duel_matched_helper.py": {
+      "bytes": 4750,
+      "sha256": "8a20a15eb8aa7b0c52024f0869dd2ba85644d613290f871cf7f794a897f414dc"
+    },
+    "reproduce/run_probe.py": {
+      "bytes": 8352,
+      "sha256": "4dcad513f3d2ce53810154e848869e2364dade15667fa8b6966c3e41dd06954e"
+    },
+    "reproduce/test_duel_matched_helper.py": {
+      "bytes": 3770,
+      "sha256": "a599e065ff28d692ed0b56daeac62d35f8dc6afef051f6b27f1e2be0970bb548"
+    },
+    "verify_package.py": {
+      "bytes": 3927,
+      "sha256": "441eddc12ddeaa81b8b0ddf4401f9b1d2f48ada68722dd8b10ea7f2aff371c55"
+    }
+  }
+}

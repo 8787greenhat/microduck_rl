@@ -1,0 +1,3 @@
+# Preserve source artifact bytes, including CSV CRLF and binary checkpoints.
+** -text
+*.log -whitespace

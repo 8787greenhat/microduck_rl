@@ -1,0 +1,20 @@
+[mdp] Patches 1-2 active: NaN-safe reward/advantage
+[mdp] Patch 4 active: ONNX export filters passive_* joints
+[mdp] Patch 5 active: MICRODUCK_WARM_START=1 restarts curricula after checkpoint load
+render scene 0 frame 1/79
+render scene 0 frame 51/79
+render scene 1 frame 1/97
+render scene 1 frame 51/97
+render scene 6 frame 1/213
+render scene 6 frame 51/213
+render scene 6 frame 101/213
+render scene 6 frame 151/213
+render scene 6 frame 201/213
+render scene 2 frame 1/98
+render scene 2 frame 51/98
+{
+  "complete": true,
+  "combined_video": "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/duel_followup_20261124/videos/duel_v3_seed1_diagnostics.mp4",
+  "decoded_frames": 587,
+  "duration_s": 23.48
+}

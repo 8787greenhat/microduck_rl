@@ -1,0 +1,64 @@
+{
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 9,
+      "sha256": "48747480eddba024928d03be9bf83dc579e5515768647507a767e8187a85c9ab"
+    },
+    {
+      "path": "capacity1024x5_verified.json",
+      "bytes": 580,
+      "sha256": "73ea36a38dd05d95deeb0b3098e90f5ddf09fe25ee3fabb62931e5250d40fb48"
+    },
+    {
+      "path": "control_physics_verified.json",
+      "bytes": 21724,
+      "sha256": "df0f55c034408b5860595128e27aa5cc19c0ab166aaf5a1dde397dacfdfea623"
+    },
+    {
+      "path": "cpu_stop_tests.log",
+      "bytes": 1183,
+      "sha256": "921aa05eecd7eb8a3f064655a1b9dadd0e08f76c2d72405910fdf320806999eb"
+    },
+    {
+      "path": "cpu_v2_v3_tests.log",
+      "bytes": 320,
+      "sha256": "ceeca13b661e0ff910a6e7014777b1a3b64b0e1de5ac1dac81b2f5ab3d8243c8"
+    },
+    {
+      "path": "eval_smoke8_summary.json",
+      "bytes": 2290,
+      "sha256": "3379ce150f7c7e64a6330ac14ecadc5398e4a8d3f4fad27e25c2b625dc9a68c5"
+    },
+    {
+      "path": "onnx_export_verified.json",
+      "bytes": 653,
+      "sha256": "d39918174d5ef36e7d1d2420a79793474f1cfbbb763b9ef21f8a1c27f3eeb6ed"
+    },
+    {
+      "path": "README.md",
+      "bytes": 582,
+      "sha256": "fe0ac3c5e17ecadaf4b0673241c91c7ac82b0518ecf8e29a94717ce0dd5c65cd"
+    },
+    {
+      "path": "smoke64x5_verified.json",
+      "bytes": 580,
+      "sha256": "1c5920ee6dd8382c39281e9c238f6d608cea56427b310cbe75c07072913e99ac"
+    },
+    {
+      "path": "tested_source_sha256_LF.json",
+      "bytes": 2930,
+      "sha256": "671a028a980d09afe22a2127062ec0343f2ecd0a283f00b158e85b8f5b78801c"
+    },
+    {
+      "path": "validation_status.json",
+      "bytes": 1591,
+      "sha256": "89c383b3a37f999988a5972a0ee463c34a9be2e9f29e429d09dfaab7a781b881"
+    },
+    {
+      "path": "walk_speed_calibration.json",
+      "bytes": 3099,
+      "sha256": "2b1bd500b0bbadb49a830fabec58bd130ea95329a67415e0d11f394970412467"
+    }
+  ]
+}

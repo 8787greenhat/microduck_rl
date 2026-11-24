@@ -1,0 +1,187 @@
+[mdp] Patches 1-2 active: NaN-safe reward/advantage
+[mdp] Patch 4 active: ONNX export filters passive_* joints
+[mdp] Patch 5 active: MICRODUCK_WARM_START=1 restarts curricula after checkpoint load
+Warp 1.12.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.3
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4060 Laptop GPU" (8 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /home/lingchentseng/projects/microduck_rl_4060_7fa6298/.local-runtime/warp-cache-driver610
+Module mujoco_warp._src.smooth 95a0b8b load on device 'cuda:0' took 5.80 ms  (cached)
+Module mujoco_warp._src.constraint 27c5750 load on device 'cuda:0' took 2.64 ms  (cached)
+Module mujoco_warp._src.collision_driver 88f7770 load on device 'cuda:0' took 0.68 ms  (cached)
+Module mujoco_warp._src.sensor 7fc0378 load on device 'cuda:0' took 3.27 ms  (cached)
+Module mujoco_warp._src.forward 8ebfcb1 load on device 'cuda:0' took 1.50 ms  (cached)
+Module mujoco_warp._src.passive 1a5e55c load on device 'cuda:0' took 1.08 ms  (cached)
+Module mujoco_warp._src.support dd3f924 load on device 'cuda:0' took 0.65 ms  (cached)
+Module mujoco_warp._src.solver b116efb load on device 'cuda:0' took 2.13 ms  (cached)
+Module mujoco_warp._src.derivative d0e2fd7 load on device 'cuda:0' took 0.95 ms  (cached)
+Module mujoco_warp._src.io 4b387a0 load on device 'cuda:0' took 1.82 ms  (cached)
+Setting seed: 0
+/home/lingchentseng/projects/microduck_rl_4060_multiseed_1a8a105/.venv/lib/python3.12/site-packages/mjlab/entity/entity.py:149: UserWarning: Actuator config matched 14 joint(s) but the same expressions also match 7 site(s): imu, left_foot, head_camera, tof, head_imu, mouth_tip, right_foot. Add a separate config with transmission_type=TransmissionType.SITE if those should be actuated too.
+  self._add_actuators()
+Warp DeprecationWarning: The symbol `warp.context.runtime` will soon be removed from the public API. It can still be accessed from `warp._src.context.runtime` but might be changed or removed without notice.
+Module _nxn_broadphase__locals__kernel_e73b1315 e73b131 load on device 'cuda:0' took 0.77 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_c1d0c893 c1d0c89 load on device 'cuda:0' took 1.86 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_bd5ecce0 bd5ecce load on device 'cuda:0' took 2.33 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_079dfa94 079dfa9 load on device 'cuda:0' took 2.02 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_2b8f1747 2b8f174 load on device 'cuda:0' took 1.15 ms  (cached)
+Module _efc_contact_init__locals__kernel_346f6f0c 346f6f0 load on device 'cuda:0' took 0.82 ms  (cached)
+Module _efc_contact_jac_sparse__locals__kernel_86e47ecb 86e47ec load on device 'cuda:0' took 0.64 ms  (cached)
+Module _efc_contact_update__locals__kernel_90315d53 90315d5 load on device 'cuda:0' took 0.55 ms  (cached)
+Module mujoco_warp._src.forward f60f76d load on device 'cuda:0' took 1.65 ms  (cached)
+Module _solve_LD_sparse_fused__locals__kernel_423e8dbe 4a2f9d7 load on device 'cuda:0' took 0.89 ms  (cached)
+Module solve_init_jaref__locals__kernel_eec718da eec718d load on device 'cuda:0' took 1.23 ms  (cached)
+Module mul_m_sparse__locals___mul_m_sparse_0e88d329 0e88d32 load on device 'cuda:0' took 0.46 ms  (cached)
+Module update_constraint_efc__locals__kernel_32935e9d 32935e9 load on device 'cuda:0' took 0.48 ms  (cached)
+Module update_constraint_gauss_cost__locals__kernel_1a5175eb 1a5175e load on device 'cuda:0' took 0.45 ms  (cached)
+Module update_gradient_cholesky_blocked__locals__kernel_3f89bed4 cfaeb41 load on device 'cuda:0' took 277.58 ms  (cached)
+Module linesearch_jv_fused__locals__kernel_814cce74 814cce7 load on device 'cuda:0' took 0.63 ms  (cached)
+Module linesearch_prepare_gauss__locals__kernel_2db7a2e8 2db7a2e load on device 'cuda:0' took 0.76 ms  (cached)
+Module update_constraint_efc__locals__kernel_3c1a9816 3c1a981 load on device 'cuda:0' took 0.68 ms  (cached)
+Module update_gradient_cholesky_blocked_skip_unchanged__locals__kernel_b35f4e9a 59f6439 load on device 'cuda:0' took 302.67 ms  (cached)
+Module _contact_sort__locals__contact_sort_304c86df 6c97b35 load on device 'cuda:0' took 0.89 ms  (cached)
+Module reset_data__locals__reset_xfrc_applied_e7898c5c e7898c5 load on device 'cuda:0' took 0.58 ms  (cached)
+Module reset_data__locals__reset_qM_10d3c793 10d3c79 load on device 'cuda:0' took 0.58 ms  (cached)
+Module reset_data__locals__reset_mocap_ff71f630 ff71f63 load on device 'cuda:0' took 0.72 ms  (cached)
+Module reset_data__locals__reset_contact_df686d47 df686d4 load on device 'cuda:0' took 0.44 ms  (cached)
+Module reset_data__locals__reset_nworld_6e0d904e 6e0d904 load on device 'cuda:0' took 0.47 ms  (cached)
+[BamActuator] model='m6' joints=14 kt=0.3660 R=2.8114 vin=range=(6.5, 8.2) drop_gain_range=(0.0, 0.2) force_limit=±1.07Nm friction_base=0.0048 friction_viscous=0.0054 envs=300 device=cuda:0
+[BamActuator] model='m6' joints=14 kt=0.3660 R=2.8114 vin=range=(6.5, 8.2) drop_gain_range=(0.0, 0.2) force_limit=±1.07Nm friction_base=0.0048 friction_viscous=0.0054 envs=300 device=cuda:0
+
++---------------------------------+
+|         Base Environment        |
++------------------------+--------+
+| Property               | Value  |
++------------------------+--------+
+| Number of environments | 300    |
+| Environment device     | cuda:0 |
+| Environment seed       | 0      |
+| Physics step-size      | 0.005  |
+| Environment step-size  | 0.02   |
++------------------------+--------+
+
+[INFO] <EventManager> contains 2 active terms.
++---------------------------------------+
+| Active Event Terms in Mode: 'startup' |
++-------------+-------------------------+
+|    Index    | Name                    |
++-------------+-------------------------+
+|      0      | bam_fields              |
++-------------+-------------------------+
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+------------------------+
+|   Index    | Name                   |
++------------+------------------------+
+|     0      | duel_reset             |
++------------+------------------------+
++-----------------------------+
+| Domain Randomization Fields |
++-------+---------------------+
+| Index | Field Name          |
++-------+---------------------+
+|   0   | dof_frictionloss    |
+|   1   | dof_damping         |
++-------+---------------------+
+
+Module repeat_array_kernel_39317a34 75ac26a load on device 'cuda:0' took 0.51 ms  (cached)
+[INFO] <NullCommandManager> (inactive)
+[INFO] <ActionManager> contains 2 active terms.
++---------------------------------+
+| Active Action Terms (shape: 28) |
++-------+----------+--------------+
+| Index | Name     |    Dimension |
++-------+----------+--------------+
+|   0   | joint_a  |           14 |
+|   1   | joint_b  |           14 |
++-------+----------+--------------+
+
+[INFO] <ObservationManager> contains 2 groups.
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'skill_a' (shape: (61,)) |
++-----------+-----------------------------------+-------------+
+|   Index   | Name                              |    Shape    |
++-----------+-----------------------------------+-------------+
+|     0     | base_ang_vel                      |     (3,)    |
+|     1     | projected_gravity                 |     (3,)    |
+|     2     | joint_pos                         |    (14,)    |
+|     3     | joint_vel                         |    (14,)    |
+|     4     | actions                           |    (14,)    |
+|     5     | command                           |     (3,)    |
+|     6     | head_command                      |     (4,)    |
+|     7     | body_command                      |     (6,)    |
++-----------+-----------------------------------+-------------+
++-------------------------------------------------------------+
+| Active Observation Terms in Group: 'skill_b' (shape: (61,)) |
++-----------+-----------------------------------+-------------+
+|   Index   | Name                              |    Shape    |
++-----------+-----------------------------------+-------------+
+|     0     | base_ang_vel                      |     (3,)    |
+|     1     | projected_gravity                 |     (3,)    |
+|     2     | joint_pos                         |    (14,)    |
+|     3     | joint_vel                         |    (14,)    |
+|     4     | actions                           |    (14,)    |
+|     5     | command                           |     (3,)    |
+|     6     | head_command                      |     (4,)    |
+|     7     | body_command                      |     (6,)    |
++-----------+-----------------------------------+-------------+
+
+[INFO] <TerminationManager> contains 0 active terms.
++--------------------------+
+| Active Termination Terms |
++-------+------+-----------+
+| Index | Name |  Time Out |
++-------+------+-----------+
++-------+------+-----------+
+
+[INFO] <RewardManager> contains 0 active terms.
++-----------------------+
+|  Active Reward Terms  |
++-------+------+--------+
+| Index | Name | Weight |
++-------+------+--------+
++-------+------+--------+
+
+[INFO] <NullCurriculumManager> (inactive)
+[INFO] <NullMetricsManager> (inactive)
+[INFO] <NullRecorderManager> (inactive)
+--------------------------------------------------------------------------------
+Resolved observation sets: 
+	 actor :  ['actor']
+	 critic :  ['critic']
+--------------------------------------------------------------------------------
+Actor Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (distribution): BoundedSquashedGaussian()
+  (mlp): MLP(
+    (0): Linear(in_features=70, out_features=128, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=128, out_features=128, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=128, out_features=4, bias=True)
+  )
+)
+Critic Model: MLPModel(
+  (obs_normalizer): EmpiricalNormalization()
+  (mlp): MLP(
+    (0): Linear(in_features=70, out_features=128, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=128, out_features=128, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): Linear(in_features=128, out_features=1, bias=True)
+  )
+)
+[duel eval] side=1 step=1 first episodes=0/300
+[duel eval] side=1 step=21 first episodes=0/300
+[duel eval] side=1 step=41 first episodes=23/300
+[duel eval] side=1 step=61 first episodes=183/300
+[duel eval] side=1 step=81 first episodes=237/300
+[duel eval] side=1 step=101 first episodes=266/300
+[duel eval] side=1 step=121 first episodes=280/300
+[duel eval] side=1 step=141 first episodes=289/300
+[duel eval] side=1 step=161 first episodes=290/300
+[duel eval] side=1 step=181 first episodes=291/300
+[duel eval] side=1 step=200 first episodes=300/300
+{'complete': True, 'official': False, 'single_direction_worker': True, 'policy': 'PPO vs fixed A', 'total': {'episodes': 300, 'end_counts': {'goal_for': 54, 'goal_against': 9, 'ball_out': 224, 'learner_fell': 0, 'opponent_fell': 1, 'learner_oob': 3, 'opponent_oob': 2, 'timeout': 7, 'both_fell': 0, 'both_oob': 0}, 'goal_for_rate': 0.18, 'goal_against_rate': 0.03, 'timeout_rate': 0.023333333333333334, 'aborted_rate': 0.7666666666666667, 'goal_difference_per_episode': 0.15, 'winning_time_s': {'mean': 5.676296296296297, 'median': 4.92, 'p90': 8.490000000000002}, 'end_time_mean_s': 6.692, 'contact_attribution_unknown_goal_rounds': 1}, 'by_side': {'1': {'episodes': 300, 'end_counts': {'goal_for': 54, 'goal_against': 9, 'ball_out': 224, 'learner_fell': 0, 'opponent_fell': 1, 'learner_oob': 3, 'opponent_oob': 2, 'timeout': 7, 'both_fell': 0, 'both_oob': 0}, 'goal_for_rate': 0.18, 'goal_against_rate': 0.03, 'timeout_rate': 0.023333333333333334, 'aborted_rate': 0.7666666666666667, 'goal_difference_per_episode': 0.15, 'winning_time_s': {'mean': 5.676296296296297, 'median': 4.92, 'p90': 8.490000000000002}, 'end_time_mean_s': 6.692, 'contact_attribution_unknown_goal_rounds': 1}}, 'wall_seconds': 48.03959721699721, 'per_episode_csv_sha256': 'c1c2f1f5baba311fddbdb0269814defed0f9c66a1215bca015de5948a56a596e', 'training_started': False, 'comparative_RL_performance_claimed': False}

@@ -1,0 +1,28 @@
+{
+  "verified": true,
+  "actor_changed": [
+    "mlp.0.weight",
+    "mlp.0.bias",
+    "mlp.2.weight",
+    "mlp.2.bias",
+    "mlp.4.weight",
+    "mlp.4.bias"
+  ],
+  "critic_changed": [
+    "mlp.0.weight",
+    "mlp.0.bias",
+    "mlp.2.weight",
+    "mlp.2.bias",
+    "mlp.4.weight",
+    "mlp.4.bias"
+  ],
+  "optimizer_steps": [
+    100
+  ],
+  "finite": true,
+  "frozen_skills_unchanged": true,
+  "obs_dim": 76,
+  "checkpoint_sha256": "12d18a19098f6ec3bf1fe9af888c18318bcc9e7d0ca5c9fd64df9d43d3d7fd7f",
+  "fresh_initialization": true,
+  "training_performance_not_formal_score": true
+}

@@ -1,0 +1,47 @@
+{
+  "state": "complete",
+  "workers": [
+    {
+      "variant": "P_H_vs_A",
+      "side": 0,
+      "returncode": 0
+    },
+    {
+      "variant": "P_H_vs_A",
+      "side": 1,
+      "returncode": 0
+    },
+    {
+      "variant": "P_H_vs_R_H",
+      "side": 0,
+      "returncode": 0
+    },
+    {
+      "variant": "P_H_vs_R_H",
+      "side": 1,
+      "returncode": 0
+    },
+    {
+      "variant": "R_H_vs_A",
+      "side": 0,
+      "returncode": 0
+    },
+    {
+      "variant": "R_H_vs_A",
+      "side": 1,
+      "returncode": 0
+    },
+    {
+      "variant": "R_H_vs_R_H",
+      "side": 0,
+      "returncode": 0
+    },
+    {
+      "variant": "R_H_vs_R_H",
+      "side": 1,
+      "returncode": 0
+    }
+  ],
+  "training": false,
+  "checkpoint_sha256": "f50f7fade3a12abea06f12acdfc904d2029a57238ed864aaa940e73a1df9cfc2"
+}

@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-11-24T01:17:46.201997+00:00",
+  "version": "duel_v3",
+  "source_commit": "e8b9756c03ae66a693275ee84b61a36aab367b2f",
+  "repo": "/home/lingchentseng/projects/microduck_duel_v3_seed1_e8b9756",
+  "PR": "https://github.com/8787greenhat/microduck_rl/pull/9",
+  "num_envs": 1024,
+  "iterations": 2000,
+  "seed": 1,
+  "PPO": true,
+  "curriculum": false,
+  "self_play": false,
+  "opponent": "fixed geometric A",
+  "fresh_initialization": true,
+  "resume": false,
+  "old_or_smoke_checkpoint_loaded": false,
+  "official_skills_sha256": {
+    "alpha_walking.onnx": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+    "ball_kick_right.onnx": "147a32c388c6b19111b3ac3b550a9a6dc8b8bf267118af4d8c3712522eedb5af"
+  },
+  "command": [
+    "bash",
+    "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/duel_v3_PPO_vs_A_seed1_20261124_091746/run_python.sh",
+    "scripts/train_duel_v3.py",
+    "--num-envs",
+    "1024",
+    "--iterations",
+    "2000",
+    "--seed",
+    "1",
+    "--out",
+    "/mnt/c/Users/LingChengTseng/Documents/Codex/2026-10-24/mac-microduck-rl-1-00-start-2/outputs/duel_v3_PPO_vs_A_seed1_20261124_091746/training"
+  ],
+  "final_checkpoint": "model_1999.pt",
+  "final_fixed600_after_training": true,
+  "intermediate_checkpoint_indices_to_evaluate_after_training": [
+    100,
+    500,
+    1000
+  ],
+  "automatic_restart_on_failure": false,
+  "start_other_seeds": false
+}

@@ -1,0 +1,9 @@
+{
+  "state": "failed",
+  "workers": [
+    {
+      "side": 0,
+      "returncode": -11
+    }
+  ]
+}

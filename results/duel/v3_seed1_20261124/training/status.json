@@ -1,0 +1,69 @@
+{
+  "state": "complete",
+  "started_at": "2026-11-24T01:18:11.268399+00:00",
+  "supervisor_pid": 283,
+  "num_envs": 1024,
+  "iterations": 2000,
+  "seed": 1,
+  "PPO": true,
+  "curriculum": false,
+  "opponent": "fixed rule A",
+  "source_commit": "e8b9756c03ae66a693275ee84b61a36aab367b2f",
+  "automatic_restart": false,
+  "other_seeds_started": false,
+  "version": "duel_v3",
+  "training_pid": 326,
+  "updated_at": "2026-11-24T06:20:30.169568+00:00",
+  "elapsed_seconds": 17429.992551998,
+  "gpu_sample": "4427 MiB, 75 %, 67",
+  "last_logged_iteration_index": 1999,
+  "completed_iterations": 2000,
+  "recent_iteration_seconds": 7.855,
+  "estimated_remaining_seconds": 0,
+  "estimated_training_end_utc": "2026-11-24T06:18:16.760204+00:00",
+  "training_returncode": 0,
+  "training_complete": true,
+  "final_checkpoint_sha256": "f50f7fade3a12abea06f12acdfc904d2029a57238ed864aaa940e73a1df9cfc2",
+  "training_ended_at": "2026-11-24T06:18:16.234508+00:00",
+  "evaluation_pid": 2443,
+  "evaluation_returncode": 0,
+  "evaluation_complete": true,
+  "fixed600_summary": {
+    "episodes": 600,
+    "end_counts": {
+      "goal_for": 167,
+      "goal_against": 7,
+      "ball_out": 402,
+      "learner_fell": 0,
+      "opponent_fell": 2,
+      "learner_oob": 0,
+      "opponent_oob": 0,
+      "timeout": 22,
+      "both_fell": 0,
+      "both_oob": 0
+    },
+    "goal_for_rate": 0.2783333333333333,
+    "goal_against_rate": 0.011666666666666667,
+    "timeout_rate": 0.03666666666666667,
+    "aborted_rate": 0.6733333333333333,
+    "goal_difference_per_episode": 0.26666666666666666,
+    "winning_time_s": {
+      "mean": 3.7676646706586827,
+      "median": 3.6,
+      "p90": 4.192000000000001
+    },
+    "end_time_mean_s": 6.194333333333334,
+    "contact_attribution_unknown_goal_rounds": 0
+  },
+  "intermediate_evaluations": [
+    {
+      "iteration_index": 100,
+      "training_updates": 101,
+      "state": "failed",
+      "pid": 2628,
+      "returncode": 1
+    }
+  ],
+  "ended_at": "2026-11-24T06:20:55.495064+00:00",
+  "intermediate_evaluation_complete": false
+}

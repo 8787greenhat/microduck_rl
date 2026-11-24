@@ -1,0 +1,76 @@
+{
+  "v2": {
+    "summary": {
+      "episodes": 600,
+      "end_counts": {
+        "goal_for": 106,
+        "goal_against": 13,
+        "ball_out": 461,
+        "learner_fell": 0,
+        "opponent_fell": 1,
+        "learner_oob": 7,
+        "opponent_oob": 3,
+        "timeout": 9,
+        "both_fell": 0,
+        "both_oob": 0
+      },
+      "goal_for_rate": 0.17666666666666667,
+      "goal_against_rate": 0.021666666666666667,
+      "timeout_rate": 0.015,
+      "aborted_rate": 0.7866666666666666,
+      "goal_difference_per_episode": 0.155,
+      "winning_time_s": {
+        "mean": 5.655471698113208,
+        "median": 4.92,
+        "p90": 8.29
+      },
+      "end_time_mean_s": 6.621133333333334,
+      "contact_attribution_unknown_goal_rounds": 1
+    },
+    "source_commit": "3c6bcc768790e1bd4a0f3f492eba0df23fe92e65",
+    "checkpoint_sha256": "52fcc4eed3e7428f78e4b006365e49ebb1f1dc8c982259f3f6e88192bda8823a",
+    "rounds_with_learner_kick_skill": 0,
+    "total_learner_kick_skill_starts": 0,
+    "goal_rounds_with_learner_kick_skill": 0,
+    "goal_rounds_with_any_learner_right_foot_contact": 3
+  },
+  "v3": {
+    "summary": {
+      "episodes": 600,
+      "end_counts": {
+        "goal_for": 167,
+        "goal_against": 7,
+        "ball_out": 402,
+        "learner_fell": 0,
+        "opponent_fell": 2,
+        "learner_oob": 0,
+        "opponent_oob": 0,
+        "timeout": 22,
+        "both_fell": 0,
+        "both_oob": 0
+      },
+      "goal_for_rate": 0.2783333333333333,
+      "goal_against_rate": 0.011666666666666667,
+      "timeout_rate": 0.03666666666666667,
+      "aborted_rate": 0.6733333333333333,
+      "goal_difference_per_episode": 0.26666666666666666,
+      "winning_time_s": {
+        "mean": 3.7676646706586827,
+        "median": 3.6,
+        "p90": 4.192000000000001
+      },
+      "end_time_mean_s": 6.194333333333334,
+      "contact_attribution_unknown_goal_rounds": 0
+    },
+    "source_commit": "e8b9756c03ae66a693275ee84b61a36aab367b2f",
+    "checkpoint_sha256": "f50f7fade3a12abea06f12acdfc904d2029a57238ed864aaa940e73a1df9cfc2",
+    "rounds_with_learner_kick_skill": 521,
+    "total_learner_kick_skill_starts": 536,
+    "goal_rounds_with_learner_kick_skill": 164,
+    "goal_rounds_with_any_learner_right_foot_contact": 167
+  },
+  "same_protocol_and_frozen_skills": true,
+  "goal_rate_difference_percentage_points": 10.166666666666666,
+  "interpretation": "One training seed per version. Whole v3 controller/observation change; no causal attribution to speed alone or statistical significance claim.",
+  "contact_caveat": "Episode-level kick starts and right-foot sensor contacts are co-occurrences, not proof of the cause of each goal."
+}

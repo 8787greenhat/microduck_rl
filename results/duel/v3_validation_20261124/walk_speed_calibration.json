@@ -1,0 +1,76 @@
+{
+  "verified": true,
+  "training": false,
+  "frozen_official_skill_sha256": {
+    "alpha_walking.onnx": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+    "ball_kick_right.onnx": "147a32c388c6b19111b3ac3b550a9a6dc8b8bf267118af4d8c3712522eedb5af"
+  },
+  "nominal_scene": "stationary distant opponent/ball; no controller override; independent worlds",
+  "simulation_seconds": 2,
+  "records": [
+    {
+      "command_vx_mps": 0.0,
+      "envs": 8,
+      "median_measured_vx_last_second_mps": -0.00048663627239875495,
+      "mean_measured_vx_last_second_mps": -0.0004804725176654756,
+      "mean_2second_forward_displacement_m": 0.0013641119003295898,
+      "min_2second_forward_displacement_m": 0.0012302398681640625
+    },
+    {
+      "command_vx_mps": 0.07999999821186066,
+      "envs": 8,
+      "median_measured_vx_last_second_mps": -8.507524762535468e-05,
+      "mean_measured_vx_last_second_mps": -9.011616930365562e-05,
+      "mean_2second_forward_displacement_m": 0.004538059234619141,
+      "min_2second_forward_displacement_m": 0.0043773651123046875
+    },
+    {
+      "command_vx_mps": 0.11999999731779099,
+      "envs": 8,
+      "median_measured_vx_last_second_mps": 0.0001814251736504957,
+      "mean_measured_vx_last_second_mps": 0.00012312141188886017,
+      "mean_2second_forward_displacement_m": 0.006070196628570557,
+      "min_2second_forward_displacement_m": 0.005780220031738281
+    },
+    {
+      "command_vx_mps": 0.1599999964237213,
+      "envs": 8,
+      "median_measured_vx_last_second_mps": 0.00016887728997971863,
+      "mean_measured_vx_last_second_mps": 0.00016497037722729146,
+      "mean_2second_forward_displacement_m": 0.007767513394355774,
+      "min_2second_forward_displacement_m": 0.007548213005065918
+    },
+    {
+      "command_vx_mps": 0.20000000298023224,
+      "envs": 8,
+      "median_measured_vx_last_second_mps": 0.00019876001169905066,
+      "mean_measured_vx_last_second_mps": 0.000143464159918949,
+      "mean_2second_forward_displacement_m": 0.009411871433258057,
+      "min_2second_forward_displacement_m": 0.009244680404663086
+    },
+    {
+      "command_vx_mps": 0.23999999463558197,
+      "envs": 8,
+      "median_measured_vx_last_second_mps": 0.11237295717000961,
+      "mean_measured_vx_last_second_mps": 0.0993117094039917,
+      "mean_2second_forward_displacement_m": 0.11722302436828613,
+      "min_2second_forward_displacement_m": 0.0479731559753418
+    },
+    {
+      "command_vx_mps": 0.30000001192092896,
+      "envs": 8,
+      "median_measured_vx_last_second_mps": 0.1538166105747223,
+      "mean_measured_vx_last_second_mps": 0.15057069063186646,
+      "mean_2second_forward_displacement_m": 0.2520991563796997,
+      "min_2second_forward_displacement_m": 0.2392253875732422
+    },
+    {
+      "command_vx_mps": 0.4000000059604645,
+      "envs": 8,
+      "median_measured_vx_last_second_mps": 0.20290495455265045,
+      "mean_measured_vx_last_second_mps": 0.19956277310848236,
+      "mean_2second_forward_displacement_m": 0.3565373420715332,
+      "min_2second_forward_displacement_m": 0.3387298583984375
+    }
+  ]
+}
