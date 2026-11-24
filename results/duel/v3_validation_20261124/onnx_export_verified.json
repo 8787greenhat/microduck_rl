@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "exporter": "MjlabOnPolicyRunner.export_policy_to_onnx",
+  "normalizer_baked_using_official_exporter": true,
+  "checkpoint_sha256": "2b19001e4ba4c79f843940c34d31b6c49cf8e74cece1315f7a8240a0c0230659",
+  "onnx_sha256": "7657a0452f4fb3a10d999fe72161154413ca0b4c917e8cea44187d518826c7d7",
+  "input_shape": [
+    1,
+    76
+  ],
+  "output_shape": [
+    1,
+    4
+  ],
+  "onnx_checker_passed": true,
+  "cpu_onnxruntime_matches_deterministic_torch": true,
+  "max_absolute_errors": [
+    1.1920928955078125e-07,
+    8.940696716308594e-08
+  ],
+  "normalization_unchanged": true,
+  "high_level_only_not_a_61D_low_level_robot_policy": true
+}

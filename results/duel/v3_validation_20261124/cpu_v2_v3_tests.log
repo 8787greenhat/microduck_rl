@@ -1,0 +1,8 @@
+[mdp] Patches 1-2 active: NaN-safe reward/advantage
+[mdp] Patch 4 active: ONNX export filters passive_* joints
+[mdp] Patch 5 active: MICRODUCK_WARM_START=1 restarts curricula after checkpoint load
+................
+----------------------------------------------------------------------
+Ran 16 tests in 1.022s
+
+OK

@@ -1,0 +1,13 @@
+test_accepted_kick_and_mode_block_retrigger (__main__.StopSettleTests.test_accepted_kick_and_mode_block_retrigger) ... ok
+test_alignment_is_slow_and_normalized (__main__.StopSettleTests.test_alignment_is_slow_and_normalized) ... ok
+test_already_inside_original_pose_tolerance_stops_instead_of_stepping_past_ball (__main__.StopSettleTests.test_already_inside_original_pose_tolerance_stops_instead_of_stepping_past_ball) ... ok
+test_ball_escape_cancels_intent_and_selective_reset (__main__.StopSettleTests.test_ball_escape_cancels_intent_and_selective_reset) ... ok
+test_drift_realigns_and_resets_dwell (__main__.StopSettleTests.test_drift_realigns_and_resets_dwell) ... ok
+test_far_request_does_not_kick_or_override_walk (__main__.StopSettleTests.test_far_request_does_not_kick_or_override_walk) ... ok
+test_speed_not_ready_never_advances_settle_clock (__main__.StopSettleTests.test_speed_not_ready_never_advances_settle_clock) ... ok
+test_stop_commands_zero_walk_before_latched_request (__main__.StopSettleTests.test_stop_commands_zero_walk_before_latched_request) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.006s
+
+OK
