@@ -1,0 +1,8 @@
+{
+  "verified": true,
+  "short_test_batches": 5,
+  "episodes": 320,
+  "checkpoint_sha256": "52fcc4eed3e7428f78e4b006365e49ebb1f1dc8c982259f3f6e88192bda8823a",
+  "GPU_used": false,
+  "training": false
+}

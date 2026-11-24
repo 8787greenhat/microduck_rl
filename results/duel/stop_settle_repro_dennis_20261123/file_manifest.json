@@ -1,0 +1,68 @@
+{
+  "files": {
+    ".gitattributes": {
+      "bytes": 27,
+      "sha256": "09bc942f7093fc4e9dec54d622092ae5e8622e37deed6f3c55f31e73b19ab2cd"
+    },
+    "README.md": {
+      "bytes": 1833,
+      "sha256": "1028df639b99b3c38e2235e5038c23c7cf663dc68f0d564d312c2dd28530aca1"
+    },
+    "received/console/stop_settle_control_02.log": {
+      "bytes": 11672,
+      "sha256": "1c68ceccf66a9c73448433427430e47772de208ae3b4a2981abbea4ae64b2ce6"
+    },
+    "received/console/stop_settle_fixed64_01.log": {
+      "bytes": 11616,
+      "sha256": "dea92fa49d79d9194e28ddca03b2fdf9c32466a779ed6845079d125b6854e22d"
+    },
+    "received/console/stop_settle_policy_01.log": {
+      "bytes": 11436,
+      "sha256": "54147f5e08e39872260bf44a8bc62f542af7d0c14606de85aa4e1f7c3f6b9ab9"
+    },
+    "received/console/test_duel_stop_settle.log": {
+      "bytes": 1170,
+      "sha256": "5cc55a80e1c283a19c0f53cefe18b5c94a20b23eb20b590c57da458758a56f5c"
+    },
+    "received/console/test_duel_v2.log": {
+      "bytes": 1944,
+      "sha256": "010d7fbb52d8de14887c91c553d1b694fe18c5e40bdf90dbec2d5dd98f636f67"
+    },
+    "received/console/verify_package.log": {
+      "bytes": 202,
+      "sha256": "16c76ca6275b965b17ffba877515fbeb5aad50711b05f5ba35c669232c8738ec"
+    },
+    "received/README_給Joshua.md": {
+      "bytes": 2708,
+      "sha256": "990d559c67557d990333770db8649135a5b69b09933bbbfac7156f23b95144d0"
+    },
+    "received/results/stop_settle_control_02/result.json": {
+      "bytes": 60526,
+      "sha256": "b4159749b779a17afe8e765d6692c46f6e197febaa66b3900900f638b6d41050"
+    },
+    "received/results/stop_settle_fixed64_01/result.json": {
+      "bytes": 70231,
+      "sha256": "f7b0019aa33ce626bcd233f3a4953facdf1f75fdc6826f59c44690bb09ba7861"
+    },
+    "received/results/stop_settle_policy_01/result.json": {
+      "bytes": 59930,
+      "sha256": "85971f0866ed2072d68f641482c8ecde48989f4cf9b17f26ab587770ada2c3d5"
+    },
+    "received/SHA256SUMS.txt": {
+      "bytes": 1495,
+      "sha256": "20a5206b397374dea85195c12f57b480ee0f49801b1f205823b907617b6e3523"
+    },
+    "received/versions.txt": {
+      "bytes": 633,
+      "sha256": "f119553c2769cff7c5321f4b2af99aef9629823467fe24c932ab1514a93ada47"
+    },
+    "review.json": {
+      "bytes": 2464,
+      "sha256": "1749f12db08fec776350eb6b6a5fb54d1de600bcf0fadf02e979aba5c4dc77a5"
+    },
+    "verify_received.py": {
+      "bytes": 1615,
+      "sha256": "caa04f5fe3cd8b3de9b508e968af588949458c4e61c93571ced8b6176495b2ee"
+    }
+  }
+}
