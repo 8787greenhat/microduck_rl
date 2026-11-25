@@ -1,0 +1,66 @@
+{
+  "complete": true,
+  "official": false,
+  "single_direction_worker": true,
+  "policy": "PPO vs fixed A",
+  "total": {
+    "episodes": 300,
+    "end_counts": {
+      "goal_for": 78,
+      "goal_against": 7,
+      "ball_out": 206,
+      "learner_fell": 0,
+      "opponent_fell": 0,
+      "learner_oob": 0,
+      "opponent_oob": 1,
+      "timeout": 8,
+      "both_fell": 0,
+      "both_oob": 0
+    },
+    "goal_for_rate": 0.26,
+    "goal_against_rate": 0.023333333333333334,
+    "timeout_rate": 0.02666666666666667,
+    "aborted_rate": 0.69,
+    "goal_difference_per_episode": 0.23666666666666666,
+    "winning_time_s": {
+      "mean": 3.7525641025641026,
+      "median": 3.6,
+      "p90": 4.18
+    },
+    "end_time_mean_s": 6.080866666666667,
+    "contact_attribution_unknown_goal_rounds": 0
+  },
+  "by_side": {
+    "0": {
+      "episodes": 300,
+      "end_counts": {
+        "goal_for": 78,
+        "goal_against": 7,
+        "ball_out": 206,
+        "learner_fell": 0,
+        "opponent_fell": 0,
+        "learner_oob": 0,
+        "opponent_oob": 1,
+        "timeout": 8,
+        "both_fell": 0,
+        "both_oob": 0
+      },
+      "goal_for_rate": 0.26,
+      "goal_against_rate": 0.023333333333333334,
+      "timeout_rate": 0.02666666666666667,
+      "aborted_rate": 0.69,
+      "goal_difference_per_episode": 0.23666666666666666,
+      "winning_time_s": {
+        "mean": 3.7525641025641026,
+        "median": 3.6,
+        "p90": 4.18
+      },
+      "end_time_mean_s": 6.080866666666667,
+      "contact_attribution_unknown_goal_rounds": 0
+    }
+  },
+  "wall_seconds": 53.44135278199974,
+  "per_episode_csv_sha256": "fbb4ff8f1b790c5ac6a1f46a9eda32ea9e7dfc277e843ae72c8422c3a68ec706",
+  "training_started": false,
+  "comparative_RL_performance_claimed": false
+}

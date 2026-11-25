@@ -1,0 +1,13 @@
+{
+  "state": "complete",
+  "workers": [
+    {
+      "side": 0,
+      "returncode": 0
+    },
+    {
+      "side": 1,
+      "returncode": 0
+    }
+  ]
+}
